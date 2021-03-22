@@ -8,17 +8,6 @@
   src: url("Nexa-Light.otf");
 }
 
-/* fonts */
-@font-face {
-  font-family: BoldFont;
-  src: url(../fonts/Nexa-Bold.otf) format("opentype");
-}
-
-@font-face {
-  font-family: LightFont;
-  src: url(../fonts/Nexa-Light.otf) format("opentype");
-}
-
 /* global tags */
 * {
   -webkit-box-sizing: border-box;
@@ -211,7 +200,7 @@ a {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) {
   section {
     padding: 2rem;
   }
@@ -245,6 +234,75 @@ a {
 }
 
 @media only screen and (min-width: 1024px) {
+  section {
+    padding: 3rem 3rem;
+    text-align: left;
+  }
+  h1, h2 {
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+  }
+  h4 {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  h5 {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+  h6 {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-family: BoldFont;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    margin-bottom: 2rem;
+  }
+  span {
+    font-size: 1.4rem;
+  }
+  button {
+    font-family: BoldFont;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.7rem;
+  }
+  input {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 0.8rem;
+  }
+  input:-ms-input-placeholder {
+    font-size: 0.8rem;
+  }
+  input::-ms-input-placeholder {
+    font-size: 0.8rem;
+  }
+  input::placeholder {
+    font-size: 0.8rem;
+  }
+  ul li {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
   section {
     padding: 5rem 7rem;
     text-align: left;
@@ -1308,6 +1366,533 @@ a {
 }
 
 @media only screen and (min-width: 1024px) {
+  #loginmsg {
+    top: 9rem;
+    right: 1rem;
+    width: 25rem;
+    height: 4.5rem;
+    background-color: white;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-left: 0.3rem solid green;
+    -webkit-animation: cssAnimation 5s forwards;
+    animation: cssAnimation 3s forwards;
+  }
+  @keyframes cssAnimation {
+    0% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes cssAnimation {
+    0% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  #loginmsg i {
+    font-size: 1.3rem;
+    color: #666565;
+  }
+  #loginmsg #tick {
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+  }
+  #loginmsg ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 2.5rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 15rem;
+  }
+  #loginmsg ul li {
+    font-size: 0.8rem;
+    font-family: BoldFont;
+    color: green;
+  }
+  #loginmsg ul li span {
+    font-size: 1.3rem;
+  }
+  #userprofile {
+    position: absolute;
+    width: 20rem;
+    background-color: white;
+    top: 7rem;
+    right: 1rem;
+    -webkit-box-shadow: 0 0 20px -2px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 20px -2px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+  }
+  #userprofile .profilenav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    border-bottom: 0.1rem solid #a19f9f;
+    padding: 0rem 1.5rem;
+  }
+  #userprofile .profilenav .pic {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 1rem;
+  }
+  #userprofile .profilenav .pic img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #userprofile div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #userprofile h4 {
+    color: #167ddd;
+    margin: 1rem 0rem;
+  }
+  #userprofile h6 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  #userprofile ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  #userprofile ul li {
+    padding: 1rem 1.3rem;
+    font-family: Boldfont;
+    width: 100%;
+    margin: 0rem;
+  }
+  #userprofile ul li:hover {
+    border-left: 0.5rem solid #167ddd;
+  }
+  .nav-desktop {
+    padding: 2rem 3rem;
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-desktop img {
+    width: 8rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+  .nav-desktop ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .nav-desktop ul li {
+    font-size: 1.1rem;
+    color: #222844;
+    font-family: BoldFont;
+    font-weight: bold;
+    margin: 0rem 1rem;
+  }
+  .nav-desktop div {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .nav-desktop div div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .nav-desktop div div i {
+    font-size: 1.5rem;
+    color: #222844;
+    cursor: pointer;
+  }
+  .nav-desktop button {
+    margin-left: 0.5rem;
+  }
+  .nav-mobile {
+    display: none;
+  }
+  .IntroSection {
+    background-image: url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.jpg");
+    background-size: cover;
+    background-position: center center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 7rem 3rem;
+  }
+  .IntroSection h1 {
+    margin-bottom: 2rem;
+  }
+  .IntroSection p {
+    margin-bottom: 3rem;
+  }
+  .IntroSection h1, .IntroSection p {
+    width: 70%;
+  }
+  .IntroSection .locationform {
+    width: 70%;
+  }
+  .IntroSection .locationform div {
+    width: 35rem;
+  }
+  .IntroSection .locationform div i {
+    font-size: 1rem;
+  }
+  .How-it-Works {
+    padding-bottom: 3rem;
+  }
+  .How-it-Works p {
+    margin-bottom: 2.5rem;
+  }
+  .How-it-Works .wrap-li .tab-div {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .How-it-Works .wrap-li .tab-div p {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    margin-right: 0rem;
+  }
+  .How-it-Works .wrap-li .tab-div div {
+    height: 25rem;
+    width: 25rem;
+    margin: 1.5rem auto;
+    margin-top: 3rem;
+  }
+  .How-it-Works .wrap-li .tab-div h4 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .How-it-Works .wrap-li div {
+    width: 45%;
+  }
+  .How-it-Works .wrap-li div ul {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .How-it-Works .wrap-li div ul li {
+    padding: 1rem 2rem;
+  }
+  .How-it-Works .wrap-li div ul li h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .How-it-Works .wrap-li div ul li span {
+    font-size: 1.4rem;
+    margin-right: 2rem;
+  }
+  .How-it-Works .wrap-li div ul .active, .How-it-Works .wrap-li div ul li:hover {
+    border: 0.1rem solid #93bede;
+  }
+  .World-class-expert-doctors p {
+    margin-bottom: 2rem;
+  }
+  .World-class-expert-doctors .carousel-circle {
+    display: block;
+    margin-top: 3rem;
+  }
+  .World-class-expert-doctors .carousel-circle .dot {
+    height: 1rem;
+    width: 1rem;
+    margin: 0 2px;
+    background-color: #f0f0f5;
+    border-radius: 50%;
+    display: inline-block;
+    border: 0.2rem solid #222844;
+  }
+  .World-class-expert-doctors .carousel-circle .activecarousel, .World-class-expert-doctors .carousel-circle .dot:hover {
+    background-color: #222844;
+    border: 0.2rem solid #167ddd;
+  }
+  .World-class-expert-doctors .wrap-doctor-card {
+    height: auto;
+    -webkit-animation: mymove 3s;
+            animation: mymove 3s;
+  }
+  @-webkit-keyframes mymove {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes mymove {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .World-class-expert-doctors .wrap-doctor-card .doctorcard {
+    width: 24.5%;
+    height: 38rem;
+  }
+  .World-class-expert-doctors .wrap-doctor-card .doctorcard .about-doctor ul h4 {
+    padding: 0.5rem 0rem;
+    margin-bottom: 0rem;
+  }
+  .World-class-expert-doctors .wrap-doctor-card .doctorcard .about-doctor ul h4::before {
+    -webkit-transform: translateY(-0.4rem);
+            transform: translateY(-0.4rem);
+    border-bottom: 0.2rem solid #167ddd;
+  }
+  .World-class-expert-doctors .wrap-doctor-card .doctorcard .about-doctor ul li {
+    font-weight: bold;
+    color: #222844;
+    font-size: 1.1rem;
+  }
+  .featured-medical-treatment p {
+    margin-bottom: 2rem;
+  }
+  .featured-medical-treatment .carousel-circle {
+    display: block;
+    margin-top: 4rem;
+  }
+  .featured-medical-treatment .carousel-circle .dot {
+    height: 1rem;
+    width: 1rem;
+    margin: 0 2px;
+    background-color: #dbd8d8;
+    border-radius: 50%;
+    display: inline-block;
+    border: 0.2rem solid white;
+  }
+  .featured-medical-treatment .carousel-circle .activecarousel, .featured-medical-treatment .carousel-circle .dot:hover {
+    background-color: white;
+    border: 0.2rem solid #167ddd;
+  }
+  .featured-medical-treatment .wrap-featured-medical-treatment {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 1rem;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 20rem 8rem 5rem 30rem;
+        grid-template-rows: 20rem 8rem 5rem 30rem;
+  }
+  .featured-medical-treatment .wrap-featured-medical-treatment .image-gradient {
+    height: 100%;
+    width: 100%;
+  }
+  .featured-medical-treatment .wrap-featured-medical-treatment .image-gradient .lowerdiv {
+    padding-left: 1rem;
+    height: 5rem;
+  }
+  .featured-medical-treatment .wrap-featured-medical-treatment .image-gradient .lowerdiv p {
+    font-size: 1.1rem;
+  }
+  .featured-medical-treatment .wrap-featured-medical-treatment #box1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .featured-medical-treatment .wrap-featured-medical-treatment #box2 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/4;
+  }
+  .featured-medical-treatment .wrap-featured-medical-treatment #box3 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+  }
+  .featured-medical-treatment .wrap-featured-medical-treatment #box4 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 3;
+    grid-row: 2/5;
+  }
+  .featured-medical-treatment .wrap-featured-medical-treatment #box5 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  .featured-medical-treatment .wrap-featured-medical-treatment #box6 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    grid-row: 3/5;
+  }
+  .exclusive-services p {
+    margin-bottom: 2rem;
+  }
+  .exclusive-services .Exclusive-services-wrap {
+    height: auto;
+  }
+  .exclusive-services .Exclusive-services-wrap div {
+    width: 16%;
+    height: 10rem;
+  }
+  .exclusive-services .Exclusive-services-wrap div img {
+    width: 5rem;
+    height: 6rem;
+  }
+  .need-help {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .need-help div {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .need-help p {
+    margin-bottom: 0rem;
+  }
+  .tab-footer .footer-div-1 {
+    width: 45%;
+  }
+  .tab-footer .footer-div-1 ul {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .tab-footer .footer-div-1 ul li {
+    font-size: 1.1rem;
+  }
+  .tab-footer .footer-div-2 {
+    width: 14%;
+  }
+  .tab-footer .footer-div-2 i {
+    font-size: 1.3rem;
+  }
+  .tab-footer .footer-div-2 img {
+    height: 1.7rem;
+    width: 10rem;
+  }
+  .tab-footer .footer-div-2 ul {
+    margin-top: 2rem;
+  }
+  .navlist {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
   #loginmsg {
     top: 9rem;
     right: 1rem;

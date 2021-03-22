@@ -522,6 +522,61 @@ align-items: flex-start;
 
 }
 
+@media only screen and (min-width:$breakpoint-unknown){
+    
+    .filtersanddoctors .doctor-card-tab .doctor-card .appointment-button{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-left: 1rem;
+        margin-bottom: 1.5rem;
+        width:100%;
+    }
+    .carouselContainer{
+        padding: 1rem;
+    }
+    .allCarouselItems .item h6{
+        margin: 0rem;
+    }
+    .subScheduleContainer{
+        display:flex;
+        flex-direction: column;
+        h3{
+            padding:1rem 0rem;
+        }
+        div{
+            padding:0rem 1rem;
+            
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-bottom: 0.2rem solid $light-grey;
+            h4{
+                padding:1rem 0rem;
+                font-family: LightFont;
+                margin-right: 0.5rem;
+                span{
+                    color: green;
+                    padding:0.5rem 0.4rem;
+                    border:0.1rem solid green;
+                    font-size: 1.1rem;
+                }
+            }
+            i{
+                margin-right: 1rem;
+            }
+            .head{
+                display: flex;
+                flex-direction: row;
+                border:unset;
+                padding: unset;
+                margin-right: 2rem;
+            }
+        }
+    }
+
+}
+
 
 @media only screen and (min-width:$breakpoint-desktop){
     
@@ -680,7 +735,7 @@ align-items: flex-start;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding:2rem 1rem 1rem 1rem;
+    padding:2rem 1rem 2rem 1rem;
 }
 .allCarouselItems{
     display: flex;
@@ -690,16 +745,17 @@ align-items: flex-start;
     .item{
         display: flex;
         flex-direction: column;
-        h4{
-            margin-top: 1rem;
+        h5{
+            margin: 0.5rem 0rem;
             span{
                 color:$sky-blue;
                 font-size:1.5rem;
             }
         }
-        h3{
-            font-size:1.7rem;
-        }
+       h6{
+        margin: 0.5rem 0rem;
+
+       }
     }
 }
 .adminpagenation{
@@ -750,8 +806,7 @@ align-items: flex-start;
             flex-direction: row;
             border:unset;
             padding: unset;
-            margin-right: 5rem;
-            width:15rem;
+            margin-right: 2rem;
         }
     }
 }

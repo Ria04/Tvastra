@@ -8,17 +8,6 @@
   src: url("Nexa-Light.otf");
 }
 
-/* fonts */
-@font-face {
-  font-family: BoldFont;
-  src: url(../fonts/Nexa-Bold.otf) format("opentype");
-}
-
-@font-face {
-  font-family: LightFont;
-  src: url(../fonts/Nexa-Light.otf) format("opentype");
-}
-
 /* global tags */
 * {
   -webkit-box-sizing: border-box;
@@ -211,7 +200,7 @@ a {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) {
   section {
     padding: 2rem;
   }
@@ -244,7 +233,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 900px) {
   section {
     padding: 5rem 7rem;
     text-align: left;
@@ -532,7 +521,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 900px) {
   .slotbooking .inclinic .imgandinfodiv .drimg {
     height: 8rem;
     width: 20%;
