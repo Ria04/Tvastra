@@ -1,0 +1,111 @@
+<head>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="signup.css">
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+</head>
+<body>
+  
+
+<header>
+  <nav class="nav-mobile">
+      <img id="logo" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg">
+      <i class="fas fa-bars"></i>
+  </nav>
+  <nav class="nav-desktop">
+      <img id="logo" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg">
+          <ul>
+            <a href="/doctor"><li>Doctor</li></a>
+            <a href="/hospital"><li>Hospital</li></a>
+            <li>Treatment</li>
+            <a href="/aboutus"> <li>About</li></a>
+          </ul>
+          <div>
+              <button  id="login">Login / Signup</button>
+              <button  id="quote">Get a Quote</button>
+          </div>
+
+
+  </nav>
+
+
+</header>
+
+
+<section class="loginsection">
+    <div class="login">
+      <h3>Sign Up</h3>
+
+
+      <form class="loginform" method="POST" action="/signup" required>
+        <input type="text" placeholder="Enter Name" name="name" required>
+        <input type="text" placeholder="Enter Email" name="email"required>
+        <div id="passworddiv">
+        <input id="pass" type="password" placeholder="Enter Password" name="password" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$" title="password must contain one uppercase, one lowercase, one special character and one digit">
+          <i id="toggle" class="fa fa-eye-slash" onclick="changeicon()"></i>
+      </div>
+        <input list="gender" type="text" placeholder="Select Your Gender" name="gender" required>
+        <datalist id="gender">
+          <option value="Male"></option>
+          <option value="Female"></option>
+          <option value="Other"></option>
+        </datalist>
+        <input type="text" placeholder="dd / mm / yy" name="date" required>
+        <input type="text" placeholder="Enter Phone Number" name="phone_number" required>
+
+        
+        <div>
+        <input type="text" placeholder="Enter City" name="city" required>
+        <input type="text" placeholder="Enter State" name="state" required>
+        </div>
+        <input list="Country" type="text" placeholder="Select Your Country" name="country" required>
+        <datalist id="Country">
+          <option value="India"></option>
+        </datalist>
+
+        <div class="isdoctor">
+        <input id="isdoctor"  type="checkbox" name="isdoctor">
+        <label for="isdoctor">Isdoctor</label>
+
+       </div>
+
+        <button type="submit">S I G N <span></span>  U P<i class="fa fa-arrow-right"></i></button>
+      </form>
+      <h4>Already Registered? <a href="/"> <span> Login</span></a></h4>
+    </div>
+</section>
+
+<script>
+
+  var passwordtext= document.getElementById("pass");  
+  function changeicon(){
+     var x = document.getElementById("pass");
+     var y= document.getElementById("toggle")
+   if (x.type === "password") {
+     x.type = "text";
+     y.className='fa fa-eye';
+   } else {
+     x.type = "password";
+     y.className='fa fa-eye-slash';
+   }
+ }
+    
+     
+ 
+ </script>
+
+<footer>
+  <section>
+ <p>All Rights Reserved. <i class="fa fa-copyright"></i> tvastra 2018</p>
+</section>
+</footer>
+</body>

@@ -1,0 +1,759 @@
+
+@import "style.scss";
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overlay-section{
+    display:none;
+   
+}
+
+.reschedule-box{
+    border: 0.1rem solid grey;
+}
+.adminpagenation{
+    margin-top: 1rem;
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        li{
+            padding:0.1rem 0.3rem;
+            border:0.1rem solid $sky-blue;
+            text-align: center;
+            color: $sky-blue;
+            font-family: BoldFont;
+            margin:0 0.5rem;
+        }
+        .active, li:hover{
+            color: $white;
+            background-color: $sky-blue;
+        }
+    }
+}
+
+.heading form{
+    select{
+        align-self: center;
+        -ms-grid-column-align: right;
+        justify-self: right;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        padding: 0.3rem;
+        background: url(https://cdn1.iconfinder.com/data/icons/flat-and-simple-part-1/128/arrow_down-512.png) no-repeat, #d3d3d3;
+        background-size: 20%;
+        background-position-x: 100%;
+        background-position-y: 50%;
+        font-family: nexa-light;
+        font-size: 0.9rem;
+        color: black;
+        border: 0;
+}
+}
+
+
+.heading{
+@include flex-row();
+padding:1rem 1.5rem;
+padding-bottom: 0rem;
+}
+
+.doctor-card-tab{
+    padding:1rem 1.5rem;
+
+    @include flex-column();
+    justify-content: space-between;
+    
+    padding-top: 0rem;;
+    .doctor-card{
+        @include flex-column();
+        justify-content: space-between;
+        
+        h3{
+            margin: 1rem 0rem;
+            color:$sky-blue;
+            text-align: left;
+
+        }
+        h3::before{
+            display:inline-block;
+            content: '';
+            border-bottom:0.18rem solid $sky-blue;
+            width:2rem;
+            transform: translateY(-0.3rem);
+            margin-right: 0.2rem;
+
+        }
+        ul{@include flex-column();
+            justify-content: flex-start;
+        
+           
+            padding:0rem 1rem;
+            li{
+                text-align: left;
+               
+                i{
+                    color:$sky-blue;
+                    margin-right: 1rem;
+                }
+            }
+        }
+        .appointment-button{
+            @include flex-column();
+            align-items: center;
+            margin: 1rem 0rem;
+           
+       
+    }
+        .doctor-image{
+            height:24rem;
+            cursor: pointer;
+            
+        }
+    
+    }
+}
+
+
+
+.filters{
+    display:none;
+}
+.carouselContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem;
+    padding-top: 2rem;
+}
+.allCarouselItems{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:70%;
+    cursor: pointer;
+    .item{
+        display: flex;
+        flex-direction: column;
+        h5{
+            text-align: center;
+            color: $dark-blue-color;
+        }
+        h5::before{
+            display: none;
+        }
+        h6{
+            margin-bottom: 1rem;
+            span{
+                color:$sky-blue;
+            }
+        }
+    }
+}
+.carouselButton{
+    i{
+        color: $sky-blue;
+        padding: 0.5rem;
+        border-radius: 50%;
+        background-color: $light-grey;
+    }
+}
+.subScheduleContainer{
+    display:flex;
+    flex-direction: column;
+    h3{
+        text-align: center;
+        padding:1rem 0rem;
+    }
+    .hospital{
+        h3::before{
+            display: none;
+            
+        }
+        h3{
+            color: $dark-blue-color;
+        }
+    }
+    #hos{
+        border-bottom: unset;
+        width: 100%;;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        h3{
+            text-align: center;
+            color: $sky-blue;
+        }
+    }
+    div{
+        padding:0rem 1rem;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 0.2rem solid $light-grey;
+        h4{
+            padding:1rem 0rem;
+            font-family: LightFont;
+            margin-right: 0.5rem;
+            margin-bottom: 0rem;
+            cursor: pointer;
+            span{
+                color: green;
+                padding:0.5rem 0.4rem;
+                border:0.1rem solid green;
+            }
+        }
+        i{
+            margin-right: 1rem;
+        }
+        div{
+            
+            flex-direction: row;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            form{
+                width:auto;
+            }
+        }
+        .head{
+            border:unset;
+            padding: unset;
+            
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+}
+
+@media only screen and (min-width:$breakpoint-tablet){
+.heading{
+    padding:3rem 3rem;
+}
+.filters{
+    display:block;
+}
+.carouselContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 1rem 0rem 1rem;
+    margin-top: 0rem;
+}
+.allCarouselItems{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:0 0.5rem;
+    width:100%;
+    .item{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0rem;
+        h6{
+
+            margin-top: 1rem;
+            span{
+                color:$sky-blue;
+
+            }
+        }
+        
+    }
+}
+.carouselButton{
+    i{
+        color: $sky-blue;
+        padding: 0.3rem;
+        border-radius: 50%;
+        background-color: $light-grey;
+        font-size: 0.5rem;
+    }
+}
+
+.heading form select{
+    padding: 0.5rem;
+        font-size: 1rem;
+    }
+.overlay-section{
+    @include flex-column();
+    align-items: flex-start;
+    justify-content: center;
+    background-image:linear-gradient(to bottom,rgba(147, 190, 222,0.8),rgba(147, 190, 222,0.8)), url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Doctors.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding:6rem 2rem;
+    h1{
+        font-family: LightFont;
+        u{
+            font-family: BoldFont;
+        }
+    }
+}
+
+.doctor-page-card{
+    display:none;
+
+}
+.filtersanddoctors{
+    padding-top:0rem;
+    
+@include flex-row();
+align-items: flex-start;
+    .filters{
+        
+        
+        button{
+            width:100%;
+            font-family: BoldFont;
+            background-color:$light-grey;
+            color:$dark-blue-color;
+            text-align: left;
+
+        }
+        
+        h4::after{
+            display:inline-block;
+            content: '';
+            border-bottom:0.3rem solid $light-grey;
+            width:1.2rem;
+        }
+        width:27%;
+        ul{
+            display:none;
+        }
+        
+        .filterform{
+            border-bottom:0.18rem solid $dark-grey;
+            
+            align-items: flex-start;
+            .showmore{
+                flex-direction: column;
+                align-items: unset;
+                max-height:7.5rem;
+                overflow: hidden;
+                label,span{
+                    font-size: 1rem;
+                    color:$dark-blue-color;
+                }
+            }
+            h4{
+                text-align: left;
+                font-family: LightFont;
+                margin: 1.5rem 0rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width:100%;
+    
+                i{
+                    font-size: 1rem;
+                    color:$sky-blue;
+                    margin-right: 0.5rem;
+                    margin-left: auto;
+                }
+            }
+            div{
+                @include flex-row();
+                justify-content: unset;
+                margin-top: 0.5rem;
+                label,input{
+                    cursor: pointer;
+                }
+            }
+            
+            input{
+                width:1rem;
+                height:1rem;
+                transform: scale(1);
+                margin:0rem;
+                margin-right: 1rem;
+                
+            }
+            button{
+                background: transparent;
+                color:$sky-blue;
+                font-weight: bold;
+                padding:0rem;
+                height:4rem;
+            }
+        }
+    }
+    
+    .doctor-card-tab{
+        @include flex-column();
+       padding-right: 0rem;;
+        width:70%;
+        .doctor-card{
+            @include flex-row();
+            height:16rem;
+            
+            h3{
+                color:$sky-blue;
+                text-align: left;
+                margin:0.5rem 0rem;
+                margin-bottom: 0rem;
+    
+            }
+            h3::before{
+                display:inline-block;
+                content: '';
+                border-bottom:0.2rem solid $sky-blue;
+                width:2rem;
+                transform: translateY(-0.4rem);
+                margin-right: 0.2rem;
+    
+            }
+            
+            .doctor-image{
+                height:100%;
+                width:34%;
+               
+            }
+            div{
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+                height:16rem;
+                width:70%;
+               /* ul{
+                    padding:0rem 2rem;
+                    padding-right: 0rem;
+                    height:7rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    li{
+                        width:5rem;
+                        font-size: 1rem;
+                        font-family: LightFont;
+                        font-weight: bold;
+                        color:$dark-blue-color;
+                        @include flex-row(); 
+                        justify-content: unset;
+                        align-items: center;                    
+                        i{
+                            color: $sky-blue;
+                            margin-right: 1rem;
+                        }
+                    }
+                }*/
+                ul{
+                    display:grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr 1fr;
+                    grid-column-gap: 0.5rem;
+                    grid-row-gap: 0.2rem;
+                    height:8rem;
+                    li{
+                        font-size: 1rem;
+                        font-family: LightFont;
+                        font-weight: bold;
+                        color:$dark-blue-color;
+                        @include flex-row(); 
+                        justify-content: unset;
+                        align-items: center;                    
+                        i{
+                            color: $sky-blue;
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+            }
+            .appointment-button{
+                height:auto;
+                padding:0rem;
+                margin:0rem;
+                margin-bottom:0.5rem;
+            }
+        }
+    }
+    
+        .reschedule-card{
+            
+            width:100%;
+            padding:0rem;
+            padding-top:2rem;
+        .reschedule-box .doctor-card{
+            height:12rem;
+        div{
+            width:100%;
+            h3{
+                margin:0.5rem 0rem;
+            }
+            ul{
+                width:100%;
+                padding-left: 0rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                height:unset;
+
+                li{
+                    width:unset;
+                }
+            }
+        }
+        .appointment-button{
+            padding-left: 0rem;
+            button{
+                margin:0rem;
+            }
+        }
+        
+    }
+}
+}
+
+
+
+}
+
+
+@media only screen and (min-width:$breakpoint-desktop){
+    
+.heading{
+    padding:5rem 7rem;
+    form select{
+        padding: 1rem;
+     
+        font-size: 1.3rem;
+    }
+}
+.overlay-section{
+    padding:10rem 7rem;
+}
+.filtersanddoctors{
+    
+    .filters{
+        width:22%;
+        
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+            
+            li{
+                font-size: 1.15rem;
+                font-family: LightFont;
+                font-weight: bold;
+                color:$dark-blue-color;
+                margin-bottom: 0.5rem;
+                border:0.1rem solid $grey;
+                border-radius: 2rem;
+                padding:0.5rem 0.8rem;
+                margin-right: 0.3em;
+             i{
+                margin-left: auto;
+                font-size: 1.2rem;
+                 color:$background-blue-color;
+             }
+            }
+        }
+        h4{
+            span{
+                font-size: 1.8rem;
+                margin-left: 0rem;
+            }
+        }
+        
+            h4{
+               
+                
+                i{
+                    font-size: 1.5rem;
+                    margin-left: auto;
+                }
+            }
+        .filterform{
+            .showmore{
+                max-height: 10.5rem;
+                label,span{
+                    font-family: LightFont;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        
+    }
+    
+    .doctor-card-tab{
+        width:75%;
+        .doctor-card{
+            height:24rem;
+            div{
+                width:70%;
+                height:100%;
+
+                ul{
+                    align-content: space-around;
+                    padding-right: 0rem;
+                    height:10rem;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    
+                    li{
+                        width:45%;
+                        font-size:1.3rem;
+                    }
+                }
+               
+            }
+            .doctor-image{
+                width:25%;
+                overflow: hidden;
+                
+            }
+            .appointment-button{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                margin-left: 1rem;
+                margin-bottom: 1.5rem;
+                width:100%;
+               
+            }
+            h3{
+                margin-top: 1.5rem;
+            }
+            h3::before{
+                
+                width:2rem;
+                transform: translateY(-0.5rem);
+    
+            }
+        }
+    }
+    .reschedule-card{
+            
+        width:60%;
+        padding:0rem;
+        padding-top:3rem;
+        margin:0 auto;
+    .reschedule-box .doctor-card{
+        height:16rem;
+    div{
+        width:100%;
+        h3{
+            margin:0.5rem 0rem;
+        }
+        ul{
+            width:100%;
+            padding-left: 0rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height:auto;
+            li{
+                width: unset;
+            }
+        }
+    }
+    .appointment-button{
+        padding-left: 0rem;
+        button{
+            margin:0rem;
+        }
+    }
+    
+}
+}
+    
+}
+
+.carouselContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:2rem 1rem 1rem 1rem;
+}
+.allCarouselItems{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:70%;
+    .item{
+        display: flex;
+        flex-direction: column;
+        h4{
+            margin-top: 1rem;
+            span{
+                color:$sky-blue;
+                font-size:1.5rem;
+            }
+        }
+        h3{
+            font-size:1.7rem;
+        }
+    }
+}
+.adminpagenation{
+    ul{
+        li{
+            padding:0.2rem 0.7rem;
+        }
+    }
+}
+.carouselButton{
+    i{
+        color: $sky-blue;
+        padding: 0.7rem;
+        border-radius: 50%;
+        background-color: $light-grey;
+        font-size: 1rem;
+    }
+}
+.subScheduleContainer{
+    display:flex;
+    flex-direction: column;
+    h3{
+        padding:1rem 0rem;
+    }
+    div{
+        padding:0rem 1rem;
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 0.2rem solid $light-grey;
+        h4{
+            padding:2rem 0rem;
+            font-family: LightFont;
+            margin-right: 0.5rem;
+            span{
+                color: green;
+                padding:0.5rem 0.4rem;
+                border:0.1rem solid green;
+                font-size: 1.5rem;
+            }
+        }
+        i{
+            margin-right: 1rem;
+        }
+        .head{
+            display: flex;
+            flex-direction: row;
+            border:unset;
+            padding: unset;
+            margin-right: 5rem;
+            width:15rem;
+        }
+    }
+}
+
+}

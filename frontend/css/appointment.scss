@@ -1,0 +1,59 @@
+@import "style.scss";
+#mainLabel{
+    font-family: BoldFont;
+    margin: 1rem 0rem;
+}
+label{
+    font-family: LightFont;
+    font-weight: bold;
+}
+#myFile{
+    border: unset;
+    padding-top: 0.3rem;
+    text-indent: unset;
+}
+
+.login{
+.loginform{
+   padding-top: 0.5rem;
+    .radiodiv{
+        justify-content: unset;
+        input{
+            width:1rem;
+            height: 1rem;
+            margin:0rem;
+            margin-bottom: 0.7rem;
+            margin-right: 1rem;
+        }
+    }
+    textarea{
+        height:4rem;
+        margin-bottom: 1rem;
+    }
+}
+}
+
+@media only screen and (min-width:$breakpoint-tablet) {
+    #mainLabel{
+        font-family: BoldFont;
+        font-size: 1.2rem;        
+    }
+    #myFile{
+        border: unset;
+        padding-top: 0.3rem;
+        text-indent: unset;
+    }#myFile{
+        border: unset;
+        padding-top: 0.7rem;
+        text-indent: unset;
+    }
+    .loginsection{
+    .login{
+    .loginform{
+        padding-top: 1rem;
+    }
+}
+    }
+    
+
+}

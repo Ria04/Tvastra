@@ -1,0 +1,805 @@
+@import "aboutus.scss";
+
+.wrap-overlay{
+    background-image: linear-gradient(rgb(45, 118, 190),rgb(149, 194, 238),rgb(226, 234, 241),rgb(245, 248, 250));
+    height:85rem;
+}
+
+p,li{
+    font-size: 0.9rem;
+    color:$dark-blue-color;
+    font-family: LightFont;
+}
+h1,h2{
+    font-size: 1.7rem;
+}
+.overlay-contact-section{
+    background-image: url('https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/tvastraPlus_heroSection.webp');
+    justify-content: unset;
+    background-size: cover;
+    background-position: unset;
+    height: 25rem;
+    .overlay-hero-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1,p{
+            color:$dark-blue-color;
+            margin-bottom: 1rem;
+
+        }
+        button{
+            background-color:$sky-blue;
+            margin-bottom: 1rem;
+            font-family: BoldFont;
+            width:5rem;
+            height:2rem;
+            border-radius: 0.5rem;
+        }
+    }
+
+}
+.overlay-plus-div{
+    background-color: white;
+    z-index: 9;
+    box-shadow: 0 0 20px -9px rgba(0,0,0,0.6);   
+    border-radius: 0.5rem;
+    padding:2rem 0.5rem;
+    padding-bottom: 0rem;
+    h1,p{
+        color:$dark-blue-color;
+
+    }
+    p{
+        padding-bottom: 2rem;
+        border-bottom: 0.1rem solid $grey;
+    }
+    .plans{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height:25rem;
+        padding:0rem 3rem;
+        padding-bottom: 2rem;
+        h3{
+            padding:1rem 0rem;
+            margin:0rem;
+            border-bottom: 0.1rem solid $grey;
+        }
+        li{
+            text-align: center;
+            margin-top: 1rem;
+        }
+    
+
+        .plancost{
+           
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            li{
+                font-size: 1rem;
+                font-family: BoldFont;
+                margin:0rem;
+            }
+            h1{
+                display: inline;
+            }
+            button{
+                font-family: BoldFont;
+                width:6rem;
+                height:2rem;
+                background-color: $sky-blue;
+                border-radius: 0.5rem;
+                margin-top: 1rem;
+            }
+            #plandetails{
+                color: $sky-blue;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+    
+    .advanceplan{
+        background-image: linear-gradient(rgb(184, 215, 245),rgb(236, 242, 248),rgb(245, 248, 250));
+    }
+}
+
+
+.rating{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 24rem;
+    ul{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height:8rem;
+        margin:1rem 0rem;
+    }
+    h2,p{
+        margin-bottom: 1.5rem;
+    }
+    .starrating{
+        width:4.6rem;
+        margin-left: 5.2rem;
+        span{
+            color: $sky-blue;
+            font-size: 0.7rem;
+        }
+    }
+    h1{
+        font-size: 2.5rem;
+        color:$sky-blue;
+    }
+    #plandetails{
+        color: $sky-blue;
+    }
+   
+}
+
+.rating #plandetails{
+    margin:0.5rem;
+}
+
+.ratingbar{
+    margin:1rem 0rem;
+}
+
+
+
+
+
+.side {
+    width: auto;
+    font-family: BoldFont;
+    color:$sky-blue;
+    padding-right: 0.5rem;
+    padding-left: 0rem;
+  }
+  
+  .middle {
+    width: 13rem;
+  }
+
+ 
+  .bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+    border-radius: 0.8rem;
+
+  }
+
+  .bar{
+    height:0.8rem;   
+    background-color: $sky-blue;
+    border-radius: 0.8rem;
+  }
+  
+  .bar-5 {width: 60%;}
+  .bar-4 {width: 40%;}
+  .bar-3 {width: 30%;}
+  .bar-2 {width: 20%;}
+  .bar-1 {width: 10%;}
+
+
+.row{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:15rem;
+}
+
+
+.details i{
+    font-size: 2rem;
+    color:var(--sky-blue);
+}
+.details div{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.details #plandetails{
+    margin:0rem;
+}
+
+.details{
+    display:flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    height:13rem;
+    padding:1rem 0rem;
+    width:100%;
+    h2{
+        font-size: 1.5rem;
+        font-family: BoldFont;
+        color:$sky-blue;
+        margin:0rem;
+    }
+    p{
+        font-size: 1rem;
+        text-align: center;
+    }
+    i{
+        color:$sky-blue;
+
+    }
+}
+
+
+
+
+
+
+
+#benefits{
+    padding-bottom: 0.5rem;
+    border-bottom: 0.2rem solid $light-blue-background-color;
+    font-size: 1.1rem;
+}
+.benefir-wrap-div{
+    h2{
+        margin-top: 1rem;
+    }
+   
+}
+
+.tickandpara{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    i{
+        padding:0.2rem;
+        background-color: $light-blue-background-color;
+        border-radius: 50%;
+        color:$white;
+        margin-right: 1rem;
+    }
+    p{
+        text-align: left;
+        margin-top: 1rem;
+    }
+}
+.wrap-detail-div{
+    h3{
+        margin-top: 1rem;
+    }
+    .details{
+        height:auto;
+        div{
+            width:49.5%;
+            height:33%;
+           border:0.1rem solid $light-blue-background-color;
+           img{
+               width:80%;
+               height:100%;
+           }
+        }
+        #image1,#image3,#image5{
+            border-left: unset;
+        }
+        #image2,#image4,#image6{
+            border-right: unset;
+        }
+        #image1,#image2{
+            border-top:unset
+        }
+        #image5,#image6{
+            border-bottom:unset
+        }
+    }
+}
+
+.consultationimage{
+    width:100%;
+    height:17rem;
+    margin:1rem 0rem;
+    img{
+    border-radius: 0.7rem;
+    }
+}
+
+
+.tests{
+    padding-top: 0rem;
+}
+
+.tests .details{
+    height:27rem;
+    width:100%;
+    padding:0rem;
+    padding-top: 1rem;
+}
+
+.tests .details div{
+    width:48%;
+    height:13rem;
+    box-shadow: 0 0 10px -1px rgba(0,0,0,0.6);   
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 0.2rem;
+}
+.tests p{
+    font-family: BoldFont;
+    margin-bottom: 1.5rem;
+}
+
+.tests .details p{
+    font-family: LightFont;
+}
+
+.tests .details img{
+    height:4rem;
+    width:4rem;
+}
+
+.lovetvastra .details{
+    height:37rem;
+    padding:0rem;
+}
+.lovetvastra .details .comment{
+    box-shadow: 0 0 10px -1px rgba(0,0,0,0.6);   
+  
+    width:100%;
+    height: 9.5rem;
+    padding:1rem 0.5rem;
+    border-radius: 0.2rem;
+}
+.lovetvastra .details p{
+    font-family: BoldFont;
+    text-align: left;
+    margin:0rem;
+}
+.lovetvastra .details .userimageansdetails{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    justify-content: flex-start;
+}
+.userimageansdetails img{
+    height:4rem;
+    width:4rem;
+    margin:0rem;
+
+    margin-right: 2rem;
+}
+.userimageansdetails h4{
+    padding: 0.3rem 0rem;
+    
+}
+.userimageansdetails button{
+    height:2rem;
+    width:10rem;
+    margin:0rem;
+    color:$sky-blue;
+    background-color: $light-blue-background-color;
+    border-radius: 0.2rem;
+    border:unset;
+    padding:0rem;
+    text-indent: 0rem;
+    font-family: BoldFont;
+}
+.lovetvastra .details .userdetails{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.lovetvastra h2{
+    padding-bottom: 1rem;
+}
+.buttonandheading{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    button{
+        background-color:$sky-blue;
+        margin-bottom: 1rem;
+        font-family: BoldFont;
+        width:5rem;
+        height:2rem;
+        border-radius: 0.5rem;
+    }
+}
+
+.doctorsprofile{
+    padding-bottom: 0rem;
+    h3{
+        margin-bottom: 0rem;
+    }
+    .profilecard{
+        border:unset;
+        .info{
+            padding:0rem;
+        }
+        .doctor-info{
+            padding:1rem 0rem;
+            ul{
+                p{
+                    display: none;
+                }
+                li{
+                    font-size: 1.3rem;
+                    border-bottom: unset;
+                    line-height: 1.5rem;
+                    span{
+                        margin-left: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:$breakpoint-tablet) {
+    p,li{
+        font-size: 1rem;
+       
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+    .wrap-overlay{
+        height:55rem;
+    }
+    .overlay-contact-section{
+        background-size: 120% 45%;
+        height:61.5rem;  
+        align-items: flex-start;
+        padding:2rem 2rem;
+        .overlay-hero-section{
+            align-items: flex-start;
+            h1{
+                padding:1rem 0rem;
+            }
+            p{
+                margin-bottom:4rem;
+            }
+        }
+        .overlay-plus-div{
+            width:97.5%;
+           h1{
+                font-size: 1.8rem;
+                padding:0rem;
+            }
+            .allplans{
+                display: flex;
+                flex-direction: row;
+                height:35rem;
+            }
+            .plans{
+                padding:0rem 1rem;
+                padding-bottom: 1rem;
+                height:90%;
+             
+               
+                
+            }
+        }
+                 
+    }
+    
+.rating{
+    padding-top:10rem;
+    .rating-flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width:70%;
+        .starrating{
+            margin-left: 2rem;
+        }
+    }
+    .details{
+        height:auto;
+        div{
+            height:7rem;
+            justify-content: space-between;
+        }
+
+    }
+}
+.benefits{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0rem;
+    #benefits{
+        padding:1rem 0rem;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        width:25rem;
+        text-align: center;
+    }
+    .benefits-wrap{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .benefir-wrap-div{
+            width:45%;
+            h2{
+                text-align: left;
+            }
+        }
+        .wrap-detail-div{
+            width:50%;
+        }
+    }
+}
+.onlineconsultation{
+    padding-top: 0rem;
+    .onlineconsultation-div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1.5rem;
+        .paradiv{
+            width:48%;
+            height:100%;
+        }
+        .consultationimage{
+            width:48%;
+
+        }
+        h2{
+            font-size: 1.5rem;
+            text-align: left;
+        }
+    }
+    .ocd2{
+        flex-direction: row-reverse;
+    }
+}
+
+.tests{
+    p{
+        text-align: left;
+    }
+    .details{
+        div{
+            width:49%;
+        }
+    }
+}
+.lovetvastra{
+    .buttonandheading{
+        margin-bottom: 1.5rem;
+        justify-content: unset;
+        button{
+            margin-left: 1rem;
+        }
+    }
+    .details{
+        height:24rem;
+        .comment{
+            width:46.5%;
+        }
+    }
+}
+.doctorsprofile{
+    h3{
+        text-align: left;
+    }
+    .info{
+        width:100%;
+    }
+}
+}
+
+@media only screen and (min-width:$breakpoint-desktop) {
+    .wrap-overlay{
+        height:79rem;
+    }
+    p,li{
+        font-size: 1.2rem;
+       
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.9rem;
+    }
+  
+    .overlay-contact-section{
+        background-size:100% 40rem;
+        background-position: inherit;
+        height:70rem;  
+        align-items: flex-start;
+        padding:5rem 7rem;
+        padding-top: 10rem;
+        .overlay-hero-section{
+            align-items: flex-start;
+            h1{
+                padding:1rem 0rem;
+            }
+            p{
+                margin-bottom:4rem;
+            }
+        }
+        .overlay-plus-div{
+            width:92%;
+            padding:4rem 4rem;
+           h1{
+                font-size: 1.9rem;
+                text-align: center;
+            }
+            p{
+                text-align: center;
+                padding-bottom: 3rem;
+
+            }
+            .allplans{
+                display: flex;
+                flex-direction: row;
+                height:40rem;
+            }
+            .plans{
+                padding:0rem 5rem;
+                padding-bottom: 1rem;
+                width:33%;
+                height:100%;
+               
+                li{
+                    margin:1.7rem 0rem;
+                    h1{
+                        font-size: 2.3rem;
+                    }
+                }
+                h3{
+                    padding:2rem 0rem;
+                }
+                button{
+                    width:10rem;
+                    height:3rem;
+                }
+                .plancost{
+                    li{
+                        font-size: 1.2rem;
+                    }
+                }
+                
+            }
+        }
+                 
+    }
+    
+.rating{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:5rem 30rem;
+    padding-bottom: 0rem;
+    p{
+        text-align: center;
+        margin:1.5rem 0rem;
+    }
+    
+}
+
+
+
+.benefits{
+  
+    #benefits{
+        font-size: 1.2rem;
+        margin-bottom:3rem;
+        width:25rem;
+        text-align: center;
+    }
+    .benefits-wrap{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .benefir-wrap-div{
+            width:45%;
+            h2{
+                text-align: left;
+                margin-bottom: 1.5rem;
+            }
+            p{
+                margin:1.5rem 0rem;
+            }
+        }
+        .wrap-detail-div{
+            width:25%;
+            p{
+                text-align: center;
+            }
+        }
+    }
+}
+.onlineconsultation{
+    padding-top: 0rem;
+    .onlineconsultation-div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1.5rem;
+        .paradiv{
+            width:60%;
+            height:100%;
+        }
+        .consultationimage{
+            width:25rem;
+            height: 20rem;
+
+        }
+        h2{
+            font-size: 1.8rem;
+            text-align: left;
+        }
+       
+    }
+    .ocd2{
+        flex-direction: row-reverse;
+    }
+}
+
+.tests{
+    p{
+        text-align: left;
+    }
+    .details{
+        height:auto;
+        div{
+            width:24%;
+            p{
+                margin:0rem;
+            }
+        }
+    }
+}
+.lovetvastra{
+    padding-top: 0rem;
+    .buttonandheading{
+        margin-bottom: 1.5rem;
+        justify-content: unset;
+        button{
+            margin-left: 1rem;
+        }
+        h3{
+            font-size: 1.8rem;
+        }
+    }
+    .details{
+        height:auto;
+        .comment{
+            width:31%;
+            height:13rem;
+            button{
+                width:15rem;
+            }
+            p{
+                margin-bottom: 1.5rem;
+                font-size: 1.2rem;
+            }
+            h4{
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+.doctorsprofile{
+    padding-top: 0rem;
+    h3{
+        font-size: 1.8rem;
+        text-align: left;
+    }
+    .info{
+        width:100%;
+    }
+}
+}

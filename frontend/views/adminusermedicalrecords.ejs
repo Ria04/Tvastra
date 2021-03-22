@@ -1,0 +1,187 @@
+
+
+<html>
+    <head>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="theme.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="myappointments.css">
+    
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    </head>
+    <style>
+        #medical{
+            color:rgb(22, 125, 221);
+            font-family: BoldFont;
+
+        }
+    </style>
+    <body>
+        
+    
+        <%-include('header.ejs') %>
+
+    
+    <section class="appointments">
+        <div class="dashboard" >
+            <h1>Dashboard</h1>
+            <ul>
+               <a href="/admindashboard"> <li>
+                    <i class="fas fa-user-edit"></i>
+                    <span id="admindashboard">Dashboard</span>
+                </li></a>
+                <a href="/adminusers"> <li>
+                    <i class="fas fa-th-list"></i>
+                    <span id="adminusers">Users</span>
+                </li>
+            </a>
+    
+    
+            <a href="/admindoctors"><li>
+                <i class="fas fa-file-alt"></i>
+                <span id="admindoctors">Doctors</span>
+            </li>
+        </a>
+    
+    
+        
+            <a href="/adminhospitals"><li>
+                    <i class="fas fa-file-alt"></i>
+                    <span id="adminhospitals">Hospitals</span>
+                </li>
+            </a>
+                <a href="/settings"><li>
+                    <i class="fas fa-user-cog"></i>
+                    <span id="setting">Setting</span>
+                </li>
+            </a>
+            </ul>
+        </div>         <div class="record-flex">
+        <form class="medical-record-form" method="POST" action="/addmedicalrecord">
+        <div class="medical-record">
+           <h2>Medical Records</h2>
+        </div>
+        <div id="floating-form">
+            <div class="addrecordform">
+                
+                <div class="addpic" style="flex-direction:row;">
+                    <div class="pic-input-label">
+                        <label for="uploadPicInput"><i class="fas fa-plus"></i><span>Add Photo</span></label>
+                        <input type="file" name="uploadPicInput" id="uploadPicInput" accept="image/*" multiple="" onchange="loadFile(event)">
+                    </div>
+                    <div class="pic-input-label" style="background-color: transparent;" >
+                        <img id="pic" src="" alt="" style="display: none;">
+                    </div>
+                </div>
+                <script>
+                    var loadFile = function(event) {
+                        var image = document.getElementById('pic');
+                        image.src = URL.createObjectURL(event.target.files[0]);
+                        image.style.display="flex";
+        
+                    };
+                    </script>
+                <div class="inputfields">
+                    <input type="text" placeholder="Title" title="Please Set a Report Title" name="title" required>
+                    <input type="text"  value="<%= username%>" title="Name of User" name="name" required>
+                    <input type="date" title="Please Date of Report" name="date" required>
+                </div>
+                <div class="type-of-report">
+                    <h4>Type of report</h4>
+                    <ul>
+                        <li>
+                            <input  type="radio" name="typeofreport" id="reportTypeInput"  value="report" >
+                            <label for="reportTypeInput">
+                                <i class="far fa-file-alt"></i>
+                                <span>Report</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input  type="radio" name="typeofreport" id="reportTypeInput2"  value="prescription" >
+                            <label for="reportTypeInput2">
+                                <i class="far fa-file-alt"></i>
+                                <span>Prescription</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="typeofreport" id="reportTypeInput3" value="Invoice" >
+                            <label for="reportTypeInput3">
+                                <i class="far fa-file-alt"></i>
+                                <span>Invoice</span>
+                            </label>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="buttons">
+                    <button id="cancel" onclick="showform()">Cancel</button>
+                    <button id="done" type="submit">Done</button>
+                </div>
+            </div>
+
+        </div>
+        
+    </form>
+   
+    <div class="record">
+        <%for(var i=0;i < data.length; i++){%>
+            <div class="recorddata">
+
+                <div class="date-div">
+                    <h4><%= data[i].date%></h4>
+                </div>
+
+
+                <div class="div-wrap">
+                    <div class="title-div">
+                    <h5><span><%= data[i].name%></span></h5>
+                    <h5><%= data[i].title%></h5>               
+                    <h5><%= data[i].typeofreport%></h5>
+                    </div>
+
+                    <div class="button-div">
+                        <form method="POST" action="/admindelete/<%= data[i]._id %>">
+                            <button type="submit">delete</button>
+                            </form>
+                    </div>
+                </div>
+
+            </div>
+                <%}%>
+            
+    </div>
+   
+    </div>
+    
+    </section>
+    <script>
+
+        function showform() {
+        const form = document.getElementById("floating-form");
+        if (form.style.display == "flex")
+            form.style.display = "none";
+        else form.style.display = "flex";
+    }
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <%-include('footer.ejs') %>
+
+    
+    </body>
+    
+    </html>

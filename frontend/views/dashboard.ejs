@@ -1,0 +1,41 @@
+
+ 
+
+
+    <div class="dashboard" >
+        <h1>Dashboard</h1>
+        <ul>
+           <a href="/myprofile"> <li>
+                <i class="fas fa-user-edit"></i>
+                <span id="profile">Profile</span>
+            </li></a>
+            <a href="/myappointments"> <li>
+                <i class="fas fa-th-list"></i>
+                <span id="appointment">Appointments</span>
+            </li>
+        </a>
+        <%if(isdoctor==true){%>
+
+
+        <a href="/editschedule"><li>
+            <i class="fas fa-file-alt"></i>
+            <span id="editschedule">edit Schedule</span>
+        </li>
+    </a>
+    <%}%>
+
+
+    
+        <a href="/medicalrecords"><li>
+                <i class="fas fa-file-alt"></i>
+                <span id="medical">Medical Reports</span>
+            </li>
+        </a>
+            <a href="/settings"><li>
+                <i class="fas fa-user-cog"></i>
+                <span id="setting">Setting</span>
+            </li>
+        </a>
+        </ul>
+    </div>
+

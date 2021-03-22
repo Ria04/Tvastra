@@ -1,0 +1,415 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="theme.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="contactus.css">
+        <link rel="stylesheet" href="doctorsprofile.css">
+
+        <link rel="stylesheet" href="tvastra-plus.css">
+
+
+    
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    </head>
+   
+    <%-include('header.ejs') %>
+
+    <script>
+        function toggleprofile() {
+          var x = document.getElementById("userprofile");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+        </script>
+
+    <script>
+        function showpara(id,iconid) {
+          var x = document.getElementById(id);
+          y= document.getElementById(iconid);
+          if (x.style.display === "none") {
+            x.style.display = "block";
+            y.className="fas fa-angle-up";
+          } else {
+            x.style.display = "none";
+            y.className="fas fa-angle-down";
+
+          }
+        }
+        </script>
+
+
+    <div class="wrap-overlay">
+        <div class="overlay-contact-section">
+            <div class="overlay-hero-section">
+            <button>plus</button>
+            <h1>Healthcare plans for you and your family</h1>
+            <p>Become a tvastra plus member and save 60% off on your yearly health expenses</p>
+            </div>
+            
+            <div class="overlay-plus-div">
+                <h1>Select a Tvastra Plus healthcare plan</h1>
+                <p>All plus plans are for 4 adults and 2 children</p>
+                <div class="allplans"> 
+                    <div class="plans basicplan">
+                        <ul class="planinfo">
+                            <h3>Basic Plan</h3>
+                            <li>Unlimited consultation with any speciality</li>
+                            <li>20% off on prescription medicines</li>
+                            <li>20% off on tests & checkups</li>
+                        </ul>
+                        <ul class="plancost">
+                            <li><h1>2999</h1>/year</li>
+                            <li id="plandetails">View plan details</li>
+                            <button>Buy plan</button>
+                        </ul>
+                    </div>
+                    <div class="plans advanceplan">
+                        <ul class="planinfo">
+                            <h3>Basic Plan</h3>
+                            <li>Unlimited consultation with any speciality</li>
+                            <li>20% off on prescription medicines</li>
+                            <li>20% off on tests & checkups</li>
+                            <li>20% off on tests & checkups</li>
+
+                        </ul>
+                        <ul class="plancost">
+                            <li><h1>2999</h1>/year</li>
+                            <li id="plandetails">View plan details</li>
+                            <button>Buy plan</button>
+                        </ul>
+                    </div>
+                    <div class="plans">
+                        <ul class="planinfo complan">
+                            <h3>Basic Plan</h3>
+                            <li>Unlimited consultation with any speciality</li>
+                            <li>20% off on prescription medicines</li>
+                            <li>20% off on tests & checkups</li>
+                            <li>20% off on tests & checkups</li>
+                            <li>20% off on tests & checkups</li>
+
+                        </ul>
+                        <ul class="plancost">
+                            <li><h1>2999</h1>/year</li>
+                            <li id="plandetails">View plan details</li>
+                            <button>Buy plan</button>
+                        </ul>
+                    </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <section class="rating">
+        <h2>Trusted by 2 Crore+ users every month</h2>
+        <p>Tvastra is the leading healthcare technology company in India. We began in 2009 and today we help 2 crore customers every month</p>
+        <div class="rating-flex">
+            <div>
+            <h1>4.5</h1>
+            <div class="starrating">
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </div>
+       
+            <p id="plandetails">1000+ Reviews</p>
+            </div>
+            <ul>
+            <li class="row">
+                <span class="side">5 </span>
+                <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-5 bar"></div>
+                </div>
+                </div>     
+            </li>
+            <li class="row">
+                <span class="side">4 </span>
+                <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-4 bar"></div>
+                </div>
+                </div>     
+            </li> <li class="row">
+                <span class="side">3</span>
+                <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-3 bar"></div>
+                </div>
+                </div>     
+            </li> <li class="row">
+                <span class="side">2</span>
+                <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-2 bar"></div>
+                </div>
+                </div>     
+            </li> <li class="row">
+                <span class="side">1</span>
+                <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-1 bar"></div>
+                </div>
+                </div>     
+            </li>
+            </ul>
+    </div>
+    
+    
+    
+        <div class="details">
+            <div>
+                <i class="fas fa-users"></i>
+                <h2>2 Crore+</h2>
+                <p id="plandetails">Monthly Customers</p>
+            </div>
+            <div>
+                <i class="fas fa-users"></i>
+                <h2>2 Crore+</h2>
+                <p id="plandetails">Monthly Customers</p>
+            </div><div>
+                <i class="fas fa-users"></i>
+                <h2>2 Crore+</h2>
+                <p id="plandetails">Monthly Customers</p>
+            </div><div>
+                <i class="fas fa-users"></i>
+                <h2>2 Crore+</h2>
+                <p id="plandetails">Monthly Customers</p>
+            </div>
+    
+        </div>
+    
+    </section>
+
+
+    <section class="benefits">
+        <p id="benefits">Benefits of Plus membership</p>
+        
+        <div class="benefits-wrap">
+            
+            <div class="benefir-wrap-div">
+            <h2>Zero fees for in-clinic consultation</h2>
+            <div class="tickandpara"><i class="fa fa-check"></i><p>Consult with 30000+ specialist doctor at top clinics and hospitals in PLUS netword at 0rs consultation fees</p></div>
+            <div class="tickandpara"><i class="fa fa-check"></i><p>Consult with 30000+ specialist doctor at top clinics and hospitals in PLUS netword at 0rs consultation fees</p></div>
+            <div class="tickandpara"><i class="fa fa-check"></i><p>Consult with 30000+ specialist doctor at top clinics and hospitals in PLUS netword at 0rs consultation fees</p></div>
+            </div>
+            <div class="wrap-detail-div">
+            <h3>Top Hospitals Onboarded</h3>
+            <div class="details">
+                <div id="image1">
+                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/sakra.svg">
+                </div>
+                <div id="image2">
+                    <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/sakra.svg">
+            
+                </div><div id="image3">
+                    <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/sakra.svg">
+            
+                </div>
+                <div id="image4">
+                    <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/sakra.svg">
+            
+                </div>
+                <div id="image5">
+                    <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/sakra.svg">
+            
+                </div><div id="image6">
+                    <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/sakra.svg">
+            
+                </div>
+            
+            
+            </div>
+            <p>+ More Hospitals</p>
+            </div>
+        
+        </div>
+        
+        </section>
+
+
+        <section class="onlineconsultation">
+            <div class="onlineconsultation-div ocd2">
+                <div class="paradiv">
+            <h2>Unlimited online consultations with top doctors</h2>
+            <div class="tickandpara"><i class="fa fa-check"></i><p>Consult with 30000+ specialist doctor at top clinics and hospitals in PLUS netword at 0rs consultation fees</p></div>
+            <div class="tickandpara"><i class="fa fa-check"></i><p>Consult with 30000+ specialist doctor at top clinics and hospitals in PLUS netword at 0rs consultation fees</p></div>
+        
+        
+        </div>
+            <div class="consultationimage"><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/checkup.jpg"></div>
+            </div>
+            <div class="onlineconsultation-div">
+                <div class="paradiv">
+                    <h2>20% off on prescription medicine, lab test and checkups</h2>
+                    <div class="tickandpara"><i class="fa fa-check"></i><p>Consult with 30000+ specialist doctor at top clinics and hospitals in PLUS netword at 0rs consultation fees</p></div>
+                <div class="tickandpara"><i class="fa fa-check"></i><p>Consult with 30000+ specialist doctor at top clinics and hospitals in PLUS netword at 0rs consultation fees</p></div>
+        </div>
+            <div class="consultationimage"><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/checkup.jpg"></div>
+            </div>
+            <div class="onlineconsultation-div ocd2">
+                <div class="paradiv">
+                    <h2>2 Free Health checkups</h2>
+           
+                    <div class="tickandpara"><i class="fa fa-check"></i><p>Consult with 30000+ specialist doctor at top clinics and hospitals in PLUS netword at 0rs consultation fees</p></div>
+                    <div class="tickandpara"><i class="fa fa-check"></i><p>Consult with 30000+ specialist doctor at top clinics and hospitals in PLUS netword at 0rs consultation fees</p></div>
+        </div>
+            <div class="consultationimage"><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/checkup.jpg"></div>
+            </div>
+           
+        
+        </section>
+        
+        <section class="tests">
+            <p>60 Tests Included</p>
+        
+            <div class="details">
+                <div id="image1">
+                    <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/Liver.svg">
+                    <h4>Liver Profile</h4>
+                    <p>3 Tests</p>
+                </div>
+                <div id="image2">
+                    <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/Liver.svg">
+                    <h4>Liver Profile</h4>
+                    <p>3 Tests</p>
+                </div><div id="image3">
+                    <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/Liver.svg">
+                    <h4>Liver Profile</h4>
+                    <p>3 Tests</p>
+                </div>
+                <div id="image4">
+                    <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/Liver.svg">
+                    <h4>Liver Profile</h4>
+                    <p>3 Tests</p>
+                </div>
+              
+            </div>
+           
+        </section >
+
+        <section class="lovetvastra">
+            <div class="buttonandheading">
+            <h3>Why We love Tvastra</h3>
+            <button>plus</button>
+            </div>
+            <div class="details">
+                <div class="comment" >
+                   <p>Wonderful experience with tvastra plus it helped me in saving lot of amount as it provides free consultations with best doctors</p>
+                   <div class="userimageansdetails">
+                    <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/General_1.svg">
+                    <div class="userdetails">
+                        <h4>Rishab Tiware</h4>
+                        <button>Advance plan user</button>
+                    </div>
+                   </div>
+                </div>   
+                <div class="comment" >
+                    <p>Wonderful experience with tvastra plus it helped me in saving lot of amount as it provides free consultations with best doctors</p>
+                    <div class="userimageansdetails">
+                     <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/General_1.svg">
+                     <div class="userdetails">
+                         <h4>Rishab Tiware</h4>
+                         <button>Advance plan user</button>
+                     </div>
+                    </div>
+                 </div>   <div class="comment" >
+                    <p>Wonderful experience with tvastra plus it helped me in saving lot of amount as it provides free consultations with best doctors</p>
+                    <div class="userimageansdetails">
+                     <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/General_1.svg">
+                     <div class="userdetails">
+                         <h4>Rishab Tiware</h4>
+                         <button>Advance plan user</button>
+                     </div>
+                    </div>
+                 </div>   
+            </div>
+            
+        </section>
+
+
+
+        <section class="doctorsprofile">
+            <h3>Frequently asked questions</h3>
+            <div class="profilecard">
+                <div class="info">
+                    <div class="doctor-info">
+                        <ul>
+                            <li onclick="showpara('para1','1')">How do i make payments?<span><i id="1" class="fas fa-angle-up" ></i></span></li>
+                            <p id="para1" style="display: block;">Loren ipsum dolor sit amet. consectetur adipisicing elit. illo rationeasperiores voluptates avel eos laboriosam,, distinctio sed dolorem, saepe repellendus incidunt. veritatis modi hurun unde officiis, placeatblandtiits</p>
+                            
+                            <li onclick="showpara('para2','2')">There is not enough money in my Portea Wallet for making a payment. What do i do?<span><i id="2" class="fas fa-angle-down" ></i></span></li>
+                            <p id="para2">Loren ipsum dolor sit amet. consectetur adipisicing elit. illo rationeasperiores voluptates avel eos laboriosam,, distinctio sed dolorem, saepe repellendus incidunt. veritatis modi hurun unde officiis, placeatblandtiits</p>
+                            
+                            <li onclick="showpara('para3','3')">Can i transfer balance in Portea wallet balance to another user?<span><i id="3" class="fas fa-angle-down" ></i></span></li>
+                            <p id="para3">Loren ipsum dolor sit amet. consectetur adipisicing elit. illo rationeasperiores voluptates avel eos laboriosam,, distinctio sed dolorem, saepe repellendus incidunt. veritatis modi hurun unde officiis, placeatblandtiits</p>
+
+                            <li onclick="showpara('para4','4')">Is Portea money same as Portea Wallet?<span><i id="4" class="fas fa-angle-down" ></i></span></li>
+                            <p id="para4">Loren ipsum dolor sit amet. consectetur adipisicing elit. illo rationeasperiores voluptates avel eos laboriosam,, distinctio sed dolorem, saepe repellendus incidunt. veritatis modi hurun unde officiis, placeatblandtiits</p>
+
+                            <li onclick="showpara('para5','6')">Refund<span><i id="5" class="fas fa-angle-down" ></i></span></li>
+                            <p id="para5">Loren ipsum dolor sit amet. consectetur adipisicing elit. illo rationeasperiores voluptates avel eos laboriosam,, distinctio sed dolorem, saepe repellendus incidunt. veritatis modi hurun unde officiis, placeatblandtiits</p>
+
+                            <li onclick="showpara('para7','7')">What is Family ID?<span><i id="6" class="fas fa-angle-down" ></i></span></li>
+                            <p id="para6">Loren ipsum dolor sit amet. consectetur adipisicing elit. illo rationeasperiores voluptates avel eos laboriosam,, distinctio sed dolorem, saepe repellendus incidunt. veritatis modi hurun unde officiis, placeatblandtiits</p>
+
+                            <li onclick="showpara('para8','8')">Who can be added as Family?<span><i id="7" class="fas fa-angle-down" ></i></span></li>
+                            <p id="para7">Loren ipsum dolor sit amet. consectetur adipisicing elit. illo rationeasperiores voluptates avel eos laboriosam,, distinctio sed dolorem, saepe repellendus incidunt. veritatis modi hurun unde officiis, placeatblandtiits</p>
+
+            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            </section>
+        
+
+
+
+
+
+
+
+
+        
+        
+        
+        
+        
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <%-include('footer.ejs') %>
+
+
+
+</body>
+</html>

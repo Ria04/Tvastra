@@ -1,0 +1,276 @@
+$background-blue-color:rgb(147, 190, 222);
+$white-color: rgb(255, 255, 255);
+$dark-blue-color:rgb(34, 40, 68);
+$light-blue-background-color: rgb(147, 190, 222);
+$grey:rgb(161, 159, 159);
+$off-white:rgb(244, 244, 248);
+$sky-blue:rgb(22, 125, 221);
+$light-grey:rgb(219, 216, 216);
+$blue-grey:rgb(240, 240, 245);
+$light-blue: rgb(209, 229, 245);
+$white:rgb(255,255,255);
+$dark-grey:rgb(102, 101, 101);
+
+
+@font-face{
+    font-family: "BoldFont";
+    src: url('Nexa-Bold-1.otf');
+}
+@font-face{
+    font-family: "LightFont";
+    src: url('Nexa-Light.otf');
+}
+
+$breakpoint-tablet:768px;
+$breakpoint-desktop:1024px;
+
+/* fonts */
+@font-face{
+    font-family: BoldFont;
+    src:url(../fonts/Nexa-Bold.otf)format("opentype");
+}
+@font-face{
+    font-family: LightFont;
+    src:url(../fonts/Nexa-Light.otf)format("opentype");
+}
+
+/* global tags */
+*{
+    box-sizing: border-box;
+}
+img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+section{
+    padding:1.5rem 1rem;
+    text-align: center;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: BoldFont;
+    color:$dark-blue-color;
+}
+h1,h2{
+    font-size:2rem;
+    line-height: 2.4rem;
+    margin-bottom: 0.625rem;
+}
+h3{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 0.625rem;
+}
+h4{
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-bottom: 0.625rem;
+}
+h5{
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin-bottom: 0.3125rem;
+}
+h6{
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin-bottom: 0.3125rem;
+}
+p{
+    font-family: LightFont;
+    font-size: 1.15rem;
+    line-height: 1.4rem;
+    color: $dark-blue-color;
+    margin-bottom: 0.625rem;
+}
+input,select{
+    font-family: LightFont;
+    padding: 0.8rem 0.75rem;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    width: 100%;
+    color: $dark-blue-color;
+    border:none;
+    outline: none;
+    margin-bottom: 0.625rem ;
+}
+
+textarea{
+    font-family: LightFont;
+    padding: 0.8rem 0.75rem;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    width: 100%;
+    color: $grey;
+    margin-bottom: 0.625rem ;
+    border:0.125rem solid $grey;
+    outline: none;
+    
+}
+input::placeholder{
+    font-size: 0.9rem;
+    color:$grey;
+}
+input:focus,select:focus{
+    outline: none;
+}
+textarea::placeholder{
+    font-size: 0.9rem;
+    color:$grey;
+    font-family: BoldFont;
+}
+button{
+    font-family: LightFont;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    outline: none;
+    cursor: pointer;
+}
+.dark-blue-button{
+    background: $dark-blue-color;
+    color:$white;
+    border:0.125rem solid $dark-blue-color;
+
+   
+}
+.sky-blue-button{
+    background: $sky-blue;
+    color:$white;
+    border:0.125rem solid $sky-blue;
+
+
+}
+.white-button{
+    background: $white;
+    color:$dark-blue-color;
+    border:0.125rem solid $white;
+}
+.btn-search{
+ 
+    background: var(--white);
+    border: 0.125rem solid var(--light-grey);
+    color:var(--grey);
+    
+}
+
+
+span{
+    font-family: BoldFont;
+    color:$grey;
+    font-size: 1.2rem;
+    margin-left: 0.3125rem;
+}
+ul li{
+    font-size: 1.1rem;
+    font-family: LightFont;
+    color:$dark-blue-color;
+    line-height: 1.5rem;
+    list-style-type: none;
+}
+label{
+    font-family: LightFont;
+    font-size: 1rem;
+}
+a{
+    text-decoration: none;
+}
+
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+    section{
+        padding: 2rem;
+    }
+    h1,h2{
+        font-size:2rem;
+        line-height: 2.4rem;
+    }
+    h3{
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+    h4{
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+    h5{
+        font-size: 1.2rem;
+        line-height: 1.6rem;;
+    }
+    h6{
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+    p{
+        font-size: 1.1rem;
+        line-height: 1.4rem; 
+    }
+    span{
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width:1024px){
+    section{
+        padding: 5rem 7rem;
+        text-align: left;
+    }
+    h1,h2{
+        font-size:2.8rem;
+        line-height: 2.8rem;
+        margin-bottom: 1rem;
+    }
+    h3{
+        font-size: 2rem;
+        line-height: 2.4rem;
+        margin-bottom: 1rem;
+    }
+    h4{
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        margin-bottom: 1rem;
+    }
+    h5{
+        font-size: 1.6rem;
+        line-height: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    h6{
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+    p{
+        font-family: BoldFont;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    span{
+        font-size: 1.6rem;
+    }
+    button{
+        font-family: BoldFont;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 1rem 1.7rem;
+    }
+    input{
+        font-size: 1.2rem;
+        padding:1.5rem 2rem;
+    }
+    input::placeholder{
+        font-size: 1.2rem;
+ 
+    }
+    ul li{
+        font-size: 1.2rem;
+       
+        line-height: 1.8rem;
+    }
+    
+}

@@ -1,0 +1,358 @@
+@import "theme.scss";
+@import "style.scss";
+
+#file{
+    padding-top: 0.3rem;
+}
+.alllabels{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    div{
+        height:3rem;
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding:0.7rem;
+        box-shadow: 1rem 0.1rem 1rem 0 grey;
+        margin:0.5rem 0rem; 
+        border-radius: 0.5rem;
+        width:100%;
+
+        i{
+            font-size:2.5rem;
+            width:3rem;
+            color: $sky-blue;
+
+        }
+        .count{
+            margin:0rem; 
+            margin-left: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            box-shadow: none;
+            h4{
+                text-align: left;
+                color: $sky-blue;
+            }
+        }
+    }
+
+}
+.survey{
+   
+    div{
+        height:15rem;
+
+    }
+}
+.userdata{
+   width:100%;
+    .adminpagenation{
+        margin-top: 1rem;
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            li{
+                width:1rem;
+                padding:0.5rem;
+                border:0.1rem solid $sky-blue;
+                text-align: center;
+                color: $sky-blue;
+                font-family: BoldFont;
+                margin:0 0.5rem;
+            }
+            .active, li:hover{
+                color: $white;
+                background-color: $sky-blue;
+            }
+        }
+    }
+    .tabel{
+        width:100%;
+        tr{
+            height:3.5rem;
+         h5{
+             margin-top: 1rem;
+         }
+         td{
+             max-width: 4.45rem;
+             overflow: scroll;
+             padding:0rem 0.3rem;
+             border: 0.05rem solid gray;
+
+         }
+        }
+        thead{
+            height:2rem;
+            background-color: #021433;
+            h5{
+                color: white;
+            } 
+        }
+        tbody{
+            tr:nth-child(even) {
+                background-color: #cccccc;
+            }
+        }
+
+    }
+   
+}
+.adminhospitalform{
+    h3{
+        color: $sky-blue;
+        text-align: left;
+        padding:0.5rem 0rem;
+    }
+    input{
+        border:0.1rem solid #DDD;
+        font-size: 1.5rem;
+        
+    }
+    button{
+        margin-top: 1rem;
+    }
+    textarea{
+        border:0.1rem solid #DDD;
+        height:10rem;
+    }
+    h2{
+        text-align: center;
+        color: $sky-blue;
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+
+
+.appointments .record-flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+
+.usercard{
+    height:30rem;
+    margin-top: 1rem;
+    border: 0.08rem solid #cccccc;
+    width:100%;
+
+    .userimage{
+        height:20rem;
+        position: relative;
+        .bar{
+            position: absolute;
+            top:0.5rem;
+            left:0.5rem;
+            padding:0.5rem;
+            border-radius: 50%;
+            background-color: $dark-blue-color;
+            i{
+                color:$white;
+                cursor: pointer;
+            }
+        }
+        .menu{
+            display: none;
+            width:10rem;
+            padding:0.5rem;
+            background-color: rgba(255, 255, 255, 0.7);
+            position: absolute;
+            top:3rem;
+            left:1rem;
+           
+            ul{
+                li{
+                    font-family: BoldFont;
+                    padding:0.2rem;
+                    color: $sky-blue;
+                }
+            }
+        }
+    }
+    .userinfo{
+        ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height:100%;
+        li{
+            h3{
+                color:$sky-blue;
+            }
+            i{
+                color: $sky-blue;
+                width:1rem;
+                margin: 0rem 1rem;
+            }
+            span{
+                font-family: LightFont;
+            }
+            h3::before{
+                display: inline-block;
+                content: '';
+                border-top: 0.2rem solid $sky-blue;
+                transform: translateY(-0.3rem);
+
+                width:1.5rem;
+            }
+        }
+        }
+        height:10rem;
+    }
+
+}
+}
+@media only screen and (min-width:$breakpoint-tablet) {
+    #file{
+        padding-top: 0.4rem;
+    }
+    .alllabels{
+        
+        div{
+            width:45%;
+
+            i{
+                font-size:2.5rem;
+                margin-right: 1rem;
+            }
+           
+        }
+    
+    } 
+    .survey{
+   
+        div{
+            height:20rem;
+    
+        }
+    } 
+    .userdata{
+        
+        .tabel{
+            width:100%;
+            tr{
+                height:3.5rem;
+             h5{
+                 margin-top: 0.8rem;
+             }
+
+            
+            }
+            thead{
+                height:2rem;
+                background-color: #021433;
+                h5{
+                    color: white;
+                } 
+            }
+            tbody{
+                tr:nth-child(even) {
+                    background-color: #cccccc;
+                }
+            }
+    
+        }
+       
+    }
+    .appointments .record-flex{
+        .usercard{
+            width:48%;
+        }
+    }
+   
+    
+      
+    
+
+}
+
+@media only screen and (min-width:$breakpoint-desktop) {
+    #file{
+        padding-top:1rem;
+    }
+    .alllabels{
+       width:100%;
+        div{
+            width:21%;
+            i{
+                font-size:2.5rem;
+                margin-right: 0.5rem;
+            }
+            .count{
+              margin-left: 0.5rem;
+              padding:0.5rem 0rem;
+            }
+        }
+    
+    }  
+    .survey{
+   
+        div{
+            height:30rem;
+    
+        }
+    }
+    .userdata{
+        .tabel{
+            width:100%;
+            tr{
+                height:3.5rem;
+             h5{
+                 margin-top: 0.8rem;
+             }
+
+             td{
+                 overflow:unset;
+             }
+            }
+            thead{
+                height:2rem;
+                background-color: #021433;
+                h5{
+                    color: white;
+                } 
+            }
+            tbody{
+                tr:nth-child(even) {
+                    background-color: #cccccc;
+                }
+            }
+    
+        }
+       
+    }
+    .appointments .record-flex{
+        .usercard{
+            width:32%;
+            height:40rem;
+            .userimage{
+                height: 25rem;
+                .menu{
+                    ul{
+                        li{
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+            .userinfo{
+                height:15rem;
+                ul{
+                    li{
+                        font-size: 1.2rem;
+                    }
+                }
+               
+            }
+        }
+    }
+}

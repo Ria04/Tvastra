@@ -1,0 +1,112 @@
+
+
+<html>
+    <head>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="theme.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="isdoctor.css">
+
+        <link rel="stylesheet" href="myappointments.css">
+        <link rel="stylesheet" href="admin.css">
+
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+    
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            #admindoctors{
+                color:rgb(22, 125, 221);
+                font-family: BoldFont;
+            }
+           
+        </style>
+         
+    </head>
+    <body>
+        
+    
+        <%-include('header.ejs') %>
+    
+    <section class="appointments">
+        <div class="dashboard" >
+            <h1>Dashboard</h1>
+            <ul>
+               <a href="/admindashboard"> <li>
+                    <i class="fas fa-user-edit"></i>
+                    <span id="admindashboard">Dashboard</span>
+                </li></a>
+                <a href="/adminusers"> <li>
+                    <i class="fas fa-th-list"></i>
+                    <span id="adminusers">Users</span>
+                </li>
+            </a>
+    
+    
+            <a href="/admindoctors"><li>
+                <i class="fas fa-file-alt"></i>
+                <span id="admindoctors">Doctors</span>
+            </li>
+        </a>
+    
+    
+        
+            <a href="/adminhospitals"><li>
+                    <i class="fas fa-file-alt"></i>
+                    <span id="adminhospitals">Hospitals</span>
+                </li>
+            </a>
+                <a href="/settings"><li>
+                    <i class="fas fa-user-cog"></i>
+                    <span id="setting">Setting</span>
+                </li>
+            </a>
+            </ul>
+        </div>
+        <div class="record-flex usercarddata">
+            <%for(var i=0;i<userdata.length;i++){%>
+           <div class="usercard">
+               <div class="userimage">
+                <img src="<%= userdata[i].img%>" alt="">
+                    <div onclick="window.location.href='/adminhospitalform/<%= userdata[i].name%>'" class="bar">
+                        <i class="fas fa-id-card"></i>                    </div>
+               </div>
+               <div class="userinfo">
+                <ul>
+                    <li><h3><%= userdata[i].name%></h3></li>
+                    <li><i class="fa fa-stethoscope"></i><span><%= userdata[i].treatment%></span></li>
+                    <li><i class="fa fa-bed"></i><span><%= userdata[i].beds%></span></li>
+                    <li><i class="fas fa-map-marker-alt"></i><span><%= userdata[i].location%></span></li>   
+                    <li><i class="fa fa-stethoscope"></i><span><%= userdata[i].specialization%></span></li>                   
+                </ul>
+               </div>
+           </div>
+           <%}%>
+        </div>
+     
+
+    
+    </section>
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <%-include('footer.ejs') %>
+    
+    </body>
+    
+    </html>

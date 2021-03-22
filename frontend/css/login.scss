@@ -1,0 +1,246 @@
+@import "style.scss";
+body{
+    background-color: $background-blue-color;
+    height:99vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+nav{
+    background-color: $white;
+}
+a{
+    text-decoration: none;
+}
+
+#loginmsg{
+    display: flex;
+    border-left: 0.3rem solid red;
+    #tick{
+        background-color: red;
+    }
+    ul{
+        li{
+            color: red;
+        }
+    }
+
+}
+#passworddiv{
+    width:100%;
+    border:0.1rem solid $light-grey;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height:auto;
+    margin-top:0rem;
+    margin-bottom:1rem;
+
+    
+    i{
+        color:$sky-blue;
+        font-size:1rem;
+        margin-right: 1rem;
+    }
+    input{
+        border: unset;
+        margin:0rem;
+       
+    }
+}
+
+.loginsection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login{
+    width:20.5rem;
+    background-color:$white;
+    @include flex-column();
+    justify-content: unset;
+    h3{
+        padding:1.5rem 0rem;
+        border-bottom:0.18rem solid $light-grey;
+        color: $sky-blue;
+
+    }
+    .loginform{
+        width:auto;
+        padding:1.5rem 1rem;
+        div{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            margin-top: 0.5rem;
+            h5{
+                font-size:0.8rem ;
+                color:$sky-blue;
+                font-family: BoldFont;
+            }
+            button{
+               height:auto;
+                border: unset;
+                background-color: unset;
+                padding: 0rem;
+            }
+        }
+        input{
+            border:0.1rem solid $light-grey;
+            height:3.5rem;
+            font-family: BoldFont;
+            text-indent: 1rem;
+            margin-bottom: 1rem;
+        }
+        button{
+            height:3.5rem;
+            font-family: BoldFont;
+            i{
+                float: right;
+            }
+        }
+    }
+    h4{
+        font-size: 0.9rem;
+        color: $dark-grey;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+        span{
+            color: $sky-blue;
+        }
+    }
+}
+footer{
+    section{
+    background-color: $background-blue-color;
+   
+    p{
+        color:black;
+        font-family: BoldFont;
+        font-size: 1rem;
+    }
+    }
+}
+   
+
+
+
+  @media only screen and (min-width:$breakpoint-tablet) {
+
+    #passworddiv{
+        
+        
+        i{
+            color:$sky-blue;
+            font-size:1.2rem;
+            margin-right: 1rem;
+        }
+        
+    }
+
+.loginsection{
+    .login{
+        width:36rem;
+        h3{
+            padding:2rem 0rem;
+            
+    
+        }
+        .loginform{
+            padding:2rem;
+            div{
+               
+                margin-bottom: 1.8rem;
+                margin-top: 0.8rem;
+                h5{
+                    font-size:1rem ;
+                   
+                }
+                button{
+                    height:auto;
+                    outline: none;
+                 }
+            }
+            button{
+                height:4rem;
+            }
+            input{
+                height:4rem;
+            }
+        }
+        
+    }
+}
+footer{
+    section{
+        p{
+            font-size: 1.2rem;
+        }
+    }
+}
+
+  }
+
+  @media only screen and (min-width:$breakpoint-desktop){
+
+    #passworddiv{
+        
+        
+        i{
+            color:$sky-blue;
+            font-size:1.4rem;
+            margin-right: 1rem;
+        }
+        
+    }
+
+#loginmsg{
+    display: flex;
+    top:9rem;
+    right:1rem;
+    border-left: 0.3rem solid red;
+    #tick{
+        background-color: red;
+    }
+    ul{
+        li{
+            color: red;
+        }
+    }
+
+}
+
+      .loginsection{
+          .login{
+              width:40rem;
+              h3{
+                  text-align: center;
+                  padding:2.5rem 0rem;
+              }
+              .loginform{
+                div{
+                   
+                    margin-bottom: 2rem;
+                    margin-top: 1rem;
+                    h5{
+                        font-size:1.1rem ;
+                     
+                    }
+                }
+              }
+          }
+      }
+      footer{
+        section{
+            padding:0rem;
+            padding-bottom: 2rem;
+
+            p{
+                text-align:center;
+            }
+        }
+    }
+
+
+  }

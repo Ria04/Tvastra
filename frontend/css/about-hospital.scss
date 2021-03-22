@@ -1,0 +1,71 @@
+
+@import "style.scss";
+
+
+.doctorimage{
+    height:18.5rem;
+    img{
+        height:15rem;
+    }
+}
+.about-hospital-info ul{
+    padding:0.5rem;
+
+}
+.about-hospital-info i{
+    color:$sky-blue;
+    margin-right:1rem;
+
+}
+.about-hospital-info li{
+    color:$dark-blue-color;
+    font-family:LightFont;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top:1rem;
+    line-height: 1.4rem;
+}
+
+.doctor-info p{
+    text-align: left;
+    border:unset;
+}
+.doctor-info ul li,p{
+    border:unset;
+}
+
+@media only screen and (min-width:$breakpoint-tablet){
+    .about-hospital-info ul{
+        padding:0rem 1rem;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width:24rem;
+    
+    }
+   
+    #loc{
+        width:15rem;
+    }
+   #bed{
+       width:7rem;
+   }
+  
+}
+
+@media only screen and (min-width:$breakpoint-desktop){
+    .about-hospital-info ul{
+        padding:0rem 2rem;
+        width:40rem;
+        margin-top:1rem;
+    }
+   
+    #loc{
+        width:auto;
+    }
+   #bed{
+       width:auto;
+   }
+
+}

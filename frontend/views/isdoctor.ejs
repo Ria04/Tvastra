@@ -1,0 +1,120 @@
+<html>
+
+<head>
+  
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="login.css">
+<link rel="stylesheet" href="signup.css">
+<link rel="stylesheet" href="appointment.css">
+<link rel="stylesheet" href="isdoctor.css">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+
+<body>
+  <%-include('header.ejs') %>
+  <% if (msg.length>0) {%>
+    <div id="loginmsg">
+    <i id="tick"class="fa fa-close"></i>
+    <ul>
+        <li><span><%= Failure%></span></li>
+        <li><%= msg1%></li>
+    </ul>
+    <i class="fa fa-close"></i>
+    
+    </div>
+
+    <%}%>
+    
+  <section class="loginsection">
+    <div class="login">
+      <h3>Welcome</h3>
+      <p>Complete your profile to access the site.</p>
+
+      <form class="loginform" method="POST" enctype="multipart/form-data" action="/get-doctor-details">
+
+        <label id="mainlabel" >Describe yourself</label>
+        <textarea name="description" placeholder="How would you describe yourself"></textarea>
+
+        <label id="mainlabel" >Upload your profile picture</label>
+        <input type="file" name="profileimage"  id="upload-pic" accept="image/*">
+
+        <label id="mainlabel" >Your Hospital</label>
+        <input type="text" name='yourhospital'  />
+    
+
+        <label id="mainlabel" >Achievements</label>
+        <input type="text" name='achievements'  />
+
+        <label id="mainlabel" >Years of experience</label>
+        <input type="number" name="exp" placeholder="your experience" />
+       
+        <label id="mainlabel" >Qualifications</label>
+        <input type="text" name='qualifications'  />
+
+        <label id="mainlabel" >Awards</label>
+        <input type="text" name='awards'  />
+
+        <label id="mainlabel" >Specialization</label>
+        <input type="text" name='specialization'  />
+
+
+        <label id="mainlabel" >Your average fees</label>
+        <input type="number" name="fees" placeholder="your avg fees" />
+
+       
+
+        <button type="submit">S U B M I T<i class="fa fa-arrow-right"></i></button>
+      </form>
+    </div>
+</section>
+
+
+
+
+
+  <script>
+    var input = document.querySelector('input[name=yourhospital]');
+    var input2 = document.querySelector('input[name=achievements]');
+    var input3 = document.querySelector('input[name=qualifications]');
+    var input4 = document.querySelector('input[name=awards]');
+    var input5 = document.querySelector('input[name=specialization]');
+
+
+    var tagify = new Tagify(input, {
+  originalInputValueFormat: valuesArr => valuesArr.map(item => item.value).join(',')
+});
+    var tagify2= new Tagify(input2, {
+  originalInputValueFormat: valuesArr2 => valuesArr2.map(item => item.value).join(',')
+});
+    var tagify3= new Tagify(input3, {
+  originalInputValueFormat: valuesArr3 => valuesArr3.map(item => item.value).join(',')
+});
+    var tagify4= new Tagify(input4, {
+  originalInputValueFormat: valuesArr4 => valuesArr4.map(item => item.value).join(',')
+});
+    var tagify5= new Tagify(input5, {
+  originalInputValueFormat: valuesArr5 => valuesArr5.map(item => item.value).join(',')
+});
+
+  </script>
+
+<footer>
+    <section>
+   <p>All Rights Reserved. <i class="fa fa-copyright"></i> tvastra 2018</p>
+  </section>
+  </footer>
+</body>
+
+</html>
+
+

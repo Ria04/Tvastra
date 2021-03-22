@@ -1,0 +1,188 @@
+
+
+<html>
+    <head>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="theme.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="myappointments.css">
+    
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/clocklet@0.2.6/css/clocklet.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/clocklet@0.2.6"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    </head>
+    <style>
+        #editschedule{
+            color:rgb(22, 125, 221);
+            font-family: BoldFont;
+
+        }
+    </style>
+    <body>
+        
+    
+        <%-include('header.ejs') %>
+        <% if (msg1.length>0) {%>
+            <div id="loginmsg">
+            <i id="tick"class="fa fa-close"></i>
+            <ul>
+                <li><span><%= msg1[0]%></span></li>
+                <li><%= msg1[1]%></li>
+            </ul>
+            <i class="fa fa-close"></i>
+            
+            </div>
+        
+            <%}%>
+
+    
+    <section class="appointments">
+        <%-include('dashboard.ejs') %>
+        <div class="record-flex">
+        <form class="medical-record-form schedule-form" method="POST" action="/editschedule">
+        <div class="schedule-button">
+           <button onclick="showform()" type="reset">Create new schedule</button>
+        </div>
+        <div id="floating-form">
+            <div class="addrecordform">
+                
+                <div class="schedule-head addpic">
+                    <h1>Create Schedule</h1>
+                </div>
+              
+                <div class="inputfields">
+                    <h4>select available days</h4>
+                    <select name="days" id="daysInput" class="daysInput" required="" multiple="">
+                        <option value="monday">Monday</option>
+                        <option value="tuesday">Tuesday</option>
+                        <option value="wednesday">Wednesday</option>
+                        <option value="thursday">Thursday</option>
+                        <option value="friday">Friday</option>
+                        <option value="saturday">Saturday</option>
+                    </select>
+                    <h4>select Hospitl</h4>
+                    <input type="text" list="hospital" placeholder="select hospital"  name="selecthospital" required>
+                    <datalist id="hospital">
+                        <option value="<%= hospital%>"></option>
+                    </datalist>
+                    <h4>From Time</h4>
+
+                    <input style="z-index: 9999;" name="fromtime" autocomplete="off"  data-clocklet>
+                    <h4>To Time</h4>
+
+                    <input style="z-index: 9999;" name="totime" autocomplete="off"  data-clocklet>
+                    <h4>Intervals</h4>
+
+                    <input type="text" name="interval"  placeholder="Enter intervals in minutes.." min="15" step="15" max="60" required="" >
+                  
+                
+                </div>
+              
+                <div class="buttons">
+                    <button id="cancel" onclick="showform()">Cancel</button>
+                    <button id="done" type="submit">Done</button>
+                </div>
+            </div>
+
+        </div>
+        
+    </form>
+    <div class="schedule-button">
+        <h2>All Schedules</h2>
+    </div>
+    <div class="record schedule-record">
+        <%for(var i=0;i < data.length; i++){%>
+            <div class="recorddata schedule-data" <%if(data[i].isdisabled==true){%> style="background-color:grey;"<%}else{%>unchecked<%}%>>
+                
+                <div class="slot-flex">
+                    <div class="days">
+                        <h4><%= data[i].days%></h4>
+                    </div>
+                    
+                
+
+
+              <div class="hospital-time">
+                <h4><span><%= data[i].selecthospital%></span></h4>
+                <h4><%= data[i].fromtime%>-<%= data[i].totime%></h4>       
+
+              </div>
+                  
+              <div class="slot-button-forms">
+                    <form method="POST" action="/deleteslot/<%= data[i].id%>">
+                        <button type="submit">Remove Slots</button>
+                    </form>
+                   
+                     
+                    <button onclick="showslots('<%= data[i].id%>')">View Slots</button>
+                    
+                    <input type="checkbox" onchange="window.location.href='/disableslot/<%= data[i].id%>/<%if(data[i].isdisabled==true){%>false<%}else{%>true<%}%>'" <%if(data[i].isdisabled==true){%>checked<%}else{%>unchecked<%}%>  >
+              </div>
+            </div>
+              <div class="slots"  id="<%= data[i].id%>"  style="display: none;">   
+              <%for(var j=0; j<(data[i].schedule).length; j++ ){ 
+
+                if((j+1)>=(data[i].schedule).length){
+                    break;
+                }%>
+                        <div <%if(data[i].schedule[j].isdisabled==true){%> style="background-color:grey;"<%}else{%>unchecked<%}%>><h5><%= data[i].schedule[j].time %> - <%= data[i].schedule[j+1].time %></h5>
+                            <input type="checkbox" onchange="window.location.href='/disablesingleslot/<%= data[i].id%>/<%= data[i].schedule[j].id%>/<%if(data[i].schedule[j].isdisabled==true){%>false<%}else{%>true<%}%>'" <%if(data[i].schedule[j].isdisabled==true){%>checked<%}else{%>unchecked<%}%>  >
+                        </div> 
+              <%}%>  
+            </div>
+
+            </div>
+
+                <%}%>
+            
+    </div>
+   
+    </div>
+    
+    </section>
+   <script>
+       
+
+   </script>
+  
+    
+  <script>
+
+    function showslots(id) {
+    const slot = document.getElementById(id);
+    if (slot.style.display == "flex")
+        slot.style.display = "none";
+    else slot.style.display = "flex";
+}
+</script>
+
+    
+    <script>
+
+        function showform() {
+        const form = document.getElementById("floating-form");
+        if (form.style.display == "flex")
+            form.style.display = "none";
+        else form.style.display = "flex";
+    }
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <%-include('footer.ejs') %>
+
+    
+    </body>
+    
+    </html>

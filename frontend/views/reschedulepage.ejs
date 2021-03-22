@@ -1,0 +1,268 @@
+
+<head>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="doctor.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<%-include('header.ejs') %>
+
+
+
+
+
+
+
+
+    <section class="filtersanddoctors">
+
+        
+
+
+        <div class="doctor-card-tab doctor-mobile reschedule-card">
+              
+              
+            <div class="reschedule-box" >
+               <div class="doctor-card" >
+                <div>
+                    <h3><%= alldata.name%></h3>
+                    <ul>
+                        <li><i class="fa fa-certificate"></i>Date: <%= appdata.day%> <%= appdata.date%></li>
+                        <li><i class="fas fa-award"></i>Hospital: <%= appdata.drhospital%></li>
+                        <li><i class="fa fa-clock"></i>From: <%= appdata.time%></li>
+                        
+
+                    </ul>
+                    <div class="appointment-button">                   
+                        <button onclick="showschedule('carouselContainer<%= alldata._id%>','<%= alldata._id%>')">Reschedule appointment</button>                 
+                    </div>
+                </div>
+               
+            </div>
+            <div class="bookAppointmentContainer">
+                <div style="display: none;"  class="carouselContainer allScheduleContainer" id="carouselContainer<%= alldata._id%>">
+                    <div class="carouselButton">
+                        <div class="carouselLeftButtonk"
+                            onclick="moveCarousel('right','carouselContainer__allCarouselContainer<%= alldata._id%>')">
+                            <i class="fas fa-less-than"></i>
+                        </div>
+                    </div>
+                    <div  class="allCarouselItems allCarouselItems"
+                        id="carouselContainer__allCarouselContainer<%= alldata._id%>">
+                        <div onclick="showsubschedule('subScheduleContainer<%= alldata._id%>','<%= alldata._id%>',0,'<%= appdata.scheduleid%>','<%= appdata._id%>')" id="item1<%= alldata._id%>" class="item">
+                            
+                            
+                        </div>
+                        <div onclick="showsubschedule('subScheduleContainer<%= alldata._id%>','<%= alldata._id%>',1,'<%= appdata.scheduleid%>','<%= appdata._id%>')" id="item2<%= alldata._id%>" class="item">
+                            
+
+                        </div>
+                        <div onclick="showsubschedule('subScheduleContainer<%= alldata._id%>','<%= alldata._id%>',2,'<%= appdata.scheduleid%>','<%= appdata._id%>')" id="item3<%= alldata._id%>" class="item">
+                            
+
+                        </div>
+                        <div onclick="showsubschedule('subScheduleContainer<%= alldata._id%>','<%= alldata._id%>',3,'<%= appdata.scheduleid%>','<%= appdata._id%>')" id="item4<%= alldata._id%>" style="display: none;" class="item">
+                            
+                        </div>
+                        <div onclick="showsubschedule('subScheduleContainer<%= alldata._id%>','<%= alldata._id%>',4,'<%= appdata.scheduleid%>','<%= appdata._id%>')" id="item5<%= alldata._id%>" style="display: none;" class="item">
+                           
+                        </div>
+                        <div onclick="showsubschedule('subScheduleContainer<%= alldata._id%>','<%= alldata._id%>',5,'<%= appdata.scheduleid%>','<%= appdata._id%>')" id="item6<%= alldata._id%>" style="display: none;" class="item">
+                           
+                        </div>
+                        <div onclick="showsubschedule('subScheduleContainer<%= alldata._id%>','<%= alldata._id%>',6,'<%= appdata.scheduleid%>','<%= appdata._id%>')" id="item7<%= alldata._id%>" style="display: none;" class="item">
+                           
+                        </div>
+                    </div>
+                    <div class="carouselButton">
+                        <div class="carouselLeftButton"
+                            onclick="moveCarousel('left','carouselContainer__allCarouselContainer<%= alldata._id%>')">
+                            <i class="fas fa-greater-than"></i></div>
+                    </div>
+                </div>
+                <div style="display: none;" class="subScheduleContainer" id="subScheduleContainer<%= alldata._id%>">
+                    <div>
+                        <div class="head">
+                        <i class="fas fa-sun"></i>     
+                       <h4>morning</h4>
+                    </div>
+                    <div id="mor<%= alldata._id%>" style="margin: 0rem;padding:0rem;border-bottom: unset;">
+                    </div>
+                    </div>
+                    <div>
+                        <div  class="head">
+                        <i class="fas fa-sun"></i>     
+                       <h4>Afternoon</h4>
+                    </div>
+                    <div id="after<%= alldata._id%>" style="margin: 0rem;padding:0rem;border-bottom: unset;">
+                    </div>
+                    </div>
+                    <div>
+                        <div class="head">
+                        <i class="fas fa-sun"></i>     
+                       <h4>Evening</h4>
+                    </div>
+                    <div id="eve<%= alldata._id%>" style="margin: 0rem;padding:0rem;border-bottom: unset;">
+                    </div>
+                    </div>
+                    <div style="border-bottom: none;">
+                        <div id='hos' class="head">
+                    </div>
+                    <div id="eve<%= alldata._id%>" style="margin: 0rem;padding:0rem;border-bottom: unset;">
+                    </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+            
+        
+        </div>
+    </section>
+    <script>
+        async function showschedule(scheduleid,docid){
+            var schedule=document.getElementById(scheduleid);
+            
+            if(schedule.style.display=="none"){
+                schedule.style.display="flex";
+                const data=await fetch("/getschedule/" + docid, { method: "get", });
+                const c = await data.json();
+
+                var nowDate = new Date(); 
+                  
+                
+                for(var l=0;l<7;l++){
+                    var count=0;
+                    for(sl=0;sl<c[l].schedule.length;sl++){
+                        if(c[l].schedule[sl].isbooked==false){
+                            count+=1;
+                        }
+                    }
+                    var no=l+1;
+                    if(l==0){
+                        document.getElementById('item'+no+docid).innerHTML= '<h3>Today</h3><h4><span>'+ count +' Slots Available</span></h4>';
+                    }
+                    else if(l==1){
+                        document.getElementById('item'+no+docid).innerHTML= '<h3>Tomorrow</h3><h4><span>'+ count +' Slots Available</span></h4>';
+  
+                    }
+                    else{
+                    document.getElementById('item'+no+docid).innerHTML= '<h3>'+c[l].days.slice(0,3)+" "+ nowDate.getFullYear()+'/'+(nowDate.getMonth())+'/'+(nowDate.getDate()+l)+'</h3><h4><span>'+ count +' Slots Available</span></h4>';
+                    }
+                }
+                  
+            
+                
+                    
+                   
+                
+                
+                
+             
+                }
+
+
+
+
+            
+            else{
+                schedule.style.display="none";
+            }
+
+        }
+
+
+    </script>
+    <script>
+        async function showsubschedule(id,did,index,scheduleid,appid){
+            document.getElementById(id).style.display="flex";   
+            const slotdata=await fetch("/getslots/" + did+"/"+index, { method: "get", });
+            const demo = await slotdata.json();
+            const morning=demo[0];
+            const afternoon=demo[1];
+            const evening=demo[2];
+            var morningslot='';
+            var eveningslot='';
+            var afternoonslot='';
+            
+            for(var m=0;m<morning.length;m++){
+               
+                morningslot+= ' <form method="post" onclick="this.submit()" action="/bookslot/'  +did+'/'+morning[m].time + '/' +morning[m].day +'/'+morning[m]._id+'/'+scheduleid+'/'+appid+ '"> <h4><span>'+morning[m].time+'</span></h4></form>' 
+            }
+            document.getElementById('mor'+did).innerHTML=morningslot;
+            for(var e=0;e<evening.length;e++){
+                eveningslot+=' <form method="post" onclick="this.submit()" action="/bookslot/' +did+'/'+evening[e].time+'/'+evening[e].day+'/'+evening[e]._id+'/'+scheduleid+'/'+appid+ '"> <h4><span>'+evening[e].time+'</span></h4></form>'
+            }
+            document.getElementById('eve'+did).innerHTML=eveningslot;
+            for(var a=0;a<afternoon.length;a++){
+                afternoonslot+=' <form method="post" onclick="this.submit()" action="/bookslot/' +did+'/'+afternoon[a].time+'/'+afternoon[a].day+'/'+afternoon[a]._id+'/'+scheduleid+'/'+appid+ '"> <h4><span>'+afternoon[a].time+'</span></h4></form>'
+            }
+            document.getElementById('after'+did).innerHTML=afternoonslot;
+            if(demo[3]==undefined){
+                document.getElementById('hos').display='none';
+
+            }
+            else{
+                document.getElementById('hos').innerHTML='<h3>'+demo[3]+'</h3>';
+
+            }
+
+                    
+        }
+    </script>
+<script>
+function moveCarousel(dirc, carouselId) {
+    var carouselItems = document.getElementById(carouselId).children;
+    if (dirc === "left") {
+        for (var i = 0; i < carouselItems.length; i++) {
+            if (carouselItems[i].style.display !== "none")
+                break;
+        }
+        if (i + 3 < carouselItems.length) {
+            for (var j = 0; j < carouselItems.length; j++) {
+                if (j === i + 1 || j === i + 2 || j === i + 3) {
+                    carouselItems[j].style.display = "flex";
+                }
+                else
+                    carouselItems[j].style.display = "none";
+            }
+        }
+    }
+    else if (dirc === "right") {
+        for (var i = 0; i < carouselItems.length; i++) {
+            if (carouselItems[i].style.display !== "none")
+                break;
+        }
+        if (i !== 0) {
+            for (var j = 0; j < carouselItems.length; j++) {
+                if (j === i - 1 || j === i || j === i + 1) {
+                    carouselItems[j].style.display = "flex";
+                }
+                else
+                    carouselItems[j].style.display = "none";
+            }
+        }
+    }
+}
+
+    
+</script>
+
+<section class="need-help">
+    <div>
+    <h2>Need Help?</h2>
+    <p>Just let us know, we will be happy to assist you</p>
+</div> 
+<button>Submit your enquiry</button> 
+
+</section>
+
+<%-include('footer.ejs') %>

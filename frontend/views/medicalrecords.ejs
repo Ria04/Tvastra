@@ -1,0 +1,177 @@
+
+
+<html>
+    <head>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="theme.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="myappointments.css">
+    
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    </head>
+    <style>
+        #medical{
+            color:rgb(22, 125, 221);
+            font-family: BoldFont;
+
+        }
+    </style>
+    <body>
+        
+    
+        <%-include('header.ejs') %>
+
+    
+    <section class="appointments">
+        <%-include('dashboard.ejs') %>
+        <div class="record-flex">
+        <form class="medical-record-form" method="POST" action="/addmedicalrecord" enctype="multipart/form-data">
+        <div class="medical-record">
+           <h2>Medical Records</h2>
+           <button onclick="showform()" type="reset">Add Record</button>
+        </div>
+        <div id="floating-form">
+            <div class="addrecordform">
+                
+                <div class="addpic" style="flex-direction:row;">
+                    <div class="pic-input-label">
+                        <label for="uploadPicInput"><i class="fas fa-plus"></i><span>Add Photo</span></label>
+                        <input type="file" name="myfiles" id="uploadPicInput" accept="image/*"  onchange="loadFile(event)" multiple>
+                    </div>
+                    <div style="display:flex; flex-direction: row;background-color: transparent;" id="pic" class="pic-input-label" >
+                    </div>
+                </div>
+                
+                <script>
+                    var loadFile = function(event) {
+                        var imagesarr = document.getElementById('uploadPicInput').files;
+                        var div=document.getElementById('pic');
+                        var str="";
+                        for(var i=0;i<imagesarr.length;i++){
+                            str+='<img src="'+URL.createObjectURL(event.target.files[i])+'">';
+                        }
+                       
+                       div.innerHTML=str;
+        
+                    };
+                    </script>
+                <div class="inputfields">
+                    <input type="text" placeholder="Title" title="Please Set a Report Title" name="title" required>
+                    <input type="text"  value="<%= username%>" title="Name of User" name="name" required>
+                    <input type="date" id="date" title="Please Date of Report" name="date" required >
+                </div>
+                <div class="type-of-report">
+                    <h4>Type of report</h4>
+                    <ul>
+                        <li>
+                            <input  type="radio" name="typeofreport" id="reportTypeInput"  value="report" >
+                            <label for="reportTypeInput">
+                                <i class="far fa-file-alt"></i>
+                                <span>Report</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input  type="radio" name="typeofreport" id="reportTypeInput2"  value="prescription" >
+                            <label for="reportTypeInput2">
+                                <i class="far fa-file-alt"></i>
+                                <span>Prescription</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="typeofreport" id="reportTypeInput3" value="Invoice" >
+                            <label for="reportTypeInput3">
+                                <i class="far fa-file-alt"></i>
+                                <span>Invoice</span>
+                            </label>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="buttons">
+                    <button id="cancel" onclick="showform()">Cancel</button>
+                    <button id="done" type="submit">Done</button>
+                </div>
+            </div>
+
+        </div>
+        
+    </form>
+   
+    <div class="record">
+        <%for(var i=0;i < data.length; i++){%>
+            <div class="recorddata">
+
+                <div class="date-div">
+                    <a href="/viewrecord/<%= data[i].id%>"><h4><%= data[i].date%></h4></a>
+                </div>
+
+
+                <div class="div-wrap">
+                    <div class="title-div">
+                    <h5><span><%= data[i].name%></span></h5>
+                    <h5><%= data[i].title%></h5>               
+                    <h5><%= data[i].typeofreport%></h5>
+                    </div>
+
+                    <div class="button-div">
+                        <form method="POST" action="/delete/<%= data[i].id %>">
+                            <button type="submit">delete</button>
+                            </form>
+                    </div>
+                </div>
+
+            </div>
+                <%}%>
+            
+    </div>
+   
+    </div>
+    
+    </section>
+    <script>
+
+        function showform() {
+        const form = document.getElementById("floating-form");
+        if (form.style.display == "flex")
+            form.style.display = "none";
+        else form.style.display = "flex";
+    }
+    </script>
+    <script>
+         var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+        dd = '0' + dd
+    }
+    if (mm < 10) {
+        mm = '0' + mm
+    }
+
+    today = yyyy + '-' + mm + '-' + dd;
+
+        document.getElementById("date").setAttribute("max",today);
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <%-include('footer.ejs') %>
+
+    
+    </body>
+    
+    </html>

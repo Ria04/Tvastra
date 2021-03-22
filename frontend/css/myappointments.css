@@ -1,0 +1,1571 @@
+@font-face {
+  font-family: "BoldFont";
+  src: url("Nexa-Bold-1.otf");
+}
+
+@font-face {
+  font-family: "LightFont";
+  src: url("Nexa-Light.otf");
+}
+
+/* fonts */
+@font-face {
+  font-family: BoldFont;
+  src: url(../fonts/Nexa-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: LightFont;
+  src: url(../fonts/Nexa-Light.otf) format("opentype");
+}
+
+/* global tags */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section {
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: BoldFont;
+  color: #222844;
+}
+
+h1, h2 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin-bottom: 0.625rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  margin-bottom: 0.625rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-bottom: 0.625rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  margin-bottom: 0.3125rem;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  margin-bottom: 0.3125rem;
+}
+
+p {
+  font-family: LightFont;
+  font-size: 1.15rem;
+  line-height: 1.4rem;
+  color: #222844;
+  margin-bottom: 0.625rem;
+}
+
+input, select {
+  font-family: LightFont;
+  padding: 0.8rem 0.75rem;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  width: 100%;
+  color: #222844;
+  border: none;
+  outline: none;
+  margin-bottom: 0.625rem;
+}
+
+textarea {
+  font-family: LightFont;
+  padding: 0.8rem 0.75rem;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  width: 100%;
+  color: #a19f9f;
+  margin-bottom: 0.625rem;
+  border: 0.125rem solid #a19f9f;
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 0.9rem;
+  color: #a19f9f;
+}
+
+input:-ms-input-placeholder {
+  font-size: 0.9rem;
+  color: #a19f9f;
+}
+
+input::-ms-input-placeholder {
+  font-size: 0.9rem;
+  color: #a19f9f;
+}
+
+input::placeholder {
+  font-size: 0.9rem;
+  color: #a19f9f;
+}
+
+input:focus, select:focus {
+  outline: none;
+}
+
+textarea::-webkit-input-placeholder {
+  font-size: 0.9rem;
+  color: #a19f9f;
+  font-family: BoldFont;
+}
+
+textarea:-ms-input-placeholder {
+  font-size: 0.9rem;
+  color: #a19f9f;
+  font-family: BoldFont;
+}
+
+textarea::-ms-input-placeholder {
+  font-size: 0.9rem;
+  color: #a19f9f;
+  font-family: BoldFont;
+}
+
+textarea::placeholder {
+  font-size: 0.9rem;
+  color: #a19f9f;
+  font-family: BoldFont;
+}
+
+button {
+  font-family: LightFont;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.dark-blue-button {
+  background: #222844;
+  color: white;
+  border: 0.125rem solid #222844;
+}
+
+.sky-blue-button {
+  background: #167ddd;
+  color: white;
+  border: 0.125rem solid #167ddd;
+}
+
+.white-button {
+  background: white;
+  color: #222844;
+  border: 0.125rem solid white;
+}
+
+.btn-search {
+  background: var(--white);
+  border: 0.125rem solid var(--light-grey);
+  color: var(--grey);
+}
+
+span {
+  font-family: BoldFont;
+  color: #a19f9f;
+  font-size: 1.2rem;
+  margin-left: 0.3125rem;
+}
+
+ul li {
+  font-size: 1.1rem;
+  font-family: LightFont;
+  color: #222844;
+  line-height: 1.5rem;
+  list-style-type: none;
+}
+
+label {
+  font-family: LightFont;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  section {
+    padding: 2rem;
+  }
+  h1, h2 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  h4 {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  h5 {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+  h6 {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+  span {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  section {
+    padding: 5rem 7rem;
+    text-align: left;
+  }
+  h1, h2 {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin-bottom: 1rem;
+  }
+  h4 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  h5 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  h6 {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-family: BoldFont;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  span {
+    font-size: 1.6rem;
+  }
+  button {
+    font-family: BoldFont;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 1.7rem;
+  }
+  input {
+    font-size: 1.2rem;
+    padding: 1.5rem 2rem;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 1.2rem;
+  }
+  input:-ms-input-placeholder {
+    font-size: 1.2rem;
+  }
+  input::-ms-input-placeholder {
+    font-size: 1.2rem;
+  }
+  input::placeholder {
+    font-size: 1.2rem;
+  }
+  ul li {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+}
+
+.tagify__tag {
+  height: 1.8rem;
+}
+
+.tagify {
+  height: 2.5rem;
+}
+
+#heading {
+  color: #222844;
+}
+
+.records {
+  margin-top: 1rem;
+}
+
+.records div {
+  padding: 2.5rem 0rem;
+  background-color: #dbd8d8;
+  width: 100%;
+  height: 14rem;
+  margin-top: 1rem;
+}
+
+.records div span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 1rem;
+}
+
+#desc {
+  width: 100%;
+  height: 8rem;
+  border: 0.1rem solid #dbd8d8;
+  padding: 0.5rem;
+  font-family: LightFont;
+}
+
+.slots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.slots div {
+  padding: 0.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0.2rem solid green;
+  margin-bottom: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.slots div h5 {
+  color: green;
+  font-size: 0.8rem;
+}
+
+.slots div input {
+  margin: 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-left: 0.5rem;
+}
+
+.appointments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 50vh;
+}
+
+.appointments .dashboard {
+  display: none;
+}
+
+.appointments .myappointments {
+  width: 100%;
+}
+
+.appointments .myappointments div div {
+  padding: 0.8rem 1rem;
+  padding-bottom: 2rem;
+}
+
+.appointments .myappointments div h3 {
+  text-align: left;
+  font-size: 1rem;
+}
+
+.appointments .myappointments div h2 {
+  text-align: left;
+  font-size: 1.3rem;
+}
+
+.appointments .record-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.appointments .record-flex .medical-record-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 0.1rem solid #dbd8d8;
+}
+
+.appointments .record-flex .medical-record-form .medical-record {
+  height: 4rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0rem 1rem 1rem 1rem;
+}
+
+.appointments .record-flex .medical-record-form .medical-record button {
+  background-color: #167ddd;
+  border-radius: 0.5rem;
+  height: 3rem;
+}
+
+.appointments .record-flex .medical-record-form .medical-record h2 {
+  width: 5rem;
+  font-size: 1.7rem;
+}
+
+.appointments .record-flex .medical-record-form #floating-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  background-color: rgba(1, 1, 1, 0.7);
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  padding: 1rem;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform {
+  width: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: whitesmoke;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform div {
+  padding: 0.5rem 0.5rem;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform div input {
+  margin-bottom: 0.5rem;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .addpic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: #a19f9f;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .addpic .pic-input-label {
+  height: 4.5rem;
+  width: 7.5rem;
+  padding: 0.2rem;
+  background-color: rgba(1, 1, 1, 0.7);
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .addpic .pic-input-label label {
+  color: white;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .addpic .pic-input-label input {
+  height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .schedule-head {
+  height: 5rem;
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 0.1rem solid #dbd8d8;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .schedule-head h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .inputfields {
+  border-bottom: 0.1rem solid #dbd8d8;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .inputfields select {
+  width: 100%;
+  border: 0.1rem solid #dbd8d8;
+  margin-bottom: 0.5rem;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .inputfields select option {
+  font-family: LightFont;
+  padding-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .inputfields h4 {
+  text-align: left;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .type-of-report {
+  border-bottom: 0.2rem solid #dbd8d8;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .type-of-report h4 {
+  color: #167ddd;
+  text-align: left;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .type-of-report ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .type-of-report ul li label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  padding: 1rem;
+  height: 3rem;
+  width: 4rem;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .type-of-report ul li label span {
+  color: #222844;
+  font-family: LightFont;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .type-of-report ul li label:hover {
+  background-color: #93bede;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .type-of-report ul li input[type="radio"]:checked + label {
+  background-color: #93bede;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .type-of-report ul li input[type="radio"] {
+  height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .buttons #cancel {
+  background-color: orangered;
+}
+
+.appointments .record-flex .medical-record-form #floating-form .addrecordform .buttons #done {
+  background-color: #167ddd;
+  margin-left: 1rem;
+}
+
+.appointments .record-flex .schedule-form {
+  border-bottom: none;
+}
+
+.appointments .record-flex .schedule-form button {
+  background-color: #167ddd;
+  margin: 1rem 0rem;
+  border-radius: 0.5rem;
+}
+
+.appointments .record-flex .record {
+  margin-top: 2rem;
+  background-color: whitesmoke;
+  padding: 1rem;
+  padding-top: 0.5rem;
+}
+
+.appointments .record-flex .record .recorddata {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0.5rem;
+  border: 0.1rem solid #a19f9f;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+}
+
+.appointments .record-flex .record .recorddata .date-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+}
+
+.appointments .record-flex .record .recorddata .div-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.appointments .record-flex .record .recorddata .title-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 57%;
+}
+
+.appointments .record-flex .record .recorddata .title-div h5 {
+  font-family: BoldFont;
+}
+
+.appointments .record-flex .record .recorddata .title-div h5 span {
+  color: #167ddd;
+}
+
+.appointments .record-flex .record .recorddata .button-div button {
+  background-color: #167ddd;
+  border-radius: 0.5rem;
+}
+
+.appointments .record-flex .record .schedule-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.appointments .record-flex .record .schedule-data h4 {
+  color: #167ddd;
+}
+
+.appointments .record-flex .record .schedule-data .hospital-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.appointments .record-flex .record .schedule-data .hospital-time h4 {
+  font-family: LightFont;
+  color: #222844;
+  margin: 1rem 0rem;
+}
+
+.appointments .record-flex .record .schedule-data .hospital-time h4 span {
+  font-family: BoldFont;
+  color: #222844;
+}
+
+.appointments .record-flex .record .schedule-data .slot-button-forms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.appointments .record-flex .record .schedule-data .slot-button-forms input {
+  width: 1rem;
+  height: 1rem;
+  margin: 0rem;
+}
+
+.appointments .record-flex .record .schedule-data .slot-button-forms form {
+  width: 7rem;
+}
+
+.appointments .record-flex .record .schedule-data .slot-button-forms form button {
+  background-color: #167ddd;
+  border-radius: 0.5rem;
+}
+
+.appointments .record-flex .record .schedule-data .slot-button-forms button {
+  background-color: #167ddd;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
+.appointments .record-flex .schedule-record {
+  background-color: white;
+  margin-top: 0rem;
+}
+
+.appointments .record-flex .currentpassword, .appointments .record-flex .newconfirmpassword {
+  padding: 1.5rem;
+  border-bottom: 0.1rem solid #dbd8d8;
+}
+
+.appointments .record-flex .currentpassword h3, .appointments .record-flex .newconfirmpassword h3 {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.appointments .record-flex .currentpassword input, .appointments .record-flex .newconfirmpassword input {
+  border: 0.1rem solid #dbd8d8;
+}
+
+.appointments .record-flex .newconfirmpassword {
+  padding-top: 0rem;
+}
+
+.appointments .record-flex .newconfirmpassword h3 {
+  margin-top: 1.5rem;
+}
+
+.appointments .record-flex div h3 {
+  text-align: left;
+  margin: 0.7rem 0rem;
+}
+
+.appointments .record-flex div input {
+  border: 0.1rem solid #dbd8d8;
+}
+
+.appointments .record-flex .profile-photo {
+  padding: 1rem 0rem;
+  border-bottom: 0.1rem solid #dbd8d8;
+  width: 100%;
+}
+
+.appointments .record-flex .profile-photo .pic-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 0rem;
+}
+
+.appointments .record-flex .profile-photo .pic-wrap .pic {
+  height: 4rem;
+  width: 4rem;
+  margin-right: 2rem;
+}
+
+.appointments .record-flex .profile-photo .pic-wrap .pic img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+}
+
+.appointments .record-flex .profile-photo .pic-wrap .choose-pic {
+  margin-right: 3rem;
+}
+
+.appointments .record-flex .profile-photo .pic-wrap .choose-pic p {
+  text-align: left;
+}
+
+.appointments .record-flex .profile-photo .pic-wrap .choose-pic input {
+  width: 0;
+  height: 0;
+}
+
+.appointments .record-flex .profile-photo .pic-wrap .choose-pic label {
+  color: #167ddd;
+  font-family: BoldFont;
+  text-decoration: underline;
+}
+
+.appointments .record-flex .personal-info-1, .appointments .record-flex .personal-info-2 {
+  padding: 1rem 0rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 0.1rem solid #dbd8d8;
+  width: 100%;
+}
+
+.appointments .upcoming-appointments .appointment-div, .appointments .completed-appointments .appointment-div {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  background-color: #ebebf3;
+  border: 0.1rem solid #cfcfe6;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.appointments .upcoming-appointments .appointment-div .datetimehospital, .appointments .completed-appointments .appointment-div .datetimehospital {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0rem;
+}
+
+.appointments .upcoming-appointments .appointment-div .datetimehospital .date, .appointments .completed-appointments .appointment-div .datetimehospital .date {
+  background-color: white;
+  width: 5rem;
+  height: 6rem;
+  padding: 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.appointments .upcoming-appointments .appointment-div .datetimehospital .date h3, .appointments .completed-appointments .appointment-div .datetimehospital .date h3 {
+  text-align: center;
+}
+
+.appointments .upcoming-appointments .appointment-div .datetimehospital .timehospital, .appointments .completed-appointments .appointment-div .datetimehospital .timehospital {
+  padding: 0rem;
+  margin-left: 1rem;
+}
+
+.appointments .upcoming-appointments .appointment-div .datetimehospital .timehospital h3, .appointments .completed-appointments .appointment-div .datetimehospital .timehospital h3 {
+  margin-bottom: 0.2rem;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.appointments .upcoming-appointments .appointment-div .datetimehospital .timehospital h3 span, .appointments .completed-appointments .appointment-div .datetimehospital .timehospital h3 span {
+  color: #167ddd;
+}
+
+.appointments .upcoming-appointments .appointment-div .datetimehospital .timehospital button, .appointments .completed-appointments .appointment-div .datetimehospital .timehospital button {
+  background-color: #a19f9f;
+  height: 2rem;
+  border-radius: 0.3rem;
+}
+
+.appointments .upcoming-appointments .appointment-div .buttons, .appointments .completed-appointments .appointment-div .buttons {
+  padding: 0rem;
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.appointments .upcoming-appointments .appointment-div .buttons button, .appointments .completed-appointments .appointment-div .buttons button {
+  width: 9rem;
+  height: 3rem;
+  border-radius: 0.3rem;
+  background-color: #167ddd;
+  font-size: 0.9rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .records {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .records div {
+    padding: 2.5rem 0rem;
+    width: 48%;
+  }
+  .slots {
+    margin-top: 1rem;
+  }
+  .slots div {
+    padding: 0.3rem 1rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .slots div h5 {
+    font-size: 1rem;
+  }
+  .slots div input {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+  .appointments {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    min-height: 50vh;
+  }
+  .appointments .dashboard {
+    display: none;
+  }
+  .appointments .myappointments {
+    width: 100%;
+  }
+  .appointments .myappointments div div {
+    padding: 0.8rem 1rem;
+    padding-bottom: 2rem;
+  }
+  .appointments .myappointments div h3 {
+    text-align: left;
+  }
+  .appointments .myappointments div h2 {
+    text-align: left;
+  }
+  .appointments .record-flex .medical-record-form .medical-record {
+    height: 5rem;
+  }
+  .appointments .record-flex .medical-record-form .medical-record h2 {
+    width: auto;
+  }
+  .appointments .record-flex .medical-record-form .medical-record button {
+    height: 3rem;
+    width: auto;
+    font-size: 1.2rem;
+  }
+  .appointments .record-flex .medical-record-form #floating-form .addrecordform {
+    width: 40rem;
+  }
+  .appointments .record-flex .medical-record-form #floating-form .addrecordform div {
+    padding: 1.5rem 1rem;
+  }
+  .appointments .record-flex .medical-record-form #floating-form .addrecordform div input {
+    margin-bottom: 1rem;
+  }
+  .appointments .record-flex .medical-record-form #floating-form .addrecordform .inputfields select {
+    margin-bottom: 1rem;
+  }
+  .appointments .record-flex .medical-record-form #floating-form .addrecordform .inputfields select option {
+    font-family: LightFont;
+    padding-left: 0.7rem;
+    font-size: 1.1rem;
+  }
+  .appointments .record-flex .record {
+    margin-top: 2rem;
+    padding: 1rem;
+    padding-top: 0rem;
+  }
+  .appointments .record-flex .record .recorddata {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  .appointments .record-flex .record .recorddata .date-div {
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 20%;
+  }
+  .appointments .record-flex .record .recorddata .div-wrap {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 70%;
+  }
+  .appointments .record-flex .record .recorddata .title-div {
+    height: 100%;
+  }
+  .appointments .record-flex .record .schedule-data .slot-button-forms {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .appointments .record-flex .record .schedule-data .slot-button-forms input {
+    width: 1rem;
+    height: 1rem;
+    margin: 0rem 1rem;
+  }
+  .appointments .record-flex .record .schedule-data .slot-button-forms form {
+    width: 10rem;
+  }
+  .appointments .record-flex .record .schedule-data .slot-button-forms form button {
+    background-color: #167ddd;
+    margin: 0rem 1rem;
+  }
+  .appointments .record-flex .currentpassword, .appointments .record-flex .newconfirmpassword {
+    padding: 2.5rem 1rem;
+  }
+  .appointments .record-flex .newconfirmpassword {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 0rem;
+  }
+  .appointments .record-flex .newconfirmpassword div {
+    width: 45%;
+  }
+  .appointments .record-flex .newconfirmpassword h3 {
+    margin-top: 1.5rem;
+  }
+  .appointments .record-flex .profile-photo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .appointments .record-flex .profile-photo .name {
+    width: 48%;
+  }
+  .appointments .record-flex .personal-info-1, .appointments .record-flex .personal-info-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .appointments .record-flex .personal-info-1 div, .appointments .record-flex .personal-info-2 div {
+    width: 48%;
+  }
+  .appointments .upcoming-appointments .appointment-div, .appointments .completed-appointments .appointment-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0rem;
+    background-color: #ebebf3;
+    border: 0.1rem solid #cfcfe6;
+    border-radius: 0.5rem;
+  }
+  .appointments .upcoming-appointments .appointment-div .datetimehospital, .appointments .completed-appointments .appointment-div .datetimehospital {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0.7rem;
+  }
+  .appointments .upcoming-appointments .appointment-div .datetimehospital .date, .appointments .completed-appointments .appointment-div .datetimehospital .date {
+    width: 8rem;
+  }
+  .appointments .upcoming-appointments .appointment-div .buttons, .appointments .completed-appointments .appointment-div .buttons {
+    width: 50%;
+    padding: 0rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.7rem;
+  }
+  .appointments .upcoming-appointments .appointment-div .buttons button, .appointments .completed-appointments .appointment-div .buttons button {
+    width: 10rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .records div {
+    width: 32%;
+  }
+  .tagify__tag {
+    height: 3.8rem;
+  }
+  #desc {
+    font-size: 1.2rem;
+  }
+  .tagify {
+    height: 4.5rem;
+  }
+  .slots {
+    margin-top: 1rem;
+  }
+  .slots div {
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .slots div h5 {
+    font-size: 1rem;
+  }
+  .slots div input {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+  .appointments {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #f0f0f5;
+  }
+  .appointments .dashboard {
+    width: 20%;
+    display: block;
+  }
+  .appointments .dashboard a {
+    text-decoration: unset;
+    color: unset;
+  }
+  .appointments .dashboard h1 {
+    margin-bottom: 2rem;
+  }
+  .appointments .dashboard ul li {
+    padding: 1.5rem 0rem;
+  }
+  .appointments .dashboard ul li:hover {
+    background-color: #dbd8d8;
+    border-left: 0.3rem solid #167ddd;
+  }
+  .appointments .dashboard ul span, .appointments .dashboard ul i {
+    font-size: 1.8rem;
+  }
+  .appointments .dashboard ul i {
+    color: #167ddd;
+    padding-left: 1.5rem;
+  }
+  .appointments .dashboard ul span {
+    margin-left: 1rem;
+    font-family: LightFont;
+  }
+  .appointments .myappointments {
+    width: 75%;
+    padding: 3rem 1.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+  }
+  .appointments .myappointments div div {
+    padding: 3rem 4rem;
+  }
+  .appointments .myappointments div h3 {
+    text-align: left;
+    color: #a19f9f;
+    font-size: 1.8rem;
+  }
+  .appointments .myappointments div h2 {
+    font-size: 3rem;
+  }
+  .appointments .record-flex {
+    padding: 2rem 3rem;
+    border-radius: 1.5rem;
+    width: 75%;
+    background-color: white;
+  }
+  .appointments .record-flex .schedule-form {
+    border: unset;
+    width: 0rem;
+    height: 0rem;
+  }
+  .appointments .record-flex .schedule-form .schedule-button {
+    position: absolute;
+    margin-top: 27rem;
+    margin-right: 27rem;
+  }
+  .appointments .record-flex .schedule-form .schedule-button button {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 100%;
+    background-color: #167ddd;
+  }
+  .appointments .record-flex .medical-record-form .medical-record {
+    height: 5rem;
+    padding-bottom: 1rem;
+  }
+  .appointments .record-flex .medical-record-form .medical-record h2 {
+    width: auto;
+    font-size: 2.8rem;
+  }
+  .appointments .record-flex .medical-record-form .medical-record button {
+    height: 4rem;
+    width: auto;
+  }
+  .appointments .record-flex .medical-record-form #floating-form .addrecordform .type-of-report ul li label {
+    padding: 1.5rem;
+    height: 5rem;
+    width: 6rem;
+  }
+  .appointments .record-flex .medical-record-form #floating-form .addrecordform .type-of-report ul li label span {
+    color: #222844;
+    font-family: LightFont;
+    font-size: 1.5rem;
+  }
+  .appointments .record-flex .medical-record-form #floating-form .addrecordform .type-of-report ul li label i {
+    font-size: 1.5rem;
+  }
+  .appointments .record-flex .record {
+    padding-top: 0rem;
+  }
+  .appointments .record-flex .record .recorddata {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  .appointments .record-flex .record .recorddata .title-div {
+    height: 100%;
+  }
+  .appointments .record-flex .record .recorddata .title-div h5 {
+    font-size: 1.5rem;
+  }
+  .appointments .record-flex .record .slot-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .appointments .record-flex .record .slot-flex .hospital-time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100%;
+  }
+  .appointments .record-flex .record .slot-flex .slot-button-forms input {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0rem;
+  }
+  .appointments .record-flex .record .slot-flex .slot-button-forms form {
+    width: 15rem;
+  }
+  .appointments .record-flex .record .slot-flex .slot-button-forms form button {
+    background-color: #167ddd;
+  }
+  .appointments .record-flex .profile-photo {
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  .appointments .record-flex .profile-photo .name, .appointments .record-flex .profile-photo .pic-div {
+    width: 32%;
+    margin-right: 1rem;
+  }
+  .appointments .record-flex .profile-photo .pic-div .pic-wrap .pic {
+    width: 5rem;
+  }
+  .appointments .record-flex .personal-info-1, .appointments .record-flex .personal-info-2 {
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+  }
+  .appointments .record-flex .personal-info-1 div, .appointments .record-flex .personal-info-2 div {
+    margin-right: 1rem;
+    width: 32%;
+  }
+  .appointments .upcoming-appointments .appointment-div, .appointments .completed-appointments .appointment-div {
+    margin-top: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0rem;
+    background-color: #ebebf3;
+    border: 0.1rem solid #cfcfe6;
+    border-radius: 0.5rem;
+  }
+  .appointments .upcoming-appointments .appointment-div .datetimehospital, .appointments .completed-appointments .appointment-div .datetimehospital {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 1rem;
+  }
+  .appointments .upcoming-appointments .appointment-div .datetimehospital .date, .appointments .completed-appointments .appointment-div .datetimehospital .date {
+    width: 11rem;
+    height: 8rem;
+    margin-right: 6rem;
+  }
+  .appointments .upcoming-appointments .appointment-div .datetimehospital .date h3, .appointments .completed-appointments .appointment-div .datetimehospital .date h3 {
+    font-size: 1.5rem;
+    color: #222844;
+  }
+  .appointments .upcoming-appointments .appointment-div .datetimehospital .timehospital h3, .appointments .completed-appointments .appointment-div .datetimehospital .timehospital h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+  }
+  .appointments .upcoming-appointments .appointment-div .datetimehospital .timehospital button, .appointments .completed-appointments .appointment-div .datetimehospital .timehospital button {
+    height: 2.5rem;
+  }
+  .appointments .upcoming-appointments .appointment-div .buttons, .appointments .completed-appointments .appointment-div .buttons {
+    width: 40%;
+    padding: 0rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.7rem;
+  }
+  .appointments .upcoming-appointments .appointment-div .buttons button, .appointments .completed-appointments .appointment-div .buttons button {
+    width: 16rem;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    height: 4rem;
+  }
+  #heading {
+    font-size: 2.3rem;
+  }
+}
+/*# sourceMappingURL=myappointments.css.map */

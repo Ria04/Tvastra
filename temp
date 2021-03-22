@@ -1,0 +1,88 @@
+.carouselContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:0rem 1rem 2rem 1rem;
+}
+.allCarouselItems{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:70%;
+    .item{
+        display: flex;
+        flex-direction: column;
+        h3{
+            text-align: center;
+            color: $dark-blue-color;
+        }
+        h3::before{
+            display: none;
+        }
+        h4{
+            margin-top: 1rem;
+            span{
+                color:$sky-blue;
+            }
+        }
+    }
+}
+.carouselButton{
+    i{
+        color: $sky-blue;
+        padding: 0.5rem;
+        border-radius: 50%;
+        background-color: $light-grey;
+    }
+}
+.subScheduleContainer{
+    display:flex;
+    flex-direction: column;
+    h3{
+        text-align: center;
+        padding:1rem 0rem;
+    }
+    .hospital{
+        h3::before{
+            display: none;
+            
+        }
+        h3{
+            color: $dark-blue-color;
+        }
+    }
+    div{
+        padding:0rem 1rem;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 0.2rem solid $light-grey;
+        h4{
+            padding:1rem 0rem;
+            font-family: LightFont;
+            margin-right: 0.5rem;
+            span{
+                color: green;
+                padding:0.5rem 0.4rem;
+                border:0.1rem solid green;
+            }
+        }
+        i{
+            margin-right: 1rem;
+        }
+        div{
+            flex-direction: row;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .head{
+            border:unset;
+            padding: unset;
+            
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }

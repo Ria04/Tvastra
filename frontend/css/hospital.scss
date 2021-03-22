@@ -1,0 +1,137 @@
+
+@import "style.scss";
+
+.doctor-card-tab{
+ 
+    .doctor-card{
+        margin-top: 1rem;
+        border:0.1rem solid grey;
+        .doctor-image{
+            width:100%;
+            height:20rem;
+        } 
+    }
+}
+
+#treatment-list{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: unset;
+        height:11rem;
+        padding-left: 1.7rem;
+        
+        li{
+            font-size: 0.9rem;
+            font-family: LightFont;
+            font-weight: bold;
+            color:black;
+            margin-bottom: 0.2rem;
+            border:0.1rem solid $grey;
+            border-radius: 2rem;
+            padding:0rem 0.6rem;
+            margin-right: 0.3rem;
+            text-align: center;
+            height:2.1rem;
+
+         
+        }
+    
+}
+
+@media only screen and (min-width:$breakpoint-tablet){
+    .overlay-section{
+        display: none;
+    }
+    .filtersanddoctors{
+        .filters{
+            display:none;
+        }
+        .doctor-card-tab{
+            width:100%;
+            .doctor-card{
+                height:28rem;
+                border:0.1rem solid grey;
+                h3{
+                    font-size: 1.4rem;
+                }
+                div{
+                    height:100%;
+                    ul{
+                        height:10rem;
+                        li{
+                            font-size: 1.2rem;
+                            line-height: 1.8rem;
+                            color:black;
+
+                        }
+                    }
+                }
+                #treatment-list{
+                    align-content: unset;
+                    height:8rem;
+
+                    li{
+                        width:auto;
+                        font-size:1rem;
+                        padding:0rem 0.5rem;
+                        height:2.1rem;
+                        margin-bottom: 0.4rem;
+                        color:black
+
+
+                    }
+                }
+            }
+        }
+        .appointment-button{
+            button{
+                width:13rem;
+                height:2.5rem;
+
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:$breakpoint-desktop){
+    .overlay-section{
+        display: flex;
+    }
+    .filtersanddoctors{
+        .filters{
+            display:block;
+        }
+        .doctor-card-tab{
+            width:75%;
+            .doctor-card{
+                height:26rem;
+               h3{
+                   font-size: 1.8rem;
+               }
+                div{
+                    height:23rem;
+                    ul{
+                        height:9rem;
+                        li{
+                            width:47%;
+                            font-size: 1.3rem;
+                        }
+                    }
+                    #treatment-list{
+                        height:6.5rem;
+                        li{
+                            padding:0rem 2rem;
+                            font-size: 1.1rem;
+                            height:2.5rem;
+                        }
+                    }
+                }
+            .doctor-image{
+                width:30%;
+            }
+        }
+        }
+    }
+}
