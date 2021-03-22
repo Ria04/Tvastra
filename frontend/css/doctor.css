@@ -3236,6 +3236,10 @@ a {
     padding: unset;
     margin-right: 2rem;
   }
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
 }
 
 @media only screen and (min-width: 1600px) {
@@ -3277,6 +3281,7 @@ a {
     color: #93bede;
   }
   .filtersanddoctors .filters h4 span {
+    color: #222844;
     font-size: 1.8rem;
     margin-left: 0rem;
   }

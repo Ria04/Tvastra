@@ -574,6 +574,10 @@ align-items: flex-start;
             }
         }
     }
+    .container{
+        max-width: 1200px;
+        margin: auto;
+    }
 
 }
 
@@ -620,6 +624,7 @@ align-items: flex-start;
         }
         h4{
             span{
+                color: $dark-blue-color;
                 font-size: 1.8rem;
                 margin-left: 0rem;
             }
@@ -637,6 +642,7 @@ align-items: flex-start;
             .showmore{
                 max-height: 10.5rem;
                 label,span{
+                   
                     font-family: LightFont;
                     font-size: 1.6rem;
                 }
@@ -811,4 +817,6 @@ align-items: flex-start;
     }
 }
 
+
 }
+
