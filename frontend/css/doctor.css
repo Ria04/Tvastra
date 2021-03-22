@@ -302,7 +302,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1600px) {
   section {
     padding: 5rem 7rem;
     text-align: left;
@@ -1892,7 +1892,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1600px) {
   #loginmsg {
     top: 9rem;
     right: 1rem;
@@ -3238,7 +3238,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1600px) {
   .heading {
     padding: 5rem 7rem;
   }
