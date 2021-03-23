@@ -11,6 +11,10 @@ $light-blue: rgb(209, 229, 245);
 $white:rgb(255,255,255);
 $dark-grey:rgb(102, 101, 101);
 
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
 
 
 @font-face{
@@ -25,8 +29,7 @@ $dark-grey:rgb(102, 101, 101);
 
 
 $breakpoint-tablet:768px;
-$breakpoint-unknown:1024px;
-$breakpoint-desktop:1600px;
+$breakpoint-desktop:1024px;
 
 
 
@@ -124,20 +127,17 @@ button{
     padding: 0.5rem 1.5rem;
     outline: none;
     cursor: pointer;
+    user-select: none;
 }
 .dark-blue-button{
     background: $dark-blue-color;
     color:$white;
-    border:0.125rem solid $dark-blue-color;
-
-   
+    border:0.125rem solid $dark-blue-color; 
 }
 .sky-blue-button{
     background: $sky-blue;
     color:$white;
     border:0.125rem solid $sky-blue;
-
-
 }
 .white-button{
     background: $white;
@@ -145,14 +145,10 @@ button{
     border:0.125rem solid $white;
 }
 .btn-search{
- 
     background: var(--white);
     border: 0.125rem solid var(--light-grey);
-    color:var(--grey);
-    
+    color:var(--grey);   
 }
-
-
 span{
     font-family: BoldFont;
     color:$grey;
@@ -207,7 +203,7 @@ a{
         font-size: 1.2rem;
     }
 }
-@media only screen and (min-width:$breakpoint-unknown){
+@media only screen and (min-width:$breakpoint-desktop){
     section{
         padding: 3rem 3rem;
         text-align: left;
@@ -270,65 +266,3 @@ a{
     
 }
 
-@media only screen and (min-width:$breakpoint-desktop){
-    section{
-        padding: 5rem 7rem;
-        text-align: left;
-    }
-    h1,h2{
-        font-size:2.8rem;
-        line-height: 2.8rem;
-        margin-bottom: 1rem;
-    }
-    h3{
-        font-size: 2rem;
-        line-height: 2.4rem;
-        margin-bottom: 1rem;
-    }
-    h4{
-        font-size: 1.8rem;
-        line-height: 2.2rem;
-        margin-bottom: 1rem;
-    }
-    h5{
-        font-size: 1.6rem;
-        line-height: 2rem;
-        margin-bottom: 0.5rem;
-    }
-    h6{
-        font-size: 1.4rem;
-        line-height: 1.8rem;
-        margin-bottom: 0.5rem;
-    }
-    p{
-        font-family: BoldFont;
-        font-size: 1.5rem;
-        line-height: 1.8rem;
-        margin-bottom: 2rem;
-    }
-    span{
-        font-size: 1.6rem;
-    }
-    button{
-        font-family: BoldFont;
-        font-size: 1.2rem;
-        line-height: 1.4rem;
-        border: none;
-        border-radius: 0.5rem;
-        padding: 1rem 1.7rem;
-    }
-    input{
-        font-size: 1.2rem;
-        padding:1.5rem 2rem;
-    }
-    input::placeholder{
-        font-size: 1.2rem;
- 
-    }
-    ul li{
-        font-size: 1.2rem;
-       
-        line-height: 1.8rem;
-    }
-    
-}

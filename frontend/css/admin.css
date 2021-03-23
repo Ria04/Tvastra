@@ -1,3 +1,8 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
 @font-face {
   font-family: "BoldFont";
   src: url("Nexa-Bold-1.otf");
@@ -150,6 +155,10 @@ button {
   padding: 0.5rem 1.5rem;
   outline: none;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .dark-blue-button {
@@ -302,7 +311,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 16000px) {
+@media only screen and (min-width: 1600px) {
   section {
     padding: 5rem 7rem;
     text-align: left;
@@ -371,6 +380,11 @@ a {
   }
 }
 
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
 @font-face {
   font-family: "BoldFont";
   src: url("Nexa-Bold-1.otf");
@@ -523,6 +537,10 @@ button {
   padding: 0.5rem 1.5rem;
   outline: none;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .dark-blue-button {
@@ -675,7 +693,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 16000px) {
+@media only screen and (min-width: 1600px) {
   section {
     padding: 5rem 7rem;
     text-align: left;
@@ -2265,7 +2283,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 16000px) {
+@media only screen and (min-width: 1600px) {
   #loginmsg {
     top: 9rem;
     right: 1rem;
@@ -3100,7 +3118,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 16000px) {
+@media only screen and (min-width: 1600px) {
   #file {
     padding-top: 1rem;
   }
