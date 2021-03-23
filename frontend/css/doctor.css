@@ -1379,7 +1379,7 @@ a {
   display: none;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1600px) {
   #loginmsg {
     top: 9rem;
     right: 1rem;
@@ -2433,30 +2433,30 @@ a {
   .need-help p {
     margin-bottom: 0rem;
   }
-  .tab-footer .container {
+  .tab-footer-section .tab-footer .container {
     width: 100%;
   }
-  .tab-footer .footer-div-1 {
+  .tab-footer-section .tab-footer .footer-div-1 {
     width: 45%;
   }
-  .tab-footer .footer-div-1 ul {
+  .tab-footer-section .tab-footer .footer-div-1 ul {
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
-  .tab-footer .footer-div-1 ul li {
+  .tab-footer-section .tab-footer .footer-div-1 ul li {
     font-size: 1.5rem;
   }
-  .tab-footer .footer-div-2 {
+  .tab-footer-section .tab-footer .footer-div-2 {
     width: 14%;
   }
-  .tab-footer .footer-div-2 i {
+  .tab-footer-section .tab-footer .footer-div-2 i {
     font-size: 1.6rem;
   }
-  .tab-footer .footer-div-2 img {
+  .tab-footer-section .tab-footer .footer-div-2 img {
     height: 3.5rem;
     width: 14rem;
   }
-  .tab-footer .footer-div-2 ul {
+  .tab-footer-section .tab-footer .footer-div-2 ul {
     margin-top: 2rem;
   }
   .navlist {
@@ -3220,6 +3220,9 @@ a {
         -ms-flex-pack: start;
             justify-content: start;
   }
+}
+
+@media only screen and (min-width: 1024px) and (min-width: 1024px) {
   .filtersanddoctors .doctor-card-tab .doctor-card .appointment-button {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3295,7 +3298,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1024px) and (min-width: 1600px) {
   .heading {
     padding: 0rem;
   }

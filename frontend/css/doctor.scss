@@ -540,6 +540,8 @@ align-items: flex-start;
         }
     }
 
+@media only screen and (min-width:$breakpoint-unknown){
+    
     .filtersanddoctors .doctor-card-tab .doctor-card .appointment-button{
         display: flex;
         flex-direction: row;
@@ -835,3 +837,7 @@ align-items: flex-start;
     
     
     }
+
+}
+
+
