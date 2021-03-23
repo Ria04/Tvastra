@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 16rem;
+    padding:6rem 1rem;
     h1{
         color: $white;
         margin-bottom: 1rem;
@@ -30,7 +30,6 @@ h2{
     .about-dentist-department{
         @include flex-column();
         justify-content: space-between;
-        height:18rem;
         h4,p{
             text-align: left;
         }
@@ -59,14 +58,14 @@ h2{
     
 }
 .symbols{
-    height:34rem;
+   
     @include flex-column();
         justify-content: space-between;
     div{
         @include flex-column();
         justify-content: space-between;
         align-items: center;
-        height:10rem;
+        
         i{
             font-size: 1.5rem;
             padding:1rem;
@@ -80,7 +79,6 @@ h2{
 }
 
 .serviceandschedule{
-   height: 24rem;
    @include flex-column();
    justify-content: space-between;
     div{
@@ -183,7 +181,6 @@ h2{
         font-size: 1.1rem;
     }
     .vaccination{
-        height:22rem;
         h2{
             text-align: left;
             margin-bottom: 2rem;
@@ -197,6 +194,9 @@ h2{
             }
             .about-dentist-department{
                 width:60%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
         .about-dentist-department{
@@ -211,7 +211,6 @@ h2{
         flex-direction: row;
         height:auto;
         div{
-            height:11rem;
             p{
                 font-size: 0.9rem;
             }
@@ -261,15 +260,19 @@ h2{
         }
     }
 }
-@media only screen and (min-width:$breakpoint-desktop){
+@media only screen and (min-width:$breakpoint-unknown){
+    p{
+        font-family: LightFont;
+    }
     .overlay-section{
-        padding-left: 7rem;
         background-position: unset;
+        .container{
+            padding:0rem 1rem;
+        }
         h5{
             text-align: left;
             margin-top: 1rem;
         }
-        height:20rem;
     }
     p{
         font-size: 1.3rem;
@@ -277,7 +280,6 @@ h2{
     .vaccination{
         .about-dentist-department{
             ul{
-                height:8rem;
                 li{
                     font-size: 1.3rem;
                 }
@@ -288,8 +290,7 @@ h2{
     .wrap-services{
         width:100%;
         .service{
-            height:20rem;
-            margin-top: 4rem;
+            margin-top: 1rem;
             .service-heading{
                 h3{
                     font-size: 1.4rem;
@@ -307,19 +308,18 @@ h2{
     flex-direction: row;
     justify-content: space-between;
     div{
-        width:60%;
+        width:75%;
         section{
             width:100%;
             padding-right: 0rem;
             }
         .vaccination{
-            height:25rem;
             .vaccination-image{
+                height:20rem;
                 width:45%;
             }
             div{
                 width:100%;
-                height:100%;
             }
             .about-dentist-department{
                 width:50%;
@@ -346,20 +346,18 @@ h5{
     font-size: 1.3rem;
 }
 .symbols{
+    padding-top: 0rem;
     div{
         width:30%;
-        height:13rem;
         p{
             text-align: center;
             font-size: 1.15rem;
         }
-    }
-}
-footer{
-    section{
-        p{
-            font-size: 1.5rem;
+        i{
+            margin-bottom: 1rem;
         }
     }
 }
+
 }
+

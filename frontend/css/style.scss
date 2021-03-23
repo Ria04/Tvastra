@@ -34,8 +34,8 @@
    }
 }
 #loginmsg{
-    width:15rem;
-    height:2.5rem;
+    width:16rem;
+    height:4rem;
     background-color: $white;
     position: absolute;
     display: flex;
@@ -70,7 +70,7 @@
     }
     ul{
         @include flex-column();
-        height:2rem;
+        height:3rem;
         align-items: flex-start;
         width:10rem;
         li{
@@ -519,48 +519,26 @@
     @media only screen and (min-width:$breakpoint-tablet){
         #loginmsg{
             width:25rem;
-            height:4.3rem;
-            background-color: $white;
-            position: absolute;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            border-left: 0.3rem solid green;
+            height:4rem;
+           
             right:1rem;
             top:5rem;
-            -webkit-animation: cssAnimation 5s forwards; 
-            animation: cssAnimation 3s forwards;
-            @keyframes cssAnimation {
-                0%   {opacity: 1;}
-                90%  {opacity: 1;}
-                100% {opacity: 0;}
-            }
-            @-webkit-keyframes cssAnimation {
-                0%   {opacity: 1;}
-                90%  {opacity: 1;}
-                100% {opacity: 0;}
-            }
+            
             i{
                 font-size: 1.1rem;
-                color:$dark-grey;
+                
                
             }
             #tick{
                 padding:0.7rem;
-                border-radius: 50%;
-                background-color: green;
-                color: $white;
+             
             }
             ul{
-                @include flex-column();
-                height:2.5rem;
-                align-items: flex-start;
-                width:15rem;
+               
+                height:3rem;
+                width:18rem;
                 li{
                     font-size: 0.8rem;
-                    font-family: BoldFont;
-                    color: green;
                     span{
                         font-size: 1.3rem;
                     }
@@ -719,8 +697,10 @@ margin-top: 1rem;
 .mobile-footer{
     display:none;
 }
-.tab-footer{
+.tab-footer-section{
     border-bottom:0.7rem solid $sky-blue;
+
+.tab-footer{
     display:flex;
     flex-direction:row;
     justify-content: space-between;
@@ -782,7 +762,7 @@ margin-top: 1rem;
         }
     }
 }
-
+}
 
 
 }
@@ -806,45 +786,23 @@ margin-top: 1rem;
         right:1rem;
         width:25rem;
         height:4.5rem;
-        background-color: $white;
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        border-left: 0.3rem solid green;
-        -webkit-animation: cssAnimation 5s forwards; 
-        animation: cssAnimation 3s forwards;
-        @keyframes cssAnimation {
-            0%   {opacity: 1;}
-            90%  {opacity: 1;}
-            100% {opacity: 0;}
-        }
-        @-webkit-keyframes cssAnimation {
-            0%   {opacity: 1;}
-            90%  {opacity: 1;}
-            100% {opacity: 0;}
-        }
+       
+      
         i{
             font-size: 1.3rem;
-            color:$dark-grey;
            
         }
         #tick{
             padding:0.5rem;
             border-radius: 50%;
-            background-color: green;
-            color: $white;
+           
         }
         ul{
-            @include flex-column();
-            height:2.5rem;
-            align-items: flex-start;
+            height:2.8rem;
             width:15rem;
             li{
                 font-size: 0.8rem;
-                font-family: BoldFont;
-                color: green;
+               
                 span{
                     font-size: 1.3rem;
                 }
@@ -929,7 +887,7 @@ margin-top: 1rem;
 
 
     .nav-desktop{
-        padding:2rem 0rem;
+        padding:2rem 1rem;
         display:block;
         display:flex;
         flex-direction: row;
@@ -1311,46 +1269,20 @@ margin-top: 1rem;
         top:9rem;
         right:1rem;
         width:25rem;
-        height:4.5rem;
-        background-color: $white;
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        border-left: 0.3rem solid green;
-        -webkit-animation: cssAnimation 5s forwards; 
-        animation: cssAnimation 3s forwards;
-        @keyframes cssAnimation {
-            0%   {opacity: 1;}
-            90%  {opacity: 1;}
-            100% {opacity: 0;}
-        }
-        @-webkit-keyframes cssAnimation {
-            0%   {opacity: 1;}
-            90%  {opacity: 1;}
-            100% {opacity: 0;}
-        }
+       
         i{
             font-size: 1.3rem;
-            color:$dark-grey;
 
         }
         #tick{
             padding:0.5rem;
-            border-radius: 50%;
-            background-color: green;
-            color: $white;
+       
         }
         ul{
-            @include flex-column();
-            height:2.5rem;
-            align-items: flex-start;
             width:15rem;
             li{
                 font-size: 0.8rem;
-                font-family: BoldFont;
-                color: green;
+                
                 span{
                     font-size: 1.3rem;
                 }
@@ -1435,7 +1367,7 @@ margin-top: 1rem;
 
 
     .nav-desktop{
-        padding:2rem 0rem;
+        padding:2rem 1rem;
         display:block;
         display:flex;
         flex-direction: row;

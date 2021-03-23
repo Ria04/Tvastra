@@ -1,4 +1,5 @@
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: auto;
 }
@@ -151,7 +152,6 @@ button {
   font-size: 1rem;
   line-height: 1.4rem;
   border: none;
-  border-radius: 0.5rem;
   padding: 0.5rem 1.5rem;
   outline: none;
   cursor: pointer;
@@ -189,7 +189,6 @@ span {
   font-family: BoldFont;
   color: #a19f9f;
   font-size: 1.2rem;
-  margin-left: 0.3125rem;
 }
 
 ul li {
@@ -244,7 +243,7 @@ a {
 
 @media only screen and (min-width: 1024px) {
   section {
-    padding: 3rem 3rem;
+    padding: 3rem 1rem;
     text-align: left;
   }
   h1, h2 {
@@ -286,7 +285,6 @@ a {
     font-size: 1.1rem;
     line-height: 1.4rem;
     border: none;
-    border-radius: 0.5rem;
     padding: 0.5rem 0.7rem;
   }
   input {
@@ -311,9 +309,13 @@ a {
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1700px) {
+  .container {
+    max-width: 1400px;
+    margin: auto;
+  }
   section {
-    padding: 5rem 7rem;
+    padding: 5rem 1rem;
     text-align: left;
   }
   h1, h2 {
@@ -355,7 +357,6 @@ a {
     font-size: 1.2rem;
     line-height: 1.4rem;
     border: none;
-    border-radius: 0.5rem;
     padding: 1rem 1.7rem;
   }
   input {
@@ -412,8 +413,8 @@ a {
 }
 
 #loginmsg {
-  width: 15rem;
-  height: 2.5rem;
+  width: 16rem;
+  height: 4rem;
   background-color: white;
   position: absolute;
   display: -webkit-box;
@@ -482,7 +483,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 2rem;
+  height: 3rem;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -1058,80 +1059,22 @@ a {
 @media only screen and (min-width: 768px) {
   #loginmsg {
     width: 25rem;
-    height: 4.3rem;
-    background-color: white;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-left: 0.3rem solid green;
+    height: 4rem;
     right: 1rem;
     top: 5rem;
-    -webkit-animation: cssAnimation 5s forwards;
-    animation: cssAnimation 3s forwards;
-  }
-  @keyframes cssAnimation {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes cssAnimation {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
   }
   #loginmsg i {
     font-size: 1.1rem;
-    color: #666565;
   }
   #loginmsg #tick {
     padding: 0.7rem;
-    border-radius: 50%;
-    background-color: green;
-    color: white;
   }
   #loginmsg ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 2.5rem;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    width: 15rem;
+    height: 3rem;
+    width: 18rem;
   }
   #loginmsg ul li {
     font-size: 0.8rem;
-    font-family: BoldFont;
-    color: green;
   }
   #loginmsg ul li span {
     font-size: 1.3rem;
@@ -1374,83 +1317,26 @@ a {
   display: none;
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1024px) {
   #loginmsg {
     top: 9rem;
     right: 1rem;
     width: 25rem;
     height: 4.5rem;
-    background-color: white;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-left: 0.3rem solid green;
-    -webkit-animation: cssAnimation 5s forwards;
-    animation: cssAnimation 3s forwards;
-  }
-  @keyframes cssAnimation {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes cssAnimation {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
   }
   #loginmsg i {
     font-size: 1.3rem;
-    color: #666565;
   }
   #loginmsg #tick {
     padding: 0.5rem;
     border-radius: 50%;
-    background-color: green;
-    color: white;
   }
   #loginmsg ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 2.5rem;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    height: 2.8rem;
     width: 15rem;
   }
   #loginmsg ul li {
     font-size: 0.8rem;
-    font-family: BoldFont;
-    color: green;
   }
   #loginmsg ul li span {
     font-size: 1.3rem;
@@ -1524,7 +1410,7 @@ a {
     border-left: 0.5rem solid #167ddd;
   }
   .nav-desktop {
-    padding: 2rem 3rem;
+    padding: 2rem 1rem;
     display: block;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1624,6 +1510,9 @@ a {
   }
   .How-it-Works {
     padding-bottom: 3rem;
+  }
+  .How-it-Works .container {
+    width: 100%;
   }
   .How-it-Works p {
     margin-bottom: 2.5rem;
@@ -1859,11 +1748,18 @@ a {
     width: 5rem;
     height: 6rem;
   }
-  .need-help {
+  .need-help .container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .need-help div {
     -webkit-box-align: start;
@@ -1873,27 +1769,36 @@ a {
   .need-help p {
     margin-bottom: 0rem;
   }
-  .tab-footer .footer-div-1 {
+  .tab-footer-section {
+    border-bottom: 0.7rem solid #167ddd;
+  }
+  .tab-footer-section .tab-footer {
+    border: none;
+  }
+  .tab-footer-section .tab-footer .container {
+    width: 100%;
+  }
+  .tab-footer-section .tab-footer .footer-div-1 {
     width: 45%;
   }
-  .tab-footer .footer-div-1 ul {
+  .tab-footer-section .tab-footer .footer-div-1 ul {
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
-  .tab-footer .footer-div-1 ul li {
+  .tab-footer-section .tab-footer .footer-div-1 ul li {
     font-size: 1.1rem;
   }
-  .tab-footer .footer-div-2 {
+  .tab-footer-section .tab-footer .footer-div-2 {
     width: 14%;
   }
-  .tab-footer .footer-div-2 i {
+  .tab-footer-section .tab-footer .footer-div-2 i {
     font-size: 1.3rem;
   }
-  .tab-footer .footer-div-2 img {
+  .tab-footer-section .tab-footer .footer-div-2 img {
     height: 1.7rem;
     width: 10rem;
   }
-  .tab-footer .footer-div-2 ul {
+  .tab-footer-section .tab-footer .footer-div-2 ul {
     margin-top: 2rem;
   }
   .navlist {
@@ -1901,85 +1806,23 @@ a {
   }
 }
 
-<<<<<<< HEAD
-=======
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1700px) {
   #loginmsg {
     top: 9rem;
     right: 1rem;
     width: 25rem;
-    height: 4.5rem;
-    background-color: white;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-left: 0.3rem solid green;
-    -webkit-animation: cssAnimation 5s forwards;
-    animation: cssAnimation 3s forwards;
-  }
-  @keyframes cssAnimation {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes cssAnimation {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
   }
   #loginmsg i {
     font-size: 1.3rem;
-    color: #666565;
   }
   #loginmsg #tick {
     padding: 0.5rem;
-    border-radius: 50%;
-    background-color: green;
-    color: white;
   }
   #loginmsg ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 2.5rem;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     width: 15rem;
   }
   #loginmsg ul li {
     font-size: 0.8rem;
-    font-family: BoldFont;
-    color: green;
   }
   #loginmsg ul li span {
     font-size: 1.3rem;
@@ -2053,7 +1896,7 @@ a {
     border-left: 0.5rem solid #167ddd;
   }
   .nav-desktop {
-    padding: 2rem 7rem;
+    padding: 2rem 1rem;
     display: block;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2153,6 +1996,9 @@ a {
   }
   .How-it-Works {
     padding-bottom: 5rem;
+  }
+  .How-it-Works .container {
+    width: 100%;
   }
   .How-it-Works p {
     margin-bottom: 2.5rem;
@@ -2397,6 +2243,9 @@ a {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .need-help .container {
+    width: 100%;
+  }
   .need-help div {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -2405,27 +2254,30 @@ a {
   .need-help p {
     margin-bottom: 0rem;
   }
-  .tab-footer .footer-div-1 {
+  .tab-footer-section .tab-footer .container {
+    width: 100%;
+  }
+  .tab-footer-section .tab-footer .footer-div-1 {
     width: 45%;
   }
-  .tab-footer .footer-div-1 ul {
+  .tab-footer-section .tab-footer .footer-div-1 ul {
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
-  .tab-footer .footer-div-1 ul li {
+  .tab-footer-section .tab-footer .footer-div-1 ul li {
     font-size: 1.5rem;
   }
-  .tab-footer .footer-div-2 {
+  .tab-footer-section .tab-footer .footer-div-2 {
     width: 14%;
   }
-  .tab-footer .footer-div-2 i {
+  .tab-footer-section .tab-footer .footer-div-2 i {
     font-size: 1.6rem;
   }
-  .tab-footer .footer-div-2 img {
+  .tab-footer-section .tab-footer .footer-div-2 img {
     height: 3.5rem;
     width: 14rem;
   }
-  .tab-footer .footer-div-2 ul {
+  .tab-footer-section .tab-footer .footer-div-2 ul {
     margin-top: 2rem;
   }
   .navlist {
@@ -2433,14 +2285,13 @@ a {
   }
 }
 
->>>>>>> 2b6ca90a27483d18a2313e6e3cce04c6e85963d2
 .overlay-section {
   background-image: -webkit-gradient(linear, left top, right top, from(#167ddd), to(rgba(22, 125, 221, 0))), url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/dentist_hero_image.jpg");
   background-image: linear-gradient(to right, #167ddd, rgba(22, 125, 221, 0)), url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/dentist_hero_image.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 16rem;
+  padding: 6rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2485,7 +2336,6 @@ p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   justify-content: space-between;
-  height: 18rem;
 }
 
 .vaccination .about-dentist-department h4, .vaccination .about-dentist-department p {
@@ -2527,7 +2377,6 @@ p {
 }
 
 .symbols {
-  height: 34rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2556,7 +2405,6 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 10rem;
 }
 
 .symbols div i {
@@ -2571,7 +2419,6 @@ p {
 }
 
 .serviceandschedule {
-  height: 24rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2740,9 +2587,6 @@ p {
   p {
     font-size: 1.1rem;
   }
-  .vaccination {
-    height: 22rem;
-  }
   .vaccination h2 {
     text-align: left;
     margin-bottom: 2rem;
@@ -2764,6 +2608,16 @@ p {
   }
   .vaccination div .about-dentist-department {
     width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .vaccination .about-dentist-department ul li {
     font-size: 1.1rem;
@@ -2774,9 +2628,6 @@ p {
         -ms-flex-direction: row;
             flex-direction: row;
     height: auto;
-  }
-  .symbols div {
-    height: 11rem;
   }
   .symbols div p {
     font-size: 0.9rem;
@@ -2841,11 +2692,15 @@ p {
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1024px) {
+  p {
+    font-family: LightFont;
+  }
   .overlay-section {
-    padding-left: 7rem;
     background-position: unset;
-    height: 20rem;
+  }
+  .overlay-section .container {
+    padding: 0rem 1rem;
   }
   .overlay-section h5 {
     text-align: left;
@@ -2854,9 +2709,6 @@ p {
   p {
     font-size: 1.3rem;
   }
-  .vaccination .about-dentist-department ul {
-    height: 8rem;
-  }
   .vaccination .about-dentist-department ul li {
     font-size: 1.3rem;
   }
@@ -2864,8 +2716,7 @@ p {
     width: 100%;
   }
   .more-services .wrap-services .service {
-    height: 20rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
   }
   .more-services .wrap-services .service .service-heading h3 {
     font-size: 1.4rem;
@@ -2887,21 +2738,18 @@ p {
             justify-content: space-between;
   }
   .vaccination-service-wrap div {
-    width: 60%;
+    width: 75%;
   }
   .vaccination-service-wrap div section {
     width: 100%;
     padding-right: 0rem;
   }
-  .vaccination-service-wrap div .vaccination {
-    height: 25rem;
-  }
   .vaccination-service-wrap div .vaccination .vaccination-image {
+    height: 20rem;
     width: 45%;
   }
   .vaccination-service-wrap div .vaccination div {
     width: 100%;
-    height: 100%;
   }
   .vaccination-service-wrap div .vaccination .about-dentist-department {
     width: 50%;
@@ -2926,16 +2774,18 @@ p {
   h5 {
     font-size: 1.3rem;
   }
+  .symbols {
+    padding-top: 0rem;
+  }
   .symbols div {
     width: 30%;
-    height: 13rem;
   }
   .symbols div p {
     text-align: center;
     font-size: 1.15rem;
   }
-  footer section p {
-    font-size: 1.5rem;
+  .symbols div i {
+    margin-bottom: 1rem;
   }
 }
 /*# sourceMappingURL=dentistry.css.map */

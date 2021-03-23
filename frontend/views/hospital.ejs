@@ -18,12 +18,17 @@
 
 
 <section class="overlay-section">
+    <div class="container">
     <h1>Hospitals in <u>Delhi</u></h1>
+</div>
 </section>
 
 
 
-<section class="heading">
+<section class="heading-section">
+    <div class="container heading">
+
+    
     <h3>Home/Doctor List</h3>
     <form action="/sort" method="POST">
     <select name="sort" id="dropdownlist" onchange="this.form.submit()">
@@ -36,12 +41,14 @@
         <option value="exp-desc">Experience(Desc.)</option>
     </select>
 </form>
+</div>
 </section>
 
 
 
 
-    <section class="filtersanddoctors">
+    <section >
+        <div class="container filtersanddoctors">
 
         <div class="filters">
             <button>Filter By</button>
@@ -179,7 +186,7 @@
                            
                         </ul>
                         <div class="appointment-button">
-                            <button>Call Now</button>
+                            <button class="dark-blue-button">Call Now</button>
                         </div>
                     </div>
                     <div class="doctor-image">
@@ -190,6 +197,7 @@
            
             
         </div>
+        </div>
     </section>
 
 
@@ -197,12 +205,13 @@
 
 
 <section class="need-help">
+    <div class="container">
     <div>
     <h2>Need Help?</h2>
     <p>Just let us know, we will be happy to assist you</p>
 </div> 
 <button>Submit your enquiry</button> 
-
+</div>
 </section>
 
 <%-include('footer.ejs') %>

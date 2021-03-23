@@ -152,7 +152,6 @@ button {
   font-size: 1rem;
   line-height: 1.4rem;
   border: none;
-  border-radius: 0.5rem;
   padding: 0.5rem 1.5rem;
   outline: none;
   cursor: pointer;
@@ -190,7 +189,6 @@ span {
   font-family: BoldFont;
   color: #a19f9f;
   font-size: 1.2rem;
-  margin-left: 0.3125rem;
 }
 
 ul li {
@@ -208,6 +206,10 @@ label {
 
 a {
   text-decoration: none;
+}
+
+a:link {
+  color: #93bede;
 }
 
 @media only screen and (min-width: 768px) {
@@ -245,7 +247,7 @@ a {
 
 @media only screen and (min-width: 1024px) {
   section {
-    padding: 3rem 0rem;
+    padding: 3rem 1rem;
     text-align: left;
   }
   h1, h2 {
@@ -287,7 +289,6 @@ a {
     font-size: 1.1rem;
     line-height: 1.4rem;
     border: none;
-    border-radius: 0.5rem;
     padding: 0.5rem 0.7rem;
   }
   input {
@@ -312,13 +313,13 @@ a {
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1700px) {
   .container {
     max-width: 1400px;
     margin: auto;
   }
   section {
-    padding: 5rem 0rem;
+    padding: 5rem 1rem;
     text-align: left;
   }
   h1, h2 {
@@ -360,7 +361,6 @@ a {
     font-size: 1.2rem;
     line-height: 1.4rem;
     border: none;
-    border-radius: 0.5rem;
     padding: 1rem 1.7rem;
   }
   input {
@@ -417,8 +417,8 @@ a {
 }
 
 #loginmsg {
-  width: 15rem;
-  height: 2.5rem;
+  width: 16rem;
+  height: 4rem;
   background-color: white;
   position: absolute;
   display: -webkit-box;
@@ -487,7 +487,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 2rem;
+  height: 3rem;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -1063,80 +1063,22 @@ a {
 @media only screen and (min-width: 768px) {
   #loginmsg {
     width: 25rem;
-    height: 4.3rem;
-    background-color: white;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-left: 0.3rem solid green;
+    height: 4rem;
     right: 1rem;
     top: 5rem;
-    -webkit-animation: cssAnimation 5s forwards;
-    animation: cssAnimation 3s forwards;
-  }
-  @keyframes cssAnimation {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes cssAnimation {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
   }
   #loginmsg i {
     font-size: 1.1rem;
-    color: #666565;
   }
   #loginmsg #tick {
     padding: 0.7rem;
-    border-radius: 50%;
-    background-color: green;
-    color: white;
   }
   #loginmsg ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 2.5rem;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    width: 15rem;
+    height: 3rem;
+    width: 18rem;
   }
   #loginmsg ul li {
     font-size: 0.8rem;
-    font-family: BoldFont;
-    color: green;
   }
   #loginmsg ul li span {
     font-size: 1.3rem;
@@ -1385,77 +1327,20 @@ a {
     right: 1rem;
     width: 25rem;
     height: 4.5rem;
-    background-color: white;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-left: 0.3rem solid green;
-    -webkit-animation: cssAnimation 5s forwards;
-    animation: cssAnimation 3s forwards;
-  }
-  @keyframes cssAnimation {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes cssAnimation {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
   }
   #loginmsg i {
     font-size: 1.3rem;
-    color: #666565;
   }
   #loginmsg #tick {
     padding: 0.5rem;
     border-radius: 50%;
-    background-color: green;
-    color: white;
   }
   #loginmsg ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 2.5rem;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    height: 2.8rem;
     width: 15rem;
   }
   #loginmsg ul li {
     font-size: 0.8rem;
-    font-family: BoldFont;
-    color: green;
   }
   #loginmsg ul li span {
     font-size: 1.3rem;
@@ -1529,7 +1414,7 @@ a {
     border-left: 0.5rem solid #167ddd;
   }
   .nav-desktop {
-    padding: 2rem 0rem;
+    padding: 2rem 1rem;
     display: block;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1925,83 +1810,23 @@ a {
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1700px) {
   #loginmsg {
     top: 9rem;
     right: 1rem;
     width: 25rem;
-    height: 4.5rem;
-    background-color: white;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-left: 0.3rem solid green;
-    -webkit-animation: cssAnimation 5s forwards;
-    animation: cssAnimation 3s forwards;
-  }
-  @keyframes cssAnimation {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes cssAnimation {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
   }
   #loginmsg i {
     font-size: 1.3rem;
-    color: #666565;
   }
   #loginmsg #tick {
     padding: 0.5rem;
-    border-radius: 50%;
-    background-color: green;
-    color: white;
   }
   #loginmsg ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 2.5rem;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     width: 15rem;
   }
   #loginmsg ul li {
     font-size: 0.8rem;
-    font-family: BoldFont;
-    color: green;
   }
   #loginmsg ul li span {
     font-size: 1.3rem;
@@ -2075,7 +1900,7 @@ a {
     border-left: 0.5rem solid #167ddd;
   }
   .nav-desktop {
-    padding: 2rem 0rem;
+    padding: 2rem 1rem;
     display: block;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2793,9 +2618,6 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .subScheduleContainer div div form {
@@ -3220,6 +3042,15 @@ a {
         -ms-flex-pack: start;
             justify-content: start;
   }
+  .filtersanddoctors .filters .filterform h4 span {
+    color: #222844;
+  }
+  .filtersanddoctors .filters .filterform .showmore span {
+    font-family: LightFont;
+  }
+  .filtersanddoctors .doctor-card-tab .doctor-card h3 {
+    margin-top: 1rem;
+  }
   .filtersanddoctors .doctor-card-tab .doctor-card .appointment-button {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3232,11 +3063,15 @@ a {
         -ms-flex-pack: start;
             justify-content: flex-start;
     margin-left: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     width: 100%;
   }
   .carouselContainer {
     padding: 1rem;
+  }
+  .allCarouselItems {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .allCarouselItems .item h6 {
     margin: 0rem;
@@ -3254,7 +3089,7 @@ a {
     padding: 1rem 0rem;
   }
   .subScheduleContainer div {
-    padding: 0rem 1rem;
+    padding: 1rem 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3268,14 +3103,14 @@ a {
     border-bottom: 0.2rem solid #dbd8d8;
   }
   .subScheduleContainer div h4 {
-    padding: 1rem 0rem;
+    padding: 0.8rem 0rem;
     font-family: LightFont;
     margin-right: 0.5rem;
   }
   .subScheduleContainer div h4 span {
-    color: green;
-    padding: 0.5rem 0.4rem;
-    border: 0.1rem solid green;
+    color: #93bede;
+    padding: 0.5rem 3rem;
+    border: 0.1rem solid #93bede;
     font-size: 1.1rem;
   }
   .subScheduleContainer div i {
@@ -3295,7 +3130,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1700px) {
   .heading {
     padding: 0rem;
   }
@@ -3536,12 +3371,6 @@ a {
     padding: 2rem 0rem;
     font-family: LightFont;
     margin-right: 0.5rem;
-  }
-  .subScheduleContainer div h4 span {
-    color: green;
-    padding: 0.5rem 0.4rem;
-    border: 0.1rem solid green;
-    font-size: 1.5rem;
   }
   .subScheduleContainer div i {
     margin-right: 1rem;

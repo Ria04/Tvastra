@@ -32,7 +32,7 @@ $dark-grey:rgb(102, 101, 101);
 $breakpoint-tablet:768px;
 $breakpoint-unknown:1024px;
 
-$breakpoint-desktop:1600px;
+$breakpoint-desktop:1700px;
 
 
 
@@ -127,7 +127,6 @@ button{
     font-size: 1rem;
     line-height: 1.4rem;
     border: none;
-    border-radius: 0.5rem;
     padding: 0.5rem 1.5rem;
     outline: none;
     cursor: pointer;
@@ -157,7 +156,6 @@ span{
     font-family: BoldFont;
     color:$grey;
     font-size: 1.2rem;
-    margin-left: 0.3125rem;
 }
 ul li{
     font-size: 1.1rem;
@@ -173,6 +171,7 @@ label{
 a{
     text-decoration: none;
 }
+
 
 
 @media only screen and (min-width:$breakpoint-tablet){
@@ -209,7 +208,7 @@ a{
 }
 @media only screen and (min-width:$breakpoint-unknown){
     section{
-        padding: 3rem 0rem;
+        padding: 3rem 1rem;
         text-align: left;
     }
     h1,h2{
@@ -251,7 +250,6 @@ a{
         font-size: 1.1rem;
         line-height: 1.4rem;
         border: none;
-        border-radius: 0.5rem;
         padding: 0.5rem 0.7rem;
     }
     input{
@@ -278,7 +276,7 @@ a{
     }
     
     section{
-        padding: 5rem 0rem;
+        padding: 5rem 1rem;
         text-align: left;
     }
     h1,h2{
@@ -320,7 +318,7 @@ a{
         font-size: 1.2rem;
         line-height: 1.4rem;
         border: none;
-        border-radius: 0.5rem;
+        
         padding: 1rem 1.7rem;
     }
     input{

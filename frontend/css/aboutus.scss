@@ -60,16 +60,7 @@ h3{
     color: white;
     font-size: 0.9rem;
 }
-.data button{
-    background-color: $sky-blue;
-    font-family: BoldFont;
-    border:unset;
-    width:15rem;
-    border-radius: 0.5rem;
-    text-indent: unset;
-    margin-bottom: 1rem;
 
-}
 
 
 .datainfo{
@@ -166,7 +157,7 @@ h3{
         align-items:flex-start;
     }
 }
-@media only screen and (min-width:$breakpoint-desktop){
+@media only screen and (min-width:$breakpoint-unknown){
 .video{
     height:39rem;
     width:100%;

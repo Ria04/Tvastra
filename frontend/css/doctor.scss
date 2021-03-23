@@ -220,7 +220,6 @@ padding-bottom: 0rem;
             flex-direction: row;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
             form{
                 width:auto;
             }
@@ -540,20 +539,47 @@ align-items: flex-start;
         }
     }
 
-    .filtersanddoctors .doctor-card-tab .doctor-card .appointment-button{
+    .filtersanddoctors {
+        .filters{
+            .filterform{
+                h4{
+                    span{
+                    color:$dark-blue-color;
+                    }
+                }
+                .showmore{
+                    span{
+                        font-family: LightFont;
+                    }
+                }
+            }
+        }
+        
+        .doctor-card-tab .doctor-card 
+        
+      { 
+          h3{
+              margin-top: 1rem;
+          }
+           .appointment-button{
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         margin-left: 1rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         width:100%;
-    }
+    }}
+
+}
     .carouselContainer{
         padding: 1rem;
     }
-    .allCarouselItems .item h6{
+    .allCarouselItems{ 
+    justify-content: space-around;
+    .item h6{
         margin: 0rem;
     }
+}
     .subScheduleContainer{
         display:flex;
         flex-direction: column;
@@ -561,20 +587,20 @@ align-items: flex-start;
             padding:1rem 0rem;
         }
         div{
-            padding:0rem 1rem;
+            padding:1rem 1rem;
             
             display: flex;
             flex-direction: row;
             align-items: center;
             border-bottom: 0.2rem solid $light-grey;
             h4{
-                padding:1rem 0rem;
+                padding:0.8rem 0rem;
                 font-family: LightFont;
                 margin-right: 0.5rem;
                 span{
-                    color: green;
-                    padding:0.5rem 0.4rem;
-                    border:0.1rem solid green;
+                    color: $background-blue-color;
+                    padding:0.5rem 3rem;
+                    border:0.1rem solid $background-blue-color;
                     font-size: 1.1rem;
                 }
             }
@@ -588,6 +614,7 @@ align-items: flex-start;
                 padding: unset;
                 margin-right: 2rem;
             }
+            
         }
     }
 
@@ -813,12 +840,7 @@ align-items: flex-start;
                 padding:2rem 0rem;
                 font-family: LightFont;
                 margin-right: 0.5rem;
-                span{
-                    color: green;
-                    padding:0.5rem 0.4rem;
-                    border:0.1rem solid green;
-                    font-size: 1.5rem;
-                }
+              
             }
             i{
                 margin-right: 1rem;
