@@ -1,3 +1,9 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
 @font-face {
   font-family: "BoldFont";
   src: url("Nexa-Bold-1.otf");
@@ -150,6 +156,10 @@ button {
   padding: 0.5rem 1.5rem;
   outline: none;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .dark-blue-button {
@@ -235,7 +245,7 @@ a {
 
 @media only screen and (min-width: 1024px) {
   section {
-    padding: 3rem 3rem;
+    padding: 3rem 0rem;
     text-align: left;
   }
   h1, h2 {
@@ -303,8 +313,12 @@ a {
 }
 
 @media only screen and (min-width: 1600px) {
+  .container {
+    max-width: 1400px;
+    margin: auto;
+  }
   section {
-    padding: 5rem 7rem;
+    padding: 5rem 0rem;
     text-align: left;
   }
   h1, h2 {
@@ -1515,7 +1529,7 @@ a {
     border-left: 0.5rem solid #167ddd;
   }
   .nav-desktop {
-    padding: 2rem 3rem;
+    padding: 2rem 0rem;
     display: block;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1615,6 +1629,9 @@ a {
   }
   .How-it-Works {
     padding-bottom: 3rem;
+  }
+  .How-it-Works .container {
+    width: 100%;
   }
   .How-it-Works p {
     margin-bottom: 2.5rem;
@@ -1850,11 +1867,18 @@ a {
     width: 5rem;
     height: 6rem;
   }
-  .need-help {
+  .need-help .container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .need-help div {
     -webkit-box-align: start;
@@ -1864,27 +1888,36 @@ a {
   .need-help p {
     margin-bottom: 0rem;
   }
-  .tab-footer .footer-div-1 {
+  .tab-footer-section {
+    border-bottom: 0.7rem solid #167ddd;
+  }
+  .tab-footer-section .tab-footer {
+    border: none;
+  }
+  .tab-footer-section .tab-footer .container {
+    width: 100%;
+  }
+  .tab-footer-section .tab-footer .footer-div-1 {
     width: 45%;
   }
-  .tab-footer .footer-div-1 ul {
+  .tab-footer-section .tab-footer .footer-div-1 ul {
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
-  .tab-footer .footer-div-1 ul li {
+  .tab-footer-section .tab-footer .footer-div-1 ul li {
     font-size: 1.1rem;
   }
-  .tab-footer .footer-div-2 {
+  .tab-footer-section .tab-footer .footer-div-2 {
     width: 14%;
   }
-  .tab-footer .footer-div-2 i {
+  .tab-footer-section .tab-footer .footer-div-2 i {
     font-size: 1.3rem;
   }
-  .tab-footer .footer-div-2 img {
+  .tab-footer-section .tab-footer .footer-div-2 img {
     height: 1.7rem;
     width: 10rem;
   }
-  .tab-footer .footer-div-2 ul {
+  .tab-footer-section .tab-footer .footer-div-2 ul {
     margin-top: 2rem;
   }
   .navlist {
@@ -2042,7 +2075,7 @@ a {
     border-left: 0.5rem solid #167ddd;
   }
   .nav-desktop {
-    padding: 2rem 7rem;
+    padding: 2rem 0rem;
     display: block;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2142,6 +2175,9 @@ a {
   }
   .How-it-Works {
     padding-bottom: 5rem;
+  }
+  .How-it-Works .container {
+    width: 100%;
   }
   .How-it-Works p {
     margin-bottom: 2.5rem;
@@ -2386,6 +2422,9 @@ a {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .need-help .container {
+    width: 100%;
+  }
   .need-help div {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -2393,6 +2432,9 @@ a {
   }
   .need-help p {
     margin-bottom: 0rem;
+  }
+  .tab-footer .container {
+    width: 100%;
   }
   .tab-footer .footer-div-1 {
     width: 45%;
@@ -3163,6 +3205,21 @@ a {
 }
 
 @media only screen and (min-width: 1024px) {
+  .heading-section {
+    padding-bottom: 0rem;
+  }
+  .heading {
+    padding: 0rem;
+  }
+  .heading h4 {
+    margin-bottom: 0rem;
+  }
+  .overlay-section .container {
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
   .filtersanddoctors .doctor-card-tab .doctor-card .appointment-button {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3236,15 +3293,11 @@ a {
     padding: unset;
     margin-right: 2rem;
   }
-  .container {
-    max-width: 1200px;
-    margin: auto;
-  }
 }
 
 @media only screen and (min-width: 1600px) {
   .heading {
-    padding: 5rem 7rem;
+    padding: 0rem;
   }
   .heading form select {
     padding: 1rem;
@@ -3252,6 +3305,11 @@ a {
   }
   .overlay-section {
     padding: 10rem 7rem;
+  }
+  .overlay-section .container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
   .filtersanddoctors .filters {
     width: 22%;

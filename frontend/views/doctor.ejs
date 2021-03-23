@@ -1,11 +1,11 @@
-
 <head>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="doctor.css">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,473 +13,524 @@
 
 </head>
 <%-include('header.ejs') %>
-<% if (loggedin==true && msg.length>0) { %>
-    
-    <div id="loginmsg">
-    <i id="tick"class="fa fa-check"></i>
-    <ul>
-        <li><span>Failure</span></li>
-        <li><%= msg%></li>
-    </ul>
-    <i class="fa fa-close"></i>
-    
-     
-    </div>
-    
-    <% } %>
+    <% if (loggedin==true && msg.length>0) { %>
 
-
-
-<section class="overlay-section">
-    <h1>Cardiac surgeon in <u>Delhi</u></h1>
-</section>
-
-
-
-<section class="heading">
-        <h4>Home/Doctor List</h4>
-        <form action="/sort" method="POST">
-        <select name="sort" id="dropdownlist" onchange="this.form.submit()">
-            <option value="" disabled selected>Sort By</option>
-            <option value="name-asc">Name(Assc.)</option>
-            <option value="name-desc">Name(Desc.)</option>
-            <option value="fees-asc">Average Fee(Assc.)</option>
-            <option value="fees-desc">Average Fee(Desc.)</option>
-            <option value="exp-asc">Experience(Assc.)</option>
-            <option value="exp-desc">Experience(Desc.)</option>
-        </select>
-    </form>
-</section>
-
-
-
-
-
-
-    <section>
-        <div class="container filtersanddoctors">
-        <div class="filters">
-            <button>Filter By</button>
+        <div id="loginmsg">
+            <i id="tick" class="fa fa-check"></i>
             <ul>
-                <%if(filter=="undefined"){%>
-                    <li style="display: none;"><%= filter%> <i class="fa fa-close"></i></li>
-                    <%}else{%>
-                    <%for(var i=0;i<filter.length;i++){%>
-                        
-
-                        <li id="<%= i%>"><%= filter[i]%> <i onclick="remove('<%= i%>','<%= filter[i]%>')" class="fa fa-close"></i></li>
-
-                        <%}}%>
-               
+                <li><span>Failure</span></li>
+                <li>
+                    <%= msg%>
+                </li>
             </ul>
+            <i class="fa fa-close"></i>
+
+
+        </div>
+
+        <% } %>
+
+
+
+            <section class="overlay-section">
+                <div class="container">
+                    <h1>Cardiac surgeon in <u>Delhi</u></h1>
+                </div>
+            </section>
+
+
+
+            <section class="heading-section">
+                <div class="container heading">
+                    <h4>Home/Doctor List</h4>
+                    <form action="/sort" method="POST">
+                        <select name="sort" id="dropdownlist" onchange="this.form.submit()">
+                            <option value="" disabled selected>Sort By</option>
+                            <option value="name-asc">Name(Assc.)</option>
+                            <option value="name-desc">Name(Desc.)</option>
+                            <option value="fees-asc">Average Fee(Assc.)</option>
+                            <option value="fees-desc">Average Fee(Desc.)</option>
+                            <option value="exp-asc">Experience(Assc.)</option>
+                            <option value="exp-desc">Experience(Desc.)</option>
+                        </select>
+                    </form>
+                </div>
+            </section>
+
+
+
+
+
+
+            <section>
+                <div class="container filtersanddoctors">
+                    <div class="filters">
+                        <button>Filter By</button>
+                        <ul>
+                            <%if(filter=="undefined"){%>
+                                <li style="display: none;">
+                                    <%= filter%> <i class="fa fa-close"></i>
+                                </li>
+                                <%}else{%>
+                                    <%for(var i=0;i<filter.length;i++){%>
+
+
+                                        <li id="<%= i%>">
+                                            <%= filter[i]%> <i onclick="remove('<%= i%>','<%= filter[i]%>')"
+                                                    class="fa fa-close"></i>
+                                        </li>
+
+                                        <%}}%>
+
+                        </ul>
+                        <script>
+                            function remove(id, filterelement) {
+                                var x = document.getElementById(id);
+                                var ele = document.getElementById(filterelement);
+                                ele.checked = false;
+                                x.style.display = "none";
+                                ele.form.submit();
+
+                            }
+                        </script>
+
+                        <div class="filter-bar">
+                            <form class="filterform" method="POST" action="/addfilter">
+
+                                <h4> <span> Location </span><i class="fa fa-search"></i></h4>
+                                <% var l=[]; var h=[]; var t=[]; for(var q=0;q<filterdata.length;q++){
+                                    if(!l.includes(filterdata[q].state)){ l.push(filterdata[q].state); } } for(var
+                                    q=0;q<filterdata.length;q++){ if(!h.includes(filterdata[q].yourhospital)){
+                                    h.push(filterdata[q].yourhospital); } } for(var q=0;q<filterdata.length;q++){
+                                    if(!t.includes(filterdata[q].treatments)){ t.push(filterdata[q].treatments); } } %>
+                                    <div class="showmore" id="showmore1">
+
+                                        <%for(var i=0;i<l.length;i++){%>
+                                            <div>
+                                                <input type="checkbox" onchange="this.form.submit()" name="state"
+                                                    id="<%= l[i]%>" value="<%= l[i]%>"
+                                                    <%if((filter.includes(l[i]))){%>checked<%}else{%>unchecked<%}%> >
+                                                        <label for="<%= l[i]%>"><span>
+                                                                <%= l[i]%>
+                                                            </span> </label>
+                                            </div>
+                                            <%}%>
+                                    </div>
+                                    <button id="1" onclick="expand(1)" type="reset">+ Show more</button>
+
+                                    <h4> <span> Treatment</span><i class="fa fa-search"></i></h4>
+                                    <div class="showmore" id="showmore2">
+
+                                        <%for(var i=0;i<t.length;i++){%>
+                                            <div <%if(t[i]==null){%> style="display:none;"<%}%>>
+                                                    <input type="checkbox" onchange="this.form.submit()"
+                                                        name="treatments" id="<%= t[i]%>" value="<%= t[i]%>"
+                                                        <%if((filter.includes(t[i]))&&(t[i]!=null)){%>checked<%}else{%>
+                                                        unchecked<%}%> >
+                                                            <label for="<%= t[i]%>"><span>
+                                                                    <%= t[i]%>
+                                                                </span> </label>
+                                            </div>
+                                            <%}%>
+                                    </div>
+                                    <button type="reset" id="2" onclick="expand(2)">+ Show more</button>
+
+                                    <h4> <span> Hospitals</span> <i class="fa fa-search"></i></h4>
+                                    <div class="showmore" id="showmore3">
+                                        <%for(var i=0;i<h.length;i++){%>
+                                            <div>
+                                                <input type="checkbox" onchange="this.form.submit()" name="hospitals"
+                                                    id="<%= h[i]%>" value="<%= h[i]%>"
+                                                    <%if((filter.includes(h[i]))){%>checked<%}else{%>unchecked<%}%>>
+                                                        <label for="<%= h[i]%>"><span>
+                                                                <%= h[i]%>
+                                                            </span> </label>
+                                            </div>
+                                            <%}%>
+                                    </div>
+                                    <button id="3" type="reset" onclick="expand(3)">+ Show more</button>
+                                    <h4><span>Years of Experience </span><i class="fa fa-search"></i></h4>
+                                    <div class="showmore" id="showmore4">
+
+                                        <div>
+                                            <input type="checkbox" onchange="this.form.submit()" name="exp" value="30"
+                                                <%if((filter.includes("30"))){%>checked<%}else{%>unchecked<%}%>>
+                                                    <label for="cybercity"><span>30 + </span> </label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" onchange="this.form.submit()" name="exp" value="25"
+                                                <%if((filter.includes("25"))){%>checked<%}else{%>unchecked<%}%>>
+                                                    <label for="cybercity"><span>25 + </span> </label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" onchange="this.form.submit()" name="exp" value="20"
+                                                <%if((filter.includes("20"))){%>checked<%}else{%>unchecked<%}%>>
+                                                    <label for="cybercity"><span>20 + </span> </label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" onchange="this.form.submit()" name="exp" value="15"
+                                                <%if((filter.includes("15"))){%>checked<%}else{%>unchecked<%}%>>
+                                                    <label for="cybercity"><span>15 + </span> </label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" onchange="this.form.submit()" name="exp" value="10"
+                                                <%if((filter.includes("10"))){%>checked<%}else{%>unchecked<%}%>>
+                                                    <label for="cybercity"><span>10 + </span> </label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" onchange="this.form.submit()" name="exp" value="5"
+                                                <%if((filter.includes("5"))){%>checked<%}else{%>unchecked<%}%>>
+                                                    <label for="cybercity"><span>5 + </span> </label>
+                                        </div>
+                                    </div>
+                                    <button type="reset" id="4" onclick="expand(4)">+ Show more</button>
+                            </form>
+                        </div>
+
+                    </div>
+
+
+                    <div class="doctor-card-tab doctor-mobile">
+                        <%if(alldata.length<=0){%>
+
+                            <h3>Nothing to show</h3>
+
+                            <%}else{ for(var q=0;q<alldata.length;q++){%>
+
+
+                                <div
+                                    style="display:flex;flex-direction: column;width: 100%; border:0.18rem solid grey;margin-bottom: 1rem;">
+                                    <div class="doctor-card">
+                                        <div>
+                                            <h3>
+                                                <%= alldata[q].name%>
+                                            </h3>
+                                            <ul>
+                                                <li><i class="fa fa-certificate"></i>
+                                                    <%= alldata[q].treatments%>
+                                                </li>
+                                                <li><i class="fas fa-award"></i>
+                                                    <%= alldata[q].awards%>
+                                                </li>
+                                                <li><i class="fa fa-clock"></i>
+                                                    <%= alldata[q].exp%> years of experience
+                                                </li>
+                                                <li><i class="fa fa-hospital"></i>
+                                                    <%= alldata[q].yourhospital%>
+                                                </li>
+                                                <li><i class='fas fa-map-marker-alt'></i>
+                                                    <%= alldata[q].city%>,<%= alldata[q].state%>,<%=
+                                                                alldata[q].country%>
+                                                </li>
+                                                <li><i class='fas fa-rupee'></i>
+                                                    <%= alldata[q].fees%>
+                                                </li>
+
+                                            </ul>
+                                            <div class="appointment-button">
+                                                <button class="dark-blue-button"
+                                                    onclick="showschedule('carouselContainer<%= alldata[q]._id%>','<%= alldata[q]._id%>')">Book
+                                                    an appointment</button>
+                                            </div>
+                                        </div>
+                                        <div class="doctor-image"
+                                            onclick="window.location.href='/doctorsprofile/<%= alldata[q]._id%>'">
+
+                                            <img onclick="viewprofile('<%= alldata[q]._id%>')" src=<%=alldata[q].img%>>
+
+                                        </div>
+                                    </div>
+                                    <div class="bookAppointmentContainer">
+                                        <div style="display: none;" class="carouselContainer allScheduleContainer"
+                                            id="carouselContainer<%= alldata[q]._id%>">
+                                            <div class="carouselButton">
+                                                <div class="carouselLeftButtonk"
+                                                    onclick="moveCarousel('right','carouselContainer__allCarouselContainer<%= alldata[q]._id%>')">
+                                                    <i class="fas fa-less-than"></i>
+                                                </div>
+                                            </div>
+                                            <div class="allCarouselItems allCarouselItems"
+                                                id="carouselContainer__allCarouselContainer<%= alldata[q]._id%>">
+                                                <div onclick="showsubschedule('subScheduleContainer<%= alldata[q]._id%>','<%= alldata[q]._id%>',0)"
+                                                    id="item1<%= alldata[q]._id%>" class="item">
+
+
+                                                </div>
+                                                <div onclick="showsubschedule('subScheduleContainer<%= alldata[q]._id%>','<%= alldata[q]._id%>',1)"
+                                                    id="item2<%= alldata[q]._id%>" class="item">
+
+
+                                                </div>
+                                                <div onclick="showsubschedule('subScheduleContainer<%= alldata[q]._id%>','<%= alldata[q]._id%>',2)"
+                                                    id="item3<%= alldata[q]._id%>" class="item">
+
+
+                                                </div>
+                                                <div onclick="showsubschedule('subScheduleContainer<%= alldata[q]._id%>','<%= alldata[q]._id%>',3)"
+                                                    id="item4<%= alldata[q]._id%>" style="display: none;" class="item">
+
+                                                </div>
+                                                <div onclick="showsubschedule('subScheduleContainer<%= alldata[q]._id%>','<%= alldata[q]._id%>',4)"
+                                                    id="item5<%= alldata[q]._id%>" style="display: none;" class="item">
+
+                                                </div>
+                                                <div onclick="showsubschedule('subScheduleContainer<%= alldata[q]._id%>','<%= alldata[q]._id%>',5)"
+                                                    id="item6<%= alldata[q]._id%>" style="display: none;" class="item">
+
+                                                </div>
+                                                <div onclick="showsubschedule('subScheduleContainer<%= alldata[q]._id%>','<%= alldata[q]._id%>',6)"
+                                                    id="item7<%= alldata[q]._id%>" style="display: none;" class="item">
+
+                                                </div>
+                                            </div>
+                                            <div class="carouselButton">
+                                                <div class="carouselLeftButton"
+                                                    onclick="moveCarousel('left','carouselContainer__allCarouselContainer<%= alldata[q]._id%>')">
+                                                    <i class="fas fa-greater-than"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="display: none;" class="subScheduleContainer"
+                                            id="subScheduleContainer<%= alldata[q]._id%>">
+                                            <div>
+                                                <div class="head">
+                                                    <i class="fas fa-sun"></i>
+                                                    <h4>morning</h4>
+                                                </div>
+                                                <div id="mor<%= alldata[q]._id%>"
+                                                    style="margin: 0rem;padding:0rem;border-bottom: unset;">
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="head">
+                                                    <i class="fas fa-sun"></i>
+                                                    <h4>Afternoon</h4>
+                                                </div>
+                                                <div id="after<%= alldata[q]._id%>"
+                                                    style="margin: 0rem;padding:0rem;border-bottom: unset;">
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="head">
+                                                    <i class="fas fa-sun"></i>
+                                                    <h4>Evening</h4>
+                                                </div>
+                                                <div id="eve<%= alldata[q]._id%>"
+                                                    style="margin: 0rem;padding:0rem;border-bottom: unset;">
+                                                </div>
+                                            </div>
+                                            <div style="border-bottom: none;">
+                                                <div id='hos' class="head">
+                                                </div>
+                                                <div id="eve<%= alldata[q]._id%>"
+                                                    style="margin: 0rem;padding:0rem;border-bottom: unset;">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                                <h1 id="f" style="display: none;">
+                                    <%= page%>
+                                </h1>
+
+                                <%}}%>
+
+                                    <div class="container">
+                                    <div <%if(filterp.length<3){%>style="display:none;"<%}%> class="adminpagenation">
+                                            <ul id="carousel">
+                                                <% for(var i=0;i<=filterp.length;i+=4){ %>
+                                                    <a class="pageIndexLink" href="/drpagination/<%=parseInt(i/4)+1%>">
+                                                        <li class="p" id="index<%=parseInt(i/4)+1%>">
+                                                            <%=parseInt(i /4)+1%>
+                                                        </li>
+                                                    </a>
+                                                    <%}%>
+                                            </ul>
+                                    </div>
+                                </div>
+                    </div>
+
+                </div>
+
+            </section>
             <script>
-                function remove(id,filterelement){
-                    var x=document.getElementById(id);
-                    var ele=document.getElementById(filterelement);
-                    ele.checked=false;
-                    x.style.display="none";
-                    ele.form.submit();
-                   
+                var page = document.getElementById("f").innerHTML;
+                document.getElementById("index" + page).classList.add("active");
+
+            </script>
+
+
+
+            <script>
+                async function showschedule(scheduleid, docid) {
+                    var schedule = document.getElementById(scheduleid);
+
+                    if (schedule.style.display == "none") {
+                        schedule.style.display = "flex";
+                        const data = await fetch("/getschedule/" + docid, { method: "get", });
+                        const c = await data.json();
+
+                        var nowDate = new Date();
+
+                        for (var l = 0; l < 7; l++) {
+                            var count = 0;
+                            for (sl = 0; sl < c[l].schedule.length; sl++) {
+                                if (c[l].schedule[sl].isbooked == false) {
+                                    count += 1;
+                                }
+                            }
+                            var no = l + 1;
+                            if (l == 0) {
+                                document.getElementById('item' + no + docid).innerHTML = '<h5>Today</h5><h6><span>' + count + ' Slots Available</span></h6>';
+                            }
+                            else if (l == 1) {
+                                document.getElementById('item' + no + docid).innerHTML = '<h5>Tomorrow</h5><h6><span>' + count + ' Slots Available</span></h6>';
+
+                            }
+                            else {
+                                document.getElementById('item' + no + docid).innerHTML = '<h5>' + " " + new Date(Date.now() + l * 24 * 60 * 60 * 1000).toString().slice(0, 15) + '</h5><h6><span>' + count + ' Slots Available</span></h6>';
+                            }
+                        }
+
+
+
+
+
+
+
+
+
+
+
+
+                    }
+
+
+
+
+
+                    else {
+                        schedule.style.display = "none";
+                    }
+
+                }
+
+
+            </script>
+            <script>
+                async function expand(id) {
+                    var d = document.getElementById("showmore" + id);
+                    var b = document.getElementById(id);
+                    if (d.style.maxHeight !== "unset") {
+                        {
+                            d.style.maxHeight = "unset";
+                            b.innerHTML = "- Show Less";
+                            b.style.color = "gray";
+                        }
+                    }
+                    else {
+                        d.style.maxHeight = "10.5rem";
+                        b.innerHTML = "+Show More";
+                        b.style.color = "#167ddd";
+                    }
                 }
             </script>
 
-            <div class="filter-bar">
-                <form class="filterform" method="POST" action="/addfilter" >
+            <script>
+                async function showsubschedule(id, did, index) {
+                    document.getElementById(id).style.display = "flex";
+                    var ff = index + 1;
+                    //for(var z=1;z<7;z++){
+                    //  document.getElementById('item'+z+did).style.borderBottom= "0rem solid #167ddd";
 
-                <h4> <span> Location </span><i class="fa fa-search"></i></h4>
-                   <% var l=[];
-                   var h=[];
-                   var t=[];
-                   for(var q=0;q<filterdata.length;q++){
-                       if(!l.includes(filterdata[q].state)){
-                           l.push(filterdata[q].state);
-                       }
-                   }
-                   for(var q=0;q<filterdata.length;q++){
-                    if(!h.includes(filterdata[q].yourhospital)){
-                        h.push(filterdata[q].yourhospital);
+                    // }
+                    //document.getElementById('item'+ff+did).style.borderBottom= "0.2rem solid #167ddd";
+
+                    const slotdata = await fetch("/getslots/" + did + "/" + index, { method: "get", });
+                    const demo = await slotdata.json();
+                    const morning = demo[0];
+                    const afternoon = demo[1];
+                    const evening = demo[2];
+                    var morningslot = '';
+                    var eveningslot = '';
+                    var afternoonslot = '';
+
+                    for (var m = 0; m < morning.length; m++) {
+
+                        morningslot += ' <form method="post" onclick="this.submit()" action="/bookslot/' + did + '/' + morning[m].time + '/' + morning[m].day + '/' + morning[m]._id + '"> <h4><span>' + morning[m].time + ' AM' + '</span></h4></form>'
                     }
-                }
-                for(var q=0;q<filterdata.length;q++){
-                    if(!t.includes(filterdata[q].treatments)){
-                        t.push(filterdata[q].treatments);
+                    document.getElementById('mor' + did).innerHTML = morningslot;
+                    for (var e = 0; e < evening.length; e++) {
+                        eveningslot += ' <form method="post" onclick="this.submit()" action="/bookslot/' + did + '/' + evening[e].time + '/' + evening[e].day + '/' + evening[e]._id + '"> <h4><span>' + evening[e].time + ' PM' + '</span></h4></form>'
                     }
+                    document.getElementById('eve' + did).innerHTML = eveningslot;
+                    for (var a = 0; a < afternoon.length; a++) {
+                        afternoonslot += ' <form method="post" onclick="this.submit()" action="/bookslot/' + did + '/' + afternoon[a].time + '/' + afternoon[a].day + '/' + afternoon[a]._id + '"> <h4><span>' + afternoon[a].time + ' PM' + '</span></h4></form>'
+                    }
+                    document.getElementById('after' + did).innerHTML = afternoonslot;
+                    if (demo[3] == undefined) {
+                        document.getElementById('hos').display = 'none';
+
+                    }
+                    else {
+                        document.getElementById('hos').innerHTML = '<h3>' + demo[3] + '</h3>';
+
+                    }
+
+
+
+
                 }
-                   
-                   
-                   %>
-                   <div class="showmore" id="showmore1">
-
-                    <%for(var i=0;i<l.length;i++){%>
-                    <div>
-                    <input type="checkbox" onchange="this.form.submit()"  name="state" id="<%= l[i]%>"  value="<%= l[i]%>" <%if((filter.includes(l[i]))){%>checked<%}else{%>unchecked<%}%> >
-                    <label for="<%= l[i]%>"><span><%= l[i]%> </span> </label>
-                    </div>
-                    <%}%>
-                </div>
-                    <button id="1" onclick="expand(1)"  type="reset">+ Show more</button>
-                  
-                  <h4> <span> Treatment</span><i class="fa fa-search"></i></h4>
-                  <div class="showmore" id="showmore2">
-
-                    <%for(var i=0;i<t.length;i++){%>
-                        <div <%if(t[i]==null){%> style="display:none;"<%}%>>
-                        <input type="checkbox" onchange="this.form.submit()"   name="treatments" id="<%= t[i]%>"  value="<%= t[i]%>" <%if((filter.includes(t[i]))&&(t[i]!=null)){%>checked<%}else{%>unchecked<%}%>  >
-                        <label for="<%= t[i]%>"><span><%= t[i]%> </span> </label>
-                        </div>
-                        <%}%>
-                    </div>
-                    <button type="reset" id="2" onclick="expand(2)">+ Show more</button>
-                 
-                  <h4> <span> Hospitals</span> <i class="fa fa-search"></i></h4>
-                  <div class="showmore" id="showmore3">
-                    <%for(var i=0;i<h.length;i++){%>
-                        <div>
-                        <input type="checkbox" onchange="this.form.submit()" name="hospitals" id="<%= h[i]%>"  value="<%= h[i]%>" <%if((filter.includes(h[i]))){%>checked<%}else{%>unchecked<%}%>>
-                        <label for="<%= h[i]%>"><span><%= h[i]%> </span> </label>
-                        </div>
-                        <%}%>
-                    </div>
-                    <button id="3" type="reset" onclick="expand(3)">+ Show more</button>
-                  <h4><span>Years of Experience </span><i class="fa fa-search"></i></h4>
-                  <div class="showmore" id="showmore4">
-
-                        <div>
-                        <input type="checkbox" onchange="this.form.submit()" name="exp"  value="30" <%if((filter.includes("30"))){%>checked<%}else{%>unchecked<%}%>>
-                        <label for="cybercity"><span>30 + </span> </label>
-                        </div>
-                        <div>
-                        <input type="checkbox" onchange="this.form.submit()" name="exp"  value="25" <%if((filter.includes("25"))){%>checked<%}else{%>unchecked<%}%>>
-                        <label for="cybercity"><span>25 + </span> </label>
-                        </div>
-                        <div>
-                        <input type="checkbox" onchange="this.form.submit()" name="exp"  value="20" <%if((filter.includes("20"))){%>checked<%}else{%>unchecked<%}%>>
-                        <label for="cybercity"><span>20 + </span> </label>
-                        </div>
-                        <div>
-                        <input type="checkbox" onchange="this.form.submit()" name="exp"  value="15" <%if((filter.includes("15"))){%>checked<%}else{%>unchecked<%}%>>
-                        <label for="cybercity"><span>15 + </span> </label>
-                        </div>
-                        <div>
-                        <input type="checkbox" onchange="this.form.submit()" name="exp" value="10"<%if((filter.includes("10"))){%>checked<%}else{%>unchecked<%}%>>
-                        <label for="cybercity"><span>10 + </span> </label>
-                        </div>
-                        <div>
-                        <input type="checkbox" onchange="this.form.submit()" name="exp"  value="5" <%if((filter.includes("5"))){%>checked<%}else{%>unchecked<%}%>>
-                        <label for="cybercity"><span>5 + </span> </label>
-                        </div>
-                    </div>
-                    <button type="reset" id="4" onclick="expand(4)">+ Show more</button>
-                  </form>
-            </div>
-
-        </div>
-
-
-        <div class="doctor-card-tab doctor-mobile">
-            <%if(alldata.length<=0){%>
-               
-                <h3>Nothing to show</h3>
-
-            <%}else{
-                for(var q=0;q<alldata.length;q++){%>
-              
-              
-            <div style="display:flex;flex-direction: column;width: 100%; border:0.18rem solid grey;margin-bottom: 1rem;" >
-               <div class="doctor-card" >
-                <div>
-                    <h3><%= alldata[q].name%></h3>
-                    <ul>
-                        <li><i class="fa fa-certificate"></i><%= alldata[q].treatments%></li>
-                        <li><i class="fas fa-award"></i><%= alldata[q].awards%></li>
-                        <li><i class="fa fa-clock"></i><%= alldata[q].exp%> years of experience</li>
-                        <li><i class="fa fa-hospital"></i><%= alldata[q].yourhospital%></li>
-                        <li><i class='fas fa-map-marker-alt'></i><%= alldata[q].city%>,<%= alldata[q].state%>,<%= alldata[q].country%></li>
-                        <li><i class='fas fa-rupee'></i><%= alldata[q].fees%></li>
-
-                    </ul>
-                    <div class="appointment-button">                   
-                        <button class="dark-blue-button" onclick="showschedule('carouselContainer<%= alldata[q]._id%>','<%= alldata[q]._id%>')">Book an appointment</button>                 
-                    </div>
-                </div>
-                <div  class="doctor-image" onclick="window.location.href='/doctorsprofile/<%= alldata[q]._id%>'">
-                  
-                    <img onclick="viewprofile('<%= alldata[q]._id%>')" src=<%= alldata[q].img%>>
-                
-                </div>
-            </div>
-            <div class="bookAppointmentContainer">
-                <div style="display: none;"  class="carouselContainer allScheduleContainer" id="carouselContainer<%= alldata[q]._id%>">
-                    <div class="carouselButton">
-                        <div class="carouselLeftButtonk"
-                            onclick="moveCarousel('right','carouselContainer__allCarouselContainer<%= alldata[q]._id%>')">
-                            <i class="fas fa-less-than"></i>
-                        </div>
-                    </div>
-                    <div  class="allCarouselItems allCarouselItems"
-                        id="carouselContainer__allCarouselContainer<%= alldata[q]._id%>">
-                        <div onclick="showsubschedule('subScheduleContainer<%= alldata[q]._id%>','<%= alldata[q]._id%>',0)" id="item1<%= alldata[q]._id%>" class="item">
-                            
-                            
-                        </div>
-                        <div onclick="showsubschedule('subScheduleContainer<%= alldata[q]._id%>','<%= alldata[q]._id%>',1)" id="item2<%= alldata[q]._id%>" class="item">
-                            
-
-                        </div>
-                        <div onclick="showsubschedule('subScheduleContainer<%= alldata[q]._id%>','<%= alldata[q]._id%>',2)" id="item3<%= alldata[q]._id%>" class="item">
-                            
-
-                        </div>
-                        <div onclick="showsubschedule('subScheduleContainer<%= alldata[q]._id%>','<%= alldata[q]._id%>',3)" id="item4<%= alldata[q]._id%>" style="display: none;" class="item">
-                            
-                        </div>
-                        <div onclick="showsubschedule('subScheduleContainer<%= alldata[q]._id%>','<%= alldata[q]._id%>',4)" id="item5<%= alldata[q]._id%>" style="display: none;" class="item">
-                           
-                        </div>
-                        <div onclick="showsubschedule('subScheduleContainer<%= alldata[q]._id%>','<%= alldata[q]._id%>',5)" id="item6<%= alldata[q]._id%>" style="display: none;" class="item">
-                           
-                        </div>
-                        <div onclick="showsubschedule('subScheduleContainer<%= alldata[q]._id%>','<%= alldata[q]._id%>',6)" id="item7<%= alldata[q]._id%>" style="display: none;" class="item">
-                           
-                        </div>
-                    </div>
-                    <div class="carouselButton">
-                        <div class="carouselLeftButton"
-                            onclick="moveCarousel('left','carouselContainer__allCarouselContainer<%= alldata[q]._id%>')">
-                            <i class="fas fa-greater-than"></i></div>
-                    </div>
-                </div>
-                <div style="display: none;" class="subScheduleContainer" id="subScheduleContainer<%= alldata[q]._id%>">
-                    <div>
-                        <div class="head">
-                        <i class="fas fa-sun"></i>     
-                       <h4>morning</h4>
-                    </div>
-                    <div id="mor<%= alldata[q]._id%>" style="margin: 0rem;padding:0rem;border-bottom: unset;">
-                    </div>
-                    </div>
-                    <div>
-                        <div  class="head">
-                        <i class="fas fa-sun"></i>     
-                       <h4>Afternoon</h4>
-                    </div>
-                    <div id="after<%= alldata[q]._id%>" style="margin: 0rem;padding:0rem;border-bottom: unset;">
-                    </div>
-                    </div>
-                    <div>
-                        <div class="head">
-                        <i class="fas fa-sun"></i>     
-                       <h4>Evening</h4>
-                    </div>
-                    <div id="eve<%= alldata[q]._id%>" style="margin: 0rem;padding:0rem;border-bottom: unset;">
-                    </div>
-                    </div>
-                    <div style="border-bottom: none;">
-                        <div id='hos' class="head">
-                    </div>
-                    <div id="eve<%= alldata[q]._id%>" style="margin: 0rem;padding:0rem;border-bottom: unset;">
-                    </div>
-                    </div>
-                </div>
-                
-            </div>
-            
-          
-        </div>
-        <h1 id="f" style="display: none;"><%= page%></h1>
-            
-            <%}}%>
-            <div <%if(filterp.length<3){%>style="display:none;"<%}%> class="adminpagenation">
-                <ul id="carousel">
-                    <% for(var i=0;i<=filterp.length;i+=4){ %>
-                        <a class="pageIndexLink"
-                            href="/drpagination/<%=parseInt(i/4)+1%>">
-                    <li class="p" id="index<%=parseInt(i/4)+1%>">
-                        <%=parseInt(i/4)+1%>
-                    </li>
-                </a>
-                    <%}%>
-            </ul>
-        </div>
-        </div>
-
-        </div>
-      
-    </section>
-    <script>
-        var page=document.getElementById("f").innerHTML;
-        document.getElementById("index" + page).classList.add("active");
-  
-    </script>
-
-    
-    
-    <script>
-        async function showschedule(scheduleid,docid){
-            var schedule=document.getElementById(scheduleid);
-            
-            if(schedule.style.display=="none"){
-                schedule.style.display="flex";
-                const data=await fetch("/getschedule/" + docid, { method: "get", });
-                const c = await data.json();
-
-                var nowDate = new Date(); 
-
-                for(var l=0;l<7;l++){
-                    var count=0;
-                    for(sl=0;sl<c[l].schedule.length;sl++){
-                        if(c[l].schedule[sl].isbooked==false){
-                            count+=1;
+            </script>
+            <script>
+                function moveCarousel(dirc, carouselId) {
+                    var carouselItems = document.getElementById(carouselId).children;
+                    if (dirc === "left") {
+                        for (var i = 0; i < carouselItems.length; i++) {
+                            if (carouselItems[i].style.display !== "none")
+                                break;
+                        }
+                        if (i + 3 < carouselItems.length) {
+                            for (var j = 0; j < carouselItems.length; j++) {
+                                if (j === i + 1 || j === i + 2 || j === i + 3) {
+                                    carouselItems[j].style.display = "flex";
+                                }
+                                else
+                                    carouselItems[j].style.display = "none";
+                            }
                         }
                     }
-                    var no=l+1;
-                    if(l==0){
-                        document.getElementById('item'+no+docid).innerHTML= '<h5>Today</h5><h6><span>'+ count +' Slots Available</span></h6>';
+                    else if (dirc === "right") {
+                        for (var i = 0; i < carouselItems.length; i++) {
+                            if (carouselItems[i].style.display !== "none")
+                                break;
+                        }
+                        if (i !== 0) {
+                            for (var j = 0; j < carouselItems.length; j++) {
+                                if (j === i - 1 || j === i || j === i + 1) {
+                                    carouselItems[j].style.display = "flex";
+                                }
+                                else
+                                    carouselItems[j].style.display = "none";
+                            }
+                        }
                     }
-                    else if(l==1){
-                        document.getElementById('item'+no+docid).innerHTML= '<h5>Tomorrow</h5><h6><span>'+ count +' Slots Available</span></h6>';
-  
-                    }
-                    else{
-                    document.getElementById('item'+no+docid).innerHTML= '<h5>'+" "+ new Date(Date.now()+l*24*60*60*1000).toString().slice(0,15)+'</h5><h6><span>'+ count +' Slots Available</span></h6>';
-                    }
-                }
-                  
-                
-              
-               
-            
-                
-                    
-                   
-                
-                
-                
-             
                 }
 
 
+            </script>
 
+            <section class="need-help">
+                <div class="container">
+                <div>
+                    <h2>Need Help?</h2>
+                    <p>Just let us know, we will be happy to assist you</p>
+                </div>
+                <button class="sky-blue-button">Submit your enquiry</button>
+            </div>
+            </section>
 
-            
-            else{
-                schedule.style.display="none";
-            }
-
-        }
-
-
-    </script>
-     <script>
-        async function expand(id) {
-            var d=document.getElementById("showmore"+id);
-            var b=document.getElementById(id);
-            if (d.style.maxHeight !== "unset") {
-                {
-                    d.style.maxHeight = "unset";
-                    b.innerHTML = "- Show Less";
-                    b.style.color = "gray";
-                }
-            }
-            else {
-                d.style.maxHeight = "10.5rem";
-                b.innerHTML = "+Show More";
-                b.style.color = "#167ddd";
-            }
-        }
-    </script>
-
-    <script>
-        async function showsubschedule(id,did,index){
-            document.getElementById(id).style.display="flex";
-            var ff=index+1;
-            //for(var z=1;z<7;z++){
-              //  document.getElementById('item'+z+did).style.borderBottom= "0rem solid #167ddd";
-
-           // }
-            //document.getElementById('item'+ff+did).style.borderBottom= "0.2rem solid #167ddd";
-
-            const slotdata=await fetch("/getslots/" + did+"/"+index, { method: "get", });
-            const demo = await slotdata.json();
-            const morning=demo[0];
-            const afternoon=demo[1];
-            const evening=demo[2];
-            var morningslot='';
-            var eveningslot='';
-            var afternoonslot='';
-            
-            for(var m=0;m<morning.length;m++){
-               
-                morningslot+= ' <form method="post" onclick="this.submit()" action="/bookslot/'  +did+'/'+morning[m].time + '/' +morning[m].day +'/'+morning[m]._id+ '"> <h4><span>'+morning[m].time+' AM'+'</span></h4></form>' 
-            }
-            document.getElementById('mor'+did).innerHTML=morningslot;
-            for(var e=0;e<evening.length;e++){
-                eveningslot+=' <form method="post" onclick="this.submit()" action="/bookslot/' +did+'/'+evening[e].time+'/'+evening[e].day+'/'+evening[e]._id+ '"> <h4><span>'+evening[e].time+' PM'+'</span></h4></form>'
-            }
-            document.getElementById('eve'+did).innerHTML=eveningslot;
-            for(var a=0;a<afternoon.length;a++){
-                afternoonslot+=' <form method="post" onclick="this.submit()" action="/bookslot/' +did+'/'+afternoon[a].time+'/'+afternoon[a].day+'/'+afternoon[a]._id+ '"> <h4><span>'+afternoon[a].time+' PM'+'</span></h4></form>'
-            }
-            document.getElementById('after'+did).innerHTML=afternoonslot;
-            if(demo[3]==undefined){
-                document.getElementById('hos').display='none';
-
-            }
-            else{
-                document.getElementById('hos').innerHTML='<h3>'+demo[3]+'</h3>';
-
-            }
-
-
-
-                    
-        }
-    </script>
-<script>
-function moveCarousel(dirc, carouselId) {
-    var carouselItems = document.getElementById(carouselId).children;
-    if (dirc === "left") {
-        for (var i = 0; i < carouselItems.length; i++) {
-            if (carouselItems[i].style.display !== "none")
-                break;
-        }
-        if (i + 3 < carouselItems.length) {
-            for (var j = 0; j < carouselItems.length; j++) {
-                if (j === i + 1 || j === i + 2 || j === i + 3) {
-                    carouselItems[j].style.display = "flex";
-                }
-                else
-                    carouselItems[j].style.display = "none";
-            }
-        }
-    }
-    else if (dirc === "right") {
-        for (var i = 0; i < carouselItems.length; i++) {
-            if (carouselItems[i].style.display !== "none")
-                break;
-        }
-        if (i !== 0) {
-            for (var j = 0; j < carouselItems.length; j++) {
-                if (j === i - 1 || j === i || j === i + 1) {
-                    carouselItems[j].style.display = "flex";
-                }
-                else
-                    carouselItems[j].style.display = "none";
-            }
-        }
-    }
-}
-
-    
-</script>
-
-<section class="need-help">
-    <div>
-    <h2>Need Help?</h2>
-    <p>Just let us know, we will be happy to assist you</p>
-</div> 
-<button class="sky-blue-button">Submit your enquiry</button> 
-
-</section>
-
-<%-include('footer.ejs') %>
+            <%-include('footer.ejs') %>
