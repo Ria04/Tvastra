@@ -502,8 +502,7 @@ a {
 
 .mobileprofile {
   position: absolute;
-  height: 10rem;
-  width: 8rem;
+  width: 10rem;
   margin-top: 1rem;
   right: 1rem;
   background-color: white;
@@ -551,6 +550,7 @@ a {
 
 .mobileprofile div h5 {
   font-size: 0.8rem;
+  margin-left: 1rem;
 }
 
 .mobileprofile ul li {
@@ -1215,8 +1215,10 @@ a {
   .mobile-footer {
     display: none;
   }
-  .tab-footer {
+  .tab-footer-section {
     border-bottom: 0.7rem solid #167ddd;
+  }
+  .tab-footer-section .tab-footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1228,35 +1230,35 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .tab-footer .footer-div-1 {
+  .tab-footer-section .tab-footer .footer-div-1 {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
     width: 68%;
   }
-  .tab-footer .footer-div-1 ul {
+  .tab-footer-section .tab-footer .footer-div-1 ul {
     margin-top: 0.3rem;
   }
-  .tab-footer .footer-div-1 ul li {
+  .tab-footer-section .tab-footer .footer-div-1 ul li {
     -webkit-box-flex: unset;
         -ms-flex: unset;
             flex: unset;
     font-size: 1.15rem;
   }
-  .tab-footer .footer-div-2 {
+  .tab-footer-section .tab-footer .footer-div-2 {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
     width: 20%;
   }
-  .tab-footer .footer-div-2 ul {
+  .tab-footer-section .tab-footer .footer-div-2 ul {
     margin-top: 1.5rem;
     margin-bottom: 0rem;
   }
-  .tab-footer .footer-div-2 ul li {
+  .tab-footer-section .tab-footer .footer-div-2 ul li {
     width: 100%;
   }
-  .tab-footer div {
+  .tab-footer-section .tab-footer div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1268,15 +1270,15 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .tab-footer div img {
+  .tab-footer-section .tab-footer div img {
     width: 8rem;
     height: 1.5rem;
   }
-  .tab-footer div p {
+  .tab-footer-section .tab-footer div p {
     font-weight: bold;
     margin-bottom: 0rem;
   }
-  .tab-footer div ul {
+  .tab-footer-section .tab-footer div ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1290,7 +1292,7 @@ a {
     width: 100%;
     margin-bottom: 1.5rem;
   }
-  .tab-footer div ul li {
+  .tab-footer-section .tab-footer div ul li {
     font-size: 1.15rem;
     font-family: LightFont;
     color: #222844;
@@ -1306,7 +1308,7 @@ a {
             justify-content: space-between;
     font-weight: bold;
   }
-  .tab-footer div ul li i {
+  .tab-footer-section .tab-footer div ul li i {
     display: inline;
     font-size: 1.2rem;
     color: #222844;
