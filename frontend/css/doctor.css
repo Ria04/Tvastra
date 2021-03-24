@@ -1898,7 +1898,7 @@ a {
     border-left: 0.5rem solid #167ddd;
   }
   .nav-desktop {
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     display: block;
     display: -webkit-box;
     display: -ms-flexbox;
