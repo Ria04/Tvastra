@@ -1,6 +1,13 @@
 @import "style.scss";
 
-
+.overlay-contact-section{
+    .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+}
 
 
 .profilecard{
@@ -17,14 +24,12 @@
 }
 .doctor-info{
     padding:1rem 0.5rem;
+    padding-top: 0rem;
 }
 .profilecard button{
-    margin-bottom:0rem;
     margin-top:0.5rem;
     width:100%;
-    font-family: BoldFont;
-    text-indent: unset;
-    padding:0rem 1rem;
+ 
 }
 .profilecard h3{
     color: $sky-blue;
@@ -91,7 +96,12 @@
 }
 
 @media only screen and (min-width:$breakpoint-tablet){
-
+.overlay-contact-section{
+    .container{
+        padding:0rem 2rem;
+        align-items: flex-start;
+    }
+}
 .profilecard{
 display: flex;
 flex-direction: row-reverse;
@@ -125,17 +135,22 @@ justify-content: space-between;
     font-size: 2rem;
 }
 }
-@media only screen and (min-width:$breakpoint-desktop){
+@media only screen and (min-width:$breakpoint-unknown){
     .info{
         padding:2rem 0rem;
         width:70%;
     }
     .doctorimage{
-        width:25%;
+        width:40%;
         height:25%;
         padding-top:2rem;
         padding-right:2rem;
 
+    }
+    .overlay-contact-section{
+        .container{
+        padding:1rem;
+        }
     }
     .profilecard img{
         height:25rem;

@@ -2287,6 +2287,22 @@ a {
   }
 }
 
+.overlay-contact-section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .profilecard {
   border: 0.1rem solid #a19f9f;
 }
@@ -2302,15 +2318,12 @@ a {
 
 .doctor-info {
   padding: 1rem 0.5rem;
+  padding-top: 0rem;
 }
 
 .profilecard button {
-  margin-bottom: 0rem;
   margin-top: 0.5rem;
   width: 100%;
-  font-family: BoldFont;
-  text-indent: unset;
-  padding: 0rem 1rem;
 }
 
 .profilecard h3 {
@@ -2391,6 +2404,12 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
+  .overlay-contact-section .container {
+    padding: 0rem 2rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
   .profilecard {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2432,16 +2451,19 @@ a {
   }
 }
 
-@media only screen and (min-width: 1700px) {
+@media only screen and (min-width: 1024px) {
   .info {
     padding: 2rem 0rem;
     width: 70%;
   }
   .doctorimage {
-    width: 25%;
+    width: 40%;
     height: 25%;
     padding-top: 2rem;
     padding-right: 2rem;
+  }
+  .overlay-contact-section .container {
+    padding: 1rem;
   }
   .profilecard img {
     height: 25rem;
