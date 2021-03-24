@@ -112,12 +112,15 @@
                     
     
                     <% if(loggedin==true) {%>
+                        <a href="/tvastraplus"><button class="sky-blue-button">Tvastra</button></a>
+
                         <a href="/feedback"><button id="quote" class="dark-blue-button">Get a Quote</button></a>
                         <div onclick="toggleprofile()">          
                         <button id="login" class="white-button"><%= username%></button>
                         <i class="fa fa-angle-down"></i>
                     </div>
                         <%} else {%>
+                            
                             <button id="quote">Get a Quote</button>
                             <a href="/"> <button id="login">Login / Signup</button></a> 
                     <%}%>
