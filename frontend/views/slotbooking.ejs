@@ -21,7 +21,8 @@
     
         <%-include('header.ejs') %>
     
-        <section class="slotbooking">
+        <section class="slot-section">
+            <div class="container slotbooking">
             <div class="inclinic">
             <h3>In Clinic Appointment</h1>
                 <div class="icon">
@@ -83,7 +84,7 @@
                         <input type="text" value="<%= phonenumber%>" readonly>
                         <h4>Patients Email</h4>
                         <input type="text" value="<%= email%>" readonly>
-                        <button type="submit">Book Appointment</button>
+                        <button class="sky-blue-button" type="submit">Book Appointment</button>
                         <input style="display: none;" type="text" name="drname" value="<%= drdata.name%>">
                         <input style="display: none;" type="text" name="drhospital" value="<%= drdata.yourhospital%>">
                         <input style="display: none;" type="text" name="drid" value="<%= drdata._id%>">
@@ -112,15 +113,15 @@
                 <h3 id="d">Mobile number</h3>
                 <p><%= appointmentdata.number%></p>
                 <div class="buttondiv">
-                    <button >Cancel Appointment</button>
+                    <button class="sky-blue-button">Cancel Appointment</button>
                   
-                    <button>Reschedule Appointment</button>
+                    <button class="sky-blue-button">Reschedule Appointment</button>
             
                 </div>
                 </form>
                 <%}%>
 
-
+            </div>
         </section>
    
     

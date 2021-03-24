@@ -381,8 +381,17 @@ a {
   }
 }
 
+.slot-section {
+  padding: 0rem;
+}
+
 .slotbooking {
+  padding: 1rem;
   background-color: #f2f2f8;
+}
+
+.slotbooking p {
+  margin-bottom: 0rem;
 }
 
 .slotbooking .inclinic {
@@ -433,7 +442,7 @@ a {
 .slotbooking .inclinic .imgandinfodiv .drimg {
   width: 30%;
   height: 5rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
 .slotbooking .inclinic .imgandinfodiv .drimg img {
@@ -459,13 +468,17 @@ a {
 }
 
 .slotbooking .inclinic .hospitalandlogo .logo {
-  width: 35%;
+  width: 30%;
   height: 6rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
 .slotbooking .inclinic .hospitalandlogo .logo img {
   border-radius: 50%;
+}
+
+.slotbooking .patientdetails {
+  padding: 1rem;
 }
 
 .slotbooking .patientdetails h2 {
@@ -521,14 +534,19 @@ a {
 }
 
 .slotbooking .patientdetails form .infoform button {
-  margin-top: 0.7rem;
   width: 100%;
-  background-color: #167ddd;
+}
+
+.slotbooking .rescheduleform {
+  padding: 1rem;
+  padding-bottom: 0rem;
 }
 
 .slotbooking .rescheduleform h3 {
   text-align: left;
   padding: 0.5rem 0rem;
+  margin-bottom: 0rem;
+  font-size: 1.4rem;
 }
 
 .slotbooking .rescheduleform #d {
@@ -550,7 +568,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 1rem;
 }
 
 .slotbooking .rescheduleform div i {
@@ -563,13 +580,11 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 1rem;
 }
 
 .slotbooking .rescheduleform .buttondiv button {
-  width: 10rem;
-  height: 4rem;
-  background-color: #167ddd;
-  border-radius: 0.5rem;
+  margin: 0 0.1rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -587,27 +602,28 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 1rem 2rem;
   }
   .inclinic {
-    width: 40%;
+    width: 45%;
   }
   .patientdetails {
     margin-bottom: 1rem;
-    width: 45%;
+    width: 50%;
   }
   .rescheduleform {
-    width: 50%;
+    width: 49%;
   }
 }
 
-@media only screen and (min-width: 1700px) {
+@media only screen and (min-width: 1024px) {
   .slotbooking .inclinic .imgandinfodiv .drimg {
     height: 8rem;
-    width: 20%;
+    width: 30%;
   }
   .slotbooking .inclinic .hospitalandlogo .logo {
     height: 8rem;
-    width: 20%;
+    width: 30%;
   }
   .slotbooking .patientdetails form .appointmentfor div input {
     width: 1rem;
@@ -622,9 +638,6 @@ a {
   }
   .slotbooking .rescheduleform {
     width: 45%;
-  }
-  .slotbooking .rescheduleform h3 {
-    padding: 1.5rem 0rem;
   }
   .slotbooking .rescheduleform div h3 {
     padding: 1.5rem 0rem;

@@ -23,7 +23,7 @@
 
     <section class="filtersanddoctors">
 
-        
+        <div class="container">
 
 
         <div class="doctor-card-tab doctor-mobile reschedule-card">
@@ -41,7 +41,7 @@
 
                     </ul>
                     <div class="appointment-button">                   
-                        <button onclick="showschedule('carouselContainer<%= alldata._id%>','<%= alldata._id%>')">Reschedule appointment</button>                 
+                        <button class="dark-blue-button" onclick="showschedule('carouselContainer<%= alldata._id%>','<%= alldata._id%>')">Reschedule appointment</button>                 
                     </div>
                 </div>
                
@@ -90,7 +90,6 @@
                 <div style="display: none;" class="subScheduleContainer" id="subScheduleContainer<%= alldata._id%>">
                     <div>
                         <div class="head">
-                        <i class="fas fa-sun"></i>     
                        <h4>morning</h4>
                     </div>
                     <div id="mor<%= alldata._id%>" style="margin: 0rem;padding:0rem;border-bottom: unset;">
@@ -98,7 +97,6 @@
                     </div>
                     <div>
                         <div  class="head">
-                        <i class="fas fa-sun"></i>     
                        <h4>Afternoon</h4>
                     </div>
                     <div id="after<%= alldata._id%>" style="margin: 0rem;padding:0rem;border-bottom: unset;">
@@ -106,7 +104,6 @@
                     </div>
                     <div>
                         <div class="head">
-                        <i class="fas fa-sun"></i>     
                        <h4>Evening</h4>
                     </div>
                     <div id="eve<%= alldata._id%>" style="margin: 0rem;padding:0rem;border-bottom: unset;">
@@ -126,6 +123,7 @@
             
         
         </div>
+    </div>
     </section>
     <script>
         async function showschedule(scheduleid,docid){
@@ -148,14 +146,14 @@
                     }
                     var no=l+1;
                     if(l==0){
-                        document.getElementById('item'+no+docid).innerHTML= '<h3>Today</h3><h4><span>'+ count +' Slots Available</span></h4>';
+                        document.getElementById('item'+no+docid).innerHTML= '<h5>Today</h5><h6><span>'+ count +' Slots Available</span></h6>';
                     }
                     else if(l==1){
-                        document.getElementById('item'+no+docid).innerHTML= '<h3>Tomorrow</h3><h4><span>'+ count +' Slots Available</span></h4>';
+                        document.getElementById('item'+no+docid).innerHTML= '<h5>Tomorrow</h5><h6><span>'+ count +' Slots Available</span></h6>';
   
                     }
                     else{
-                    document.getElementById('item'+no+docid).innerHTML= '<h3>'+c[l].days.slice(0,3)+" "+ nowDate.getFullYear()+'/'+(nowDate.getMonth())+'/'+(nowDate.getDate()+l)+'</h3><h4><span>'+ count +' Slots Available</span></h4>';
+                    document.getElementById('item'+no+docid).innerHTML= '<h5>'+c[l].days.slice(0,3)+" "+ nowDate.getFullYear()+'/'+(nowDate.getMonth())+'/'+(nowDate.getDate()+l)+'</h5><h6><span>'+ count +' Slots Available</span></h6>';
                     }
                 }
                   
@@ -257,12 +255,13 @@ function moveCarousel(dirc, carouselId) {
 </script>
 
 <section class="need-help">
+    <div class="container">
     <div>
     <h2>Need Help?</h2>
     <p>Just let us know, we will be happy to assist you</p>
 </div> 
-<button>Submit your enquiry</button> 
-
+<button class="sky-blue-button">Submit your enquiry</button> 
+</div>
 </section>
 
 <%-include('footer.ejs') %>

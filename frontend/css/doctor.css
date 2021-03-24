@@ -1490,7 +1490,7 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 7rem 3rem;
+    padding: 7rem 1rem;
   }
   .IntroSection h1 {
     margin-bottom: 2rem;
@@ -2990,9 +2990,6 @@ a {
     padding: 0rem;
     padding-top: 2rem;
   }
-  .filtersanddoctors .reschedule-card .reschedule-box .doctor-card {
-    height: 12rem;
-  }
   .filtersanddoctors .reschedule-card .reschedule-box .doctor-card div {
     width: 100%;
   }
@@ -3249,9 +3246,6 @@ a {
     padding-top: 3rem;
     margin: 0 auto;
   }
-  .filtersanddoctors .reschedule-card .reschedule-box .doctor-card {
-    height: 16rem;
-  }
   .filtersanddoctors .reschedule-card .reschedule-box .doctor-card div {
     width: 100%;
   }
@@ -3274,6 +3268,7 @@ a {
   }
   .filtersanddoctors .reschedule-card .reschedule-box .doctor-card div ul li {
     width: unset;
+    margin: 0.5rem 0rem;
   }
   .filtersanddoctors .reschedule-card .reschedule-box .doctor-card .appointment-button {
     padding-left: 0rem;
