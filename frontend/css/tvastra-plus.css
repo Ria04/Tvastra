@@ -502,8 +502,7 @@ a {
 
 .mobileprofile {
   position: absolute;
-  height: 10rem;
-  width: 8rem;
+  width: 10rem;
   margin-top: 1rem;
   right: 1rem;
   background-color: white;
@@ -551,6 +550,7 @@ a {
 
 .mobileprofile div h5 {
   font-size: 0.8rem;
+  margin-left: 1rem;
 }
 
 .mobileprofile ul li {

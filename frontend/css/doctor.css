@@ -2597,9 +2597,9 @@ a {
 }
 
 .subScheduleContainer div h4 span {
-  color: green;
-  padding: 0.5rem 0.4rem;
-  border: 0.1rem solid green;
+  color: #93bede;
+  padding: 0.5rem 1.2rem;
+  border: 0.1rem solid #93bede;
 }
 
 .subScheduleContainer div i {
@@ -3366,7 +3366,7 @@ a {
     border-bottom: 0.2rem solid #dbd8d8;
   }
   .subScheduleContainer div h4 {
-    padding: 2rem 0rem;
+    padding: 1rem 0rem;
     font-family: LightFont;
     margin-right: 0.5rem;
   }

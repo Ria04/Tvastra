@@ -31,7 +31,7 @@
     }
 }
 
-@media only screen and (min-width:$breakpoint-desktop) {
+@media only screen and (min-width:$breakpoint-unknown) {
     .loginform textarea{
         font-size: 1.2rem;
     }

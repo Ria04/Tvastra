@@ -1,4 +1,5 @@
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: auto;
 }
@@ -151,7 +152,6 @@ button {
   font-size: 1rem;
   line-height: 1.4rem;
   border: none;
-  border-radius: 0.5rem;
   padding: 0.5rem 1.5rem;
   outline: none;
   cursor: pointer;
@@ -189,7 +189,6 @@ span {
   font-family: BoldFont;
   color: #a19f9f;
   font-size: 1.2rem;
-  margin-left: 0.3125rem;
 }
 
 ul li {
@@ -244,7 +243,7 @@ a {
 
 @media only screen and (min-width: 1024px) {
   section {
-    padding: 3rem 3rem;
+    padding: 3rem 1rem;
     text-align: left;
   }
   h1, h2 {
@@ -286,7 +285,6 @@ a {
     font-size: 1.1rem;
     line-height: 1.4rem;
     border: none;
-    border-radius: 0.5rem;
     padding: 0.5rem 0.7rem;
   }
   input {
@@ -311,9 +309,13 @@ a {
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1700px) {
+  .container {
+    max-width: 1400px;
+    margin: auto;
+  }
   section {
-    padding: 5rem 7rem;
+    padding: 5rem 1rem;
     text-align: left;
   }
   h1, h2 {
@@ -355,7 +357,6 @@ a {
     font-size: 1.2rem;
     line-height: 1.4rem;
     border: none;
-    border-radius: 0.5rem;
     padding: 1rem 1.7rem;
   }
   input {
@@ -599,7 +600,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1700px) {
   .slotbooking .inclinic .imgandinfodiv .drimg {
     height: 8rem;
     width: 20%;

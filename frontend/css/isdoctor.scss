@@ -3,14 +3,23 @@
 
 #mainLabel{
     color:$sky-blue;
-    
+
 }
 #myfile{
     height:2rem;
 }
+.tagify{
+    height:3rem;
+    margin: 1rem 0rem;
+    width:100%;
+}
 .tagify__tag{
     height:2.3rem;
 }
+span{
+    color:$dark-blue-color;
+}
+
 #upload-pic{
     padding-top: 0.5rem;
 }
@@ -19,27 +28,39 @@
         margin-top: 1rem;
     }   
     .loginform{
-        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        input{
+            margin:1rem 0rem;
+        }
         textarea{
             border:0.1rem solid $light-grey;
             height:10rem;
             font-family: BoldFont;           
             padding:0.5rem;
+            margin:1rem 0rem;
+            color:$dark-blue-color;
+
             ::placeholder{
                 color: $light-grey;
             }
         }
     }
 }
+
 @media only screen and (min-width:$breakpoint-tablet) {
     #upload-pic{
         padding-top: 0.7rem;
     }
 }
-@media only screen and (min-width:$breakpoint-desktop) {
+@media only screen and (min-width:$breakpoint-unknown) {
     
     .tagify__tag{
         height:3.7rem;
+    }
+    .tagify{
+        height:4.5rem;
     }
     .tagify__input {
         height:2.5rem;
@@ -74,6 +95,7 @@
         .loginform{
             input{
                 height:4rem;
+                margin:1rem 0rem;
             }
             textarea{
                 padding:1rem;

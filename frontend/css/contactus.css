@@ -1,4 +1,5 @@
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: auto;
 }
@@ -151,7 +152,6 @@ button {
   font-size: 1rem;
   line-height: 1.4rem;
   border: none;
-  border-radius: 0.5rem;
   padding: 0.5rem 1.5rem;
   outline: none;
   cursor: pointer;
@@ -189,7 +189,6 @@ span {
   font-family: BoldFont;
   color: #a19f9f;
   font-size: 1.2rem;
-  margin-left: 0.3125rem;
 }
 
 ul li {
@@ -244,7 +243,7 @@ a {
 
 @media only screen and (min-width: 1024px) {
   section {
-    padding: 3rem 3rem;
+    padding: 3rem 1rem;
     text-align: left;
   }
   h1, h2 {
@@ -286,7 +285,6 @@ a {
     font-size: 1.1rem;
     line-height: 1.4rem;
     border: none;
-    border-radius: 0.5rem;
     padding: 0.5rem 0.7rem;
   }
   input {
@@ -311,9 +309,13 @@ a {
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1700px) {
+  .container {
+    max-width: 1400px;
+    margin: auto;
+  }
   section {
-    padding: 5rem 7rem;
+    padding: 5rem 1rem;
     text-align: left;
   }
   h1, h2 {
@@ -355,7 +357,6 @@ a {
     font-size: 1.2rem;
     line-height: 1.4rem;
     border: none;
-    border-radius: 0.5rem;
     padding: 1rem 1.7rem;
   }
   input {
@@ -412,8 +413,8 @@ a {
 }
 
 #loginmsg {
-  width: 15rem;
-  height: 2.5rem;
+  width: 16rem;
+  height: 4rem;
   background-color: white;
   position: absolute;
   display: -webkit-box;
@@ -482,7 +483,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 2rem;
+  height: 3rem;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -501,8 +502,7 @@ a {
 
 .mobileprofile {
   position: absolute;
-  height: 10rem;
-  width: 8rem;
+  width: 10rem;
   margin-top: 1rem;
   right: 1rem;
   background-color: white;
@@ -550,6 +550,7 @@ a {
 
 .mobileprofile div h5 {
   font-size: 0.8rem;
+  margin-left: 1rem;
 }
 
 .mobileprofile ul li {
@@ -1058,80 +1059,22 @@ a {
 @media only screen and (min-width: 768px) {
   #loginmsg {
     width: 25rem;
-    height: 4.3rem;
-    background-color: white;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-left: 0.3rem solid green;
+    height: 4rem;
     right: 1rem;
     top: 5rem;
-    -webkit-animation: cssAnimation 5s forwards;
-    animation: cssAnimation 3s forwards;
-  }
-  @keyframes cssAnimation {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes cssAnimation {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
   }
   #loginmsg i {
     font-size: 1.1rem;
-    color: #666565;
   }
   #loginmsg #tick {
     padding: 0.7rem;
-    border-radius: 50%;
-    background-color: green;
-    color: white;
   }
   #loginmsg ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 2.5rem;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    width: 15rem;
+    height: 3rem;
+    width: 18rem;
   }
   #loginmsg ul li {
     font-size: 0.8rem;
-    font-family: BoldFont;
-    color: green;
   }
   #loginmsg ul li span {
     font-size: 1.3rem;
@@ -1272,8 +1215,10 @@ a {
   .mobile-footer {
     display: none;
   }
-  .tab-footer {
+  .tab-footer-section {
     border-bottom: 0.7rem solid #167ddd;
+  }
+  .tab-footer-section .tab-footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1285,35 +1230,35 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .tab-footer .footer-div-1 {
+  .tab-footer-section .tab-footer .footer-div-1 {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
     width: 68%;
   }
-  .tab-footer .footer-div-1 ul {
+  .tab-footer-section .tab-footer .footer-div-1 ul {
     margin-top: 0.3rem;
   }
-  .tab-footer .footer-div-1 ul li {
+  .tab-footer-section .tab-footer .footer-div-1 ul li {
     -webkit-box-flex: unset;
         -ms-flex: unset;
             flex: unset;
     font-size: 1.15rem;
   }
-  .tab-footer .footer-div-2 {
+  .tab-footer-section .tab-footer .footer-div-2 {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
     width: 20%;
   }
-  .tab-footer .footer-div-2 ul {
+  .tab-footer-section .tab-footer .footer-div-2 ul {
     margin-top: 1.5rem;
     margin-bottom: 0rem;
   }
-  .tab-footer .footer-div-2 ul li {
+  .tab-footer-section .tab-footer .footer-div-2 ul li {
     width: 100%;
   }
-  .tab-footer div {
+  .tab-footer-section .tab-footer div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1325,15 +1270,15 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .tab-footer div img {
+  .tab-footer-section .tab-footer div img {
     width: 8rem;
     height: 1.5rem;
   }
-  .tab-footer div p {
+  .tab-footer-section .tab-footer div p {
     font-weight: bold;
     margin-bottom: 0rem;
   }
-  .tab-footer div ul {
+  .tab-footer-section .tab-footer div ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1347,7 +1292,7 @@ a {
     width: 100%;
     margin-bottom: 1.5rem;
   }
-  .tab-footer div ul li {
+  .tab-footer-section .tab-footer div ul li {
     font-size: 1.15rem;
     font-family: LightFont;
     color: #222844;
@@ -1363,7 +1308,7 @@ a {
             justify-content: space-between;
     font-weight: bold;
   }
-  .tab-footer div ul li i {
+  .tab-footer-section .tab-footer div ul li i {
     display: inline;
     font-size: 1.2rem;
     color: #222844;
@@ -1374,83 +1319,26 @@ a {
   display: none;
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1024px) {
   #loginmsg {
     top: 9rem;
     right: 1rem;
     width: 25rem;
     height: 4.5rem;
-    background-color: white;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-left: 0.3rem solid green;
-    -webkit-animation: cssAnimation 5s forwards;
-    animation: cssAnimation 3s forwards;
-  }
-  @keyframes cssAnimation {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes cssAnimation {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
   }
   #loginmsg i {
     font-size: 1.3rem;
-    color: #666565;
   }
   #loginmsg #tick {
     padding: 0.5rem;
     border-radius: 50%;
-    background-color: green;
-    color: white;
   }
   #loginmsg ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 2.5rem;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    height: 2.8rem;
     width: 15rem;
   }
   #loginmsg ul li {
     font-size: 0.8rem;
-    font-family: BoldFont;
-    color: green;
   }
   #loginmsg ul li span {
     font-size: 1.3rem;
@@ -1524,7 +1412,7 @@ a {
     border-left: 0.5rem solid #167ddd;
   }
   .nav-desktop {
-    padding: 2rem 3rem;
+    padding: 2rem 1rem;
     display: block;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1624,6 +1512,9 @@ a {
   }
   .How-it-Works {
     padding-bottom: 3rem;
+  }
+  .How-it-Works .container {
+    width: 100%;
   }
   .How-it-Works p {
     margin-bottom: 2.5rem;
@@ -1859,11 +1750,18 @@ a {
     width: 5rem;
     height: 6rem;
   }
-  .need-help {
+  .need-help .container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .need-help div {
     -webkit-box-align: start;
@@ -1873,27 +1771,36 @@ a {
   .need-help p {
     margin-bottom: 0rem;
   }
-  .tab-footer .footer-div-1 {
+  .tab-footer-section {
+    border-bottom: 0.7rem solid #167ddd;
+  }
+  .tab-footer-section .tab-footer {
+    border: none;
+  }
+  .tab-footer-section .tab-footer .container {
+    width: 100%;
+  }
+  .tab-footer-section .tab-footer .footer-div-1 {
     width: 45%;
   }
-  .tab-footer .footer-div-1 ul {
+  .tab-footer-section .tab-footer .footer-div-1 ul {
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
-  .tab-footer .footer-div-1 ul li {
+  .tab-footer-section .tab-footer .footer-div-1 ul li {
     font-size: 1.1rem;
   }
-  .tab-footer .footer-div-2 {
+  .tab-footer-section .tab-footer .footer-div-2 {
     width: 14%;
   }
-  .tab-footer .footer-div-2 i {
+  .tab-footer-section .tab-footer .footer-div-2 i {
     font-size: 1.3rem;
   }
-  .tab-footer .footer-div-2 img {
+  .tab-footer-section .tab-footer .footer-div-2 img {
     height: 1.7rem;
     width: 10rem;
   }
-  .tab-footer .footer-div-2 ul {
+  .tab-footer-section .tab-footer .footer-div-2 ul {
     margin-top: 2rem;
   }
   .navlist {
@@ -1901,85 +1808,23 @@ a {
   }
 }
 
-<<<<<<< HEAD
-=======
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1700px) {
   #loginmsg {
     top: 9rem;
     right: 1rem;
     width: 25rem;
-    height: 4.5rem;
-    background-color: white;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-left: 0.3rem solid green;
-    -webkit-animation: cssAnimation 5s forwards;
-    animation: cssAnimation 3s forwards;
-  }
-  @keyframes cssAnimation {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes cssAnimation {
-    0% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
   }
   #loginmsg i {
     font-size: 1.3rem;
-    color: #666565;
   }
   #loginmsg #tick {
     padding: 0.5rem;
-    border-radius: 50%;
-    background-color: green;
-    color: white;
   }
   #loginmsg ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 2.5rem;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     width: 15rem;
   }
   #loginmsg ul li {
     font-size: 0.8rem;
-    font-family: BoldFont;
-    color: green;
   }
   #loginmsg ul li span {
     font-size: 1.3rem;
@@ -2053,7 +1898,7 @@ a {
     border-left: 0.5rem solid #167ddd;
   }
   .nav-desktop {
-    padding: 2rem 7rem;
+    padding: 2rem 1rem;
     display: block;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2153,6 +1998,9 @@ a {
   }
   .How-it-Works {
     padding-bottom: 5rem;
+  }
+  .How-it-Works .container {
+    width: 100%;
   }
   .How-it-Works p {
     margin-bottom: 2.5rem;
@@ -2397,6 +2245,9 @@ a {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .need-help .container {
+    width: 100%;
+  }
   .need-help div {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -2405,27 +2256,30 @@ a {
   .need-help p {
     margin-bottom: 0rem;
   }
-  .tab-footer .footer-div-1 {
+  .tab-footer-section .tab-footer .container {
+    width: 100%;
+  }
+  .tab-footer-section .tab-footer .footer-div-1 {
     width: 45%;
   }
-  .tab-footer .footer-div-1 ul {
+  .tab-footer-section .tab-footer .footer-div-1 ul {
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
-  .tab-footer .footer-div-1 ul li {
+  .tab-footer-section .tab-footer .footer-div-1 ul li {
     font-size: 1.5rem;
   }
-  .tab-footer .footer-div-2 {
+  .tab-footer-section .tab-footer .footer-div-2 {
     width: 14%;
   }
-  .tab-footer .footer-div-2 i {
+  .tab-footer-section .tab-footer .footer-div-2 i {
     font-size: 1.6rem;
   }
-  .tab-footer .footer-div-2 img {
+  .tab-footer-section .tab-footer .footer-div-2 img {
     height: 3.5rem;
     width: 14rem;
   }
-  .tab-footer .footer-div-2 ul {
+  .tab-footer-section .tab-footer .footer-div-2 ul {
     margin-top: 2rem;
   }
   .navlist {
@@ -2433,7 +2287,6 @@ a {
   }
 }
 
->>>>>>> 2b6ca90a27483d18a2313e6e3cce04c6e85963d2
 .overlay-contact-section {
   background-image: url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/contactUs.png");
   background-repeat: no-repeat;
@@ -2609,7 +2462,7 @@ p {
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1700px) {
   .overlay-contact-section {
     padding: 0rem 7rem;
   }

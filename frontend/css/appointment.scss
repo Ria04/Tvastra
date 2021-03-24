@@ -1,7 +1,6 @@
 @import "style.scss";
 #mainLabel{
     font-family: BoldFont;
-    margin: 1rem 0rem;
 }
 label{
     font-family: LightFont;
@@ -38,6 +37,7 @@ label{
         font-family: BoldFont;
         font-size: 1.2rem;        
     }
+    
     #myFile{
         border: unset;
         padding-top: 0.3rem;

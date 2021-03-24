@@ -32,13 +32,14 @@
     
         <%-include('header.ejs') %>
     
-    <section class="appointments">
+    <section>
+        <div class="container appointments">
         <%-include('dashboard.ejs') %>
         <div class="record-flex">
             <form  class="medical-record-form" action="/updateprofile" enctype="multipart/form-data" method="POST">
                 <div class="medical-record">
                 <h2>Accounts </h2>
-                <button type="submit">Save Changes</button>
+                <button class="sky-blue-button" type="submit">Save Changes</button>
                 </div>
          
 
@@ -192,7 +193,7 @@
    
     </form>
     </div>
-    
+</div>
     </section>
    
     

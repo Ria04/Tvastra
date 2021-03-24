@@ -28,7 +28,8 @@
 
    
 
-<section class="appointments">
+<section>
+    <div class="container appointments">
    <%var countp=0;
             for(var i=0;i<allappdata.length;i++){
                 if(allappdata[i].status=="notcomplete"){
@@ -64,9 +65,9 @@
                     </div>
                     <div class="buttons">
                         <div onclick="window.location.href='/reschedule/<%= allappdata[i].drid%>/<%= allappdata[i]._id%>'" style="padding:0rem;">
-                        <button type="button">Reschedule Appointment</button>
+                        <button class="sky-blue-button" type="button">Reschedule Appointment</button>
                     </div>
-                        <button type="submit">Cancel Appointment</button>
+                        <button class="sky-blue-button" type="submit">Cancel Appointment</button>
                     </div>
                 </div>
             </form>
@@ -113,7 +114,7 @@
         </div>
 
     </div>
-
+</div>
 </section>
 
 

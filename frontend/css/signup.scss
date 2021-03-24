@@ -18,8 +18,7 @@
         .isdoctor{
             align-items: center;
             justify-content: center;
-            margin-bottom:0.5rem;
-            height:2.5rem;
+            margin:1rem 0rem;
             input{
                 height:1rem;
                 width:1rem; 
@@ -34,7 +33,6 @@
             }
         }
         input{
-            height:2.5rem;
             margin-bottom: 0.5rem;
           
         }
@@ -70,9 +68,7 @@ footer{
 
             }
             .isdoctor{
-               
-                margin-bottom:1rem;
-                height:3.2rem;
+               margin:1rem 0rem;
                
                 label{
                   
@@ -80,11 +76,9 @@ footer{
                 }
             }
             button{
-                height:4rem;
+                padding:1rem 1.5rem;
             }
-            input{
-                height:3.2rem;
-            }
+            
         }
         
     }

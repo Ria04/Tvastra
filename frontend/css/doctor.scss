@@ -207,9 +207,9 @@ padding-bottom: 0rem;
             margin-bottom: 0rem;
             cursor: pointer;
             span{
-                color: green;
-                padding:0.5rem 0.4rem;
-                border:0.1rem solid green;
+                color: $background-blue-color;
+                padding:0.5rem 1.2rem;
+                border:0.1rem solid $background-blue-color;
             }
         }
         i{
@@ -837,7 +837,7 @@ align-items: flex-start;
             align-items: center;
             border-bottom: 0.2rem solid $light-grey;
             h4{
-                padding:2rem 0rem;
+                padding:1rem 0rem;
                 font-family: LightFont;
                 margin-right: 0.5rem;
               

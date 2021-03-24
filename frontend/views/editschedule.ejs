@@ -40,13 +40,12 @@
             <%}%>
 
     
-    <section class="appointments">
+    <section >
+        <div class="container appointments">
         <%-include('dashboard.ejs') %>
         <div class="record-flex">
         <form class="medical-record-form schedule-form" method="POST" action="/editschedule">
-        <div class="schedule-button">
-           <button onclick="showform()" type="reset">Create new schedule</button>
-        </div>
+    
         <div id="floating-form">
             <div class="addrecordform">
                 
@@ -91,8 +90,9 @@
         </div>
         
     </form>
-    <div class="schedule-button">
+    <div class="medical-record">
         <h2>All Schedules</h2>
+        <button class="sky-blue-button" onclick="showform()" type="reset">Create new schedule</button>
     </div>
     <div class="record schedule-record">
         <%for(var i=0;i < data.length; i++){%>
@@ -114,11 +114,11 @@
                   
               <div class="slot-button-forms">
                     <form method="POST" action="/deleteslot/<%= data[i].id%>">
-                        <button type="submit">Remove Slots</button>
+                        <button class="sky-blue-button" type="submit">Remove Slots</button>
                     </form>
                    
                      
-                    <button onclick="showslots('<%= data[i].id%>')">View Slots</button>
+                    <button class="sky-blue-button" onclick="showslots('<%= data[i].id%>')">View Slots</button>
                     
                     <input type="checkbox" onchange="window.location.href='/disableslot/<%= data[i].id%>/<%if(data[i].isdisabled==true){%>false<%}else{%>true<%}%>'" <%if(data[i].isdisabled==true){%>checked<%}else{%>unchecked<%}%>  >
               </div>
@@ -142,7 +142,7 @@
     </div>
    
     </div>
-    
+</div>
     </section>
    <script>
        

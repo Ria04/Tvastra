@@ -27,13 +27,14 @@
         <%-include('header.ejs') %>
 
     
-    <section class="appointments">
+    <section>
+        <div class="container appointments">
         <%-include('dashboard.ejs') %>
         <div class="record-flex">
         <form class="medical-record-form" method="POST" action="/addmedicalrecord" enctype="multipart/form-data">
         <div class="medical-record">
            <h2>Medical Records</h2>
-           <button onclick="showform()" type="reset">Add Record</button>
+           <button class="sky-blue-button" onclick="showform()" type="reset">Add Record</button>
         </div>
         <div id="floating-form">
             <div class="addrecordform">
@@ -121,7 +122,7 @@
 
                     <div class="button-div">
                         <form method="POST" action="/delete/<%= data[i].id %>">
-                            <button type="submit">delete</button>
+                            <button class="sky-blue-button" type="submit">delete</button>
                             </form>
                     </div>
                 </div>
@@ -132,7 +133,7 @@
     </div>
    
     </div>
-    
+</div>
     </section>
     <script>
 

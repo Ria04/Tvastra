@@ -2487,6 +2487,10 @@ footer section p {
   .loginsection .login .loginform div button {
     height: auto;
     outline: none;
+    padding: 0rem;
+  }
+  .loginsection .login .loginform button {
+    padding: 1rem 1.5rem;
   }
   footer section p {
     font-size: 1.2rem;
