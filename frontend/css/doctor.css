@@ -1065,7 +1065,7 @@ a {
     width: 25rem;
     height: 4rem;
     right: 1rem;
-    top: 5rem;
+    top: 1rem;
   }
   #loginmsg i {
     font-size: 1.1rem;
@@ -1325,7 +1325,7 @@ a {
 
 @media only screen and (min-width: 1024px) {
   #loginmsg {
-    top: 9rem;
+    top: 1rem;
     right: 1rem;
     width: 25rem;
     height: 4.5rem;
