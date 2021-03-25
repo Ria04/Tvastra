@@ -805,7 +805,7 @@ font-size: 1.1rem;
     .appointments{
         display: flex;
         flex-direction: row;
-        
+        justify-content: unset;
         .dashboard{
           
             display: block;
