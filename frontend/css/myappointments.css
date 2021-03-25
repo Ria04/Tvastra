@@ -1372,6 +1372,13 @@ a {
 }
 
 @media only screen and (min-width: 1024px) {
+  .appointment-section {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+  .appointment-section .container {
+    background-color: #a19f9f;
+  }
   .records div {
     width: 32%;
   }

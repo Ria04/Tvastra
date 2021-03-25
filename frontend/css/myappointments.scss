@@ -754,6 +754,13 @@ font-size: 1.1rem;
 
 }
 @media only screen and (min-width:$breakpoint-unknown){
+    .appointment-section{
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+        .container{
+            background-color: $grey;
+        }
+    }
     .records{
       
         div{
