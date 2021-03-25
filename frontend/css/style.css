@@ -1093,7 +1093,7 @@ a {
   }
   .IntroSection .locationform div {
     width: 20rem;
-    border-right: 0.2rem solid #93bede;
+    border-right: 1px solid #a19f9f;
     margin-bottom: 0rem;
   }
   .IntroSection .locationform button {
@@ -1412,6 +1412,7 @@ a {
   }
   #userprofile ul li:hover {
     border-left: 0.5rem solid #167ddd;
+    background-color: #f0f0f5;
   }
   .nav-desktop {
     padding: 2rem 1rem;

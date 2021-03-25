@@ -555,7 +555,7 @@
               }
                 div{
                     width:20rem;
-                    border-right:0.2rem solid $background-blue-color;
+                    border-right:1px solid $grey;
                     margin-bottom: 0rem;
 
                 }
@@ -881,6 +881,8 @@ margin-top: 1rem;
             }
             li:hover{
                 border-left: 0.5rem solid $sky-blue;
+                background-color: $blue-grey;
+        
             }
         }
     }
