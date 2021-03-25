@@ -828,7 +828,10 @@ font-size: 1.1rem;
                 li:hover{
                     background-color: $white;
                     border-left: 0.3rem solid $sky-blue;
-                    color:$sky-blue;
+                    span{
+                        color:$sky-blue;
+
+                    }
                 }
                 span,i{
                     font-size: 1.5rem;

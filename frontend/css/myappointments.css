@@ -1438,6 +1438,8 @@ a {
   .appointments .dashboard ul li:hover {
     background-color: white;
     border-left: 0.3rem solid #167ddd;
+  }
+  .appointments .dashboard ul li:hover span {
     color: #167ddd;
   }
   .appointments .dashboard ul span, .appointments .dashboard ul i {
