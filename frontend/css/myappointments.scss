@@ -760,7 +760,7 @@ font-size: 1.1rem;
         .container{
             padding: 1rem;
             border-radius: 0.3rem;
-            background-color: rgb(211, 226, 238);
+            background-color: $blue-grey;
         }
     }
     .records{
@@ -826,8 +826,9 @@ font-size: 1.1rem;
                     padding:1.2rem 0rem;
                 }
                 li:hover{
-                    background-color: $blue-grey;
+                    background-color: $white;
                     border-left: 0.3rem solid $sky-blue;
+                    color:$sky-blue;
                 }
                 span,i{
                     font-size: 1.5rem;

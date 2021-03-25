@@ -1379,7 +1379,7 @@ a {
   .appointment-section .container {
     padding: 1rem;
     border-radius: 0.3rem;
-    background-color: #d3e2ee;
+    background-color: #f0f0f5;
   }
   .records div {
     width: 32%;
@@ -1436,8 +1436,9 @@ a {
     padding: 1.2rem 0rem;
   }
   .appointments .dashboard ul li:hover {
-    background-color: #f0f0f5;
+    background-color: white;
     border-left: 0.3rem solid #167ddd;
+    color: #167ddd;
   }
   .appointments .dashboard ul span, .appointments .dashboard ul i {
     font-size: 1.5rem;
