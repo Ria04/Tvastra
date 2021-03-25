@@ -421,6 +421,8 @@
                 height:4rem;
                 width:5rem;
                 margin-right: 2rem;
+                border: 1px solid $grey;
+                border-radius: 100%;
                 img{
                     object-fit: cover;
                     border-radius: 100%;
@@ -434,6 +436,7 @@
                 p{
                     text-align: left;
                     margin-bottom: 0.5rem;
+                    font-size: 1rem;
                 }
                 input{
                     display: none;

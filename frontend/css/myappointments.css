@@ -1004,6 +1004,8 @@ a {
   height: 4rem;
   width: 5rem;
   margin-right: 2rem;
+  border: 1px solid #a19f9f;
+  border-radius: 100%;
 }
 
 .appointments .record-flex .profile-photo .pic-wrap .pic img {
@@ -1029,6 +1031,7 @@ a {
 .appointments .record-flex .profile-photo .pic-wrap .choose-pic p {
   text-align: left;
   margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 
 .appointments .record-flex .profile-photo .pic-wrap .choose-pic input {
