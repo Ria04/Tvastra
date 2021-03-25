@@ -8,7 +8,6 @@ var Schema = mongoose.Schema;
 var doctordata = mongoose.model('doctordata',new Schema({
   name:{
     type:String,
-    lowercase:true,
     trim:true,
     required:true
   },

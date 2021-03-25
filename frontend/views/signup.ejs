@@ -61,10 +61,10 @@
           <option value="Female"></option>
           <option value="Other"></option>
         </datalist>
-        <input type="date" placeholder="dd / mm / yy" name="date" id="date" class="empty" required>
+        <input type="date" name="date" id="dateee" class="empty" required>
         <input type="text" placeholder="Enter Phone Number" name="phone_number" maxlength="10" minlength="10" title="please enter 10 digit number" required>
 <script>
-  var el = document.getElementById("date");
+  var el = document.getElementById("dateee");
   el.onchange = function () {
   if (el.value === "") {
     el.classList.add("empty");
