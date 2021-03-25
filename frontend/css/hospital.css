@@ -2418,6 +2418,12 @@ span {
   .filtersanddoctors .doctor-card-tab .doctor-card .doctor-image {
     width: 30%;
   }
+  #doctor {
+    color: #222844;
+  }
+  #hospital {
+    color: #93bede;
+  }
 }
 
 @media only screen and (min-width: 1700px) {

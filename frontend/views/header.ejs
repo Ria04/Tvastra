@@ -103,10 +103,10 @@
 
             <img id="logo" onclick="window.location.href='/home'" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg">
                 <ul>
-                    <a href="/doctor"><li>Doctor</li></a>
-                    <a href="/hospital"><li>Hospital</li></a>
-                    <a href="/dentistry"><li>Treatment</li></a>
-                    <a href="/aboutus"> <li>About</li></a>
+                    <a href="/doctor"><li id="doctor" >Doctor</li></a>
+                    <a href="/hospital"><li id="hospital" >Hospital</li></a>
+                    <a href="/dentistry"><li id="treatment">Treatment</li></a>
+                    <a href="/aboutus"> <li id="about">About</li></a>
                 </ul>
                 <div>
                     
@@ -118,6 +118,29 @@
                         <div onclick="toggleprofile()">          
                         <button id="login" class="white-button"><%= username%></button>
                         <i class="fa fa-angle-down"></i>
+                        <div id="userprofile">
+                            <a href="/myprofile">
+                            <div class="profilenav">
+                           
+                            <div class="pic">
+                                <img id="headerpic" src=<%= profilepic%>>
+                            </div>
+                       
+                            <div>
+                                <h4><%= username%></h4>
+                                <h6><%= phonenumber%></h6>
+                            </div>
+                        </div>
+                    </a>
+                            <ul>
+                                <a href="/myappointments"><li>My Appointments</li></a>
+                                <li>My Lab Tests</li>
+                                <li>My Medicine Orders</li>
+                                <li>My payments</li>
+                                <a href="/logout"><li>Logout</li></a>
+                            </ul>
+                    
+                        </div>
                     </div>
                         <%} else {%>
                             
@@ -127,31 +150,7 @@
     
                 </div>
     
-                <% if(loggedin==true) {%>
-                    <div id="userprofile">
-                        <a href="/myprofile">
-                        <div class="profilenav">
-                       
-                        <div class="pic">
-                            <img id="headerpic" src=<%= profilepic%>>
-                        </div>
-                   
-                        <div>
-                            <h4><%= username%></h4>
-                            <h6><%= phonenumber%></h6>
-                        </div>
-                    </div>
-                </a>
-                        <ul>
-                            <a href="/myappointments"><li>My Appointments</li></a>
-                            <li>My Lab Tests</li>
-                            <li>My Medicine Orders</li>
-                            <li>My payments</li>
-                            <a href="/logout"><li>Logout</li></a>
-                        </ul>
                 
-                    </div>
-                    <%}%>
           
         </nav>
     </div> 

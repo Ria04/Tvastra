@@ -1490,7 +1490,7 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 7rem 3rem;
+    padding: 7rem 1rem;
   }
   .IntroSection h1 {
     margin-bottom: 2rem;
@@ -1898,7 +1898,7 @@ a {
     border-left: 0.5rem solid #167ddd;
   }
   .nav-desktop {
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
     display: block;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2788,6 +2788,9 @@ p {
   }
   .symbols div i {
     margin-bottom: 1rem;
+  }
+  #treatments {
+    color: #93bede;
   }
 }
 /*# sourceMappingURL=dentistry.css.map */
