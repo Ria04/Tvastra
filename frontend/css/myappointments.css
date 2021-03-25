@@ -1377,6 +1377,8 @@ a {
     padding-bottom: 0rem;
   }
   .appointment-section .container {
+    padding: 1rem;
+    border-radius: 0.3rem;
     background-color: #a19f9f;
   }
   .records div {
