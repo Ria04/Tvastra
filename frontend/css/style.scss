@@ -9,9 +9,7 @@
     justify-content: space-between;
 }
 
-#login-container{
-    position:relative;
-}
+
 
 .navlist{
     width:100%;
@@ -526,7 +524,7 @@
             height:4rem;
            
             right:1rem;
-            top:1rem;
+            top:5rem;
             
             i{
                 font-size: 1.1rem;
@@ -786,7 +784,7 @@ margin-top: 1rem;
 
 @media only screen and (min-width:$breakpoint-unknown){
     #loginmsg{
-        top:1rem;
+        top:9rem;
         right:1rem;
         width:25rem;
         height:4.5rem;
