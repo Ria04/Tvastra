@@ -1379,7 +1379,7 @@ a {
   .appointment-section .container {
     padding: 1rem;
     border-radius: 0.3rem;
-    background-color: #93bede;
+    background-color: #d3e2ee;
   }
   .records div {
     width: 32%;
@@ -1421,9 +1421,9 @@ a {
             justify-content: unset;
   }
   .appointments .dashboard {
+    width: 25%;
     display: block;
     padding: 1rem;
-    padding-right: 0.3rem;
   }
   .appointments .dashboard a {
     text-decoration: unset;
@@ -1436,7 +1436,7 @@ a {
     padding: 1.2rem 0rem;
   }
   .appointments .dashboard ul li:hover {
-    background-color: #dbd8d8;
+    background-color: #f0f0f5;
     border-left: 0.3rem solid #167ddd;
   }
   .appointments .dashboard ul span, .appointments .dashboard ul i {

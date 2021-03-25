@@ -760,7 +760,7 @@ font-size: 1.1rem;
         .container{
             padding: 1rem;
             border-radius: 0.3rem;
-            background-color: $light-blue-background-color;
+            background-color: rgb(211, 226, 238);
         }
     }
     .records{
@@ -807,10 +807,9 @@ font-size: 1.1rem;
         flex-direction: row;
         justify-content: unset;
         .dashboard{
-          
+            width:25%;
             display: block;
             padding:1rem;
-            padding-right: 0.3rem;
             a{
                 text-decoration: unset;
                 color:unset;
@@ -827,7 +826,7 @@ font-size: 1.1rem;
                     padding:1.2rem 0rem;
                 }
                 li:hover{
-                    background-color: $light-grey;
+                    background-color: $blue-grey;
                     border-left: 0.3rem solid $sky-blue;
                 }
                 span,i{
