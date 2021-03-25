@@ -61,9 +61,18 @@
           <option value="Female"></option>
           <option value="Other"></option>
         </datalist>
-        <input type="text" placeholder="dd / mm / yy" name="date" required>
-        <input type="text" placeholder="Enter Phone Number" name="phone_number" required>
-
+        <input type="date" placeholder="dd / mm / yy" name="date" id="date" class="empty" required>
+        <input type="text" placeholder="Enter Phone Number" name="phone_number" maxlength="10" minlength="10" title="please enter 10 digit number" required>
+<script>
+  var el = document.getElementById("date");
+  el.onchange = function () {
+  if (el.value === "") {
+    el.classList.add("empty");
+  } else {
+    el.classList.remove("empty");
+  }
+};
+</script>
         
         <div>
         <input type="text" placeholder="Enter City" name="city" required>
@@ -86,7 +95,7 @@
     </div>
 </section>
 
-<script>
+<scrip>
 
   var passwordtext= document.getElementById("pass");  
   function changeicon(){
@@ -103,7 +112,7 @@
     
      
  
- </script>
+ </scrip>
 
 <footer>
   <section>
