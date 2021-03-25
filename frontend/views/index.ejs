@@ -17,6 +17,7 @@
 <%-include('header.ejs') %>
 
     <% if (loggedin==true && msg.length>0) { %>
+        <div class="container">
 
         <div id="loginmsg">
             <i id="tick" class="fa fa-check"></i>
@@ -27,10 +28,8 @@
                 </li>
             </ul>
             <i class="fa fa-close"></i>
-
-
         </div>
-
+    </div>
         <% } %>
 
 
