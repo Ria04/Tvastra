@@ -760,7 +760,7 @@ font-size: 1.1rem;
         .container{
             padding: 1rem;
             border-radius: 0.3rem;
-            background-color: $light-blue;
+            background-color: $light-blue-background-color;
         }
     }
     .records{
@@ -805,12 +805,12 @@ font-size: 1.1rem;
     .appointments{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         
         .dashboard{
           
             display: block;
             padding:1rem;
+            padding-right: 0.3rem;
             a{
                 text-decoration: unset;
                 color:unset;

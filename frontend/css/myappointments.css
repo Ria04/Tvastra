@@ -1379,7 +1379,7 @@ a {
   .appointment-section .container {
     padding: 1rem;
     border-radius: 0.3rem;
-    background-color: #d1e5f5;
+    background-color: #93bede;
   }
   .records div {
     width: 32%;
@@ -1416,13 +1416,11 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
   .appointments .dashboard {
     display: block;
     padding: 1rem;
+    padding-right: 0.3rem;
   }
   .appointments .dashboard a {
     text-decoration: unset;
