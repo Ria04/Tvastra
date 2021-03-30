@@ -68,7 +68,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "/frontend/images/")));
 app.use(express.static(path.join(__dirname, "/frontend/css")));
 app.use(express.static(path.join(__dirname, "/frontend/fonts/")));
-app.use(express.static(path.join(__dirname, "/frontend/js/")));
+app.use(express.static(path.join(__dirname, "/frontend/js")));
 app.use(express.static(path.join(__dirname)));
 
 app.set('port', process.env.PORT || port); // set express to use this port
