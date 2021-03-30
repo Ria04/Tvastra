@@ -1,0 +1,125 @@
+@import "./colors.scss";
+
+.mobile-footer{
+    background-color: $dark-blue-color;
+    display: block;
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        li{
+            margin-bottom: 1rem;
+            color:$white;
+            width:100%;
+            font-family: BoldFont;
+            figure{
+                width:10rem;
+                height:2.5rem;
+                margin: auto;
+                cursor: pointer;
+
+            }
+            ul{
+                width:60%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: auto;
+                li{
+                    margin-bottom: 0rem;
+                    i{
+                        color:$white;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+            p{
+                color:$white;
+                margin-bottom: 0rem;
+                font-family: BoldFont;
+
+            }
+        }
+        li:last-child{
+            margin-bottom: 0rem;
+        }
+        
+    }
+}
+.desktop-footer{
+    display: none;
+}
+.need-help{
+    background-color: $background-blue-color;
+    .container{
+        padding:0rem;
+    }
+    article{
+        h2{
+            color: $white;
+        }
+    }
+}
+
+
+@media only screen and (min-width:$breakpoint-tablet){
+    .mobile-footer{
+        display: none;
+    }
+    .desktop-footer{
+        display: block;
+        .container{
+            padding:0rem;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 4fr 1fr;
+            grid-column-gap: 6rem;
+            grid-row-gap: 1rem;
+
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+           justify-content: space-between;
+           align-items: center;
+           li{
+               font-family: BoldFont;
+           }
+        }
+        figure{
+            width:10rem;
+            height:2.5rem;
+            margin-left: auto;
+        }
+        p{
+            margin:auto 0;
+            text-align: left;
+            font-family: BoldFont;
+        }
+    }
+}
+
+
+@media only screen and (min-width:$breakpoint-desktop){
+    
+    .desktop-footer{
+        .container{
+            grid-template-columns: 6fr 1fr;
+            grid-column-gap: 25rem;
+        }
+    }
+    .need-help{
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        article{
+            p{
+                margin-bottom: 0rem;
+            }
+        }
+    
+    }
+}

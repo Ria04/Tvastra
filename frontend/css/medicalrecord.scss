@@ -1,0 +1,105 @@
+@import "colors.scss";
+.parent-div{
+    padding: 1rem;
+   
+}
+.recorddata{
+    border:1px solid $background-blue-color;
+    width:auto;
+    padding:0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    .date-div,.title-div,.button-div{
+        padding:0.5rem;
+        width:100%;
+    }
+    h5{
+        color: $sky-blue;
+    }
+   
+}
+.pic-input-label{
+    display:flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     background-color: transparent;
+     i{
+         color: $sky-blue;
+         margin-right: 1rem;
+     }
+     img{
+         width:4rem;
+         height:4rem;
+         margin: 0.5rem;
+    
+     }
+     input{
+         display: none;
+     }
+}
+
+.floating-form{
+    .form{
+        .inputfields{
+            border-top: 1px solid $grey;
+            padding:1rem 0rem;
+        }
+        .type-of-report{
+            h6{
+                margin-bottom: 1rem;
+            }
+            ul{
+                li{
+                    padding:0.5rem;
+                    input{
+                        width:auto;
+                        margin-right: 1rem;
+                    }
+                    label{
+                        margin-bottom: 0rem;
+                    }
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+            }
+           
+        }
+        .buttons{
+            margin-top: 1rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+@media only screen and (min-width:$breakpoint-tablet){
+
+.recorddata{
+ 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .date-div,.title-div,.button-div{
+        width: auto;
+    }
+
+    
+}
+.floating-form{
+    .form{
+        padding:2rem 1rem;
+        .pic-input-label{
+            label{
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+}

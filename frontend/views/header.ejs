@@ -1,26 +1,88 @@
-<script>
-    function toggleprofile() {
-      var x = document.getElementById("userprofile");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
-    }
-    </script>
-    <script>
-        function togglemobileprofile() {
-          var x = document.getElementById("mobileprofile");
-          if (x.style.display === "none") {
-            x.style.display = "block";
-          } else {
-            x.style.display = "none";
-          }
-        }
-        </script>
+<header>
+    <div class="container">
 
+
+        <nav class="mobile-nav">
+            <figure>
+                <img onclick="window.location.href='/home'"
+                    src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" />
+            </figure>
+            <div>
+                <% if(loggedin==true) {%>
+                    <a href="/myprofile">
+                        <figure>
+                            <img id="headerpic" src=<%=profilepic%>>
+                        </figure>
+                    </a>
+                    <%}%>
+                        <i onclick="showlist()" class="fas fa-bars"></i>
+            </div>
+
+           
+        </nav>
+        <div class="toaster-mobile" id="navlist" style="display: none;">
+            <ul>
+                <a href="/doctor"><li>My Appointments</li></a>
+                <a href=""><li>Hospital</li></a>
+                <a href=""><li>Treatments</li></a>
+                <a href=""><li>About Us</li></a>
+                <a href="/logout"><li>Logout</li></a>
+            </ul>
+        </div>
+
+
+        <nav class="desktop-nav">
+            <figure>
+                <img onclick="window.location.href='/home'"
+                    src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" />
+            </figure>
+            <ul>
+                <a href="/doctor">
+                    <li>Doctor</li>
+                </a>
+                <li>Hospital</li>
+                <li id="treatment" class="toaster">Treatments
+                    <ul class="dropdown">
+                        <li>Dentistry</li>
+                        <li>Cancer</li>
+                        <li>Multi Organ Transplant</li>
+                        <li>Orthopedics Surgery</li>
+                        <li>Infertility Treatment</li>
+                    </ul>
+                </li>
+                <li>About</li>
+            </ul>
+            <div id="button-div">
+                <button class="accentButton">Tvastra Plus</button>
+                <button class="filledButton">Get a quote</button>
+                <button id="username" class="linkButton">
+                    <%= username%>
+                        <div class="toaster">
+                            <div>
+                                <a href="/myprofile">
+                                    <figure>
+                                        <img id="headerpic" src=<%=profilepic%>>
+                                    </figure>
+                                </a>
+                                <h5>
+                                    <%= username%>
+                                </h5>
+                            </div>
+                            <ul>
+                                <a href="/myappointments"><li>My Appointments</li></a>
+                                <a href="/medicalrecords"><li>Medicl Records</li></a>
+                                <a href="/settings"><li>Settings</li></a>
+                                <li>My payments</li>
+                                <a href="/logout"><li>Logout</li></a>
+                            </ul>
+                        </div>
+                </button>
+            </div>
+        </nav>
+    </div>
+</header>
 <script>
-    function showlist(){
+      function showlist(){
         var x = document.getElementById("navlist");
         console.log(x);
         if (x.style.display === "none") {
@@ -29,138 +91,4 @@
         x.style.display = "none";
       }
     }
-    
-
 </script>
-
-
-
-
-
-
-           
-    <header>
-        <div class="container">
-
-
-        <nav class="nav-mobile">
-            
-            <img id="logo" onclick="window.location.href='/home'" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg">
-            <% if(loggedin==true) {%>
-                <div class="nav">
-                <div onclick="togglemobileprofile()" id="loginm" class="pic">
-                    <img onclick="toggleprofile()" id="headerpic" src=<%= profilepic%>>
-                </div>
-                    <i onclick="showlist()" class="fas fa-bars"></i>
-                </div>
-                <%}else{%>
-                    <i onclick="showlist()" class="fas fa-bars"></i>
-
-                    <%}%>
-
-        </nav>
-
-        <div id="mobileprofile" class="mobileprofile" style="display: none;">
-            <div>
-            <div class="picname">
-                <a href="/myprofile">
-                    <div class="pic">
-                    <img id="headerpic" src=<%= profilepic%>>
-                    </div>
-                </a>
-                <h5><%= username%></h5>
-            </div>
-            <h5><%= phonenumber%></h5>
-        </div>
-        <ul>
-            <ul>
-                <a href="/myappointments"><li>My Appointments</li></a>
-                <li>My Lab Tests</li>
-                <li>my medicine Orders</li>
-                <li>My payments</li>
-                <a href="/logout"><li>Logout</li></a>
-            </ul>
-        </ul>
-        </div>
-        
-        <ul id="navlist" class="navlist" style="display: none;">
-            <li><a href="/doctor">Doctor</li></a>
-            <li><a href="/hospital">Hospital</a></li>
-            <li><a href="/dentistry">Treatment</a></li>
-             <li><a href="/aboutus">About</a></li>
-        </ul>
-
-
-
-
-
-
-
-
-
-
-        <nav class="nav-desktop">
-
-            <img id="logo" onclick="window.location.href='/home'" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg">
-                <ul>
-                    <a href="/doctor"><li id="doctor" >Doctor</li></a>
-                    <a href="/hospital"><li id="hospital" >Hospital</li></a>
-                    <a href="/dentistry"><li id="treatment">Treatment</li></a>
-                    <a href="/aboutus"> <li id="about">About</li></a>
-                </ul>
-                <div>
-                    
-    
-                    <% if(loggedin==true) {%>
-                        <button class="sky-blue-button">Tvastra</button>
-
-                        <a href="/feedback"><button id="quote" class="dark-blue-button">Get a Quote</button></a>
-                        <div onclick="toggleprofile()">          
-                        <button id="login" class="white-button"><%= username%></button>
-                        <i class="fa fa-angle-down"></i>
-                        <div id="userprofile">
-                            <a href="/myprofile">
-                            <div class="profilenav">
-                           
-                            <div class="pic">
-                                <img id="headerpic" src=<%= profilepic%>>
-                            </div>
-                       
-                            <div>
-                                <h4><%= username%></h4>
-                                <h6><%= phonenumber%></h6>
-                            </div>
-                        </div>
-                    </a>
-                            <ul>
-                                <a href="/myappointments"><li>My Appointments</li></a>
-                                <li>My Lab Tests</li>
-                                <li>My Medicine Orders</li>
-                                <li>My payments</li>
-                                <a href="/logout"><li>Logout</li></a>
-                            </ul>
-                    
-                        </div>
-                    </div>
-                        <%} else {%>
-                            
-                            <button id="quote">Get a Quote</button>
-                            <a href="/"> <button id="login">Login / Signup</button></a> 
-                    <%}%>
-    
-                </div>
-    
-                
-          
-        </nav>
-    </div> 
-    
-    </header>
-    
-    
-       
-    
-    
-    
-    
-    

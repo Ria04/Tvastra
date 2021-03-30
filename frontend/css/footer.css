@@ -1,0 +1,166 @@
+@font-face {
+  font-family: "BoldFont";
+  src: url("Nexa-Bold-1.otf");
+}
+
+@font-face {
+  font-family: "LightFont";
+  src: url("Nexa-Light.otf");
+}
+
+.mobile-footer {
+  background-color: #222844;
+  display: block;
+}
+
+.mobile-footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile-footer ul li {
+  margin-bottom: 1rem;
+  color: white;
+  width: 100%;
+  font-family: BoldFont;
+}
+
+.mobile-footer ul li figure {
+  width: 10rem;
+  height: 2.5rem;
+  margin: auto;
+  cursor: pointer;
+}
+
+.mobile-footer ul li ul {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+}
+
+.mobile-footer ul li ul li {
+  margin-bottom: 0rem;
+}
+
+.mobile-footer ul li ul li i {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.mobile-footer ul li p {
+  color: white;
+  margin-bottom: 0rem;
+  font-family: BoldFont;
+}
+
+.mobile-footer ul li:last-child {
+  margin-bottom: 0rem;
+}
+
+.desktop-footer {
+  display: none;
+}
+
+.need-help {
+  background-color: #93bede;
+}
+
+.need-help .container {
+  padding: 0rem;
+}
+
+.need-help article h2 {
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-footer {
+    display: none;
+  }
+  .desktop-footer {
+    display: block;
+  }
+  .desktop-footer .container {
+    padding: 0rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: 4fr 1fr;
+        grid-template-columns: 4fr 1fr;
+    grid-column-gap: 6rem;
+    grid-row-gap: 1rem;
+  }
+  .desktop-footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .desktop-footer ul li {
+    font-family: BoldFont;
+  }
+  .desktop-footer figure {
+    width: 10rem;
+    height: 2.5rem;
+    margin-left: auto;
+  }
+  .desktop-footer p {
+    margin: auto 0;
+    text-align: left;
+    font-family: BoldFont;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .desktop-footer .container {
+    -ms-grid-columns: 6fr 1fr;
+        grid-template-columns: 6fr 1fr;
+    grid-column-gap: 25rem;
+  }
+  .need-help .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .need-help article p {
+    margin-bottom: 0rem;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

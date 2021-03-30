@@ -1,110 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="theme.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="login.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="login.css">
 
 </head>
+
 <body>
-
-<header>
-    <nav class="nav-mobile">
-
-        <img id="logo" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg">
-        <i class="fas fa-bars"></i>
-    </nav>
-    <div class="container">
-
-    <nav class="nav-desktop">
-        <img id="logo" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg">
-            <ul>
-                <a href="/doctor"><li>Doctor</li></a>
-                <a href="/hospital"><li>Hospital</li></a>
-                <li>Treatment</li>
-                <a href="/aboutus"> <li>About</li></a>
-            </ul>
-            <div>
-                <button class="sky-blue-button id="login">Login / Signup</button>
-                <button class="dark-blue-button id="quote">Get a Quote</button>
-            </div>
-
+    <header>
+        <div class="container">
+    
+    
+            <nav class="mobile-nav">
+                <figure>
+                    <img onclick="window.location.href='/home'"
+                        src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" />
+                </figure>
+                <div>
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+    
+    
+            <nav class="desktop-nav">
+                <figure>
+                    <img onclick="window.location.href='/home'"
+                        src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" />
+                </figure>
+                <ul>
+                    <a href="/doctor"><li>Doctor</li></a>
+                    <li>Hospital</li>
+                    <li id="treatment">Treatments
+                        <ul class="dropdown">
+                            <li>Dentistry</li>
+                            <li>Cancer</li>
+                            <li>Multi Organ Transplant</li>
+                            <li>Orthopedics Surgery</li>
+                            <li>Infertility Treatment</li>
+                        </ul>
+                    </li>
+                    <li>About</li>
+                </ul>
+                <div id="button-div">
+                    <button class="accentButton">Tvastra Plus</button>
+                    <button class="filledButton">Get a quote</button>                    
+                </button>
+                </div>
+            </nav>
         </div>
-
-    </nav>
-</div>
-</header>
+    </header>
 
 
-    
-
-<% if (msg1.length>0) {%>
-    <div id="loginmsg">
-    <i id="tick"class="fa fa-close"></i>
-    <ul>
-        <li><span><%= msg1[0]%></span></li>
-        <li><%= msg1[1]%></li>
-    </ul>
-    <i class="fa fa-close"></i>
-    
-    </div>
-
-    <%}%>
-    
 
 
-   
-<section class="loginsection">
-  
-    <div class="login">
-      
-    <h3>Login</h3>
-      <form id="forgotform"  class="loginform" method="POST" action="/">
-        <input  type="text" placeholder="Enter Email" name="email" required>
-        <div id="passworddiv">
-        <input id="pass" type="password" placeholder="Enter Password" name="password" >
-        <i id="toggle" class="fa fa-eye-slash" onclick="changeicon()"></i>
-        </div>  
-        <div>
-            <a href="/otpnumberpage"><h5>Login with OTP</h5></a> 
-            
-            <button type="button" onclick='this.form.action="/getemail";'><h5>Forgot Password</h5></button>
+
+
+
+
+
+
+
+
+<section class="bg-blue-section signin-section">
+    <% if (msg1.length>0) {%>
+        <div id="loginmsg">
+        <i id="tick"class="fa fa-close"></i>
+        <ul>
+            <li><span><%= msg1[0]%></span></li>
+            <li><%= msg1[1]%></li>
+        </ul>
         </div>
-        <button class="dark-blue-button" type="submit">L O G I N <i class="fa fa-arrow-right"></i></button>
-      </form>
-
-      <h4>Not Registered? <a href="/signup"><span>SignUp</span></a></h4>
-    </div>
-</section>
-<script>
-
- var passwordtext= document.getElementById("pass");  
- function changeicon(){
-    var x = document.getElementById("pass");
-    var y= document.getElementById("toggle")
-  if (x.type === "password") {
-    x.type = "text";
-    y.className='fa fa-eye';
-  } else {
-    x.type = "password";
-    y.className='fa fa-eye-slash';
-  }
-}
-   
-    
-
-</script>
-
-
-<footer>
+        <%}%>
+        
     <section>
-   <p>All Rights Reserved. <i class="fa fa-copyright"></i> tvastra 2018</p>
+        <article>
+            <h1>Login</h1>
+        </article>
+        <form method="POST" action="/">
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <div class="password-div">
+                <input id="password" type="password" placeholder="Enter Password" name="password" required>
+                <i id="toggle" class="fa fa-eye-slash" onclick="changeicon()"></i>
+            </div>
+            <div class="button-div">
+                <button type="button" onclick='window.location.href="/otpnumberpage"' class="linkButton">Login with
+                    OTP</button>
+                <button type="button" onclick='this.form.action="/getemail";' class="linkButton">Forgot
+                    Password</button>
+            </div>
+            <button class="filledButton">l o g i n <i class="fa fa-arrow-right"></i></button>
+        </form>
+        <h6>not registered? <span><a href="/signup">SignUp</a></span></h6>
+
+
+    </section>
+    <footer>
+        <p> All Rights Reserved. <i class="fa fa-copyright"></i> tvastra 2020</p>
+    </footer>
 </section>
-</footer>
+
+
+
+
+
+
+
+
 </body>
+<script src="login.js"></script>
+</html>

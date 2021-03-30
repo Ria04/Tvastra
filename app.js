@@ -68,6 +68,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "/frontend/images/")));
 app.use(express.static(path.join(__dirname, "/frontend/css")));
 app.use(express.static(path.join(__dirname, "/frontend/fonts/")));
+app.use(express.static(path.join(__dirname, "/frontend/js/")));
 app.use(express.static(path.join(__dirname)));
 
 app.set('port', process.env.PORT || port); // set express to use this port
@@ -625,6 +626,7 @@ app.post("/otp/:token", (req, res) => {
       console.log(req.body);
 
       otpSender.send(otp, req.body);
+      
       console.log(`Your token code is ${otp.token} and otp is ${otp.code}`);
       res.redirect('/otppage');
 

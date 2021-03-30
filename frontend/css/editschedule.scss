@@ -1,0 +1,165 @@
+@import "colors.scss";
+
+.disabled{
+    background-color: $blue-grey;
+}
+
+body{
+    position: relative;
+}
+.floating-form{
+    position: absolute;
+    background-color: rgba(1, 1, 1, 0.7);
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    height:100%;
+    width:100%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    .form{
+        margin-top: 2rem;
+        padding: 1rem;
+        width:80%;
+        background-color: $white;
+        border:0.2rem solid $sky-blue;
+        .schedule-head{
+            border-bottom: 1px solid $grey;
+            h1{
+                text-align: center;
+            }
+        }
+        .inputfields{
+           padding:1rem;
+           label{
+               font-family: BoldFont;
+           }
+           select{
+               appearance: unset;
+               background: none;
+               width:100%;
+               border:1px solid $grey;
+               margin: 0.5rem 0rem;
+               padding:0.5rem;
+           }
+           input{
+            border: 1px solid $grey;
+            margin: 0.5rem 0rem;
+
+           }
+        }
+        .buttons{
+            padding:0rem 1rem;
+        }
+    }
+}
+
+
+.schedule-div{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    .schedule-details{
+        padding:0.5rem;
+        border:1px solid $sky-blue;
+        border-radius: 0.5rem;
+    }
+    .hospital-time{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .slot-button-forms{
+            margin-top: 1rem;
+            button{
+                margin-right: 0.5rem;
+            }
+        }
+    }
+    .slot-details{
+        margin-top: 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        div{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding:0.5rem;
+            border:1px solid $background-blue-color;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            input{
+                margin-left: 0.3rem;
+            }
+            h6{
+              color: $background-blue-color;  
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (min-width:$breakpoint-tablet){
+    .schedule-div{
+        .schedule-details{
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            .flex-div{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        .hospital-time{
+            flex-direction: row;
+            margin-top: 0rem;
+            align-items: center;
+            justify-content: space-between;
+            width:80%;
+            div{
+                flex-direction: column;
+
+            }
+            .slot-button-forms{
+                flex-direction: row;
+                margin-top: 0rem;
+                
+            }
+        }
+    }
+    .floating-form{
+        .form{
+            margin:auto 0rem;
+            max-width: 40rem;
+            .inputfields{
+                label{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:$breakpoint-tablet){
+    .schedule-div{
+        .hospital-time{
+            width:70%;
+        }
+    }
+    .floating-form{
+        .form{
+            border:0.4rem solid $sky-blue;
+
+        }
+    }
+}

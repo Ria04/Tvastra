@@ -1,40 +1,14 @@
-$background-blue-color:rgb(147, 190, 222);
-$white-color: rgb(255, 255, 255);
-$dark-blue-color:rgb(34, 40, 68);
-$light-blue-background-color: rgb(147, 190, 222);
-$grey:rgb(161, 159, 159);
-$off-white:rgb(244, 244, 248);
-$sky-blue:rgb(22, 125, 221);
-$light-grey:rgb(219, 216, 216);
-$blue-grey:rgb(240, 240, 245);
-$light-blue: rgb(209, 229, 245);
-$white:rgb(255,255,255);
-$dark-grey:rgb(102, 101, 101);
+@import "./colors.scss";
+@import "./header.scss";
+@import "./footer.scss";
+
 
 .container{
+    padding:1rem;
     width:100%;
     max-width: 1200px;
     margin: auto;
 }
-
-
-@font-face{
-    font-family: "BoldFont";
-    src: url('Nexa-Bold-1.otf');
-}
-@font-face{
-    font-family: "LightFont";
-    src: url('Nexa-Light.otf');
-}
-
-
-
-$breakpoint-tablet:768px;
-$breakpoint-unknown:1024px;
-
-$breakpoint-desktop:1700px;
-
-
 
 
 /* global tags */
@@ -46,84 +20,135 @@ img{
     height:100%;
     object-fit: cover;
 }
-section{
+section,footer{
     padding:1.5rem 1rem;
     text-align: center;
 }
 h1,h2,h3,h4,h5,h6{
     font-family: BoldFont;
     color:$dark-blue-color;
+    text-transform: capitalize;
 }
 h1,h2{
     font-size:2rem;
     line-height: 2.4rem;
-    margin-bottom: 0.625rem;
+    margin-bottom: 1rem;
 }
 h3{
     font-size: 1.6rem;
     line-height: 2rem;
-    margin-bottom: 0.625rem;
 }
 h4{
     font-size: 1.4rem;
     line-height: 1.8rem;
-    margin-bottom: 0.625rem;
 }
 h5{
     font-size: 1.2rem;
     line-height: 1.6rem;
-    margin-bottom: 0.3125rem;
 }
 h6{
     font-size: 1rem;
     line-height: 1.4rem;
-    margin-bottom: 0.3125rem;
 }
 p{
     font-family: LightFont;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     line-height: 1.4rem;
     color: $dark-blue-color;
-    margin-bottom: 0.625rem;
+    margin-bottom: 1rem;
 }
-input,select{
+input,datalist{
     font-family: LightFont;
-    padding: 0.8rem 0.75rem;
+    padding: 0.8rem;
     font-size: 1.1rem;
     line-height: 1.4rem;
     width: 100%;
     color: $dark-blue-color;
     border:none;
     outline: none;
-    margin-bottom: 0.625rem ;
 }
+
+.tagify{
+    padding: 0.2rem 0.5rem;
+    flex-wrap: unset;
+    overflow-x: scroll;
+
+    --tag-bg: rgb(184, 213, 240);
+    span{
+        color:$sky-blue
+    }
+}
+
+
+.tagify__tag__removeBtn{
+    color: $sky-blue;
+}
+
+
+.tagify::-webkit-scrollbar {
+    display: none;
+}
+
+select{
+    align-self: center;
+    -ms-grid-column-align: right;
+    justify-self: right;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    padding: 0.7rem;
+    background: url(https://cdn1.iconfinder.com/data/icons/flat-and-simple-part-1/128/arrow_down-512.png) no-repeat, #d3d3d3;
+    background-size: 20%;
+    background-position-x: 100%;
+    background-position-y: 50%;
+    font-family: nexa-light;
+    font-size: 0.9rem;
+    color: $black;
+    border: 0;
+}
+
+
 
 textarea{
     font-family: LightFont;
-    padding: 0.8rem 0.75rem;
+    padding: 0.8rem;
     font-size: 1.1rem;
     line-height: 1.4rem;
     width: 100%;
-    color: $grey;
-    margin-bottom: 0.625rem ;
-    border:0.125rem solid $grey;
+    color: $dark-blue-color;
+    border:1px solid $grey;
     outline: none;
-    
 }
+
+
+
 input::placeholder{
     font-size: 0.9rem;
     color:$grey;
 }
+
+input[type="checkbox"]{
+    width:1rem;
+    height:1rem;
+    margin: 0rem;
+}
+
+
 input:focus,select:focus{
     outline: none;
 }
+
+
 textarea::placeholder{
     font-size: 0.9rem;
     color:$grey;
     font-family: BoldFont;
 }
+
+
 button{
-    font-family: LightFont;
+    font-family: BoldFont;
     font-size: 1rem;
     line-height: 1.4rem;
     border: none;
@@ -131,32 +156,49 @@ button{
     outline: none;
     cursor: pointer;
     user-select: none;
+    text-transform: capitalize; 
 }
-.dark-blue-button{
+
+
+.filledButton{
     background: $dark-blue-color;
     color:$white;
-    border:0.125rem solid $dark-blue-color; 
+    border:1px solid $dark-blue-color; 
 }
-.sky-blue-button{
-    background: $sky-blue;
-    color:$white;
-    border:0.125rem solid $sky-blue;
-}
-.white-button{
+.filledButton:hover{
     background: $white;
     color:$dark-blue-color;
-    border:0.125rem solid $white;
+    border:1px solid $dark-blue-color; 
 }
-.btn-search{
-    background: var(--white);
-    border: 0.125rem solid var(--light-grey);
-    color:var(--grey);   
+
+.accentButton{
+    background: $sky-blue;
+    color:$white;
+    border:1px solid $sky-blue;
 }
+.accentButton:hover{
+    background: $white;
+    color:$sky-blue;
+    border:1px solid $sky-blue;
+}
+
+.linkButton{
+    background: $white;
+    color:$dark-blue-color;
+    border:1px solid $white;
+}
+.linkButton:hover{
+    color:$sky-blue;
+    border:1px solid $sky-blue;
+}
+
+
 span{
     font-family: BoldFont;
-    color:$grey;
-    font-size: 1.2rem;
+    color:$sky-blue;
+    font-size: 1.1rem;
 }
+
 ul li{
     font-size: 1.1rem;
     font-family: LightFont;
@@ -167,80 +209,108 @@ ul li{
 label{
     font-family: LightFont;
     font-size: 1rem;
+    margin-bottom: 1rem;
+    color: $sky-blue;
 }
 a{
     text-decoration: none;
+    cursor: pointer;
 }
 
 
+i{
+    color:$dark-blue-color;
+}
+
+
+.date{
+    color:$grey;
+}
+
+
+
+#loginmsg{
+    position: absolute;
+    padding:0.5rem;
+    top:1rem;
+    right:1rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    background-color: $white;
+    -webkit-animation: cssAnimation 3s forwards; 
+    animation: cssAnimation 3s forwards;
+    @keyframes cssAnimation {
+        0%   {opacity: 1;}
+        90%  {opacity: 1;}
+        100% {opacity: 0;}
+    }
+    @-webkit-keyframes cssAnimation {
+        0%   {opacity: 1;}
+        90%  {opacity: 1;}
+        100% {opacity: 0;}
+    }
+    ul{
+        padding:0rem 1rem;
+        li{
+            text-align: left;
+            
+        }
+    }
+    i{
+        border-radius: 100%;
+        color:$dark-blue-color;
+    }
+    #tick{
+        padding:0.4rem 0.5rem;
+        color: $white;
+    }
+
+}
 
 @media only screen and (min-width:$breakpoint-tablet){
     section{
         padding: 2rem;
     }
-    h1,h2{
-        font-size:2rem;
-        line-height: 2.4rem;
-    }
-    h3{
-        font-size: 1.6rem;
-        line-height: 2rem;
-    }
-    h4{
-        font-size: 1.4rem;
-        line-height: 1.8rem;
-    }
-    h5{
-        font-size: 1.2rem;
-        line-height: 1.6rem;;
-    }
-    h6{
-        font-size: 1rem;
-        line-height: 1.4rem;
-    }
-    p{
-        font-size: 1.1rem;
-        line-height: 1.4rem; 
-    }
-    span{
-        font-size: 1.2rem;
-    }
 }
-@media only screen and (min-width:$breakpoint-unknown){
+
+
+@media only screen and (min-width:$breakpoint-desktop){
+    .container{
+        padding:0rem;
+    }
     section{
-        padding: 3rem 1rem;
+        padding: 3rem 0rem;
         text-align: left;
+    }
+    footer{
+        padding:1.5rem 1rem;
     }
     h1,h2{
         font-size:2.4rem;
-        line-height: 2.6rem;
-        margin-bottom: 1rem;
+        line-height: 2.8rem;
     }
     h3{
-        font-size: 1.6rem;
-        line-height: 2rem;
-        margin-bottom: 1rem;
+        font-size: 2rem;
+        line-height: 2.4rem;
     }
     h4{
-        font-size: 1.4rem;
-        line-height: 1.8rem;
-        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        line-height: 2rem;
     }
     h5{
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         line-height: 1.6rem;
-        margin-bottom: 0.5rem;
     }
     h6{
-        font-size: 1rem;
-        line-height: 1.8rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+        line-height: 1.4rem;
     }
     p{
         font-family: BoldFont;
         font-size: 1.1rem;
         line-height: 1.4rem;
-        margin-bottom: 2rem;
     }
     span{
         font-size: 1.1rem;
@@ -252,87 +322,23 @@ a{
         border: none;
         padding: 0.5rem 0.7rem;
     }
-    input{
-        font-size: 1rem;
+    input,select,textarea,datalist{
+        font-size: 1.1rem;
         padding:1rem;
     }
-    input::placeholder{
-        font-size: 0.8rem;
- 
+    .tagify{
+        padding: 0.5rem 0.5rem;
+    
     }
+    input::placeholder,textarea::placeholder{
+        font-size: 1.1rem;
+
+    }
+   
     ul li{
-        font-size: 1rem;
-       
+        font-size: 1.1rem;
         line-height: 1.4rem;
     }
     
 }
 
-
-@media only screen and (min-width:$breakpoint-desktop){
-    .container{
-        max-width: 1400px;
-        margin: auto;
-    }
-    
-    section{
-        padding: 5rem 1rem;
-        text-align: left;
-    }
-    h1,h2{
-        font-size:2.8rem;
-        line-height: 2.8rem;
-        margin-bottom: 1rem;
-    }
-    h3{
-        font-size: 2rem;
-        line-height: 2.4rem;
-        margin-bottom: 1rem;
-    }
-    h4{
-        font-size: 1.8rem;
-        line-height: 2.2rem;
-        margin-bottom: 1rem;
-    }
-    h5{
-        font-size: 1.6rem;
-        line-height: 2rem;
-        margin-bottom: 0.5rem;
-    }
-    h6{
-        font-size: 1.4rem;
-        line-height: 1.8rem;
-        margin-bottom: 0.5rem;
-    }
-    p{
-        font-family: BoldFont;
-        font-size: 1.5rem;
-        line-height: 1.8rem;
-        margin-bottom: 2rem;
-    }
-    span{
-        font-size: 1.6rem;
-    }
-    button{
-        font-family: BoldFont;
-        font-size: 1.2rem;
-        line-height: 1.4rem;
-        border: none;
-        
-        padding: 1rem 1.7rem;
-    }
-    input{
-        font-size: 1.2rem;
-        padding:1.5rem 2rem;
-    }
-    input::placeholder{
-        font-size: 1.2rem;
- 
-    }
-    ul li{
-        font-size: 1.2rem;
-       
-        line-height: 1.8rem;
-    }
-    
-}

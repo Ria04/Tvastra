@@ -1,9 +1,3 @@
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-}
-
 @font-face {
   font-family: "BoldFont";
   src: url("Nexa-Bold-1.otf");
@@ -14,397 +8,21 @@
   src: url("Nexa-Light.otf");
 }
 
-/* global tags */
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-section {
-  padding: 1.5rem 1rem;
-  text-align: center;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: BoldFont;
-  color: #222844;
-}
-
-h1, h2 {
-  font-size: 2rem;
-  line-height: 2.4rem;
-  margin-bottom: 0.625rem;
-}
-
-h3 {
-  font-size: 1.6rem;
-  line-height: 2rem;
-  margin-bottom: 0.625rem;
-}
-
-h4 {
-  font-size: 1.4rem;
-  line-height: 1.8rem;
-  margin-bottom: 0.625rem;
-}
-
-h5 {
-  font-size: 1.2rem;
-  line-height: 1.6rem;
-  margin-bottom: 0.3125rem;
-}
-
-h6 {
-  font-size: 1rem;
-  line-height: 1.4rem;
-  margin-bottom: 0.3125rem;
-}
-
-p {
-  font-family: LightFont;
-  font-size: 1.15rem;
-  line-height: 1.4rem;
-  color: #222844;
-  margin-bottom: 0.625rem;
-}
-
-input, select {
-  font-family: LightFont;
-  padding: 0.8rem 0.75rem;
-  font-size: 1.1rem;
-  line-height: 1.4rem;
-  width: 100%;
-  color: #222844;
-  border: none;
-  outline: none;
-  margin-bottom: 0.625rem;
-}
-
-textarea {
-  font-family: LightFont;
-  padding: 0.8rem 0.75rem;
-  font-size: 1.1rem;
-  line-height: 1.4rem;
-  width: 100%;
-  color: #a19f9f;
-  margin-bottom: 0.625rem;
-  border: 0.125rem solid #a19f9f;
-  outline: none;
-}
-
-input::-webkit-input-placeholder {
-  font-size: 0.9rem;
-  color: #a19f9f;
-}
-
-input:-ms-input-placeholder {
-  font-size: 0.9rem;
-  color: #a19f9f;
-}
-
-input::-ms-input-placeholder {
-  font-size: 0.9rem;
-  color: #a19f9f;
-}
-
-input::placeholder {
-  font-size: 0.9rem;
-  color: #a19f9f;
-}
-
-input:focus, select:focus {
-  outline: none;
-}
-
-textarea::-webkit-input-placeholder {
-  font-size: 0.9rem;
-  color: #a19f9f;
-  font-family: BoldFont;
-}
-
-textarea:-ms-input-placeholder {
-  font-size: 0.9rem;
-  color: #a19f9f;
-  font-family: BoldFont;
-}
-
-textarea::-ms-input-placeholder {
-  font-size: 0.9rem;
-  color: #a19f9f;
-  font-family: BoldFont;
-}
-
-textarea::placeholder {
-  font-size: 0.9rem;
-  color: #a19f9f;
-  font-family: BoldFont;
-}
-
-button {
-  font-family: LightFont;
-  font-size: 1rem;
-  line-height: 1.4rem;
-  border: none;
-  padding: 0.5rem 1.5rem;
-  outline: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.dark-blue-button {
-  background: #222844;
-  color: white;
-  border: 0.125rem solid #222844;
-}
-
-.sky-blue-button {
-  background: #167ddd;
-  color: white;
-  border: 0.125rem solid #167ddd;
-}
-
-.white-button {
-  background: white;
-  color: #222844;
-  border: 0.125rem solid white;
-}
-
-.btn-search {
-  background: var(--white);
-  border: 0.125rem solid var(--light-grey);
-  color: var(--grey);
-}
-
-span {
-  font-family: BoldFont;
-  color: #a19f9f;
-  font-size: 1.2rem;
-}
-
-ul li {
-  font-size: 1.1rem;
-  font-family: LightFont;
-  color: #222844;
-  line-height: 1.5rem;
-  list-style-type: none;
-}
-
-label {
-  font-family: LightFont;
-  font-size: 1rem;
-}
-
-a {
-  text-decoration: none;
-}
-
-@media only screen and (min-width: 768px) {
-  section {
-    padding: 2rem;
-  }
-  h1, h2 {
-    font-size: 2rem;
-    line-height: 2.4rem;
-  }
-  h3 {
-    font-size: 1.6rem;
-    line-height: 2rem;
-  }
-  h4 {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-  }
-  h5 {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-  }
-  h6 {
-    font-size: 1rem;
-    line-height: 1.4rem;
-  }
-  p {
-    font-size: 1.1rem;
-    line-height: 1.4rem;
-  }
-  span {
-    font-size: 1.2rem;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  section {
-    padding: 3rem 1rem;
-    text-align: left;
-  }
-  h1, h2 {
-    font-size: 2.4rem;
-    line-height: 2.6rem;
-    margin-bottom: 1rem;
-  }
-  h3 {
-    font-size: 1.6rem;
-    line-height: 2rem;
-    margin-bottom: 1rem;
-  }
-  h4 {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    margin-bottom: 1rem;
-  }
-  h5 {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    margin-bottom: 0.5rem;
-  }
-  h6 {
-    font-size: 1rem;
-    line-height: 1.8rem;
-    margin-bottom: 0.5rem;
-  }
-  p {
-    font-family: BoldFont;
-    font-size: 1.1rem;
-    line-height: 1.4rem;
-    margin-bottom: 2rem;
-  }
-  span {
-    font-size: 1.1rem;
-  }
-  button {
-    font-family: BoldFont;
-    font-size: 1.1rem;
-    line-height: 1.4rem;
-    border: none;
-    padding: 0.5rem 0.7rem;
-  }
-  input {
-    font-size: 1rem;
-    padding: 1rem;
-  }
-  input::-webkit-input-placeholder {
-    font-size: 0.8rem;
-  }
-  input:-ms-input-placeholder {
-    font-size: 0.8rem;
-  }
-  input::-ms-input-placeholder {
-    font-size: 0.8rem;
-  }
-  input::placeholder {
-    font-size: 0.8rem;
-  }
-  ul li {
-    font-size: 1rem;
-    line-height: 1.4rem;
-  }
-}
-
-@media only screen and (min-width: 1700px) {
-  .container {
-    max-width: 1400px;
-    margin: auto;
-  }
-  section {
-    padding: 5rem 1rem;
-    text-align: left;
-  }
-  h1, h2 {
-    font-size: 2.8rem;
-    line-height: 2.8rem;
-    margin-bottom: 1rem;
-  }
-  h3 {
-    font-size: 2rem;
-    line-height: 2.4rem;
-    margin-bottom: 1rem;
-  }
-  h4 {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-    margin-bottom: 1rem;
-  }
-  h5 {
-    font-size: 1.6rem;
-    line-height: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  h6 {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    margin-bottom: 0.5rem;
-  }
-  p {
-    font-family: BoldFont;
-    font-size: 1.5rem;
-    line-height: 1.8rem;
-    margin-bottom: 2rem;
-  }
-  span {
-    font-size: 1.6rem;
-  }
-  button {
-    font-family: BoldFont;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    border: none;
-    padding: 1rem 1.7rem;
-  }
-  input {
-    font-size: 1.2rem;
-    padding: 1.5rem 2rem;
-  }
-  input::-webkit-input-placeholder {
-    font-size: 1.2rem;
-  }
-  input:-ms-input-placeholder {
-    font-size: 1.2rem;
-  }
-  input::-ms-input-placeholder {
-    font-size: 1.2rem;
-  }
-  input::placeholder {
-    font-size: 1.2rem;
-  }
-  ul li {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-  }
-}
-
 .slot-section {
+  background-color: #f0f0f5;
+}
+
+.slot-section .container {
   padding: 0rem;
 }
 
-.slotbooking {
-  padding: 1rem;
-  background-color: #f2f2f8;
-}
-
-.slotbooking p {
-  margin-bottom: 0rem;
-}
-
-.slotbooking .inclinic {
+.background-white-div {
   background-color: white;
-  padding: 1.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
-.slotbooking .inclinic h3 {
-  padding-bottom: 1rem;
-  border-bottom: 0.1rem solid #dbd8d8;
-}
-
-.slotbooking .inclinic .icon {
+.background-white-div .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,23 +30,15 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0.5rem 0rem;
+  margin: 0.5rem 0rem;
 }
 
-.slotbooking .inclinic .icon i {
+.background-white-div .icon i {
   color: #167ddd;
   margin-right: 1rem;
 }
 
-.slotbooking .inclinic h4 {
-  color: #167ddd;
-  text-align: left;
-}
-
-.slotbooking .inclinic .imgandinfodiv {
+.background-white-div figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,128 +46,65 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-top: 1rem;
-}
-
-.slotbooking .inclinic .imgandinfodiv .drimg {
-  width: 30%;
-  height: 5rem;
-  margin-right: 2rem;
-}
-
-.slotbooking .inclinic .imgandinfodiv .drimg img {
-  border-radius: 0.5rem;
-}
-
-.slotbooking .inclinic .imgandinfodiv .drinfo p {
-  text-align: left;
-}
-
-.slotbooking .inclinic .hospitalandlogo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dbd8d8;
 }
 
-.slotbooking .inclinic .hospitalandlogo .logo {
-  width: 30%;
-  height: 6rem;
-  margin-right: 2rem;
+.background-white-div figure div {
+  height: 5rem;
+  width: 5rem;
 }
 
-.slotbooking .inclinic .hospitalandlogo .logo img {
-  border-radius: 50%;
-}
-
-.slotbooking .patientdetails {
-  padding: 1rem;
-}
-
-.slotbooking .patientdetails h2 {
-  padding: 0.5rem 0rem;
-  margin-bottom: 1rem;
-  border-bottom: 0.1rem solid #dbd8d8;
-}
-
-.slotbooking .patientdetails form .appointmentfor h3 {
-  text-align: left;
-  padding: 0.5rem 0rem;
-  margin-bottom: 0.7rem;
-}
-
-.slotbooking .patientdetails form .appointmentfor div {
+.background-white-div figure figcaption {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  background-color: white;
-  padding: 0.5rem;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.slotbooking .patientdetails form .appointmentfor div input {
-  width: 0.7rem;
-  height: 0.7rem;
-}
-
-.slotbooking .patientdetails form .appointmentfor div label {
-  font-family: BoldFont;
-  color: #167ddd;
-}
-
-.slotbooking .patientdetails form .infoform h3, .slotbooking .patientdetails form .infoform h4 {
+.background-white-div figure figcaption ul li {
   text-align: left;
-  margin-top: 0.7rem;
 }
 
-.slotbooking .patientdetails form .infoform h4 {
-  color: #167ddd;
-  margin-bottom: 0.5rem;
+.background-white-div .infoform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.slotbooking .patientdetails form .infoform h3 {
-  margin: 1.3rem 0rem;
+.background-white-div .infoform span {
+  margin: 0.5rem 0rem;
 }
 
-.slotbooking .patientdetails form .infoform input {
-  border: 0.1rem solid #dbd8d8;
+.background-white-div .infoform input {
+  border: 1px solid #dbd8d8;
+  margin-bottom: 1rem;
 }
 
-.slotbooking .patientdetails form .infoform button {
+.background-white-div .infoform button {
   width: 100%;
 }
 
-.slotbooking .rescheduleform {
-  padding: 1rem;
-  padding-bottom: 0rem;
-}
-
-.slotbooking .rescheduleform h3 {
-  text-align: left;
-  padding: 0.5rem 0rem;
-  margin-bottom: 0rem;
-  font-size: 1.4rem;
-}
-
-.slotbooking .rescheduleform #d {
-  color: #167ddd;
-}
-
-.slotbooking .rescheduleform p {
-  text-align: left;
-}
-
-.slotbooking .rescheduleform div {
+.background-white-div .confirmed div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -568,27 +115,49 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 1rem;
 }
 
-.slotbooking .rescheduleform div i {
-  color: #167ddd;
+.background-white-div .confirmed div i {
+  color: green;
   font-size: 1.5rem;
   margin-right: 1rem;
 }
 
-.slotbooking .rescheduleform .buttondiv {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.background-white-div .confirmed div span {
   margin-top: 1rem;
 }
 
-.slotbooking .rescheduleform .buttondiv button {
-  margin: 0 0.1rem;
+.background-white-div .confirmed .buttondiv {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.background-white-div .confirmed .buttondiv .accentButton {
+  margin-right: 0.5rem;
+  height: auto;
 }
 
 @media only screen and (min-width: 768px) {
-  .slotbooking {
+  .slot-section .container {
+    max-width: 25rem;
+  }
+  .slot-section .container .background-white-div figure {
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  .slot-section .container .background-white-div figure figcaption {
+    margin-left: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .slot-section .container {
+    max-width: 1000px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -602,48 +171,16 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 1rem 2rem;
   }
-  .inclinic {
-    width: 45%;
-  }
-  .patientdetails {
-    margin-bottom: 1rem;
+  .slot-section .container .background-white-div {
     width: 50%;
+    padding: 2rem 1.5rem;
   }
-  .rescheduleform {
-    width: 49%;
+  .slot-section .container .background-white-div .buttondiv {
+    width: 100%;
   }
-}
-
-@media only screen and (min-width: 1024px) {
-  .slotbooking .inclinic .imgandinfodiv .drimg {
-    height: 8rem;
-    width: 30%;
-  }
-  .slotbooking .inclinic .hospitalandlogo .logo {
-    height: 8rem;
-    width: 30%;
-  }
-  .slotbooking .patientdetails form .appointmentfor div input {
-    width: 1rem;
-    height: 1rem;
-    margin-right: 1rem;
-  }
-  .slotbooking .patientdetails form .appointmentfor div label {
-    font-size: 1.5rem;
-  }
-  .slotbooking .patientdetails form .appointmentfor div h3 {
-    margin-bottom: 0.5rem;
-  }
-  .slotbooking .rescheduleform {
-    width: 45%;
-  }
-  .slotbooking .rescheduleform div h3 {
-    padding: 1.5rem 0rem;
-  }
-  .slotbooking .rescheduleform .buttondiv button {
-    width: 20rem;
+  .slot-section .container .clinic {
+    width: auto;
   }
 }
 /*# sourceMappingURL=slotbooking.css.map */

@@ -1,120 +1,127 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="theme.css">
-  <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="login.css">
-<link rel="stylesheet" href="signup.css">
-<link rel="stylesheet" href="appointment.css">
-<link rel="stylesheet" href="isdoctor.css">
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.css" />
 
   <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="isdoctor.css">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
 </head>
+<header>
+    <div class="container">
 
-<body>
-  <%-include('header.ejs') %>
-  <% if (msg.length>0) {%>
-    <div id="loginmsg">
-    <i id="tick"class="fa fa-close"></i>
-    <ul>
-        <li><span><%= Failure%></span></li>
-        <li><%= msg1%></li>
-    </ul>
-    <i class="fa fa-close"></i>
-    
+
+        <nav class="mobile-nav">
+            <figure>
+                <img onclick="window.location.href='/home'"
+                    src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" />
+            </figure>
+            <div>
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+
+
+        <nav class="desktop-nav">
+            <figure>
+                <img onclick="window.location.href='/home'"
+                    src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" />
+            </figure>
+            <ul>
+                <a href="/doctor"><li>Doctor</li></a>
+                <li>Hospital</li>
+                <li id="treatment">Treatments
+                    <ul class="dropdown">
+                        <li>Dentistry</li>
+                        <li>Cancer</li>
+                        <li>Multi Organ Transplant</li>
+                        <li>Orthopedics Surgery</li>
+                        <li>Infertility Treatment</li>
+                    </ul>
+                </li>
+                <li>About</li>
+            </ul>
+            <div id="button-div">
+                <button class="accentButton">Tvastra Plus</button>
+                <button class="filledButton">Get a quote</button>                    
+            </button>
+            </div>
+        </nav>
     </div>
+</header>
 
-    <%}%>
+
+<section class="bg-blue-section">
+
+    <section class="signup-section">
+        <article>
+            <h1>Welcome</h1>
+            <p>Complete your profile to access the site</p>
+        </article>
+        <form class="loginform" method="POST" enctype="multipart/form-data" action="/get-doctor-details">
+
+            <label id="mainlabel" >Describe yourself</label>
+            <textarea name="description" placeholder="How would you describe yourself"></textarea>
     
-  <section class="loginsection">
-    <div class="login">
-      <h3>Welcome</h3>
-      <p>Complete your profile to access the site.</p>
-
-      <form class="loginform" method="POST" enctype="multipart/form-data" action="/get-doctor-details">
-
-        <label id="mainlabel" >Describe yourself</label>
-        <textarea name="description" placeholder="How would you describe yourself"></textarea>
-
-        <label id="mainlabel" >Upload your profile picture</label>
-        <input type="file" name="profileimage"  id="upload-pic" accept="image/*">
-
-        <label id="mainlabel" >Your Hospital</label>
-        <input type="text" name='yourhospital'  />
+            <label id="mainlabel" >Upload your profile picture</label>
+            <input type="file" name="profileimage"  id="upload-pic" accept="image/*">
     
+            <label id="mainlabel" >Your Hospital</label>
+            <input type="text" name='yourhospital'  />
+        
+    
+            <label id="mainlabel" >Achievements</label>
+            <input type="text" name='achievements'  />
+    
+            <label id="mainlabel" >Years of experience</label>
+            <input type="number" name="exp" />
+           
+            <label id="mainlabel" >Qualifications</label>
+            <input type="text" name='qualifications'  />
+    
+            <label id="mainlabel" >Awards</label>
+            <input type="text" name='awards'  />
+    
+            <label id="mainlabel" >Specialization</label>
+            <input type="text" name='specialization'  />
+    
+    
+            <label id="mainlabel" >Your average fees</label>
+            <input type="number" name="fees" />
+    
+           
+    
+            <button class="filledButton" type="submit">S U B M I T<i class="fa fa-arrow-right"></i></button>
+          </form>
 
-        <label id="mainlabel" >Achievements</label>
-        <input type="text" name='achievements'  />
 
-        <label id="mainlabel" >Years of experience</label>
-        <input type="number" name="exp" />
-       
-        <label id="mainlabel" >Qualifications</label>
-        <input type="text" name='qualifications'  />
-
-        <label id="mainlabel" >Awards</label>
-        <input type="text" name='awards'  />
-
-        <label id="mainlabel" >Specialization</label>
-        <input type="text" name='specialization'  />
-
-
-        <label id="mainlabel" >Your average fees</label>
-        <input type="number" name="fees" />
-
-       
-
-        <button class="dark-blue-button" type="submit">S U B M I T<i class="fa fa-arrow-right"></i></button>
-      </form>
-    </div>
+    </section>
+    <footer>
+        <p> All Rights Reserved. <i class="fa fa-copyright"></i> tvastra 2020</p>
+    </footer>
+    
 </section>
 
 
 
 
 
-  <script>
-    var input = document.querySelector('input[name=yourhospital]');
-    var input2 = document.querySelector('input[name=achievements]');
-    var input3 = document.querySelector('input[name=qualifications]');
-    var input4 = document.querySelector('input[name=awards]');
-    var input5 = document.querySelector('input[name=specialization]');
 
 
-    var tagify = new Tagify(input, {
-  originalInputValueFormat: valuesArr => valuesArr.map(item => item.value).join(',')
-});
-    var tagify2= new Tagify(input2, {
-  originalInputValueFormat: valuesArr2 => valuesArr2.map(item => item.value).join(',')
-});
-    var tagify3= new Tagify(input3, {
-  originalInputValueFormat: valuesArr3 => valuesArr3.map(item => item.value).join(',')
-});
-    var tagify4= new Tagify(input4, {
-  originalInputValueFormat: valuesArr4 => valuesArr4.map(item => item.value).join(',')
-});
-    var tagify5= new Tagify(input5, {
-  originalInputValueFormat: valuesArr5 => valuesArr5.map(item => item.value).join(',')
-});
-
-  </script>
-
-<footer>
-    <section>
-   <p>All Rights Reserved. <i class="fa fa-copyright"></i> tvastra 2018</p>
-  </section>
-  </footer>
 </body>
-
+<script src="tag.js"></script>
 </html>
-
-

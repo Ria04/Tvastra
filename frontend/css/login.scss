@@ -1,255 +1,164 @@
-@import "style.scss";
-body{
-    background-color: $background-blue-color;
-    height:99vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-header{
-    background-color: $white;
-}
-
-a{
-    text-decoration: none;
-}
+@import "colors.scss";
 
 #loginmsg{
-    display: flex;
-    border-left: 0.3rem solid red;
-    #tick{
-        background-color: red;
-    }
+    border-left: 0.2rem solid $red;
     ul{
-        li{
-            color: red;
+        
+            span{
+                color: $red;
+            }
+        
+    }
+    #tick{
+        background-color: $red;
+    }
+}
+
+.bg-blue-section{
+background-color: $background-blue-color;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+width:100%;
+position: relative;
+}
+.signup-section{
+    margin:1rem 0rem;
+}
+.signin-section{
+    height:90vh;
+}
+section{
+    background-color: $white;
+    width:100%;
+    margin:auto;
+    article{
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $light-grey;
+        h1{
+            color: $sky-blue;
+            margin-bottom: 0rem;
         }
     }
-
-}
-#passworddiv{
-    width:100%;
-    border:0.1rem solid $light-grey;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height:auto;
-    margin-top:0rem;
-    margin-bottom:1rem;
-
-    
-    i{
-        color:$sky-blue;
-        font-size:1rem;
-        margin-right: 1rem;
-    }
-    input{
-        border: unset;
-        margin:0rem;
-       
-    }
-}
-
-.loginsection{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.login{
-    width:20.5rem;
-    background-color:$white;
-    @include flex-column();
-    justify-content: unset;
-    h3{
-        padding:1.5rem 0rem;
-        border-bottom:0.18rem solid $light-grey;
-        color: $sky-blue;
-
-    }
-    .loginform{
-        width:auto;
-        padding:1.5rem 1rem;
-        div{
-            display:flex;
+    form{
+        margin-top: 1rem;
+        input{
+            border:1px solid $light-grey;
+            margin-bottom: 0.5rem;
+        }
+        
+        .button-div{
+            display: flex;
             flex-direction: row;
             justify-content: space-between;
-            margin-bottom: 1rem;
-            margin-top: 0.5rem;
-            h5{
-                font-size:0.8rem ;
-                color:$sky-blue;
-                font-family: BoldFont;
-            }
+            margin:0.5rem 0rem 1rem 0rem;
             button{
-                border: unset;
-                background-color: unset;
-                padding: 0rem;
-                width:auto
+                padding:0rem;
+                margin-bottom: 0rem;
+                width:auto;
             }
-        }
-        input{
-            border:0.1rem solid $light-grey;
-            font-family: BoldFont;
-            margin-bottom: 1rem;
+           
+            .linkButton{
+                color:$sky-blue;
+            }
+            .linkButton:hover{
+                background-color: $white;
+                border:1px solid $white;
+              
+            }
         }
         button{
-            width:100%;
-            font-family: BoldFont;
+            padding:0.8rem 1.5rem;
+            margin-bottom: 1rem;
+            width: 100%;
             i{
+                color: $white;
                 float: right;
+                font-size: 1rem;
+            }
+        }
+        button:hover{
+            i{
+                color:$dark-blue-color;
+            }
+        }
+        .password-div{
+            position: relative;
+            i{
+                position: absolute;
+                top:1rem;
+                right:1.5rem;
+                color: $sky-blue;
+            }
+        }
+        .isdoctor{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.7rem;
+            label{
+                font-family: BoldFont;
+                color:$sky-blue;
+                margin:auto 0;
+                margin-left: 1rem;
             }
         }
     }
-    h4{
-        font-size: 0.9rem;
-        color: $dark-grey;
-        padding-top: 0rem;
-        padding-bottom: 0.5rem;
+    h6{
         span{
-            color: $sky-blue;
-            font-size: 1rem;
+            a{
+                color: $sky-blue;
+            }
         }
     }
 }
 footer{
-    section{
-    background-color: $background-blue-color;
-   
     p{
-        color:black;
         font-family: BoldFont;
-        font-size: 1rem;
-    }
-    }
-}
-   
-
-
-
-  @media only screen and (min-width:$breakpoint-tablet) {
-
-    #passworddiv{
-        
-        
-        i{
-            color:$sky-blue;
-            font-size:1.2rem;
-            margin-right: 1rem;
-        }
-        
-    }
-
-.loginsection{
-    .login{
-        width:36rem;
-        h3{
-            padding:2rem 0rem;
-            
-    
-        }
-        .loginform{
-            padding:2rem;
-            div{
-               
-                margin-bottom: 1.8rem;
-                margin-top: 1.8rem;
-                h5{
-                    font-size:1.2rem ;
-                   margin-bottom: 0rem;
-                }
-                button{
-                    height:auto;
-                    outline: none;
-                    padding:0rem;
-                 }
-            }
-            button{
-                padding:1rem 1.5rem;
-            }
-          
-        }
-        
+        margin-bottom: 0rem;
     }
 }
-footer{
+@media only screen and (min-width:$breakpoint-tablet){
     section{
-        p{
-            font-size: 1.2rem;
-        }
+        width:70%;
     }
 }
 
-  }
-
-  @media only screen and (min-width:$breakpoint-unknown){
-
-    #passworddiv{
-        
-        
-        i{
-            color:$sky-blue;
-            font-size:1.4rem;
-            margin-right: 1rem;
+@media only screen and (min-width:$breakpoint-desktop){
+    section{
+        width:40%;
+       padding:2rem;
+    
+        article{
+            padding-bottom:2rem;
+           h1{
+               text-align: center;
+           }
         }
-        
-    }
-
-#loginmsg{
-    display: flex;
-    top:9rem;
-    right:1rem;
-    border-left: 0.3rem solid red;
-    #tick{
-        background-color: red;
-    }
-    ul{
-        li{
-            color: red;
-        }
-    }
-
-}
-
-      .loginsection{
-          .login{
-              width:40rem;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              h3{
-                  text-align: center;
-                  padding:2.5rem 0rem;
-                  width: 100%;
-              }
-              .loginform{
-                  width: 100%;
-                div{
-                   display: flex;
-                   flex-direction: row;
-                   align-items: center;
-                    margin: 1.5rem 0rem;
-                    h5{
-                        font-size:1.1rem ;
-                     
-                    }
-                }
-                button{
-                    padding:1rem 0.7rem;
-                }
-                
-              }
-          }
-      }
-      footer{
-        section{
-            padding:0rem;
-            padding-bottom: 2rem;
-
-            p{
-                text-align:center;
+        form{
+            margin-top: 0.7rem;
+            input{
+                margin-bottom: 0.7rem;
             }
+            
+            .button-div{
+                
+                margin:0.7rem 0rem 1rem 0rem;
+            }
+           
+            .password-div{
+                i{
+                    top:1.2rem;
+                    font-size: 1.1rem;
+                }
+            }
+            
+        }
+        h6{
+            margin-top: 1rem;
+            text-align: center;
         }
     }
-
-
-  }
+}

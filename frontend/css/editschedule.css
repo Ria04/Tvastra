@@ -1,0 +1,241 @@
+@font-face {
+  font-family: "BoldFont";
+  src: url("Nexa-Bold-1.otf");
+}
+
+@font-face {
+  font-family: "LightFont";
+  src: url("Nexa-Light.otf");
+}
+
+.disabled {
+  background-color: #f0f0f5;
+}
+
+body {
+  position: relative;
+}
+
+.floating-form {
+  position: absolute;
+  background-color: rgba(1, 1, 1, 0.7);
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  height: 100%;
+  width: 100%;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.floating-form .form {
+  margin-top: 2rem;
+  padding: 1rem;
+  width: 80%;
+  background-color: white;
+  border: 0.2rem solid #167ddd;
+}
+
+.floating-form .form .schedule-head {
+  border-bottom: 1px solid #a19f9f;
+}
+
+.floating-form .form .schedule-head h1 {
+  text-align: center;
+}
+
+.floating-form .form .inputfields {
+  padding: 1rem;
+}
+
+.floating-form .form .inputfields label {
+  font-family: BoldFont;
+}
+
+.floating-form .form .inputfields select {
+  -webkit-appearance: unset;
+     -moz-appearance: unset;
+          appearance: unset;
+  background: none;
+  width: 100%;
+  border: 1px solid #a19f9f;
+  margin: 0.5rem 0rem;
+  padding: 0.5rem;
+}
+
+.floating-form .form .inputfields input {
+  border: 1px solid #a19f9f;
+  margin: 0.5rem 0rem;
+}
+
+.floating-form .form .buttons {
+  padding: 0rem 1rem;
+}
+
+.schedule-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+}
+
+.schedule-div .schedule-details {
+  padding: 0.5rem;
+  border: 1px solid #167ddd;
+  border-radius: 0.5rem;
+}
+
+.schedule-div .hospital-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 1rem;
+}
+
+.schedule-div .hospital-time div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.schedule-div .hospital-time .slot-button-forms {
+  margin-top: 1rem;
+}
+
+.schedule-div .hospital-time .slot-button-forms button {
+  margin-right: 0.5rem;
+}
+
+.schedule-div .slot-details {
+  margin-top: 1rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.schedule-div .slot-details div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  border: 1px solid #93bede;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.schedule-div .slot-details div input {
+  margin-left: 0.3rem;
+}
+
+.schedule-div .slot-details div h6 {
+  color: #93bede;
+}
+
+@media only screen and (min-width: 768px) {
+  .schedule-div .schedule-details {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .schedule-div .schedule-details .flex-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .schedule-div .hospital-time {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 0rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 80%;
+  }
+  .schedule-div .hospital-time div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .schedule-div .hospital-time .slot-button-forms {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 0rem;
+  }
+  .floating-form .form {
+    margin: auto 0rem;
+    max-width: 40rem;
+  }
+  .floating-form .form .inputfields label {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .schedule-div .hospital-time {
+    width: 70%;
+  }
+  .floating-form .form {
+    border: 0.4rem solid #167ddd;
+  }
+}
+/*# sourceMappingURL=editschedule.css.map */

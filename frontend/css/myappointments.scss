@@ -1,1067 +1,127 @@
-@import "theme.scss";
-.tagify__tag{
-    height:1.8rem;
-}
-.tagify{
-    height:2.5rem;
+@import "colors.scss";
 
-}
-#heading{
-    color: $dark-blue-color;
-}
-.records{
-    margin-top: 1rem;
-    div{
-        padding:2.5rem 0rem;
-        background-color: $light-grey;
-        width:100%;
-        margin-top: 1rem;
-        span{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding:1rem 1rem;
-        }
+.profile-section{
+.main-section{
+    .form-section{
+        padding:1rem;
     }
 }
-#desc{
-    width:100%;
-    border: 0.1rem solid $light-grey;
-    padding:0.5rem;
-    font-family: LightFont;
+.upcoming-appointments{
+    h4{
+        margin-bottom: 1rem;
+    }
 }
-.slots{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-    div{
-        padding:0.2rem;
+.appointment-div{
+    border:1px solid $sky-blue;
+    padding:1rem;
+    margin-bottom: 1rem;
+    span{
+        font-size: 1rem;
+    }
+    .datetimehospital{
+        margin-bottom: 1rem;
         display: flex;
-        flex-direction:row;
-        align-items: center;
-        border: 0.2rem solid $background-blue-color;
-        margin-bottom: 0.3rem;
-        margin-right: 0.3rem;
-        h5{
-            color:$background-blue-color;
-            font-size:0.8rem;
-           margin-bottom: 0rem;
-        }
-        input{
-            margin:0rem;
-            width:0.7rem;
-            height:0.7rem;
-            margin-left: 0.5rem;
-        }
-    }
-    
-}
-.appointments{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    min-height: 50vh;
-    
-    .dashboard{
-       display: none;
-    }
-    .myappointments{
-        width: 100%;
-        div{
-            div{
-                padding:0.8rem 1rem;
-                padding-bottom: 2rem;
-            }
-            h3{
-                text-align:left;
-             margin-bottom: 0rem;
-             line-height: 1.3rem;
-                font-size: 1rem;
-            }
-            h2{
-                text-align: left;
-            }
-        }
-    }
-    .record-flex{
-        display: flex;
-        flex-direction: column;
-        width:100%;
-        .medical-record{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            h2{
-                margin-bottom: 0rem;
-            }
-        }
-    .medical-record-form{
-        
-       
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-bottom: 0.1rem solid $light-grey;
-        .medical-record{
-            width:100%;
-            display: flex;
-            flex-direction: row;    
-            align-items: center;
-            justify-content: space-between;
-            padding-bottom:1rem;
-            h2{
-                margin-bottom: 0rem;
-            }
-           
-        }
-       
-        #floating-form{
-            display:flex;
-            position: fixed;
-            width: -webkit-fill-available;
-            height: -webkit-fill-available;
-            background-color: rgba(1, 1, 1, 0.7);
-            top: 0;
-            left: 0;
-            z-index: 9999;
-            padding: 1rem;
-            display: none;
-            justify-content: center;    
-            align-items: center;
-            .addrecordform{
-                width: 20rem;
-               
-                display: flex;
-                flex-direction: column;
-                background-color: whitesmoke;
-                h1{
-                    margin-bottom: 0rem;
-                }
-                div{
-                    padding:1rem;
-                    input{
-                        margin-bottom: 0.5rem;
-                    }
-                }
-                
-                .addpic{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    background-color: $grey;
-                    
-                    .pic-input-label{
-                        height: 4.5rem;
-                        width: 7.5rem;
-                        padding: 0.2rem;
-                        background-color: rgba(1, 1, 1, 0.7);
-                        label{
-                            color:$white;
-                            font-size: 1.2rem;
-                            display: flex;
-                            flex-direction: column;
-                            align-items:center;
-                            justify-content: space-around;
-                            height: 100%;
-                        }
-                        input{
-                            height: 0;
-                            width: 0;
-                            margin: 0;
-                            padding: 0;
-                        }
-                    }
-                }
-                .schedule-head{
-                    height:5rem;
-                    background-color: $white;
-                    align-items: center;
-                    border-bottom: 0.1rem solid $light-grey;
-
-                    h1{
-                        width:100%;
-                        text-align: center;
-
-                    }
-                }
-                .inputfields{
-                    border-bottom: 0.1rem solid $light-grey;
-                    select{
-                        width:100%;
-                        border: 0.1rem solid $light-grey;
-                        margin-bottom: 0.5rem;
-                        padding:0.5rem;
-                        option{
-                            font-family: LightFont;
-                            padding: 0.3rem 0rem;
-                            font-size:1rem;
-                        }
-                    }
-                    h4{
-                        text-align: left;
-                        margin: 0.3rem 0rem;
-                    }
-                }
-                .type-of-report{
-                    border-bottom: 0.2rem solid $light-grey;
-
-                    h4{
-                        color:$sky-blue;
-                        text-align: left;
-                    }
-                    ul{
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-around;
-                        li{
-                            label{
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-around;
-                            align-items: center;
-                            font-size:0.8rem;
-                            padding:3.2rem;
-                            height:3rem;
-                            width:4rem;
-                            i{
-                                margin-bottom: 1rem;
-                            }
-                            span{
-                                color:$dark-blue-color;
-                                font-family: LightFont;
-                            }
-                            }
-                            label:hover{
-                                background-color: $background-blue-color;
-                            }
-                            input[type="radio"]:checked + label {
-                                background-color: $background-blue-color;
-                            }
-                            input[type="radio"]{
-                                height: 0;
-                                width: 0;
-                                margin: 0;
-                                padding: 0;
-                            }
-                        }
-                    }
-                }
-                .buttons{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-end;
-                    #cancel{
-                        background-color: orangered;
-                        color:$white;
-                        margin: 0rem;
-
-                    }
-                    #done{
-                        background-color: $sky-blue;
-                        margin: 0rem;
-
-                        margin-left: 1rem;
-                        color:$white;
-
-                    }
-                }
-            }
-        }
-        
-    }
-    .schedule-form{
-        border-bottom:none;
-        button{
-            background-color: $sky-blue;
-            margin:1rem 0rem;
-            border-radius: 0.5rem;
-        }
-    }
-   
-    .record{
-        margin-top: 2rem;
-        background-color: whitesmoke;
-       padding:1rem;
-       padding-top:0.5rem;
-       .recorddata{
-           display: flex;
-           flex-direction: row;
-           padding:0.5rem;
-           border:0.1rem solid $grey;
-           border-radius: 1rem;
-           margin-top:0.5rem;
-           
-           .date-div{
-               display: flex;
-               flex-direction: column;
-               justify-content: center;
-               background-color: $white;
-               padding:0.5rem;
-               margin-right: 1rem;
-               border-radius: 0.5rem;
-               h4{
-                   margin-bottom: 0rem;
-               }
-           }
-           .div-wrap{
-               height:100%;
-               display: flex;
-               flex-direction: column;
-               align-items: flex-start;
-               justify-content: space-between;
-           }
-           .title-div{
-               display: flex;
-               flex-direction: column;
-               align-items: flex-start;
-               justify-content: space-between;
-               height:57%;
-              
-               h5{
-                   font-family: BoldFont;
-                   span{
-                       font-size: 1.5rem;
-                       color:$sky-blue;
-                   }
-               }
-           }
-           
-           
-           
-       }
-       .schedule-data{
-           display: flex;
-           flex-direction:column;
-           justify-content: space-between;
-           padding:1rem;
-           
-           h4{
-            color: $sky-blue;
-            font-size: 1.5rem;
-            }
-            .hospital-time{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between ;
-                h4{
-                    font-family: LightFont;
-                    color: $dark-blue-color;
-                    margin: 0.5rem 0rem;
-                    span{
-                        font-family: BoldFont;
-                        color: $dark-blue-color;
-                    }
-                }
-            }
-            .slot-button-forms{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                
-                input{
-                    width:1rem;
-                    height:1rem;
-                    margin: 0rem;
-                }
-               
-            }
-
-       }
-     
-    }
-    .schedule-record{
-        background-color: white;
-        margin-top: 0rem;
-
-    }
-    .currentpassword,.newconfirmpassword{
-      padding:1.5rem;
-      border-bottom: 0.1rem solid $light-grey;
-
-        h3{
+        flex-direction: row;
+        justify-content: space-between;
+        height:100%;
+        .timehospital{
             text-align: left;
+        }
+        .date{
+            background-color: $blue-grey;
+            padding:0.5rem;
+            display: flex;
+                flex-direction: column;
+                justify-content:center;
+            h6{
+                
+                width: auto;
+            }
+
+        }
+    }
+    .buttons{
+        button{
+            width: 100%;
+
+        }
+        .accentButton{
             margin-bottom: 0.5rem;
         }
-        input{
-            border: 0.1rem solid $light-grey;
-        }
-    }
-    .newconfirmpassword{
-        padding-top: 0rem;
-        h3{
-            margin-top: 1.5rem;
-        }
-    }
-    div{
-        h3{
-            text-align: left;
-            margin: 0.7rem 0rem;
-            font-size: 1.4rem;
-
-           
-
-        }
-        input{
-            border:0.1rem solid $light-grey;
-        }  
-    }
-    .profile-photo{
-        padding:1rem 0rem;
-        border-bottom:0.1rem solid $light-grey;
-        width:100%;
-
-        .pic-wrap{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding:1rem 0rem;
-           
-            .pic{
-                height:4rem;
-                width:5rem;
-                margin-right: 2rem;
-                border: 1px solid $grey;
-                border-radius: 100%;
-                img{
-                    object-fit: cover;
-                    border-radius: 100%;
-                }
-            }
-            .choose-pic{
-               margin-right: 3rem;
-               display: flex;
-               flex-direction: column;
-               align-items: flex-start;
-                p{
-                    text-align: left;
-                    margin-bottom: 0.5rem;
-                    font-size: 1rem;
-                }
-                input{
-                    display: none;
-                }
-                label{
-                    color:$sky-blue;
-                    font-family: BoldFont;
-                    text-decoration: underline;
-                }
-            }
-        }
-        
-    }
-    .personal-info-1,.personal-info-2{
-        padding:1rem 0rem;
-        padding-bottom: 1.5rem;
-        border-bottom:0.1rem solid $light-grey;
-        width: 100%;
-
     }
 }
-
-.upcoming-appointments,.completed-appointments{
-    
+.completed-appointment{
+    .datetimehospital{
+        margin-bottom: 0rem;
+    }
+}
+}
+@media only screen and (min-width:$breakpoint-tablet){
+    .profile-section{
     .appointment-div{
-        margin-top: 1rem;
         display: flex;
-        flex-direction: column;
-        padding:1rem;
-        background-color: rgb(235, 235, 243);
-        border:0.1rem solid rgb(207, 207, 230);
-        border-radius: 0.5rem;
-        margin-bottom: 1rem;
+        flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         .datetimehospital{
-            display: flex;
-            flex-direction: row;
-            padding: 0rem;
-            .date{
-                background-color: $white;
-                width:5rem;
-                padding:0rem;
+            width:45%;
+            justify-content: space-between;
+            margin-bottom: 0rem;
+        }
+        .buttons{
+            width:50%;
+        }
+    }
+    .completed-appointment{
+        .datetimehospital{
+            width: 100%;
+        }
+    }
+}
+    
+}
+
+@media only screen and (min-width:$breakpoint-desktop){
+    .profile-section{
+        .main-section{
+            .form-section{
+                padding:1rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                h3{
-                    text-align: center;
-                }
-                
-            }
-            .timehospital{
-                padding:0rem;
-                margin-left: 1rem;
-                h3{
-                    margin-bottom: 0.2rem;
-                    font-size: 1rem;
-                    text-align: left;
-                    span{
-                        color:$sky-blue;
+                div{
+                    width:100%;
+                    .myappointments{
+                        .appointment-div{
+                            .datetimehospital{
+                                
+                                width:50%;
+                                .date{
+                                    width:auto;
+                                }
+                                .timehospital{
+                                    span{
+                                        font-size: 1.3rem;
+                                    }
+                                    width:auto
+                                }
+                            }
+                            .buttons{
+                                width:30%;
+                            }
+                        }
+                        .completed-appointment{
+                            .datetimehospital{
+                                width:100%;
+                            }
+                        }
                     }
                 }
-                button{
-                    background-color: $grey;
-                    color: $white;
-                    border-radius: 0.3rem;
-                }
-
             }
+            
         }
-        .buttons{
-            padding:0rem;
-            padding-top: 1rem;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-           button{
-            margin:0rem 0.1rem;
-           }
-        }
-    }
-}
-
-
-
-
-
-
-}
-
-
-
-@media only screen and (min-width:$breakpoint-tablet){
-    .records{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-        div{
-            padding:2.5rem 0rem;
-            width:48%;
-           
-        }
-    }
-    .slots{
        
-        margin-top: 1rem;
-        div{
-            padding:0.3rem 1rem;
-           
-            margin-bottom: 0.5rem;
-            margin-right: 0.5rem;
-            h5{
-               
-                font-size:1rem;
-               
-            }
-            input{
-            
-                width:0.9rem;
-                height:0.9rem;
-               
-            }
-        }
-        
-    }
-    
-    .appointments{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        min-height: 50vh;
-        
-        .dashboard{
-           display: none;
-        }
-        .myappointments{
-            width: 100%;
-            div{
-                div{
-                    padding:0.8rem 1rem;
-                    padding-bottom: 2rem;
-
-                }
-                h3{
-                    text-align:left;
-                 
-                 
-                }
-                h2{
-                    text-align: left;
-            
-                }
-            }
-        }
-        .record-flex{
-           
-        .medical-record-form{ 
-            
-            .medical-record{
-                h2{
-                    width:auto; 
-                }
-               
-            }
-            #floating-form{
-                .addrecordform{ 
-                    width: 40rem;
-                    div{
-                        padding:1.5rem 1rem;
-                        input{
-                            margin-bottom: 1rem;
-                        }
-                    }
-                    .inputfields{
-                        select{
-                            margin-bottom:1rem;
-                            option{
-                                font-family: LightFont;
-                                padding-left: 0.7rem;
-                                font-size:1.1rem;
-                            }
-                        }
-                        
-                    }
-                    
-                    }
-                }
-            
-            
-        }
-        .record{
-            margin-top: 2rem;
-           padding:1rem;
-           padding-top:0rem;
-           .recorddata{
-              
-               padding:1rem;
-               margin-top:1rem;
-               .date-div{
-                   
-                   padding:1rem;
-                   
-                   border-radius:1rem;
-                   width:20%;
-                   h4{
-font-size: 1.1rem;
-                   }
-               }
-               .div-wrap{
-                   height:100%;
-                   display: flex;
-                   flex-direction: row;
-                   align-items:center;
-                   justify-content: space-between;
-                   width:70%;
-               }
-               .title-div{                 
-                   height:100%;
-               }
-               
-           }
-           .schedule-data{
-         
-             .slot-button-forms{
-                 display: flex;
-                 flex-direction: row;
-                 justify-content: center;
-                 align-items: center;
-                 
-                 input{
-                     width:1rem;
-                     height:1rem;
-                     margin: 0rem 1rem;
-                 }
-                 form{
-                     button{
-                         background-color: $sky-blue;
-                         margin: 0rem 1rem;
-
- 
-                     }
-                 } 
-             }
- 
-        }
-         
-        }
-        .currentpassword,.newconfirmpassword{ 
-            padding:2.5rem 1rem;         
-              
-          }
-          .newconfirmpassword{
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              padding-top: 0rem;
-              div{
-                width:45%;
-              }
-              h3{
-                  margin-top: 1.5rem;
-              }
-          }
-          .profile-photo{
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              .name{
-               width:48%;
-              }
-          }
-          .personal-info-1,.personal-info-2{
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: space-between;
-              
-              div{
-                  width:48%;
-              }
-          }
-        
-    }
-    .upcoming-appointments,.completed-appointments{
-        .appointment-div{
-            
-            display: flex;
-            flex-direction: row;
-            padding:0rem;
-            background-color: rgb(235, 235, 243);
-            border:0.1rem solid rgb(207, 207, 230);
-            border-radius: 0.5rem;
-            .datetimehospital{
-                display: flex;
-                flex-direction: row;
-                padding:0.7rem;
-                .date{
-                    width:8rem;
-                    
-                    
-                }
-                
-                
-            }
-            .buttons{
-                width:50%;
-                padding:0rem;
-                align-items: center;
-                padding:0.7rem;
-                
-            }
-            
-        }
-    }
-    
-    }
-    
-
-}
-@media only screen and (min-width:$breakpoint-unknown){
-    .appointment-section{
-        padding-top: 0rem;
-        padding-bottom: 0rem;
-        .container{
-            padding: 1rem;
-            border-radius: 0.3rem;
-            background-color: $blue-grey;
-        }
-    }
-    .records{
+        }    
       
-        div{
-            width:32%;
-           
-        }
-    }
-    .tagify__tag{
-        height:3.8rem;
-    }
-    #desc{
-        font-size:1.2rem;
-    }
-    .tagify{
-        height:4.5rem;
-    
-    }
-    .slots{
-        
-        margin-top: 1rem;
-        div{
-            padding:0.5rem 1rem;
-           
-            margin-bottom: 0.5rem;
-            margin-right: 0.5rem;
-            h5{
-               
-                font-size:1rem;
-               
-            }
-            input{
-            
-                width:0.9rem;
-                height:0.9rem;
-               
-            }
-        }
-        
-    }
-    .appointments{
-        display: flex;
-        flex-direction: row;
-        justify-content: unset;
-        .dashboard{
-            width:25%;
-            display: block;
-            padding:1rem;
-            a{
-                text-decoration: unset;
-                color:unset;
-            }
-            
-
-            
-            h1{
-                margin-bottom: 1.5rem;;
-            }
-            ul{
-                
-                li{
-                    padding:1.2rem 0rem;
-                }
-                li:hover{
-                    background-color: $white;
-                    border-left: 0.3rem solid $sky-blue;
-                    span{
-                        color:$sky-blue;
-
-                    }
-                }
-                span,i{
-                    font-size: 1.5rem;
-                }
-                i{
-                    color:$sky-blue;
-                    padding-left: 1rem;
-                }
-                span{
-                    margin-left: 1rem;
-                    font-family: LightFont;
-                   
-                }
-               
-            }
-        }
-        .myappointments{
-            width: 75%;
-            padding: 1.5rem 1.5rem;
-            background-color: $white;
-            border-radius: 0.5rem;
-            div{
-                div{
-                    padding:3rem 4rem;
-                }
-                h3{
-                    text-align:left;
-                    color:$grey;
-                    font-size: 1.8rem;
-                }
-                h2{
-                    font-size: 3rem;
-                    
-                }
-            }
-        }
-        .record-flex{
-            padding:1rem;
-            border-radius: 1.5rem;
-            width:75%;
-            background-color:$white;
-        .schedule-form{
-            border: unset;
-            width:0rem;
-            height:0rem;
-           
-            
-            
-           
-        }
-      
-        .medical-record-form{
-            
-            
-            .medical-record{
-                padding: 1rem 0rem;
-                height:auto;
-                h2{
-                    width:auto; 
-                }
-               
-            }
-            #floating-form{               
-                .addrecordform{                    
-                    .type-of-report{                       
-                        ul{                          
-                            li{
-                                label{                              
-                                padding:4.5rem;
-                                height:5rem;
-                                width:6rem;
-                                span{
-                                    color:$dark-blue-color;
-                                    font-family: LightFont;
-                                    font-size:1.5rem;
-                                }
-                                i{
-                                    font-size:1.5rem;
-  
-                                }
-                                }
-                                
-                                
-                            }
-                        }
-                    }
-                   
-                }
-            }
-            
-            
-        }
-        .record{
-            
-          
-           padding-top:0rem;
-           .recorddata{
-              
-               padding:1rem;
-               margin-top:1rem;
-           .date-div{
-               h4{
-                   font-size: 1.3rem;
-               }
-           }
-               
-               .title-div{                 
-                   height:100%;
-                   h5{
-                       font-size:1.5rem;
-                   }
-               }
-               
-           }
-           .slot-flex{
-            display: flex;
-            flex-direction:row;
-            justify-content: space-between;
-            align-items: center;
-         .days{
-             h4{
-                 margin-bottom: 0rem;
-             }
-         }
-           
-             .hospital-time{
-                 display: flex;
-                 flex-direction: column;
-                 justify-content: space-between ;
-                 height:100%;
-                 
-             }
-             .slot-button-forms{
-                
-                 input{
-                     width:1.5rem;
-                     height:1.5rem;
-                     margin: 0rem;
-                     margin-left: 1rem;
-                 }
-                 
-             }
- 
-        }
-         
-        }
-        .profile-photo{
-            justify-content: unset;
-            .name,.pic-div{
-                width: 32%;
-                margin-right:1rem;
-            }
-            .pic-wrap{
-            .choose-pic{
-                margin-right: 1rem;
-            }}
-            .pic-div{
-                .pic-wrap{
-                    .pic{
-                        height:5rem;
-                        width:8rem;
-                    }
-                }
-            }
-        }
-        .personal-info-1,.personal-info-2{
-           justify-content: unset;
-           align-content: space-between;
-          
-            div{
-                margin-right: 1rem;
-                width:31.4%;
-               
-            }
-        }
-        
-    }
-    .upcoming-appointments,.completed-appointments{
-        .appointment-div{
-            margin-top: 1.5rem;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding:0rem;
-            background-color: rgb(235, 235, 243);
-            border:0.1rem solid rgb(207, 207, 230);
-            border-radius: 0.5rem;
-            .datetimehospital{
-                display: flex;
-                flex-direction: row;
-                padding:1rem;
-                .date{
-                    width:11rem;
-                    height:8rem;
-                    margin-right: 1rem;
-                    h3{
-                        font-size: 1.2rem;
-                        color: $dark-blue-color;
-                    }
-                    
-                }
-                .timehospital{
-                    h3,span{
-                        font-size: 1.5rem;
-                        margin-bottom: 0.5rem;
-                    }
-                  
-                }
-                
-                
-            }
-            .buttons{
-                padding:0rem;
-                align-items: center;
-                padding:1rem;
-             
-            }
-            
-        }
-    }
 }
-#heading{
-    margin-top: 1.5rem;
-    font-size: 2rem;
-}
-
-}
-
-
-

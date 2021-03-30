@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "BoldFont";
+  src: url("Nexa-Bold-1.otf");
+}
+
+@font-face {
+  font-family: "LightFont";
+  src: url("Nexa-Light.otf");
+}
+
+aside {
+  padding: 1rem 0rem;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+  top: 0rem;
+  left: 0rem;
+  -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.6);
+}
+
+aside ul span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 1rem 1rem 0rem 1rem;
+  border-top: 1px solid #dbd8d8;
+  cursor: pointer;
+}
+
+aside ul span i {
+  margin-right: 1rem;
+}
+
+aside ul #head {
+  padding: 0rem 1rem 1rem 1rem;
+  border: none;
+  border-bottom: 1px solid #dbd8d8;
+}
+
+aside ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0.5rem 1rem;
+}
+
+aside ul li i {
+  margin-right: 1rem;
+  color: #167ddd;
+}
+
+aside ul li span {
+  padding: 0rem;
+  border: none;
+}
+
+aside ul li:hover {
+  background-color: #167ddd;
+}
+
+aside ul li:hover span, aside ul li:hover i {
+  color: white;
+}
+
+.profile-section .container {
+  padding: 0rem;
+}
+
+.profile-section .container span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.profile-section .container span i {
+  font-size: 1.6rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  #aside {
+    display: block;
+    position: unset;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+    width: 18%;
+    background-color: #f0f0f5;
+  }
+  #aside #last-span {
+    display: none;
+  }
+  #aside ul {
+    margin-top: 1rem;
+  }
+  #aside ul li {
+    padding: 1rem 1rem;
+  }
+  .profile-section .container span i {
+    font-size: 2rem;
+  }
+  #dash-head {
+    display: none;
+  }
+}
+/*# sourceMappingURL=dashboard.css.map */

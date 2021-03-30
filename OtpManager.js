@@ -44,7 +44,6 @@ class OtpManager {
           verificationResult = VerificationResults.valid;
       }
     }
-
     return verificationResult;
   }
 }

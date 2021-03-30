@@ -1,0 +1,205 @@
+@font-face {
+  font-family: "BoldFont";
+  src: url("Nexa-Bold-1.otf");
+}
+
+@font-face {
+  font-family: "LightFont";
+  src: url("Nexa-Light.otf");
+}
+
+.profile-section {
+  background-color: #f0f0f5;
+  border-top: 1px solid #a19f9f;
+}
+
+.main-section {
+  position: relative;
+  padding: 1.5rem 0rem;
+  padding-bottom: 0rem;
+}
+
+.main-section .form-section {
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+.main-section .form-section form .hero-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.main-section .form-section form .hero-div h2 {
+  margin-bottom: 0rem;
+}
+
+.main-section .form-section form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  color: #167ddd;
+  font-family: BoldFont;
+  font-size: 1.2rem;
+}
+
+.main-section .form-section form input, .main-section .form-section form textarea {
+  border: 1px solid #dbd8d8;
+}
+
+.main-section .form-section form .input-div label {
+  margin-top: 1.5rem;
+}
+
+.main-section .form-section form .info {
+  border-top: 1px solid #a19f9f;
+  padding: 1rem;
+  padding-bottom: 1.5rem;
+  padding-top: 0rem;
+}
+
+.main-section .form-section form .profile-div {
+  padding: 1rem;
+  border-top: 1px solid #a19f9f;
+}
+
+.main-section .form-section form .profile-div .pic-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-section .form-section form .profile-div .pic-div figure {
+  width: 4rem;
+  height: 3.5rem;
+  margin-right: 1rem;
+  border: 1px solid #a19f9f;
+}
+
+.main-section .form-section form .profile-div .pic-div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.main-section .form-section form .profile-div .pic-div div input {
+  display: none;
+}
+
+.main-section .form-section form .profile-div .pic-div div label {
+  color: #167ddd;
+  margin-bottom: 0rem;
+  font-size: 1rem;
+}
+
+.main-section .form-section form .profile-div .pic-div div p {
+  margin-bottom: 0rem;
+  text-align: left;
+}
+
+.hide {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrap-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .wrap-div div {
+    width: 49%;
+  }
+  .wrap-div .tagify div {
+    width: 100%;
+  }
+  .main-section .form-section form .profile-div .input-div label {
+    margin-top: 0rem;
+  }
+  .main-section .form-section form .profile-div .pic-div {
+    width: 100%;
+  }
+  .main-section .form-section form #textarea-div {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .profile-section {
+    background-color: white;
+  }
+  .wrap-div {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .wrap-div div {
+    width: 32.4%;
+    margin-right: 0.5rem;
+  }
+  .main-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1rem;
+    background-color: #f0f0f5;
+  }
+  .main-section .form-section {
+    width: 80%;
+  }
+  .main-section .form-section form .hero-div {
+    padding: 1.5rem;
+  }
+  .main-section .form-section form label {
+    font-size: 1.4rem;
+  }
+  .main-section .form-section form .info {
+    padding-left: 1.5rem;
+  }
+  .main-section .form-section form .profile-div {
+    padding-left: 1.5rem;
+  }
+  .main-section .form-section form .profile-div .pic-div div {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=myprofile.css.map */

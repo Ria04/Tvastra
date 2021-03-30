@@ -1,74 +1,68 @@
-
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="theme.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="myappointments.css">
-    
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Doctor Page</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+            integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+            integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.min.js"></script>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="theme.css">
+        <link rel="stylesheet" href="dashboard.css">
+        <link rel="stylesheet" href="myprofile.css">
+
     </head>
-    <style>
-        #setting{
-            color:rgb(22, 125, 221);
-            font-family: BoldFont;
+<body>
+    <%-include('header.ejs') %>
+    <section class="profile-section">
+        <div class="container">
+            <span id="dash-head" onclick="showaside()"><i class="fa fa-angle-double-right"></i> <h4>Click to view dashboard</h4></span>
+            <section class="main-section">
+                <%-include('dashboard.ejs') %>
+                <div class="form-section">
+                    <form>
+                        <div class="hero-div">
+                            <h2>Settings </h2>
+                            <button class="accentButton" type="submit">Save Changes</button>
+                        </div>
+                        
+                        
+                        <div class="input-div info wrap-div">
+                            <div>
+                                <h5>Current password</h5>
+                                <input type="text" placeholder="Enter current password">
+                            </div>
+                            <div>
+                                <h5>new password</h5>
+                                <input type="text" placeholder="Enter new password">
+                            </div>
+                            <div>
+                                <h5>confirm password</h5>
+                                <input type="text" placeholder="Enter new password">
+                            </div>
+                            
+                        </div>
+                       
 
-        }
-    </style>
-    <body>
-        
-    
-        <%-include('header.ejs') %>
+                    </form>
+                </div>
 
-    
-    <section class="appointment-section">
-        <div class="container appointments">
-        <%-include('dashboard.ejs') %>
-        <div class="record-flex">
-        <form class="medical-record-form" action="">
-        <div class="medical-record">
-           <h2>Account settings</h2>
-           <button type="submit">Change password</button>
+
+            </section>
         </div>
-        
-    </form>
-    <div class="currentpassword">
-        <h3>Current password</h3>
-        <input type="text">
-    </div>
-    <div class="newconfirmpassword">
-        <div>
-        <h3>New password</h3>
-        <input type="text">
-        </div>
-        <div>
-        <h3>Confirm password</h3>
-        <input type="text">
-    </div>
-    </div>
-    
-    </div>
-</div>
     </section>
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <%-include('footer.ejs') %>
+</body>
+<script src="dashboard.js"></script>
+<script src="tag.js"></script>
 
-    
-    </body>
-    
-    </html>
+</html>

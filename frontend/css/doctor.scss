@@ -1,861 +1,406 @@
-
-@import "style.scss";
-
-@mixin flex-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
+@import "colors.scss";
 
 .overlay-section{
-    display:none;
-   
-}
-
-.reschedule-box{
-    border: 0.1rem solid grey;
-}
-.adminpagenation{
-    margin-top: 1rem;
-    ul{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        li{
-            padding:0.1rem 0.3rem;
-            border:0.1rem solid $sky-blue;
-            text-align: center;
-            color: $sky-blue;
-            font-family: BoldFont;
-            margin:0 0.5rem;
-        }
-        .active, li:hover{
-            color: $white;
-            background-color: $sky-blue;
-        }
-    }
-}
-
-.heading form{
-    select{
-        align-self: center;
-        -ms-grid-column-align: right;
-        justify-self: right;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border: none;
-        padding: 0.3rem;
-        background: url(https://cdn1.iconfinder.com/data/icons/flat-and-simple-part-1/128/arrow_down-512.png) no-repeat, #d3d3d3;
-        background-size: 20%;
-        background-position-x: 100%;
-        background-position-y: 50%;
-        font-family: nexa-light;
-        font-size: 0.9rem;
-        color: black;
-        border: 0;
-}
-}
-
-
-.heading{
-@include flex-row();
-padding:1rem 1.5rem;
-padding-bottom: 0rem;
-}
-
-.doctor-card-tab{
-    padding:1rem 1.5rem;
-
-    @include flex-column();
-    justify-content: space-between;
-    
-    padding-top: 0rem;;
-    .doctor-card{
-        @include flex-column();
-        justify-content: space-between;
-        
-        h3{
-            margin: 1rem 0rem;
-            color:$sky-blue;
-            text-align: left;
-
-        }
-        h3::before{
-            display:inline-block;
-            content: '';
-            border-bottom:0.18rem solid $sky-blue;
-            width:2rem;
-            transform: translateY(-0.3rem);
-            margin-right: 0.2rem;
-
-        }
-        ul{@include flex-column();
-            justify-content: flex-start;
-        
-           
-            padding:0rem 1rem;
-            li{
-                text-align: left;
-               
-                i{
-                    color:$sky-blue;
-                    margin-right: 1rem;
-                }
-            }
-        }
-        .appointment-button{
-            @include flex-column();
-            align-items: center;
-            margin: 1rem 0rem;
-           
-       
-    }
-        .doctor-image{
-            height:24rem;
-            cursor: pointer;
-            
-        }
-    
-    }
-}
-
-
-
-.filters{
-    display:none;
-}
-.carouselContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding:1rem;
-    padding-top: 2rem;
-}
-.allCarouselItems{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width:70%;
-    cursor: pointer;
-    .item{
-        display: flex;
-        flex-direction: column;
-        h5{
-            text-align: center;
-            color: $dark-blue-color;
-        }
-        h5::before{
-            display: none;
-        }
-        h6{
-            margin-bottom: 1rem;
-            span{
-                color:$sky-blue;
-            }
-        }
-    }
-}
-.carouselButton{
-    i{
-        color: $sky-blue;
-        padding: 0.5rem;
-        border-radius: 50%;
-        background-color: $light-grey;
-    }
-}
-.subScheduleContainer{
-    display:flex;
-    flex-direction: column;
-    h3{
-        text-align: center;
-        padding:1rem 0rem;
-    }
-    .hospital{
-        h3::before{
-            display: none;
-            
-        }
-        h3{
-            color: $dark-blue-color;
-        }
-    }
-    #hos{
-        border-bottom: unset;
-        width: 100%;;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        h3{
-            text-align: center;
-            color: $sky-blue;
-        }
-    }
-    div{
-        padding:0rem 1rem;
-        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-bottom: 0.2rem solid $light-grey;
-        h4{
-            padding:1rem 0rem;
-            font-family: LightFont;
-            margin-right: 0.5rem;
-            margin-bottom: 0rem;
-            cursor: pointer;
-            span{
-                color: $background-blue-color;
-                padding:0.5rem 1.2rem;
-                border:0.1rem solid $background-blue-color;
-            }
-        }
-        i{
-            margin-right: 1rem;
-        }
-        div{
-            
-            flex-direction: row;
-            display: flex;
-            flex-wrap: wrap;
-            form{
-                width:auto;
-            }
-        }
-        .head{
-            border:unset;
-            padding: unset;
-            
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-    }
-}
-
-@media only screen and (min-width:$breakpoint-tablet){
-.heading{
-    padding:3rem 3rem;
-}
-.filters{
-    display:block;
-}
-.carouselContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding:1rem 1rem 0rem 1rem;
-    margin-top: 0rem;
-}
-.allCarouselItems{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin:0 0.5rem;
-    width:100%;
-    .item{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 0rem;
-        h6{
-
-            margin-top: 1rem;
-            span{
-                color:$sky-blue;
-
-            }
-        }
-        
-    }
-}
-.carouselButton{
-    i{
-        color: $sky-blue;
-        padding: 0.3rem;
-        border-radius: 50%;
-        background-color: $light-grey;
-        font-size: 0.5rem;
-    }
-}
-
-.heading form select{
-    padding: 0.5rem;
-        font-size: 1rem;
-    }
-.overlay-section{
-    @include flex-column();
-    align-items: flex-start;
-    justify-content: center;
     background-image:linear-gradient(to bottom,rgba(147, 190, 222,0.8),rgba(147, 190, 222,0.8)), url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Doctors.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    padding:6rem 2rem;
+    padding:5rem 0rem;
     h1{
         font-family: LightFont;
-        u{
+        font-weight: 400;
+        span{
+            font-size: 2rem;
             font-family: BoldFont;
+            color: $black;
+            border-bottom: 0.2rem solid $black;
         }
     }
 }
-
-.doctor-page-card{
-    display:none;
-
-}
-.filtersanddoctors{
-    padding-top:0rem;
-    
-@include flex-row();
-align-items: flex-start;
-    .filters{
-        
-        
-        button{
-            width:100%;
-            font-family: BoldFont;
-            background-color:$light-grey;
-            color:$dark-blue-color;
-            text-align: left;
-
-        }
-        
-        h4::after{
-            display:inline-block;
-            content: '';
-            border-bottom:0.3rem solid $light-grey;
-            width:1.2rem;
-        }
-        width:27%;
-        ul{
-            display:none;
-        }
-        
-        .filterform{
-            border-bottom:0.18rem solid $dark-grey;
-            
-            align-items: flex-start;
-            .showmore{
-                flex-direction: column;
-                align-items: unset;
-                max-height:7.5rem;
-                overflow: hidden;
-                label,span{
-                    font-size: 1rem;
-                    color:$dark-blue-color;
-                }
-            }
-            h4{
-                text-align: left;
-                font-family: LightFont;
-                margin: 1.5rem 0rem;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                width:100%;
-    
-                i{
-                    font-size: 1rem;
-                    color:$sky-blue;
-                    margin-right: 0.5rem;
-                    margin-left: auto;
-                }
-            }
-            div{
-                @include flex-row();
-                justify-content: unset;
-                margin-top: 0.5rem;
-                label,input{
-                    cursor: pointer;
-                }
-            }
-            
-            input{
-                width:1rem;
-                height:1rem;
-                transform: scale(1);
-                margin:0rem;
-                margin-right: 1rem;
-                
-            }
-            button{
-                background: transparent;
-                color:$sky-blue;
-                font-weight: bold;
-                padding:0rem;
-                height:4rem;
-            }
-        }
-    }
-    
-    .doctor-card-tab{
-        @include flex-column();
-       padding-right: 0rem;;
-        width:70%;
-        .doctor-card{
-            @include flex-row();
-            height:16rem;
-            
-            h3{
-                color:$sky-blue;
-                text-align: left;
-                margin:0.5rem 0rem;
-                margin-bottom: 0rem;
-    
-            }
-            h3::before{
-                display:inline-block;
-                content: '';
-                border-bottom:0.2rem solid $sky-blue;
-                width:2rem;
-                transform: translateY(-0.4rem);
-                margin-right: 0.2rem;
-    
-            }
-            
-            .doctor-image{
-                height:100%;
-                width:34%;
-               
-            }
-            div{
-               display: flex;
-               flex-direction: column;
-               justify-content: space-between;
-                height:16rem;
-                width:70%;
-               /* ul{
-                    padding:0rem 2rem;
-                    padding-right: 0rem;
-                    height:7rem;
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                    li{
-                        width:5rem;
-                        font-size: 1rem;
-                        font-family: LightFont;
-                        font-weight: bold;
-                        color:$dark-blue-color;
-                        @include flex-row(); 
-                        justify-content: unset;
-                        align-items: center;                    
-                        i{
-                            color: $sky-blue;
-                            margin-right: 1rem;
-                        }
-                    }
-                }*/
-                ul{
-                    display:grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows: 1fr 1fr 1fr;
-                    grid-column-gap: 0.5rem;
-                    grid-row-gap: 0.2rem;
-                    height:8rem;
-                    li{
-                        font-size: 1rem;
-                        font-family: LightFont;
-                        font-weight: bold;
-                        color:$dark-blue-color;
-                        @include flex-row(); 
-                        justify-content: unset;
-                        align-items: center;                    
-                        i{
-                            color: $sky-blue;
-                            margin-right: 1rem;
-                        }
-                    }
-                }
-            }
-            .appointment-button{
-                height:auto;
-                padding:0rem;
-                margin:0rem;
-                margin-bottom:0.5rem;
-            }
-        }
-    }
-    
-        .reschedule-card{
-            
-            width:100%;
-            padding:0rem;
-            padding-top:2rem;
-        .reschedule-box .doctor-card{
-        div{
-            width:100%;
-            h3{
-                margin:0.5rem 0rem;
-            }
-            ul{
-                width:100%;
-                padding-left: 0rem;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                height:unset;
-
-                li{
-                    width:unset;
-                }
-            }
-        }
-        .appointment-button{
-            padding-left: 0rem;
-            button{
-                margin:0rem;
-            }
-        }
-        
-    }
-}
-}
-
-
-
-}
-
-@media only screen and (min-width:$breakpoint-unknown){
-    .heading-section{
-        padding-bottom: 0rem;
-    }
-    .heading{
-        padding: 0rem;
-        h4{
-            margin-bottom: 0rem;
-        }
-
-    }
-    .overlay-section{
-        .container{
-            width:100%;
-            justify-content: start;
-        }
-    }
-
-    .filtersanddoctors {
-        .filters{
-            .filterform{
-                h4{
-                    span{
-                    color:$dark-blue-color;
-                    }
-                }
-                .showmore{
-                    span{
-                        font-family: LightFont;
-                    }
-                }
-            }
-        }
-        
-        .doctor-card-tab .doctor-card 
-        
-      { 
-          h3{
-              margin-top: 1rem;
-          }
-           .appointment-button{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        margin-left: 1rem;
-        margin-bottom: 1rem;
-        width:100%;
-    }}
-
-}
-    .carouselContainer{
-        padding: 1rem;
-    }
-    .allCarouselItems{ 
-    justify-content: space-around;
-    .item h6{
-        margin: 0rem;
-    }
-}
-    .subScheduleContainer{
-        display:flex;
-        flex-direction: column;
-        h3{
-            padding:1rem 0rem;
-        }
-        div{
-            padding:1rem 1rem;
-            
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            border-bottom: 0.2rem solid $light-grey;
-            h4{
-                padding:0.8rem 0rem;
-                font-family: LightFont;
-                margin-right: 0.5rem;
-                span{
-                    color: $background-blue-color;
-                    padding:0.5rem 3rem;
-                    border:0.1rem solid $background-blue-color;
-                    font-size: 1.1rem;
-                }
-            }
-            i{
-                margin-right: 1rem;
-            }
-            .head{
-                display: flex;
-                flex-direction: row;
-                border:unset;
-                padding: unset;
-                margin-right: 2rem;
-            }
-            
-        }
-    }
-    
-   #doctor{
-       color:$background-blue-color;
-   }
-}
-
-
-@media only screen and (min-width:$breakpoint-desktop){
-
-    .heading{
-        padding: 0rem;
-
-        form select{
-            padding: 1rem;
-    
-            font-size: 1.3rem;
-        }
-    }
-    .overlay-section{
-        padding:10rem 7rem;
-        .container{
-            justify-content: start;
-        }
-    }
-    .filtersanddoctors{
-    
-        .filters{
-            width:22%;
-    
-            ul{
-                display: flex;
-                flex-wrap: wrap;
-                margin-top: 1.5rem;
-    
-                li{
-                    font-size: 1.15rem;
-                    font-family: LightFont;
-                    font-weight: bold;
-                    color:$dark-blue-color;
-                    margin-bottom: 0.5rem;
-                    border:0.1rem solid $grey;
-                    border-radius: 2rem;
-                    padding:0.5rem 0.8rem;
-                    margin-right: 0.3em;
-                 i{
-                    margin-left: auto;
-                    font-size: 1.2rem;
-                     color:$background-blue-color;
-                 }
-                }
-            }
-            h4{
-                span{
-                    color: $dark-blue-color;
-                    font-size: 1.8rem;
-                    margin-left: 0rem;
-                }
-            }
-    
-                h4{
-    
-    
-                    i{
-                        font-size: 1.5rem;
-                        margin-left: auto;
-                    }
-                }
-            .filterform{
-                .showmore{
-                    max-height: 10.5rem;
-                    label,span{
-    
-                        font-family: LightFont;
-                        font-size: 1.6rem;
-                    }
-                }
-            }
-    
-        }
-    
-        .doctor-card-tab{
-            width:75%;
-            .doctor-card{
-                height:24rem;
-                div{
-                    width:70%;
-                    height:100%;
-    
-                    ul{
-                        align-content: space-around;
-                        padding-right: 0rem;
-                        height:10rem;
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-    
-                        li{
-                            width:45%;
-                            font-size:1.3rem;
-                        }
-                    }
-    
-                }
-                .doctor-image{
-                    width:25%;
-                    overflow: hidden;
-    
-                }
-                .appointment-button{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    margin-left: 1rem;
-                    margin-bottom: 1.5rem;
-                    width:100%;
-    
-                }
-                h3{
-                    margin-top: 1.5rem;
-                }
-                h3::before{
-    
-                    width:2rem;
-                    transform: translateY(-0.5rem);
-    
-                }
-            }
-        }
-        .reschedule-card{
-    
-            width:60%;
-            padding:0rem;
-            padding-top:3rem;
-            margin:0 auto;
-        .reschedule-box .doctor-card{
-        div{
-            width:100%;
-            h3{
-                margin:0.5rem 0rem;
-            }
-            ul{
-                width:100%;
-                padding-left: 0rem;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                height:auto;
-                li{
-                    width: unset;
-                    margin:0.5rem 0rem;
-                }
-            }
-        }
-        .appointment-button{
-            padding-left: 0rem;
-            button{
-                margin:0rem;
-            }
-        }
-    
-    }
-    }
-    
-    }
-    
-    .carouselContainer{
+.heading-section{
+    .container{
+        padding:0rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding:2rem 1rem 2rem 1rem;
+       
+        
     }
-    .allCarouselItems{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width:70%;
-        .item{
-            display: flex;
-            flex-direction: column;
-            h5{
-                margin: 0.5rem 0rem;
-                span{
-                    color:$sky-blue;
-                    font-size:1.5rem;
+}
+
+
+
+
+
+.filteranddoctor{
+    padding-top: 0rem;
+    .container{
+        padding:0rem;
+        aside{
+            display: none;
+        }
+        .cards{
+            padding:0rem;
+            .main-grid{
+                display: grid;
+                border:1px solid $background-blue-color;
+                margin-bottom: 1rem;
+                div{
+                    
+                    h3{
+                        color: $sky-blue;
+                        position: relative;
+                    }
+                    h3::before{
+                    display: inline;
+                    content:'';
+                    position: absolute;
+                    border-bottom:0.2rem solid $sky-blue;
+                    width:1.3rem;
+                    left: -1.5rem;
+                    top:0.7rem;
+                    }
+
+                    padding:1rem 1.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-around;
+                    .sub-grid{
+                        display: grid;
+                        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                        grid-column-gap: 1rem;
+                        grid-row-gap: 0.2rem;
+                        margin:1rem 0rem;
+                        width:100%;
+                        li{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            font-weight: 600;
+                            span{
+                                color: $dark-blue-color;
+                                font-family: LightFont;
+                                font-weight: 900;
+                                text-align: left;
+                            }
+                            i{
+                                color:$sky-blue;
+                                margin-right: 1rem;
+                            }
+                        }
+                    }
+                    button{
+                        margin:0rem auto;
+                    }
+                   
+                }
+                figure{
+                    width:100%;
+                    height: 17rem;
+                }
+                .hidebookdiv{
+                    display: none;
+                   
+                }
+                .bookAppointmentContainer{
+                    div{
+                        padding:0rem;
+                    }
+                    .carouselContainer{
+                        padding:0rem;
+                        padding-bottom: 1rem;
+                        width:100%;
+                        display: grid;
+                        grid-template-rows: 1fr;
+                        grid-template-columns: auto 1fr auto;
+                        width:100%;
+                        align-items: center;
+                        .allCarouselItems{
+                            .item{
+                                width:100%;
+                                padding:0.3rem 0rem;
+                                cursor: pointer;
+                                h5,h6{
+                                    width:100%;
+
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                    .subScheduleContainer{
+                        width:100%;
+                        padding-top: 1rem;
+                        border-top: 1px solid $dark-blue-color;
+                        div{
+                                padding:0.5rem 0rem;
+                                width:100%;
+                                .head{
+                                    h4{
+                                        text-align: center;
+                                        width:100%;
+                                        margin-bottom: 0.7rem;
+
+
+                                    }
+                                }
+                                div{
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                    padding:0rem;
+                                    h6{
+                                        width:100%;
+                                        color: $background-blue-color;
+                                        text-align: center;
+                                    }
+                                    form{
+                                        margin-bottom: 0.7rem;
+                                        cursor: pointer;
+                                        h4{
+                                            span{
+                                                padding:0.4rem;
+                                                color:$background-blue-color;
+                                                border:1px solid $background-blue-color;
+                                            }
+                                        }
+                                    }
+                                }
+                            
+                        }
+                    }
+                    
+                   
                 }
             }
-           h6{
-            margin: 0.5rem 0rem;
-    
-           }
         }
     }
-    .adminpagenation{
-        ul{
-            li{
-                padding:0.2rem 0.7rem;
-            }
-        }
-    }
-    .carouselButton{
-        i{
-            color: $sky-blue;
-            padding: 0.7rem;
-            border-radius: 50%;
-            background-color: $light-grey;
-            font-size: 1rem;
-        }
-    }
-    .subScheduleContainer{
-        display:flex;
-        flex-direction: column;
-        h3{
-            padding:1rem 0rem;
-        }
-        div{
-            padding:0rem 1rem;
-    
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            border-bottom: 0.2rem solid $light-grey;
-            h4{
-                padding:1rem 0rem;
-                font-family: LightFont;
-                margin-right: 0.5rem;
-              
-            }
-            i{
-                margin-right: 1rem;
-            }
-            .head{
-                display: flex;
-                flex-direction: row;
-                border:unset;
-                padding: unset;
-                margin-right: 2rem;
-            }
-        }
-    }
+}
 
+
+@media only screen and (min-width:$breakpoint-tablet){
+   .overlay-section{
+       h1{
+           text-align: left;
+       }
+   }
+   .filteranddoctor{
+       padding-top: 0rem;
+       .container{
+           display: flex;
+           flex-direction: row;
+           justify-content: space-between;
+           padding:0rem;
+           aside{
+               display: block;
+               width:25%;
+               form{
+                   button{
+                       width:100%;
+                   }
+                   ul{
+                       margin-top: 1.5rem;
+                       display: flex;
+                       flex-wrap: wrap;
+                       justify-content: space-between;
+                       li{
+                           padding:0.3rem 0.5rem;
+                           border:2px solid $light-grey;
+                           border-radius: 0.3rem;
+                           width:auto;
+                           margin-top: 0.2rem;
+
+                           i{
+                             margin-left: 1rem;
+                             color: $background-blue-color;
+                             cursor: pointer;
+
+                           }
+                       }
+                   }
+                   .category{
+                       padding:1.5rem 0rem;
+                       border-bottom: 1px solid $grey;
+                       display: flex;
+                       flex-direction: column;
+                       align-items: flex-start;
+                       .head{
+                           width:100%;
+                           display: flex;
+                           flex-direction: row;
+                           justify-content: space-between;
+
+                           i{
+                               color: $sky-blue;
+                           }
+                           i::after{
+                            display: inline-block;
+                            content:'';
+                            border-bottom:0.2rem solid $light-grey;
+                            width:1rem;
+                            transform: translateY(-0.2rem);
+                            margin-left: 0.5rem;
+
+                            
+                           }
+                       }
+                       .filter-data{
+                        margin:1rem 0rem;
+                        padding:0.5rem 0rem;
+                        max-height: 7rem;
+                        overflow: hidden;
+                        div{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            margin:0.3rem 0rem;
+                            cursor: pointer;
+
+                            input{
+                                margin-right: 1rem;
+                                cursor: pointer;
+
+                            }
+                            label{
+                                color:$dark-blue-color;
+                                font-weight: 600;
+                                margin-bottom: 0rem;
+                                cursor: pointer;
+
+                            }
+                            
+                        }
+                       }
+                       span{
+                           color:$background-blue-color;
+                        }
+                   }
+               }
+           }
+           .cards{
+            padding:0rem;
+            width:73%;
+            .main-grid{
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                grid-template-rows: 1fr;
+                div{
+                    
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-around;
+                    .sub-grid{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows: repeat(3, minmax(2.5rem, max-content));
+                      
+                    }
+                    button{
+                        margin-left: 0rem;
+                    }
+                }
+                figure{
+                    height:100%;
+                }
+                .bookAppointmentContainer{
+                    
+                    .carouselContainer{
+                        grid-template-columns: 1fr 1fr 1fr;
+                        #end-button{
+                            align-items: flex-end;
+                        }
+                    }
+            }
+            }
+           }
+
+       }
+   }
     
+}
+@media only screen and (min-width:$breakpoint-desktop){
+    .overlay-section{
+        padding:7rem 0rem;
+        h1{
+            span{
+                font-size: 2.4rem;
+            }
+        }
     }
+    .filteranddoctor{
+        .container{
+            aside{
+                form{
+                    .category{
+                        .filter-data{
+                            max-height: 9rem;
+                            div{
+                                margin:0.5rem 0rem;
+                                label{
+                                    font-size: 1.2rem;
+                                    font-weight: 700;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .cards{
+                width:70%;
+               padding:0rem;
+            .main-grid{
+               
+                div{
+                    justify-content: space-around;
+                    padding: 0rem;
+                    h3::before{
+                  
+                    width:1.7rem;
+                    left: -2rem;
+                    top:0.9rem;
+                    }
+                    
+                   
+                   .sub-grid{
+                    grid-column-gap: 1rem;
+                    grid-row-gap:0.2rem;
+                   }
+                }
+                .demodiv{
+
+                    padding:1rem 2rem;
+                    }
+                .bookAppointmentContainer{
+                    width:100%;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    .carouselContainer{
+                        grid-template-columns: auto 1fr auto;
+                        padding: 1rem 1.5rem;
+
+                        .allCarouselItems{
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr;
+                        }
+                        #end-button{
+                            align-items: flex-end;
+                        }
+                    }
+                    .subScheduleContainer{
+                        padding:1rem;
+                    }
+            }
+            figure{
+                height:18rem;
+            }
+                
+            }
+            }
+        }  
+    }
+}

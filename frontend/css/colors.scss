@@ -1,0 +1,27 @@
+$background-blue-color:rgb(147, 190, 222);
+$white-color: rgb(255, 255, 255);
+$dark-blue-color:rgb(34, 40, 68);
+$light-blue-background-color: rgb(147, 190, 222);
+$grey:rgb(161, 159, 159);
+$off-white:rgb(244, 244, 248);
+$sky-blue:rgb(22, 125, 221);
+$light-grey:rgb(219, 216, 216);
+$blue-grey:rgb(240, 240, 245);
+$light-blue: rgb(209, 229, 245);
+$white:rgb(255,255,255);
+$dark-grey:rgb(102, 101, 101);
+$black:black;
+$red:red;
+$green:green;
+$breakpoint-tablet:768px;
+$breakpoint-desktop:1024px;
+
+
+@font-face{
+    font-family: "BoldFont";
+    src: url('Nexa-Bold-1.otf');
+}
+@font-face{
+    font-family: "LightFont";
+    src: url('Nexa-Light.otf');
+}

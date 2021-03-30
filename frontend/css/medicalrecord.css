@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "BoldFont";
+  src: url("Nexa-Bold-1.otf");
+}
+
+@font-face {
+  font-family: "LightFont";
+  src: url("Nexa-Light.otf");
+}
+
+.parent-div {
+  padding: 1rem;
+}
+
+.recorddata {
+  border: 1px solid #93bede;
+  width: auto;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.recorddata .date-div, .recorddata .title-div, .recorddata .button-div {
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.recorddata h5 {
+  color: #167ddd;
+}
+
+.pic-input-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: transparent;
+}
+
+.pic-input-label i {
+  color: #167ddd;
+  margin-right: 1rem;
+}
+
+.pic-input-label img {
+  width: 4rem;
+  height: 4rem;
+  margin: 0.5rem;
+}
+
+.pic-input-label input {
+  display: none;
+}
+
+.floating-form .form .inputfields {
+  border-top: 1px solid #a19f9f;
+  padding: 1rem 0rem;
+}
+
+.floating-form .form .type-of-report h6 {
+  margin-bottom: 1rem;
+}
+
+.floating-form .form .type-of-report ul li {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.floating-form .form .type-of-report ul li input {
+  width: auto;
+  margin-right: 1rem;
+}
+
+.floating-form .form .type-of-report ul li label {
+  margin-bottom: 0rem;
+}
+
+.floating-form .form .buttons {
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .recorddata {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .recorddata .date-div, .recorddata .title-div, .recorddata .button-div {
+    width: auto;
+  }
+  .floating-form .form {
+    padding: 2rem 1rem;
+  }
+  .floating-form .form .pic-input-label label {
+    margin-bottom: 2rem;
+  }
+}
+/*# sourceMappingURL=medicalrecord.css.map */

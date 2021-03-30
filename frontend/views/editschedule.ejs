@@ -1,61 +1,42 @@
-
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="theme.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="myappointments.css">
-    
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Doctor Page</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+            integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+            integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/clocklet@0.2.6/css/clocklet.min.css">
         <script src="https://cdn.jsdelivr.net/npm/clocklet@0.2.6"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.min.js"></script>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="theme.css">
+        <link rel="stylesheet" href="dashboard.css">
+        <link rel="stylesheet" href="myprofile.css">
+        <link rel="stylesheet" href="editschedule.css">
+
+
     </head>
-    <style>
-        #editschedule{
-            color:rgb(22, 125, 221);
-            font-family: BoldFont;
+<body>
+    <%-include('header.ejs') %>
+    <form id="floating-form" class="floating-form" method="POST" action="/editschedule">
 
-        }
-    </style>
-    <body>
-        
-    
-        <%-include('header.ejs') %>
-        <% if (msg1.length>0) {%>
-            <div id="loginmsg">
-            <i id="tick"class="fa fa-close"></i>
-            <ul>
-                <li><span><%= msg1[0]%></span></li>
-                <li><%= msg1[1]%></li>
-            </ul>
-            <i class="fa fa-close"></i>
-            
-            </div>
-        
-            <%}%>
-
-    
-    <section class="appointment-section">
-        <div class="container appointments">
-        <%-include('dashboard.ejs') %>
-        <div class="record-flex">
-        <form class="medical-record-form schedule-form" method="POST" action="/editschedule">
-    
-        <div id="floating-form">
-            <div class="addrecordform">
-                
-                <div class="schedule-head addpic">
+<div class="form">
+                <div class="schedule-head">
                     <h1>Create Schedule</h1>
                 </div>
-              
+
                 <div class="inputfields">
-                    <h4>select available days</h4>
-                    <select name="days" id="daysInput" class="daysInput" required="" multiple="">
+                    <label>select available days</label>
+                    <select name="days" id="daysInput" class="daysInput" required=""
+                        multiple="">
                         <option value="monday">Monday</option>
                         <option value="tuesday">Tuesday</option>
                         <option value="wednesday">Wednesday</option>
@@ -63,126 +44,117 @@
                         <option value="friday">Friday</option>
                         <option value="saturday">Saturday</option>
                     </select>
-                    <h4>select Hospitl</h4>
-                    <input type="text" list="hospital" placeholder="select hospital"  name="selecthospital" required>
+                    <label>select Hospitl</label>
+                    <input type="text" list="hospital" placeholder="select hospital"
+                        name="selecthospital" required>
                     <datalist id="hospital">
                         <option value="<%= hospital%>"></option>
                     </datalist>
-                    <h4>From Time</h4>
+                    <label>From Time</label>
 
-                    <input style="z-index: 9999;" name="fromtime" autocomplete="off"  data-clocklet>
-                    <h4>To Time</h4>
+                    <input style="z-index: 9999;" name="fromtime" autocomplete="off"
+                        data-clocklet>
+                    <label>To Time</label>
 
-                    <input style="z-index: 9999;" name="totime" autocomplete="off"  data-clocklet>
-                    <h4>Intervals</h4>
+                    <input style="z-index: 9999;" name="totime" autocomplete="off"
+                        data-clocklet>
+                    <label>Intervals</label>
 
-                    <input type="text" name="interval"  placeholder="Enter intervals in minutes.." min="15" step="15" max="60" required="" >
-                  
-                
+                    <input type="text" name="interval"
+                        placeholder="Enter intervals in minutes.." min="15" step="15"
+                        max="60" required>
+
+
                 </div>
-              
+
                 <div class="buttons">
-                    <button id="cancel" onclick="showform()">Cancel</button>
-                    <button id="done" type="submit">Done</button>
+                    <button class="accentButton" id="cancel" onclick="showform()">Cancel</button>
+                    <button class="filledButton" id="done" type="submit">Done</button>
                 </div>
-            </div>
+            
 
         </div>
-        
+
     </form>
-    <div class="medical-record">
-        <h2>All Schedules</h2>
-        <button class="sky-blue-button" onclick="showform()" type="reset">Create new schedule</button>
-    </div>
-    <div class="record schedule-record">
-        <%for(var i=0;i < data.length; i++){%>
-            <div class="recorddata schedule-data" <%if(data[i].isdisabled==true){%> style="background-color:grey;"<%}else{%>unchecked<%}%>>
-                
-                <div class="slot-flex">
-                    <div class="days">
-                        <h4><%= data[i].days%></h4>
-                    </div>
-                    
-                
-
-
-              <div class="hospital-time">
-                <h4><span><%= data[i].selecthospital%></span></h4>
-                <h4><%= data[i].fromtime%>-<%= data[i].totime%></h4>       
-
-              </div>
-                  
-              <div class="slot-button-forms">
-                    <form method="POST" action="/deleteslot/<%= data[i].id%>">
-                        <button class="sky-blue-button" type="submit">Remove Slots</button>
+    <section class="profile-section">
+        <div class="container">
+            <span id="dash-head" onclick="showaside()"><i class="fa fa-angle-double-right"></i> <h4>Click to view dashboard</h4></span>
+            <section class="main-section">
+                <%-include('dashboard.ejs') %>
+                <div class="form-section">
+                    <form>
+                        <div class="hero-div">
+                            <h2>Schedules</h2>
+                            <button type="button" class="accentButton" onclick="showform()">Add schedule</button>
+                        </div>
                     </form>
-                   
-                     
-                    <button class="sky-blue-button" onclick="showslots('<%= data[i].id%>')">View Slots</button>
-                    
-                    <input type="checkbox" onchange="window.location.href='/disableslot/<%= data[i].id%>/<%if(data[i].isdisabled==true){%>false<%}else{%>true<%}%>'" <%if(data[i].isdisabled==true){%>checked<%}else{%>unchecked<%}%>  >
-              </div>
-            </div>
-              <div class="slots"  id="<%= data[i].id%>"  style="display: none;">   
-              <%for(var j=0; j<(data[i].schedule).length; j++ ){ 
+                    <%for(var i=0;i < data.length; i++){%>
+                        <div class="schedule-div">
+                            
+                            <div <%if(data[i].isdisabled==true){%>class="schedule-details disabled"<%}else{%> class="schedule-details" unchecked<%}%>>
+                                <div class="flex-div">
+                                <div class="days">
+                                    <h5>
+                                        <%= data[i].days%>
+                                    </h5>
+                                </div>
+                                <div class="hospital-time">
+                                    <div>
+                                    <h5>
+                                            <%= data[i].selecthospital%>
+                                        </h5>
+                                    <h5>
+                                        <%= data[i].fromtime%>-<%= data[i].totime%>
+                                    </h5>
+                                </div>
+                                    <div class="slot-button-forms">
+                                        <form method="POST" action="/deleteslot/<%= data[i].id%>">
+                                            <button class="accentButton" type="submit">Remove
+                                                Slots</button>
+                                        </form>
+                                        <button class="filledButton"
+                                            onclick="showslots('<%= data[i].id%>')">View
+                                            Slots</button>
+    
+                                        <input type="checkbox"
+                                            onchange="window.location.href='/disableslot/<%= data[i].id%>/<%if(data[i].isdisabled==true){%>false<%}else{%>true<%}%>'"
+                                            <%if(data[i].isdisabled==true){%>checked<%}else{%>
+                                            unchecked<%}%> >
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="slot-details" id="<%= data[i].id%>" style="display: none;">
+                                    <% for(var j=0; j<(data[i].schedule).length; j++ ){
+                                        if((j+1)>=(data[i].schedule).length){
+                                        break;
+                                        }%>
+                                        <div <%if(data[i].schedule[j].isdisabled==true){%>class="disabled"<%}else{%>unchecked<%}%> >
+                                                    <h6>
+                                                        <%= data[i].schedule[j].time %> - <%=
+                                                                data[i].schedule[j+1].time %>
+                                                    </h6>
+                                                    <input type="checkbox"
+                                                        onchange="window.location.href='/disablesingleslot/<%= data[i].id%>/<%= data[i].schedule[j].id%>/<%if(data[i].schedule[j].isdisabled==true){%>false<%}else{%>true<%}%>'"
+                                                        <%if(data[i].schedule[j].isdisabled==true){%>checked
+                                                    <%}else{%>unchecked<%}%> >
+                                        </div>
+                                        <%}%>
+                                </div>
+                       
 
-                if((j+1)>=(data[i].schedule).length){
-                    break;
-                }%>
-                        <div <%if(data[i].schedule[j].isdisabled==true){%> style="background-color:grey;"<%}else{%>unchecked<%}%>><h5><%= data[i].schedule[j].time %> - <%= data[i].schedule[j+1].time %></h5>
-                            <input type="checkbox" onchange="window.location.href='/disablesingleslot/<%= data[i].id%>/<%= data[i].schedule[j].id%>/<%if(data[i].schedule[j].isdisabled==true){%>false<%}else{%>true<%}%>'" <%if(data[i].schedule[j].isdisabled==true){%>checked<%}else{%>unchecked<%}%>  >
-                        </div> 
-              <%}%>  
-            </div>
+                            </div>
 
-            </div>
-
-                <%}%>
+                       
+                        </div>
+                    <%}%>
+                </div>
+            </section>
             
-    </div>
-   
-    </div>
-</div>
+        </div>
     </section>
-   <script>
-       
-
-   </script>
-  
-    
-  <script>
-
-    function showslots(id) {
-    const slot = document.getElementById(id);
-    if (slot.style.display == "flex")
-        slot.style.display = "none";
-    else slot.style.display = "flex";
-}
-</script>
-
-    
-    <script>
-
-        function showform() {
-        const form = document.getElementById("floating-form");
-        if (form.style.display == "flex")
-            form.style.display = "none";
-        else form.style.display = "flex";
-    }
-    </script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <%-include('footer.ejs') %>
+</body>
+<script src="dashboard.js"></script>
+<script src="schedule.js"></script>
 
-    
-    </body>
-    
-    </html>
+</html>

@@ -1,212 +1,171 @@
-
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="theme.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="isdoctor.css">
-
-        <link rel="stylesheet" href="myappointments.css">
-
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Doctor Page</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+            integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+            integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.css" />
 
   <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="theme.css">
+        <link rel="stylesheet" href="dashboard.css">
+        <link rel="stylesheet" href="myprofile.css">
 
-    
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            #profile{
-                color:rgb(22, 125, 221);
-                font-family: BoldFont;
-            }
-        </style>
     </head>
-    <body>
-        
+<body>
+    <%-include('header.ejs') %>
     
-        <%-include('header.ejs') %>
-    
-    <section class="appointment-section">
-        <div class="container appointments">
-        <%-include('dashboard.ejs') %>
-        <div class="record-flex">
-            <form  class="medical-record-form" action="/updateprofile" enctype="multipart/form-data" method="POST">
-                <div class="medical-record">
-                <h2>Accounts </h2>
-                <button class="sky-blue-button" type="submit">Save Changes</button>
+    <section class="profile-section">
+        <div class="container">
+            <span id="dash-head" onclick="showaside()"><i class="fa fa-angle-double-right"></i> <h4>Click to view dashboard</h4></span>
+            <section class="main-section">
+                <%-include('dashboard.ejs') %>
+                <div class="form-section">
+                    <form action="/updateprofile" enctype="multipart/form-data" method="POST">
+                        <div class="hero-div">
+                            <h2>Accounts </h2>
+                            <button class="accentButton" type="submit">Save Changes</button>
+                        </div>
+                        <div class="profile-div wrap-div">
+                            <div>
+                            <label>Profile photo</label>
+                            <div class="pic-div">
+                                <figure>
+                                    <img id="pic" src="<%= profilepic%>">
+                                </figure>
+                                <div>
+                                    <p>Pick a photo from your system</p>
+                                    <label for="upload-pic">Select Photo</label>
+                                    <input type="file" name="profile-image"  id="upload-pic" accept="image/*" onchange="loadFile(event)">
+                                </div>
+                            </div>
+                        </div>
+                            <div class="input-div">
+                                <label>Name</label>
+                                <input name="name" type="text" value="<%= username%>">
+                            </div>
+                        </div>
+
+                        <div class="input-div info wrap-div">
+                            <div>
+                                <label>Phone Number</label>
+                                <input name="number" type="text" value="<%= phonenumber%>" >
+                            </div>
+                            <div>
+                                <label>Email</label>
+                                <input name="email" type="text" value="<%= email%>">
+                            </div>
+                            <div>
+                                <label>Gender</label>
+                                <input name="gender" type="text" value="<%= gender%>">
+                            </div>
+                            <div>
+                                <label>Date of Birth</label>
+                                <input name="date" type="text" value="<%= date%>">
+                            </div>
+                            <div>
+                                <label>Timezone</label>
+                                <input type="text" >
+                            </div>
+                        </div>
+
+                        <div class="input-div info wrap-div">
+                            <div>
+                                <label>House No/Street</label>
+                                <input type="text" >
+                            </div>
+                            <div>
+                                <label>Colony/Street/Locality</label>
+                                <input type="text" >
+                            </div>
+                            <div>
+                                <label>City</label>
+                                <input name="city" type="text" value="<%= city%>">
+                            </div>
+                            <div>
+                                <label>State</label>
+                                <input name="state" type="text" value="<%= state%>">
+                            </div>
+                            <div>
+                                <label>Country</label>
+                                <input name="country" type="text" value="<%= country%>">
+                            </div>
+                        </div>
+                        <%if(isdoctor){%>
+                            <div class="input-div info wrap-div">
+                                <div>
+                                    <label>yourhospital</label>
+                                    <input type="text" name='yourhospital' value=<%= yourhospital%>  >
+                                </div>
+                                <div>
+                                    <label>achievements</label>
+                                    <input type="text" name='achievements' value=<%= achievements%>  >
+                                </div>
+                                <div>
+                                    <label>experience</label>
+                                    <input type="number" name="exp" placeholder="your experience" value=<%= exp%> >
+                                </div>
+                                <div>
+                                    <label>qualifications</label>
+                                    <input type="text" name='qualifications' value=<%= qualifications%>  >
+                                </div>
+                                <div>
+                                    <label>awards</label>
+                                    <input type="text" name='awards' value=<%= awards%>  >
+                                </div>
+                                <div>
+                                    <label>specialization</label>
+                                    <input type="text" name='specialization' value=<%= specialization%>  >
+                                </div>
+                                <div>
+                                    <label>fees</label>
+                                    <input type="number" name="fees" placeholder="your avg fees" value=<%= fees%> >
+                                </div>
+                                <div>
+                                    <label>Treatments</label>
+                                    <input type="text" name="treatments" value=<%= treatments%> >
+                                </div>
+                                <div id="textarea-div">
+                                    <label>Description</label>
+                                    <textarea id="desc" name="description" placeholder="description"  ><%= description%></textarea>
+                                </div>
+                            </div>
+                        <%}%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </form>
                 </div>
-         
 
-        <div class="profile-photo">
-            <div class="pic-div">
-            <h3>Profile Photo</h3>
-            <div class="pic-wrap">
-                <div  class="pic">
-                    <img id="pic" src="<%= profilepic%>">
-                </div>
-                <div class="choose-pic">
-                <p>Pick a photo from your system</p>
-                <label for="upload-pic" class="inputLabel picInputLabel">Select Photo</label>
-                <input type="file" name="profile-image"  id="upload-pic" accept="image/*" onchange="loadFile(event)">
-                </div>
-            </div>
-        </div>  
-        <script>
-            var loadFile = function(event) {
-                var image = document.getElementById('pic');
-                var image2 = document.getElementById('headerpic');
 
-                image.src = URL.createObjectURL(event.target.files[0]);
-                image2.src = URL.createObjectURL(event.target.files[0]);
-
-            };
-            </script>
-            <div class="name">
-                <h3>Name</h3>
-                <input name="name" type="text" value="<%= username%>">
-            </div>
+            </section>
         </div>
-        <div class="personal-info-1">
-            <div>
-                <h3>Phone Number</h3>
-                <input name="number" type="text" value="<%= phonenumber%>" >
-            </div>
-            <div>
-                <h3>Email</h3>
-                <input name="email" type="text" value="<%= email%>">
-            </div>
-            <div>
-                <h3>Gender</h3>
-                <input name="gender" type="text" value="<%= gender%>">
-            </div>
-            <div>
-                <h3>Date of Birth</h3>
-                <input name="date" type="text" value="<%= date%>">
-            </div>
-            <div>
-                <h3>Timezone</h3>
-                <input type="text" >
-            </div>
-        </div>
-        <div class="personal-info-2">
-            <div>
-                <h3>House No/Street Name/Area</h3>
-                <input type="text" >
-            </div>
-            <div>
-                <h3>Colony/Street/Locality</h3>
-                <input type="text" >
-            </div>
-            <div>
-                <h3>City</h3>
-                <input name="city" type="text" value="<%= city%>">
-            </div>
-            <div>
-                <h3>State</h3>
-                <input name="state" type="text" value="<%= state%>">
-            </div>
-            <div>
-                <h3>Country</h3>
-                <input name="country" type="text" value="<%= country%>">
-            </div>
-        </div>
-
-        <%if(isdoctor){%>
-        <div class="personal-info-2 tags">
-            <div>
-                <h3>yourhospital</h3>
-                <input type="text" name='yourhospital' value=<%= yourhospital%>  >
-            </div>
-            <div>
-                <h3>achievements</h3>
-                <input type="text" name='achievements' value=<%= achievements%>  >
-            </div>
-            <div>
-                <h3>experience</h3>
-                <input type="number" name="exp" placeholder="your experience" value=<%= exp%> >
-            </div>
-            <div>
-                <h3>qualifications</h3>
-                <input type="text" name='qualifications' value=<%= qualifications%>  >
-            </div>
-            <div>
-                <h3>awards</h3>
-                <input type="text" name='awards' value=<%= awards%>  >
-            </div>
-            <div>
-                <h3>specialization</h3>
-                <input type="text" name='specialization' value=<%= specialization%>  >
-            </div>
-            <div>
-                <h3>fees</h3>
-                <input type="number" name="fees" placeholder="your avg fees" value=<%= fees%> >
-            </div>
-            <div>
-                <h3>Treatments</h3>
-                <input type="text" name="treatments" value=<%= treatments%> >
-            </div>
-            <div style="flex: unset;width:100%">
-                <h3>Description</h3>
-                <textarea id="desc" name="description" placeholder="description"  ><%= description%></textarea>
-            </div>
-        </div>
-
-        <script>
-            var input = document.querySelector('input[name=yourhospital]');
-            var input2 = document.querySelector('input[name=achievements]');
-            var input3 = document.querySelector('input[name=qualifications]');
-            var input4 = document.querySelector('input[name=awards]');
-            var input5 = document.querySelector('input[name=specialization]');
-            var input6 = document.querySelector('input[name=treatments]');
-
-        
-        
-            var tagify = new Tagify(input, {
-          originalInputValueFormat: valuesArr => valuesArr.map(item => item.value).join(',')
-        });
-            var tagify2= new Tagify(input2, {
-          originalInputValueFormat: valuesArr2 => valuesArr2.map(item => item.value).join(',')
-        });
-            var tagify3= new Tagify(input3, {
-          originalInputValueFormat: valuesArr3 => valuesArr3.map(item => item.value).join(',')
-        });
-            var tagify4= new Tagify(input4, {
-          originalInputValueFormat: valuesArr4 => valuesArr4.map(item => item.value).join(',')
-        });
-            var tagify5= new Tagify(input5, {
-          originalInputValueFormat: valuesArr5 => valuesArr5.map(item => item.value).join(',')
-        });
-        var tagify6= new Tagify(input6, {
-          originalInputValueFormat: valuesArr5 => valuesArr6.map(item => item.value).join(',')
-        });
-        
-          </script>
-        <%}%>
-       
-
-   
-    </form>
-    </div>
-</div>
     </section>
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <%-include('footer.ejs') %>
-    
-    </body>
-    
-    </html>
+</body>
+<script src="dashboard.js"></script>
+<script src="tag.js"></script>
+
+</html>

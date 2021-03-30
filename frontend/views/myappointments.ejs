@@ -1,133 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Doctor Page</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+            integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+            integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.css" />
 
+  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.min.js"></script>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="theme.css">
+        <link rel="stylesheet" href="dashboard.css">
+        <link rel="stylesheet" href="myprofile.css">
+        <link rel="stylesheet" href="myappointments.css">
 
-<html>
-<head>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="theme.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="myappointments.css">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        #appointment{
-            color:rgb(22, 125, 221);
-            font-family: BoldFont;
-
-        }
-    </style>
-</head>
+    </head>
 <body>
-    
-
     <%-include('header.ejs') %>
+    <section class="profile-section">
+        <div class="container">
+            <span id="dash-head" onclick="showaside()"><i class="fa fa-angle-double-right"></i> <h4>Click to view dashboard</h4></span>
+            <section class="main-section">
+                <%-include('dashboard.ejs') %>
+                <div class="form-section">
+                  
+                        <div>
 
+                        <%if(allappdata.length<=0){%>
+                            <h6>No appointments available</h6>
+                        <%}else{%>
 
-   
-
-<section class="appointment-section">
-    <div class="container appointments">
-   <%var countp=0;
-            for(var i=0;i<allappdata.length;i++){
-                if(allappdata[i].status=="notcomplete"){
-                    countp+=1;
-                }
-            }%>
-    <%-include('dashboard.ejs') %>
-    <div class="myappointments">
-        <div class="upcoming-appointments">
-            <%if(allappdata.length<=0){%>
-                <div>
-                    <h3>No appointments available</h3>
-                </div>
-                <%}else if(countp>0){%>
-                    <h3 id="heading">Upcoming Appointments</h3>
-
-            <%for(var i=0;i<allappdata.length;i++){%>
-               <% if(allappdata[i].status=="notcomplete"){%>
-                <form action="/deleteappointment/<%= allappdata[i]._id%>" method="POST">
-
-                <div class="appointment-div">
-                    <div class="datetimehospital">
-                        <div class="date">
-                            <h3><%= allappdata[i].date%></h3>
-                        </div>
-                        <div class="timehospital">
-                            <h3><span><%= allappdata[i].drname%></span></h3>
-                            <h3><%= allappdata[i].day%><%= allappdata[i].time%></h3>
-                            <h3><%= allappdata[i].drhospital%></h3>
-                            <button type="reset" >Confirmed</button>
-                        </div>
-
-                    </div>
-                    <div class="buttons">
-                        <div onclick="window.location.href='/reschedule/<%= allappdata[i].drid%>/<%= allappdata[i]._id%>'" style="padding:0rem;">
-                        <button class="sky-blue-button" type="button">Reschedule Appointment</button>
-                    </div>
-                        <button class="sky-blue-button" type="submit">Cancel Appointment</button>
-                    </div>
-                </div>
-            </form>
-            <%}%>
-                <%}}%>
-            
-            
-        </div>
-        <div class="upcoming-appointments completed-appointments">
-            <%var count=0;
-            for(var i=0;i<allappdata.length;i++){
-                if(allappdata[i].status=="complete"){
-                    count+=1;
-                }
-            }%>
-            <%if(count>0){%>
+                            <%var countp=0;
+                            for(var i=0;i<allappdata.length;i++){
+                                if(allappdata[i].status=="notcomplete"){
+                                    countp+=1;
+                                }
+                            }%>
+                    <div class="myappointments">
+                        <div class="upcoming-appointments">
+                           
+                            <%if(countp>0){%>
+                            <h4>Upcoming Appointments</h4>
                 
-            <h3 id="heading">Complete Appointments</h3>
+                            <%for(var i=0;i<allappdata.length;i++){%>
+                               <% if(allappdata[i].status=="notcomplete"){%>
+                                <form action="/deleteappointment/<%= allappdata[i]._id%>" method="POST">
+                
+                                <div class="appointment-div ">
 
-            <%for(var i=0;i<allappdata.length;i++){%>
-               <% if(allappdata[i].status=="complete"){%>
-                <form action="/deleteappointment/<%= allappdata[i]._id%>" method="POST">
 
-                <div class="appointment-div">
-                    <div class="datetimehospital">
-                        <div class="date">
-                            <h3><%= allappdata[i].date%></h3>
+                                    <div class="datetimehospital">
+                                        <div class="date">
+                                            <h6><%= allappdata[i].date%></h6>
+                                        </div>
+                                        <div class="timehospital">
+                                            <h6><span><%= allappdata[i].drname%></span></h6>
+                                            <h6><%= allappdata[i].day%><%= allappdata[i].time%></h6>
+                                            <h6><%= allappdata[i].drhospital%></h6>
+                                            <button type="reset" >Confirmed</button>
+                                        </div>
+                
+                                    </div>
+
+
+                                    <div class="buttons">
+                                        <div onclick="window.location.href='/reschedule/<%= allappdata[i].drid%>/<%= allappdata[i]._id%>'" style="padding:0rem;">
+                                        <button class="accentButton" type="button">Reschedule Appointment</button>
+                                    </div>
+                                        <button class="filledButton" type="submit">Cancel Appointment</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <%}%>
+                                <%}}%>
+                            
+                            
                         </div>
-                        <div class="timehospital">
-                            <h3><span><%= allappdata[i].drname%></span></h3>
-                            <h3><%= allappdata[i].day%><%= allappdata[i].time%></h3>
-                            <h3><%= allappdata[i].drhospital%></h3>
-                            <button type="reset" style="background-color: rgb(238, 139, 139);">Completed</button>
+                        <div class="upcoming-appointments completed-appointment">
+                            <%var count=0;
+                            for(var i=0;i<allappdata.length;i++){
+                                if(allappdata[i].status=="complete"){
+                                    count+=1;
+                                }
+                            }%>
+                            <%if(count>0){%>
+                                
+                            <h4>Complete Appointments</h4>
+                
+                            <%for(var i=0;i<allappdata.length;i++){%>
+                               <% if(allappdata[i].status=="complete"){%>
+                                <form action="/deleteappointment/<%= allappdata[i]._id%>" method="POST">
+                
+                                <div class="appointment-div">
+                                    <div class="datetimehospital">
+                                        <div class="date">
+                                            <h6><%= allappdata[i].date%></h6>
+                                        </div>
+                                        <div class="timehospital">
+                                            <h6><span><%= allappdata[i].drname%></span></h6>
+                                            <h6><%= allappdata[i].day%><%= allappdata[i].time%></h6>
+                                            <h6><%= allappdata[i].drhospital%></h6>
+                                            <button type="reset" style="background-color: rgb(238, 139, 139);">Completed</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <%}%>
+                                <%}}%>
+                            
+                            
                         </div>
-
                     </div>
+
+                        <%}%>
+                      
+                        
                     
+                       
+
+                  
                 </div>
-            </form>
-            <%}%>
-                <%}}%>
-            
-            
+
+
+            </section>
         </div>
-
-    </div>
-</div>
-</section>
-
-
-
-
-
-
-
-
-
-
-<%-include('footer.ejs') %>
-
+    </section>
+    <%-include('footer.ejs') %>
 </body>
+<script src="dashboard.js"></script>
+<script src="tag.js"></script>
 
 </html>

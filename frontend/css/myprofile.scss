@@ -1,0 +1,178 @@
+@import "colors.scss";
+.profile-section{
+    background-color: $blue-grey;
+    border-top: 1px solid $grey;
+}
+.main-section{
+    position: relative;
+    padding:1.5rem 0rem;
+    padding-bottom: 0rem;
+  
+    .form-section{
+        border-radius: 0.5rem;
+        background-color: $white;
+        form{
+            .hero-div{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding:1rem;
+                h2{
+                    margin-bottom: 0rem;
+                }
+            }
+           label{
+               display: flex;
+                text-align: left;
+                margin-bottom: 0.5rem;
+                color: $sky-blue;
+                font-family: BoldFont;
+                font-size: 1.2rem;
+            }
+            input,textarea{
+                border:1px solid $light-grey;
+            }
+            .input-div{
+               label{
+                    margin-top: 1.5rem;
+                }
+            }
+            .info{
+                
+                border-top:1px solid $grey;
+                padding:1rem;
+                padding-bottom: 1.5rem;
+                padding-top: 0rem;
+            }
+            .profile-div{
+                padding: 1rem;
+             
+                border-top:1px solid $grey;
+                
+                .pic-div{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    
+                    figure{
+                        width:4rem;
+                        height:3.5rem;
+                        margin-right: 1rem;
+                        border:1px solid $grey;
+                    }
+                    div{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        input{
+                            display: none;
+                        }
+                        label{
+                            color: $sky-blue;
+                            margin-bottom: 0rem;
+                            font-size: 1rem;
+
+                        }
+                        p{
+                            margin-bottom: 0rem;
+                            text-align: left;
+
+                        }
+                    }
+                }
+                
+            }
+
+
+            
+        }
+    }
+}
+
+
+.hide{
+    display: none;
+}
+
+@media only screen and (min-width:$breakpoint-tablet){
+.wrap-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    div{
+        width:49%; 
+    }
+    .tagify{
+        div{
+            width:100%;
+        }
+    }
+    
+}
+.main-section{
+    .form-section{
+        form{
+            .profile-div{
+                .input-div{
+                   label{
+                        margin-top: 0rem;
+                    }
+                }
+                .pic-div{
+                    width:100%;
+                }
+            }
+            #textarea-div{
+                width:100%;
+            }
+        }
+    }
+}
+}
+
+@media only screen and (min-width:$breakpoint-desktop){
+    .profile-section{
+        background-color: $white;
+    }
+    .wrap-div{
+       justify-content: flex-start;
+        div{
+            width:32.4%;
+            margin-right: 0.5rem;
+        }
+        
+    }
+    .main-section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding:1rem;
+        background-color: $blue-grey;
+
+        .form-section{
+            width: 80%;
+            form{
+                .hero-div{
+                    padding:1.5rem;
+                }
+                label{
+                    font-size: 1.4rem;
+
+                }
+                .info{
+                    padding-left: 1.5rem;
+                }
+                .profile-div{
+                    padding-left: 1.5rem;
+
+                    .pic-div{
+                        div{
+                            width:100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
