@@ -30,12 +30,12 @@
             <section class="main-section">
                 <%-include('dashboard.ejs') %>
                 <div class="form-section">
-                  
+                    <%if(allappdata.length<=0){%>
+                        <h6>No appointments available</h6>
+                    <%}else{%>
                         <div>
 
-                        <%if(allappdata.length<=0){%>
-                            <h6>No appointments available</h6>
-                        <%}else{%>
+                       
 
                             <%var countp=0;
                             for(var i=0;i<allappdata.length;i++){
