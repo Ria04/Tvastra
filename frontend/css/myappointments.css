@@ -124,9 +124,6 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .profile-section .main-section .form-section div {
-    width: 100%;
-  }
   .profile-section .main-section .form-section div .myappointments .appointment-div .datetimehospital {
     width: 50%;
   }
