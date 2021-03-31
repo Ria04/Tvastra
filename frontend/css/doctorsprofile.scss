@@ -1,0 +1,82 @@
+@import "colors.scss";
+
+.main-div{
+    padding:1rem;
+    display: flex;
+    flex-direction: column-reverse;
+
+    border: 1px solid $grey;
+    .doctor-info{
+        ul{
+            li{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                color: $sky-blue;
+                font-family: BoldFont;
+                i{
+                    color: $sky-blue;
+                    margin-right: 1rem;
+                }
+                margin:0.5rem 0rem;
+                
+            }
+            p{
+                display: none;
+                text-align: left;
+                margin-bottom: 0rem;
+                padding:0.7rem;
+                background-color: $blue-grey;
+                border-bottom: 1px solid $grey;
+                border-style: dashed;
+
+            }
+        }
+    }
+    figure{
+       div{
+           height:20rem;
+           margin-bottom: 1rem;
+       }
+       button{
+           width:100%;
+       }
+       margin-bottom: 1rem;
+    }
+    
+}
+
+@media only screen and (min-width:$breakpoint-tablet){
+    .main-div{
+        flex-direction: row;
+        justify-content: space-between;
+        .doctor-info{
+            width: 68%;
+        }
+        figure{
+            width:30%;
+            div{
+                height:10rem;
+            }
+        }
+    }
+}
+@media only screen and (min-width:$breakpoint-desktop){
+    .main-div{
+    
+        .doctor-info{
+            ul{
+                li{
+                    font-size: 1.3rem;
+                    margin:0.7rem 0rem;
+                }
+            }
+        }
+        figure{
+            div{
+                height:20rem;
+            }
+        }
+    }
+}

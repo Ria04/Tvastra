@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Page</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="doctor.css">
+    <link rel="stylesheet" href="doctorsprofile.css">
+
+</head>
+
+<body>
+    <%-include('header.ejs') %>
+
+        <section class="overlay-section">
+            <div class="container">
+                <h1>About <span><%= doctor.name %></span> </h1>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="main-div">
+                    <div class="doctor-info">
+                        <ul>
+                            <li onclick="showpara('para1','1')"><div><i class="fas fa-award"></i>Specialization </div><span><i id="1" class="fas fa-angle-up"></i></span></li>
+                            <p id="para1" style="display: block;"><%= doctor.specialization%></p>
+                            <li  onclick="showpara('para2','2')"><div><i class="fa fa-stethoscope"></i>List of Treatments</div><span><i id="2" class="fas fa-angle-down"></i></span></li>
+                            <p id="para2"><%= doctor.treatments%></p>
+                            <li onclick="showpara('para3','3')"><div><i class="fa fa-hospital"></i>Work Experience</div><span><i id="3" class="fas fa-angle-down" ></i></span></li>
+                            <p id="para3"><%= doctor.exp%></p>
+                            <li  onclick="showpara('para4','4')"><div><i class="fa fa-star"></i>Qualification</div><span><i id="4" class="fas fa-angle-down"></i></span></li>
+                            <p id="para4"><%= doctor.qualifications%></p>
+                            <li onclick="showpara('para5','5')"><div><i class="fa fa-trophy"></i>Awards</div><span><i id="5" class="fas fa-angle-down" ></i></span></li>
+                            <p id="para5"><%= doctor.awards%></p>
+                            <li onclick="showpara('para6','6')"><div><i class="fas fa-map-marker-alt"></i>Location</div><span><i id="6" class="fas fa-angle-down" ></i></span></li>
+                            <p id="para6"><%= doctor.state%></p>
+                            <li onclick="showpara('para7','7')"><div><i class="fa fa-rupee"></i>Avg Fees</div><span><i  id="7" class="fas fa-angle-down" onclick="showpara('para7','7')"></i></span></li>
+                            <p id="para7"><%= doctor.fees%></p>
+                        </ul>
+                    </div>
+                    <figure>
+                        <div>
+                        <img src=<%= doctor.img%>>
+                    </div>
+                        <button class="filledButton">Book an appointmet</button>
+                    </figure>
+                </div>
+
+            </div>
+        </section>
+
+
+    <%-include('footer.ejs') %>
+</body>
+<script src="frontend/js/doctorsprofile.js"></script>
+</html>
