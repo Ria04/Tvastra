@@ -23,10 +23,7 @@ var schedules = mongoose.model('schedules',new Schema({
     interval:String,
     schedule:[slotsschema],
     isdisabled:Boolean,
-    createdby:String
-
-
-  
+    createdby:String 
 }));
 
 

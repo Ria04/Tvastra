@@ -599,13 +599,7 @@ function bookappointment(req, res) {
     const phonenumber = req.session.number;
     const scheduleid = req.session.current_schedule_id;
     const slotid = req.session.current_slot_id;
-    const date = new Date(Date.now() + 0 * 24 * 60 * 60 * 1000).toString().slice(4, 15);
-    if (date > new Date(scheduledate)) {
-        var status = "complete";
-    }
-    else {
-        var status = "notcomplete";
-    }
+ 
 
 
     if (req.session.username == drname) {

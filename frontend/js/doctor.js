@@ -42,6 +42,7 @@ async function expand(id) {
 
 }
 
+
 async function showschedule(scheduleid, docid) {
   var schedule = document.getElementById(scheduleid);
 
@@ -124,10 +125,16 @@ async function showsubschedule(id, did, index) {
   const slotdata = await fetch("/getslots/" + did + "/" + index, {
     method: "get",
   });
+
+
   const demo = await slotdata.json();
+
+
   const morning = demo[0];
   const afternoon = demo[1];
   const evening = demo[2];
+
+
   var morningslot = "";
   var eveningslot = "";
   var afternoonslot = "";

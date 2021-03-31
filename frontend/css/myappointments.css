@@ -61,6 +61,10 @@
   text-align: left;
 }
 
+.profile-section .appointment-div .datetimehospital .timehospital h6 {
+  font-size: 1.1rem;
+}
+
 .profile-section .appointment-div .datetimehospital .date {
   background-color: #f0f0f5;
   padding: 0.5rem;

@@ -262,6 +262,7 @@
   }
   .filteranddoctor .container aside form button {
     width: 100%;
+    text-align: left;
   }
   .filteranddoctor .container aside form ul {
     margin-top: 1.5rem;
