@@ -179,7 +179,7 @@ async function showsubschedule(id, did, index) {
   document.getElementById("eve" + did).innerHTML = eveningslot;
 }
 else{
-  document.getElementById("eve" + did).innerHTML = "<h6>No Slots available in morning</h6>";
+  document.getElementById("eve" + did).innerHTML = "<h6>No Slots available in evening</h6>";
 }
   for (var a = 0; a < afternoon.length; a++) {
     afternoonslot +=
@@ -200,7 +200,7 @@ else{
   document.getElementById("after" + did).innerHTML = afternoonslot;
 }
 else{
-  document.getElementById("after" + did).innerHTML = "<h6>No Slots available in morning</h6>";
+  document.getElementById("after" + did).innerHTML = "<h6>No Slots available in afternoon</h6>";
 }
 }
 else{

@@ -94,6 +94,7 @@ aside ul li:hover span, aside ul li:hover i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-transform: capitalize;
   cursor: pointer;
 }
 

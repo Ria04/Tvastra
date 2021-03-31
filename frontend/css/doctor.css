@@ -154,6 +154,10 @@
   padding: 0rem;
 }
 
+.filteranddoctor .container .cards .main-grid .bookAppointmentContainer div .carouselButton {
+  cursor: pointer;
+}
+
 .filteranddoctor .container .cards .main-grid .bookAppointmentContainer .carouselContainer {
   padding: 0rem;
   padding-bottom: 1rem;
@@ -403,6 +407,7 @@
   }
   .filteranddoctor .container .cards .main-grid figure {
     height: 100%;
+    cursor: pointer;
   }
   .filteranddoctor .container .cards .main-grid .bookAppointmentContainer .carouselContainer {
     -ms-grid-columns: 1fr 1fr 1fr;

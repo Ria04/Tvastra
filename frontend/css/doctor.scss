@@ -108,6 +108,10 @@
                 .bookAppointmentContainer{
                     div{
                         padding:0rem;
+                        .carouselButton{
+                            cursor: pointer;
+                        }
+
                     }
                     .carouselContainer{
                         padding:0rem;
@@ -119,6 +123,7 @@
                         width:100%;
                         align-items: center;
                         .allCarouselItems{
+                            
                             .item{
                                 width:100%;
                                 padding:0.3rem 0rem;
@@ -317,6 +322,7 @@
                 }
                 figure{
                     height:100%;
+                    cursor: pointer;
                 }
                 .bookAppointmentContainer{
                     

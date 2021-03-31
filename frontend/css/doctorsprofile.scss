@@ -15,9 +15,13 @@
                 align-items: center;
                 color: $sky-blue;
                 font-family: BoldFont;
+                user-select: none;
+                cursor: pointer;
                 i{
                     color: $sky-blue;
                     margin-right: 1rem;
+                    user-select: none;
+                    
                 }
                 margin:0.5rem 0rem;
                 
@@ -30,6 +34,7 @@
                 background-color: $blue-grey;
                 border-bottom: 1px solid $grey;
                 border-style: dashed;
+                user-select: none;
 
             }
         }
