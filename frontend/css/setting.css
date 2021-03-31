@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "BoldFont";
+  src: url("Nexa-Bold-1.otf");
+}
+
+@font-face {
+  font-family: "LightFont";
+  src: url("Nexa-Light.otf");
+}
+
+#profile {
+  background-color: #f0f0f5;
+}
+
+#profile i, #profile span {
+  color: #167ddd;
+}
+
+#setting {
+  background-color: #167ddd;
+}
+
+#setting i, #setting span {
+  color: white;
+}
+/*# sourceMappingURL=setting.css.map */

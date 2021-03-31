@@ -231,6 +231,11 @@
   border: 1px solid #93bede;
 }
 
+.filteranddoctor .container .cards .main-grid .bookAppointmentContainer .subScheduleContainer div div form h4:hover span {
+  color: #167ddd;
+  border: 1px solid #167ddd;
+}
+
 @media only screen and (min-width: 768px) {
   .overlay-section h1 {
     text-align: left;

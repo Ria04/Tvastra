@@ -157,9 +157,11 @@
   .desktop-nav ul #treatment:hover .dropdown li {
     padding: 1rem 1rem;
     font-size: 1rem;
+    border-left: 0.3rem solid white;
     text-align: left;
   }
   .desktop-nav ul #treatment:hover .dropdown li:hover {
+    padding: 1rem 1.7rem;
     background-color: #f0f0f5;
     color: #167ddd;
     border-left: 0.3rem solid #167ddd;
@@ -213,6 +215,7 @@
   .desktop-nav #button-div #username:hover .toaster div h5 {
     width: 100%;
     color: #167ddd;
+    font-size: 1.1rem;
     text-align: center;
   }
   .desktop-nav #button-div #username:hover .toaster ul {
@@ -228,8 +231,10 @@
     padding: 1rem 1rem;
     font-size: 1rem;
     text-align: left;
+    border-left: 0.3rem solid white;
   }
   .desktop-nav #button-div #username:hover .toaster ul li:hover {
+    padding: 1rem 1.7rem;
     background-color: #f0f0f5;
     color: #167ddd;
     border-left: 0.3rem solid #167ddd;
@@ -512,7 +517,7 @@ select {
   padding: 0.7rem;
   background: url(https://cdn1.iconfinder.com/data/icons/flat-and-simple-part-1/128/arrow_down-512.png) no-repeat, #d3d3d3;
   background-size: 20%;
-  background-position-x: 100%;
+  background-position-x: 95%;
   background-position-y: 50%;
   font-family: nexa-light;
   font-size: 0.9rem;
@@ -632,7 +637,6 @@ button {
 
 .linkButton:hover {
   color: #167ddd;
-  border: 1px solid #167ddd;
 }
 
 span {

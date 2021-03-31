@@ -12,6 +12,22 @@
   padding: 1rem;
 }
 
+#profile, #schedule {
+  background-color: #f0f0f5;
+}
+
+#profile i, #profile span, #schedule i, #schedule span {
+  color: #167ddd;
+}
+
+#medicalreports {
+  background-color: #167ddd;
+}
+
+#medicalreports i, #medicalreports span {
+  color: white;
+}
+
 .recorddata {
   border: 1px solid #93bede;
   width: auto;

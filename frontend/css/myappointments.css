@@ -8,6 +8,22 @@
   src: url("Nexa-Light.otf");
 }
 
+#profile {
+  background-color: #f0f0f5;
+}
+
+#profile i, #profile span {
+  color: #167ddd;
+}
+
+#appointments {
+  background-color: #167ddd;
+}
+
+#appointments i, #appointments span {
+  color: white;
+}
+
 .profile-section .main-section .form-section {
   padding: 1rem;
 }

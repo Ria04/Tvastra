@@ -1,0 +1,15 @@
+@import "colors.scss";
+
+
+#profile{
+    background-color: $blue-grey;
+    i,span{
+        color:$sky-blue;
+    }
+}
+#setting{
+    background-color: $sky-blue;
+    i,span{
+        color:$white;
+    }
+}

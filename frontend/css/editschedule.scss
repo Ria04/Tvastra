@@ -4,6 +4,18 @@
     background-color: $blue-grey;
 }
 
+#profile{
+    background-color: $blue-grey;
+    i,span{
+        color:$sky-blue;
+    }
+}
+#schedule{
+    background-color: $sky-blue;
+    i,span{
+        color:$white;
+    }
+}
 body{
     position: relative;
 }

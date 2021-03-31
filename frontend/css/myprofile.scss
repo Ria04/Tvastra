@@ -3,6 +3,12 @@
     background-color: $blue-grey;
     border-top: 1px solid $grey;
 }
+#profile{
+    background-color: $sky-blue;
+    i,span{
+        color:$white;
+    }
+}
 .main-section{
     position: relative;
     padding:1.5rem 0rem;

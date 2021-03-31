@@ -100,7 +100,7 @@ select{
     padding: 0.7rem;
     background: url(https://cdn1.iconfinder.com/data/icons/flat-and-simple-part-1/128/arrow_down-512.png) no-repeat, #d3d3d3;
     background-size: 20%;
-    background-position-x: 100%;
+    background-position-x: 95%;
     background-position-y: 50%;
     font-family: nexa-light;
     font-size: 0.9rem;
@@ -189,7 +189,6 @@ button{
 }
 .linkButton:hover{
     color:$sky-blue;
-    border:1px solid $sky-blue;
 }
 
 

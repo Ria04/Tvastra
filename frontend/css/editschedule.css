@@ -12,6 +12,22 @@
   background-color: #f0f0f5;
 }
 
+#profile {
+  background-color: #f0f0f5;
+}
+
+#profile i, #profile span {
+  color: #167ddd;
+}
+
+#schedule {
+  background-color: #167ddd;
+}
+
+#schedule i, #schedule span {
+  color: white;
+}
+
 body {
   position: relative;
 }

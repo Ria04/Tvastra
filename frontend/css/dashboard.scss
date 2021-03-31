@@ -1,5 +1,12 @@
 @import "colors.scss";
 
+.active{
+    background-color: $sky-blue;
+    i,span{
+        color: $white;
+    }
+}
+
 aside{
     padding:1rem 0rem;
     background-color: $white;

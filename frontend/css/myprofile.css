@@ -13,6 +13,14 @@
   border-top: 1px solid #a19f9f;
 }
 
+#profile {
+  background-color: #167ddd;
+}
+
+#profile i, #profile span {
+  color: white;
+}
+
 .main-section {
   position: relative;
   padding: 1.5rem 0rem;

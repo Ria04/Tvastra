@@ -8,6 +8,14 @@
   src: url("Nexa-Light.otf");
 }
 
+.active {
+  background-color: #167ddd;
+}
+
+.active i, .active span {
+  color: white;
+}
+
 aside {
   padding: 1rem 0rem;
   background-color: white;

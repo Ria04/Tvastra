@@ -100,10 +100,12 @@ display: none;
                 li{
                     padding:1rem 1rem;
                     font-size: 1rem;
+                    border-left: 0.3rem solid $white;
                     text-align: left;
                     
                 }
                 li:hover{
+                    padding: 1rem 1.7rem;
                     background-color: $blue-grey;
                     color:$sky-blue;
                     border-left: 0.3rem solid $sky-blue;
@@ -147,6 +149,7 @@ display: none;
                     h5{
                         width:100%;
                         color:$sky-blue;
+                        font-size: 1.1rem;
                         text-align: center;
                     }
                 }
@@ -157,13 +160,16 @@ display: none;
                         padding:1rem 1rem;
                         font-size: 1rem;
                         text-align: left;
-                        
+                        border-left: 0.3rem solid $white;
+
                     }
                     li:hover{
+                        padding:1rem 1.7rem;
+
                         background-color: $blue-grey;
                         color:$sky-blue;
                         border-left: 0.3rem solid $sky-blue;
-                        margin:0rem;
+                        margin: 0rem;
                     }
                 }
             }

@@ -1,15 +1,16 @@
 
 <aside id="aside" class="hide">
-    <ul>
+    <ul id="dashboard">
         <span id="head"><i class="fa fa-angle-double-right"></i> <h6>Dashboard</h6></span>
 
-        <a href="/myprofile"><li><i class="fas fa-file-alt"></i><span>Profile</span></li></a>
-        <a href="/myappointments"><li><i class="fas fa-file-alt"></i><span>Appointments</span></li></a>
-        <a href="/medicalrecords"><li><i class="fas fa-file-alt"></i><span>Medical REports</span></li></a>
+        <a href="/myprofile"><li id="profile"><i class="fas fa-file-alt"></i><span>Profile</span></li></a>
+        <a href="/myappointments"><li id="appointments"><i class="fas fa-file-alt"></i><span>Appointments</span></li></a>
+        <a href="/medicalrecords"><li id="medicalreports"><i class="fas fa-file-alt"></i><span>Medical REports</span></li></a>
         <%if(isdoctor==true){%>
-            <a href="/editschedule"><li><i class="fas fa-file-alt"></i><span>Add Schedule</span></li></a>
+            <a href="/editschedule"><li id="schedule"><i class="fas fa-file-alt"></i><span>Add Schedule</span></li></a>
         <%}%>
-        <a href="/settings"><li><i class="fas fa-file-alt"></i><span>Setting</span></li></a>
+        <a href="/settings"><li id="setting"><i class="fas fa-file-alt"></i><span>Setting</span></li></a>
         <span id="last-span" onclick="showaside()"><i class="fa fa-angle-double-left"></i> <h6>Collapse dashboard</h6></span>
     </ul>
 </aside>
+
