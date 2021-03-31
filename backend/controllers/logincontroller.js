@@ -493,10 +493,12 @@ function bookslotreschedule(req, res) {
     schedules.findOne({ _id: scheduleid })
         .then((user) => {
             var slot = user.schedule.id(slotid);
+            
             slot.isbooked = false;
             slot.bookeddate = null;
             user.save();
-            console.log(user);
+            
+            
         }).catch();
 
     appointmentdata.deleteOne({ _id: appid }).then((u) => {
@@ -598,7 +600,7 @@ function bookappointment(req, res) {
     const scheduleid = req.session.current_schedule_id;
     const slotid = req.session.current_slot_id;
     const date = new Date(Date.now() + 0 * 24 * 60 * 60 * 1000).toString().slice(4, 15);
-    if (date > scheduledate) {
+    if (date > new Date(scheduledate)) {
         var status = "complete";
     }
     else {

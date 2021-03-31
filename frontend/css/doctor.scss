@@ -40,6 +40,7 @@
         aside{
             display: none;
         }
+        
         .cards{
             padding:0rem;
             .main-grid{
@@ -280,6 +281,10 @@
                    }
                }
            }
+           .reschedule-card{
+            margin:0rem auto;
+            margin-top: 2rem;
+            }
            .cards{
             padding:0rem;
             width:73%;
@@ -350,6 +355,9 @@
                     }
                 }
             }
+            .reschedule-card{
+                margin-top: 3rem;
+                }
             .cards{
                 width:70%;
                padding:0rem;

@@ -353,6 +353,10 @@
   .filteranddoctor .container aside form .category span {
     color: #93bede;
   }
+  .filteranddoctor .container .reschedule-card {
+    margin: 0rem auto;
+    margin-top: 2rem;
+  }
   .filteranddoctor .container .cards {
     padding: 0rem;
     width: 73%;
@@ -421,6 +425,9 @@
   .filteranddoctor .container aside form .category .filter-data div label {
     font-size: 1.2rem;
     font-weight: 700;
+  }
+  .filteranddoctor .container .reschedule-card {
+    margin-top: 3rem;
   }
   .filteranddoctor .container .cards {
     width: 70%;

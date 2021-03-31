@@ -339,11 +339,11 @@ async function myappointments(req, res) {
         for (var i = 0; i < allappdata.length; i++) {
             const date = new Date(Date.now() + 0 * 24 * 60 * 60 * 1000).toString().slice(4, 15);
 
-            if (allappdata[i].date < date) {
+            if (new Date(allappdata[i].date) < date) {
                 const status = "complete";
                 appointmentdata.findByIdAndUpdate({ _id: allappdata[i]._id }, { status: status }).then((c) => { console.log(c); }).catch();
             }
-            else if (allappdata[i].date > date) {
+            else if (new Date(allappdata[i].date > date)) {
                 const status = "notcomplete";
                 appointmentdata.findByIdAndUpdate({ _id: allappdata[i]._id }, { status: status }).then((c) => { console.log(c); }).catch();
 

@@ -234,6 +234,9 @@ body {
   .schedule-div .hospital-time {
     width: 70%;
   }
+  .schedule-div .schedule-details {
+    padding: 1rem;
+  }
   .floating-form .form {
     border: 0.4rem solid #167ddd;
   }

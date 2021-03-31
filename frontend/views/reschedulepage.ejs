@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Page</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="doctor.css">
+</head>
+
+<body>
+    <%-include('header.ejs') %>
+
+        
+
+      
+        <section class="filteranddoctor">
+            <div class="container">
+                <section class="cards reschedule-card">
+
+                    <div id="main-grid" class="main-grid">
+                        <div class="demodiv">
+                            <h3><%= alldata.name%></h3>
+                            <ul class="sub-grid">
+                                <li><i class="fa fa-certificate"></i><span><%= alldata.treatments%></span></li>
+                                <li><i class="fas fa-award"></i><span><%= alldata.awards%></span></li>
+                                <li><i class="fa fa-clock"></i><span><%= alldata.exp%></span></li>
+                                <li><i class="fa fa-hospital"></i><span><%= alldata.yourhospital%></span></li>
+                                <li><i class="fas fa-map-marker-alt"></i><span><%= alldata.city%> <%= alldata.state%> <%=
+                                    alldata.country%></span></li>
+                                <li><i class="fa fa-rupee"></i><span><%= alldata.fees%></span></li>
+                            </ul>
+                            <button onclick="showschedule('carouselContainer<%= alldata._id%>','<%= alldata._id%>')" class="filledButton">Book an appointment</button>
+
+                        </div>
+                        <figure onclick="window.location.href='/doctorsprofile/<%= alldata._id%>'">
+                            <img onclick="viewprofile('<%= alldata._id%>')" src=<%=alldata.img%>>                        
+                        </figure>
+                        <div id="bookdiv" class="bookAppointmentContainer hidebookdiv">
+                            <div style="display: none;" class="carouselContainer allScheduleContainer"
+                                id="carouselContainer<%= alldata._id%>">
+                                <div class="carouselButton">
+                                    <div class="carouselLeftButtonk"
+                                        onclick="moveCarousel('right','carouselContainer__allCarouselContainer<%= alldata._id%>')">
+                                        <i class="fas fa-less-than"></i>
+                                    </div>
+                                </div>
+                                <div class="allCarouselItems allCarouselItems"
+                                    id="carouselContainer__allCarouselContainer<%= alldata._id%>">
+                                    <div onclick="showsubschedule('subScheduleContainer<%= alldata._id%>','<%= alldata._id%>',0,'<%= appdata.scheduleid%>','<%= appdata._id%>')" id="item1<%= alldata._id%>" class="item">
+                            
+                            
+                                    </div>
+                                    <div onclick="showsubschedule('subScheduleContainer<%= alldata._id%>','<%= alldata._id%>',1,'<%= appdata.scheduleid%>','<%= appdata._id%>')" id="item2<%= alldata._id%>" class="item">
+                                        
+            
+                                    </div>
+                                    <div onclick="showsubschedule('subScheduleContainer<%= alldata._id%>','<%= alldata._id%>',2,'<%= appdata.scheduleid%>','<%= appdata._id%>')" id="item3<%= alldata._id%>" class="item">
+                                        
+            
+                                    </div>
+                                    <div onclick="showsubschedule('subScheduleContainer<%= alldata._id%>','<%= alldata._id%>',3,'<%= appdata.scheduleid%>','<%= appdata._id%>')" id="item4<%= alldata._id%>" style="display: none;" class="item">
+                                        
+                                    </div>
+                                    <div onclick="showsubschedule('subScheduleContainer<%= alldata._id%>','<%= alldata._id%>',4,'<%= appdata.scheduleid%>','<%= appdata._id%>')" id="item5<%= alldata._id%>" style="display: none;" class="item">
+                                       
+                                    </div>
+                                    <div onclick="showsubschedule('subScheduleContainer<%= alldata._id%>','<%= alldata._id%>',5,'<%= appdata.scheduleid%>','<%= appdata._id%>')" id="item6<%= alldata._id%>" style="display: none;" class="item">
+                                       
+                                    </div>
+                                    <div onclick="showsubschedule('subScheduleContainer<%= alldata._id%>','<%= alldata._id%>',6,'<%= appdata.scheduleid%>','<%= appdata._id%>')" id="item7<%= alldata._id%>" style="display: none;" class="item">
+                                       
+                                    </div>
+                                </div>
+                                <div class="carouselButton" id="end-button">
+                                    <div class="carouselLeftButton"
+                                        onclick="moveCarousel('left','carouselContainer__allCarouselContainer<%= alldata._id%>')">
+                                        <i class="fas fa-greater-than"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display: none;" class="subScheduleContainer"
+                                id="subScheduleContainer<%= alldata._id%>">
+                                <div>
+                                    <div class="head">
+                                        <h4>morning</h4>
+                                    </div>
+                                    <div id="mor<%= alldata._id%>"
+                                        style="margin: 0rem;padding:0rem;border-bottom: unset;">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="head">
+                                        <h4>Afternoon</h4>
+                                    </div>
+                                    <div id="after<%= alldata._id%>"
+                                        style="margin: 0rem;padding:0rem;border-bottom: unset;">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="head">
+                                        <h4>Evening</h4>
+                                    </div>
+                                    <div id="eve<%= alldata._id%>"
+                                        style="margin: 0rem;padding:0rem;border-bottom: unset;">
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </section>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+        <%-include('footer.ejs') %>
+</body>
+<script src="frontend/js/reschedule.js"></script>
+</html>
