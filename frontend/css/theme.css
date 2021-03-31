@@ -489,6 +489,7 @@ input, datalist {
   -ms-flex-wrap: unset;
       flex-wrap: unset;
   overflow-x: scroll;
+  scrollbar-width: none;
   --tag-bg: rgb(184, 213, 240);
 }
 
@@ -496,12 +497,12 @@ input, datalist {
   color: #167ddd;
 }
 
-.tagify__tag__removeBtn {
-  color: #167ddd;
-}
-
 .tagify::-webkit-scrollbar {
   display: none;
+}
+
+.tagify__tag__removeBtn {
+  color: #167ddd;
 }
 
 select {

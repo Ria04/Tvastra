@@ -72,11 +72,15 @@ input,datalist{
     padding: 0.2rem 0.5rem;
     flex-wrap: unset;
     overflow-x: scroll;
+    scrollbar-width: none;
 
     --tag-bg: rgb(184, 213, 240);
     span{
         color:$sky-blue
     }
+}
+.tagify::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -85,9 +89,7 @@ input,datalist{
 }
 
 
-.tagify::-webkit-scrollbar {
-    display: none;
-}
+
 
 select{
     align-self: center;
