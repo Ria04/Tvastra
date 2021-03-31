@@ -245,3 +245,6 @@ function moveCarousel(dirc, carouselId) {
 
 
 
+var page = document.getElementById("f").innerHTML;
+
+document.getElementById("index" +page.trim()).classList.add("active");

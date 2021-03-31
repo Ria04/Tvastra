@@ -269,6 +269,24 @@ i{
     }
 
 }
+.pagenation{
+    ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        li{
+            padding:0.2rem 0.5rem;
+            color: $sky-blue;
+            margin-right: 0.5rem;
+            font-family: BoldFont;
+            border:1px solid $sky-blue;
+        }
+        .active{
+            background-color: $sky-blue;
+            color:$white;
+        }
+    }
+}
 
 @media only screen and (min-width:$breakpoint-tablet){
     section{

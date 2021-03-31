@@ -735,6 +735,31 @@ i {
   color: white;
 }
 
+.pagenation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.pagenation ul li {
+  padding: 0.2rem 0.5rem;
+  color: #167ddd;
+  margin-right: 0.5rem;
+  font-family: BoldFont;
+  border: 1px solid #167ddd;
+}
+
+.pagenation ul .active {
+  background-color: #167ddd;
+  color: white;
+}
+
 @media only screen and (min-width: 768px) {
   section {
     padding: 2rem;

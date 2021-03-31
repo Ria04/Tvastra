@@ -160,7 +160,7 @@
                 <section class="cards">
 
                     <%if(alldata.length<=0){%>
-                        <h5>Nothing to shoe</h5>
+                        <h5>Nothing to show</h5>
                         <%}else{for(var q=0;q<alldata.length;q++){%>
                     <div id="main-grid" class="main-grid">
                         <div class="demodiv">
@@ -262,6 +262,23 @@
                         </div>
                     </div>
                     <%}}%>
+                    <h1 id="f" style="display: none;">
+                        <%= page%>
+                    </h1>
+
+                  
+
+                        <div <%if(filterp.length<3){%>style="display:none;"<%}%> class="pagenation">
+                                <ul id="carousel">
+                                    <% for(var i=0;i<=filterp.length;i+=4){ %>
+                                        <a class="pageIndexLink" href="/drpagination/<%=parseInt(i/4)+1%>">
+                                            <li class="p" id="index<%=parseInt(i/4)+1%>">
+                                                <%=parseInt(i /4)+1%>
+                                            </li>
+                                        </a>
+                                        <%}%>
+                                </ul>
+                        </div>
 
 
                 </section>
