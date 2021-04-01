@@ -69,8 +69,7 @@ async function doctor(req, res) {
                         filterp: a,
                         filter: filter,
                         msg: req.flash("fail"),
-                        page:page,
-                        isadmin:req.session.isadmin
+                        page:page
 
 
                     });
@@ -83,9 +82,7 @@ async function doctor(req, res) {
                     username: req.session.username,
                     phonenumber: req.session.number,
                     profilepic: req.session.myprofilepic,
-                    loggedin: true,
-                    isadmin:req.session.isadmin
-
+                    loggedin: true
                 });
             }
         }).catch();
@@ -109,16 +106,12 @@ async function home(req, res) {
             phonenumber: req.session.number,
             profilepic: req.session.myprofilepic,
             loggedin: true,
-            isadmin:req.session.isadmin
-
 
         });
     }
     else {
         res.render("index", {
-            loggedin: false,
-            isadmin:req.session.isadmin
-
+            loggedin: false
         });
     }
 }
@@ -150,9 +143,7 @@ async function hospital(req, res) {
             phonenumber: req.session.number,
             profilepic: req.session.myprofilepic,
             hospitaldata: a,
-            loggedin: true,
-            isadmin:req.session.isadmin
-
+            loggedin: true
         });
     }
     else {
@@ -174,7 +165,6 @@ function feedback(req, res) {
             username: req.session.username,
             phonenumber: req.session.number,
             profilepic: req.session.myprofilepic,
-            isadmin:req.session.isadmin,
 
             loggedin: true
         });
@@ -191,7 +181,6 @@ function faq(req, res) {
             username: req.session.username,
             phonenumber: req.session.number,
             profilepic: req.session.myprofilepic,
-            isadmin:req.session.isadmin,
 
             loggedin: true
         });
@@ -210,9 +199,7 @@ function doctorsprofile(req, res) {
             phonenumber: req.session.number,
             profilepic: req.session.myprofilepic,
             doctor: req.session.doctorinfo,
-            loggedin: true,
-            isadmin:req.session.isadmin
-
+            loggedin: true
         });
     }
     else {
@@ -247,7 +234,6 @@ function dentistry(req, res) {
             username: req.session.username,
             phonenumber: req.session.number,
             profilepic: req.session.myprofilepic,
-            isadmin:req.session.isadmin,
 
             loggedin: true
         });
@@ -264,7 +250,6 @@ function contactus(req, res) {
             username: req.session.username,
             phonenumber: req.session.number,
             profilepic: req.session.myprofilepic,
-            isadmin:req.session.isadmin,
 
             loggedin: true
         });
@@ -281,8 +266,6 @@ function appointment(req, res) {
             username: req.session.username,
             phonenumber: req.session.number,
             profilepic: req.session.myprofilepic,
-            isadmin:req.session.isadmin,
-
 
             loggedin: true
         });
@@ -299,7 +282,6 @@ function aboutus(req, res) {
             username: req.session.username,
             phonenumber: req.session.number,
             profilepic: req.session.myprofilepic,
-            isadmin:req.session.isadmin,
 
             loggedin: true
         });
@@ -318,7 +300,6 @@ function abouthospital(req, res) {
             username: req.session.username,
             phonenumber: req.session.number,
             profilepic: req.session.myprofilepic,
-            isadmin:req.session.isadmin,
 
             loggedin: true
         });
@@ -335,7 +316,6 @@ function tvastraplus(req, res) {
             username: req.session.username,
             phonenumber: req.session.number,
             profilepic: req.session.myprofilepic,
-            isadmin:req.session.isadmin,
 
             loggedin: true
         });
@@ -377,9 +357,7 @@ async function myappointments(req, res) {
             profilepic: req.session.myprofilepic,
             isdoctor: req.session.isdoctor,
             allappdata: allappdata,
-            loggedin: true,
-            isadmin:req.session.isadmin
-
+            loggedin: true
         });
 
 
@@ -409,7 +387,6 @@ function medicalrecords(req, res) {
                     phonenumber: req.session.number,
                     profilepic: req.session.myprofilepic,
                     isdoctor: req.session.isdoctor,
-                    isadmin:req.session.isadmin,
 
                     data: data
                 });
@@ -420,7 +397,6 @@ function medicalrecords(req, res) {
                     phonenumber: req.session.number,
                     profilepic: req.session.myprofilepic,
                     isdoctor: req.session.isdoctor,
-                    isadmin:req.session.isadmin,
 
                 })
             });
@@ -439,7 +415,6 @@ function settings(req, res) {
             phonenumber: req.session.number,
             profilepic: req.session.myprofilepic,
             isdoctor: req.session.isdoctor,
-            isadmin:req.session.isadmin,
 
             loggedin: true
         });
@@ -473,8 +448,7 @@ function myprofile(req, res) {
             specialization: req.session.specialization,
             fees: req.session.fees,
             description: req.session.description,
-            treatments: req.session.treatments,
-            isadmin:req.session.isadmin
+            treatments: req.session.treatments
 
 
         });
@@ -492,18 +466,13 @@ function isdoctor(req, res) {
             username: req.session.username,
             phonenumber: req.session.number,
             profilepic: req.session.myprofilepic,
-            isadmin:req.session.isadmin,
-
             msg: req.flash("fail"),
-            loggedin: true,
-
+            loggedin: true
         });
     }
     else {
         res.render("isdoctor", {
-            loggedin: false,
-            isadmin:req.session.isadmin
-
+            loggedin: false
         });
     }
 }
@@ -544,8 +513,7 @@ async function editschedule(req, res) {
                     profilepic: req.session.myprofilepic,
                     isdoctor: req.session.isdoctor,
                     data: data,
-                    hospital:req.session.yourhospital,
-                    isadmin:req.session.isadmin
+                    hospital:req.session.yourhospital
 
                 });
             }).catch(() => {
@@ -555,7 +523,6 @@ async function editschedule(req, res) {
                     phonenumber: req.session.number,
                     profilepic: req.session.myprofilepic,
                     isdoctor: req.session.isdoctor,
-                    isadmin:req.session.isadmin
 
 
                 })
@@ -589,9 +556,7 @@ function reschedule(req, res) {
                 username: req.session.username,
                 phonenumber: req.session.number,
                 profilepic: req.session.myprofilepic,
-                loggedin: true,
-                isadmin:req.session.isadmin
-
+                loggedin: true
             });
         }).catch();
 
@@ -630,8 +595,7 @@ async function admindashboard(req, res) {
                 doctorcount: doctorcount,
                 appcount: appointmentcount,
                 usercount:usercount,
-                page:page,
-                isadmin:req.session.isadmin
+                page:page
 
             });
         }
@@ -648,7 +612,6 @@ async function admindashboard(req, res) {
                 country: req.session.country,
                 profilepic: req.session.myprofilepic,
                 isdoctor: req.session.isdoctor,
-                isadmin:req.session.isadmin
 
             });
         }
@@ -664,8 +627,7 @@ function adminusers(req, res) {
             username: req.session.username,
             phonenumber: req.session.number,
             profilepic: req.session.myprofilepic,
-            userdata: userdata,
-            isadmin:req.session.isadmin
+            userdata: userdata
         });
     }).catch();
 }
@@ -702,8 +664,7 @@ function admineditprofile(req, res) {
         username: req.session.username,
         phonenumber: req.session.number,
         profilepic: req.session.myprofilepic,
-        userdata: req.session.adminuser,
-        isadmin:req.session.isadmin
+        userdata: req.session.adminuser
     });
 
 }
@@ -727,8 +688,7 @@ function adminuserappointments(req, res) {
         username: req.session.username,
         phonenumber: req.session.number,
         profilepic: req.session.myprofilepic,
-        allappdata: req.session.adminuserappointments,
-        isadmin:req.session.isadmin
+        allappdata: req.session.adminuserappointments
     });
 
 }
@@ -752,8 +712,7 @@ function adminusermedicalrecords(req, res) {
         username: req.session.username,
         phonenumber: req.session.number,
         profilepic: req.session.myprofilepic,
-        data: req.session.adminusermedicalrecords,
-        isadmin:req.session.isadmin
+        data: req.session.adminusermedicalrecords
     });
 
 }
@@ -776,8 +735,7 @@ function admindoctors(req, res) {
             username: req.session.username,
             phonenumber: req.session.number,
             profilepic: req.session.myprofilepic,
-            userdata: userdata,
-            isadmin:req.session.isadmin
+            userdata: userdata
         });
     }).catch();
 }
@@ -801,8 +759,7 @@ function adminallappointments(req, res) {
         username: req.session.username,
         phonenumber: req.session.number,
         profilepic: req.session.myprofilepic,
-        userdata: req.session.adminallappointments,
-        isadmin:req.session.isadmin
+        userdata: req.session.adminallappointments
     })
 }
 
@@ -814,8 +771,7 @@ function adminallhospitals(req, res) {
             username: req.session.username,
             phonenumber: req.session.number,
             profilepic: req.session.myprofilepic,
-            userdata: data,
-            isadmin:req.session.isadmin
+            userdata: data
         })
     }).catch();
 
@@ -832,8 +788,7 @@ function adminformpage(req, res) {
         username: req.session.username,
         phonenumber: req.session.number,
         profilepic: req.session.myprofilepic,
-        hospital: req.session.adminhospitalname,
-        isadmin:req.session.isadmin
+        hospital: req.session.adminhospitalname
     })
 
 }
@@ -855,9 +810,7 @@ function viewrecord(req, res) {
         phonenumber: req.session.number,
         profilepic: req.session.myprofilepic,
         isdoctor: req.session.isdoctor,
-        data: req.session.rec,
-        isadmin:req.session.isadmin
-
+        data: req.session.rec
     });
 }
 
