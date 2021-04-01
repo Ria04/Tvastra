@@ -111,6 +111,7 @@ function login(req, res) {
                 req.session.userid = user.id;
                 req.session.myprofilepic = user.img;
                 req.session.isdoctor = user.isdoctor;
+                req.session.isadmin=false;
                 console.log(user);
                 console.log(req.session.number);
                 if (user.isdoctor == true) {
