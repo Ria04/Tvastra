@@ -492,9 +492,10 @@ function isdoctor(req, res) {
             username: req.session.username,
             phonenumber: req.session.number,
             profilepic: req.session.myprofilepic,
+            isadmin:req.session.isadmin,
+
             msg: req.flash("fail"),
             loggedin: true,
-            isadmin:req.session.isadmin
 
         });
     }
