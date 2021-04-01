@@ -59,7 +59,6 @@
                 <button id="username" class="linkButton">
                     <%= username%>
                         <div class="toaster">
-                            <% if(!isadmin){ %>
                             <div>
                                 <a href="/myprofile">
                                     <figure>
@@ -77,24 +76,7 @@
                                 <li>My payments</li>
                                 <a href="/logout"><li>Logout</li></a>
                             </ul>
-                            <%}else{%>
-                                <div>
-                                    <a href="/admindashboard">
-                                        <figure>
-                                            <img id="headerpic" src=<%=profilepic%>>
-                                        </figure>
-                                    </a>
-                                    <h5>
-                                        <%= username%>
-                                    </h5>
-                                </div>
-                                <ul>
-                                    <a href="/adminusers"><li>Users</li></a>
-                                    <a href="/admindoctors"><li>Doctors</li></a>
-                                    <a href="/adminhospitals"><li>Hospitals</li></a>
-                                    <a href="/logout"><li>Logout</li></a>
-                                </ul>
-                            <%}%>
+                           
                         </div>
                         <i class="fa fa-angle-down"></i>
                 </button>
