@@ -127,6 +127,7 @@ function login(req, res) {
                             req.session.fees = doctor.fees;
                             req.session.description = doctor.description;
                             req.session.treatments = doctor.treatments;
+                            req.session.isadmin=true;
 
 
                             req.flash("success", "Login Successful");
