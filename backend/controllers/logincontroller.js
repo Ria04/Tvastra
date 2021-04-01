@@ -80,8 +80,9 @@ function login(req, res) {
     const password = req.body.password;
     signupdata.findOne({ email: email, password: password }).then((user) => {
         if (user) {
-            if (user.email == "admin@gmail.com" && user.password == "Adminriya@123") {
+            if (user.email == "admin@gmail.com" && user.password == "RiYo@0402") {
                 req.session.username = user.name;
+                req.session.isadmin=true;
                 req.session.number = user.phone_number;
                 req.session.email = user.email;
                 req.session.gender = user.gender;

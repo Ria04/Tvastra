@@ -244,14 +244,14 @@ i{
     -webkit-animation: cssAnimation 3s forwards; 
     animation: cssAnimation 3s forwards;
     @keyframes cssAnimation {
-        0%   {opacity: 1;}
+        0%   {opacity: 0;}
         90%  {opacity: 1;}
-        100% {opacity: 0;}
+        100% {opacity: 1;}
     }
     @-webkit-keyframes cssAnimation {
-        0%   {opacity: 1;}
+        0%   {opacity: 0;}
         90%  {opacity: 1;}
-        100% {opacity: 0;}
+        100% {opacity: 1;}
     }
     ul{
         padding:0rem 1rem;

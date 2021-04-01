@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACmBA,UAAU;EACN,WAAW,EAAE,UAAU;EACvB,GAAG,EAAE,sBAAsB;;;AAE/B,UAAU;EACN,WAAW,EAAE,WAAW;EACxB,GAAG,EAAE,qBAAqB",
+    "sources": [
+        "admindashboard.scss",
+        "colors.scss"
+    ],
+    "names": [],
+    "file": "admindashboard.css"
+}

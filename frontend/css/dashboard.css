@@ -73,10 +73,36 @@ aside ul li span {
 
 aside ul li:hover {
   background-color: #167ddd;
+  -webkit-animation: cssAnimation 2s forwards;
+  animation: cssAnimation 2s forwards;
 }
 
 aside ul li:hover span, aside ul li:hover i {
   color: white;
+}
+
+@keyframes cssAnimation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes cssAnimation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .profile-section .container {

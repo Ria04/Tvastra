@@ -143,6 +143,30 @@
     top: 1.3rem;
     right: 1rem;
     z-index: 10;
+    -webkit-animation: cssAnimation 1s forwards;
+    animation: cssAnimation 1s forwards;
+  }
+  @keyframes cssAnimation {
+    0% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes cssAnimation {
+    0% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   .desktop-nav ul #treatment:hover .dropdown li {
     padding: 1rem 1rem;
@@ -156,6 +180,30 @@
     color: #167ddd;
     border-left: 0.3rem solid #167ddd;
     margin: 0rem;
+    -webkit-animation: cssAnimation 1s forwards;
+    animation: cssAnimation 1s forwards;
+  }
+  @keyframes cssAnimation {
+    0% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes cssAnimation {
+    0% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   .desktop-nav #button-div .toaster {
     display: none;
@@ -181,6 +229,30 @@
             box-shadow: 0 0 20px -2px #a19f9f;
     z-index: 5;
     right: 1rem;
+    -webkit-animation: cssAnimation 1s forwards;
+    animation: cssAnimation 1s forwards;
+  }
+  @keyframes cssAnimation {
+    0% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes cssAnimation {
+    0% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   .desktop-nav #button-div #username:hover .toaster div {
     display: -webkit-box;
@@ -201,6 +273,9 @@
     width: 3rem;
     height: 3rem;
     border: 1px solid #a19f9f;
+  }
+  .desktop-nav #button-div #username:hover .toaster div figure:hover {
+    border: 1px solid #167ddd;
   }
   .desktop-nav #button-div #username:hover .toaster div h5 {
     width: 100%;
@@ -229,6 +304,30 @@
     color: #167ddd;
     border-left: 0.3rem solid #167ddd;
     margin: 0rem;
+    -webkit-animation: cssAnimation 1s forwards;
+    animation: cssAnimation 1s forwards;
+  }
+  @keyframes cssAnimation {
+    0% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes cssAnimation {
+    0% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 /*# sourceMappingURL=header.css.map */

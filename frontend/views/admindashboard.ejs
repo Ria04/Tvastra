@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Doctor Page</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+            integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+            integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.min.js"></script>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="theme.css">
+        <link rel="stylesheet" href="dashboard.css">
+        <link rel="stylesheet" href="myprofile.css">
+        <link rel="stylesheet" href="admindashboard.css">
+
+    </head>
+
+<body>
+    <%-include('header.ejs') %>
+    <section class="profile-section">
+        <div class="container">
+            <span id="dash-head" onclick="showaside()"><i class="fa fa-angle-double-right"></i> <h4>Click to view dashboard</h4></span>
+            <section class="main-section">
+                <%-include('dashboard.ejs') %>
+                <div class="form-section">
+                    <div class="alllabels">
+                        <div>
+                        <i class="fas fa-briefcase-medical"></i>
+                            <div class="count">
+                                <h4>User</h4>
+                                <h4><%= usercount.length%></h4>
+                            </div>
+                        </div>
+                        <div>
+                        <i class="fas fa-syringe"></i>
+                            <div class="count">
+                                <h4>Doctors</h4>
+                                <h4><%= doctorcount%></h4>
+                            </div>
+                        </div>
+                        <div>
+                        <i class="fas fa-user-md"></i>
+                            <div class="count">
+                                <h4>Hospitals</h4>
+                                <h4>33</h4>
+                            </div>
+                        </div>
+                        <div>
+                        <i class="fas fa-briefcase-medical"></i>
+                            <div class="count">
+                                <h4>Appointments</h4>
+                                <h4><%= appcount%></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <figure>
+                        <img src="./canvas.png">
+                    </figure>
+                    <figure>
+                        <img src="./canvasPieChart.png">
+                    </figure>
+
+                    <table  class="tabel">
+                        <thead>
+                            <tr>
+                                <td>
+                                    <h5>Name</h5>
+                                </td>
+                                <td>
+                                    <h5>Phone Number</h5>
+                                </td>
+                                <td>
+                                    <h5>Email</h5>
+                                </td>
+                                <td>
+                                    <h5>Actions</h5>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%for(var i=0;i<userdata.length;i++){%>
+                            <tr>
+                                <td>
+                                    <span><%= userdata[i].name%></span>
+                                </td>
+                                <td>
+                                    <span><%= userdata[i].phone_number%></span>
+                                </td>
+                                <td>
+                                    <span><%= userdata[i].email%> </span>
+                                </td>
+                                <td>
+                                    <span>Appointments Details </span>
+                                </td>
+                            </tr>
+                            <%}%>
+                        </tbody>
+                    </table>
+                    
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <%-include('footer.ejs') %>
+</body>
+<script src="frontend/js/dashboard.js"></script>
+
+</html>

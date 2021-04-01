@@ -54,6 +54,18 @@ aside{
             span,i{
             color: $white;
             }
+            -webkit-animation: cssAnimation 2s forwards; 
+                animation: cssAnimation 2s forwards;
+                @keyframes cssAnimation {
+                    0%   {opacity: 0;}
+                    90%  {opacity: 1;}
+                    100% {opacity: 1;}
+                }
+                @-webkit-keyframes cssAnimation {
+                    0%   {opacity: 0;}
+                    90%  {opacity: 1;}
+                    100% {opacity: 1;}
+                }
             
         }
     }

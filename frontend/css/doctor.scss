@@ -122,6 +122,18 @@
                         grid-template-columns: auto 1fr auto;
                         width:100%;
                         align-items: center;
+                        -webkit-animation: cssAnimation 1s forwards; 
+                        animation: cssAnimation 1s forwards;
+                        @keyframes cssAnimation {
+                            0%   {opacity: 0;}
+                            90%  {opacity: 1;}
+                            100% {opacity: 1;}
+                        }
+                        @-webkit-keyframes cssAnimation {
+                            0%   {opacity: 0;}
+                            90%  {opacity: 1;}
+                            100% {opacity: 1;}
+                        }
                         .allCarouselItems{
                             
                             .item{
@@ -140,6 +152,18 @@
                         width:100%;
                         padding-top: 1rem;
                         border-top: 1px solid $dark-blue-color;
+                        -webkit-animation: cssAnimation 1s forwards; 
+                        animation: cssAnimation 1s forwards;
+                        @keyframes cssAnimation {
+                            0%   {opacity: 0;}
+                            90%  {opacity: 1;}
+                            100% {opacity: 1;}
+                        }
+                        @-webkit-keyframes cssAnimation {
+                            0%   {opacity: 0;}
+                            90%  {opacity: 1;}
+                            100% {opacity: 1;}
+                        }
                         div{
                                 padding:0.5rem 0rem;
                                 width:100%;

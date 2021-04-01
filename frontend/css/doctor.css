@@ -172,6 +172,32 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: cssAnimation 1s forwards;
+  animation: cssAnimation 1s forwards;
+}
+
+@keyframes cssAnimation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes cssAnimation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .filteranddoctor .container .cards .main-grid .bookAppointmentContainer .carouselContainer .allCarouselItems .item {
@@ -189,6 +215,32 @@
   width: 100%;
   padding-top: 1rem;
   border-top: 1px solid #222844;
+  -webkit-animation: cssAnimation 1s forwards;
+  animation: cssAnimation 1s forwards;
+}
+
+@keyframes cssAnimation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes cssAnimation {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .filteranddoctor .container .cards .main-grid .bookAppointmentContainer .subScheduleContainer div {

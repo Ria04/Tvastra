@@ -1,4 +1,4 @@
-
+<% if(!isadmin){ %>
 <aside id="aside" class="hide">
     <ul id="dashboard">
         <span id="head"><i class="fa fa-angle-double-right"></i> <h6>Dashboard</h6></span>
@@ -13,4 +13,19 @@
         <span id="last-span" onclick="showaside()"><i class="fa fa-angle-double-left"></i> <h6>Collapse dashboard</h6></span>
     </ul>
 </aside>
+<%}else{%>
+
+    <aside id="aside" class="hide">
+        <ul id="dashboard">
+            <span id="head"><i class="fa fa-angle-double-right"></i> <h6>Dashboard</h6></span>
+    
+            <a href="/admindashboard"><li><i class="fas fa-file-alt"></i><span>Dashboard</span></li></a>
+            <a href="/adminusers"><li><i class="fas fa-file-alt"></i><span>Users</span></li></a>
+            <a href="/admindoctors"><li><i class="fas fa-file-alt"></i><span>Doctors</span></li></a>
+            <a href="/adminhospitals"><li><i class="fas fa-file-alt"></i><span>Hospitals</span></li></a>
+            <a href="/settings"><li><i class="fas fa-file-alt"></i><span>Settings</span></li></a>
+            <span id="last-span" onclick="showaside()"><i class="fa fa-angle-double-left"></i> <h6>Collapse dashboard</h6></span>
+        </ul>
+    </aside>
+<%}%>
 
