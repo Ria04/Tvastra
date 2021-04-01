@@ -348,7 +348,7 @@ async function myappointments(req, res) {
                 appointmentdata.findByIdAndUpdate({ _id: allappdata[i]._id }, { status: status }).then((c) => { console.log(c); }).catch();
 
             }
-        }
+        }  
 
         const data_dr=await appointmentdata.find({drid:req.session.userid});
 
