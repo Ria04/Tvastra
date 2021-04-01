@@ -1,0 +1,9 @@
+-form
+-toaster
+-profile page toaster, phone no disabled, edit button.
+-doctor page render
+-Book an appointment UI
+-add schedule
+-doctor card render slots
+-book appointment page
+-myappointments

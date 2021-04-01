@@ -19,10 +19,47 @@
         <link rel="stylesheet" href="theme.css">
         <link rel="stylesheet" href="dashboard.css">
         <link rel="stylesheet" href="myprofile.css">
+        <link rel="stylesheet" href="editschedule.css">
+
 
     </head>
 <body>
     <%-include('header.ejs') %>
+
+    <form id="floating-form" class="floating-form">
+
+        <div class="form">
+            <div class="schedule-head">
+                <h1>Change phone Number</h1>
+            </div>
+            <div class="inputfields">
+                <label>New Phone Number</label>
+                <input id="abc" name="pno" type="number">
+            </div>
+            <div class="buttons">
+                <button type="button" class="accentButton" id="cancel" onclick="openotpbox()">Cancel</button>
+                <button type="button" class="filledButton" id="done" onclick="sendotp('abc')" >Send OTP</button>
+            </div>
+        </div>
+        
+    </form>
+
+    <form id="otp-form" class="floating-form otp-form" method="POST" action="">
+
+        <div class="form">
+            <div class="schedule-head">
+                <h1>Verify OTP</h1>
+            </div>
+            <div class="inputfields">
+                <label>Enter OTP</label>
+                <input type="number">
+            </div>
+            <div class="buttons">
+                <button class="accentButton" onclick="enterotp()">cancel</button>
+                <button class="filledButton" type="submit">Verify OTP</button>
+            </div>
+        </div>
+    </form>
     
     <section class="profile-section">
         <div class="container">
@@ -58,7 +95,10 @@
                         <div class="input-div info wrap-div">
                             <div>
                                 <label>Phone Number</label>
-                                <input name="number" type="text" value="<%= phonenumber%>" >
+                                <div id="otp">
+                                <input name="number" type="text" value="<%= phonenumber%>" readonly>
+                                <i id="edit-pencil" class="fa fa-pencil" onclick="openotpbox()"></i>
+                                </div>
                             </div>
                             <div>
                                 <label>Email</label>
@@ -167,5 +207,7 @@
 </body>
 <script src="frontend/js/dashboard.js"></script>
 <script src="frontend/js/tag.js"></script>
+<script src="frontend/js/myprofile.js"></script>
+
 
 </html>

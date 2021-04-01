@@ -617,7 +617,7 @@ app.post("/uploadhospitaldata/:hospital", upload.single('profileimage'), async (
 
 app.post("/otp/:token", (req, res) => {
 
-  const number = req.body.number;
+  const number = req.body.number||req.session.cno;
 
   signupdata.findOne({ phone_number: number }).then((user) => {
     if (user) {
@@ -628,7 +628,11 @@ app.post("/otp/:token", (req, res) => {
       otpSender.send(otp, req.body);
       
       console.log(`Your token code is ${otp.token} and otp is ${otp.code}`);
+      if(req.session.cno){
+
+      }else{
       res.redirect('/otppage');
+      }
 
     }
     else {
@@ -641,6 +645,24 @@ app.post("/otp/:token", (req, res) => {
   })
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 app.post("/forgototp/:token", async(req, res) => {
 
   console.log(req.params,req.body);

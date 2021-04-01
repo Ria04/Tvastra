@@ -274,9 +274,6 @@
     height: 3rem;
     border: 1px solid #a19f9f;
   }
-  .desktop-nav #button-div #username:hover .toaster div figure:hover {
-    border: 1px solid #167ddd;
-  }
   .desktop-nav #button-div #username:hover .toaster div h5 {
     width: 100%;
     color: #167ddd;

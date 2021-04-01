@@ -21,6 +21,23 @@
   color: white;
 }
 
+#otp {
+  position: relative;
+  width: 100%;
+}
+
+#edit-pencil {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: #167ddd;
+  cursor: pointer;
+}
+
+.otp-form {
+  display: none;
+}
+
 .main-section {
   position: relative;
   padding: 1.5rem 0rem;

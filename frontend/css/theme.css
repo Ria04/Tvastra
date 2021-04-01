@@ -284,9 +284,6 @@
     height: 3rem;
     border: 1px solid #a19f9f;
   }
-  .desktop-nav #button-div #username:hover .toaster div figure:hover {
-    border: 1px solid #167ddd;
-  }
   .desktop-nav #button-div #username:hover .toaster div h5 {
     width: 100%;
     color: #167ddd;
@@ -792,31 +789,31 @@ i {
       -ms-flex-align: center;
           align-items: center;
   background-color: white;
-  -webkit-animation: cssAnimation 3s forwards;
-  animation: cssAnimation 3s forwards;
+  -webkit-animation: cA 3s forwards;
+  animation: cA 3s forwards;
 }
 
-@keyframes cssAnimation {
+@keyframes cA {
   0% {
-    opacity: 0;
+    opacity: 1;
   }
   90% {
     opacity: 1;
   }
   100% {
-    opacity: 1;
+    opacity: 0;
   }
 }
 
-@-webkit-keyframes cssAnimation {
+@-webkit-keyframes cA {
   0% {
-    opacity: 0;
+    opacity: 1;
   }
   90% {
     opacity: 1;
   }
   100% {
-    opacity: 1;
+    opacity: 0;
   }
 }
 

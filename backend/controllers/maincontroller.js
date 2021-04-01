@@ -350,6 +350,8 @@ async function myappointments(req, res) {
             }
         }
 
+        const data_dr=await appointmentdata.find({drid:req.session.userid});
+
         console.log(allappdata);
         res.render("myappointments", {
             username: req.session.username,
@@ -357,7 +359,8 @@ async function myappointments(req, res) {
             profilepic: req.session.myprofilepic,
             isdoctor: req.session.isdoctor,
             allappdata: allappdata,
-            loggedin: true
+            loggedin: true,
+            dr:data_dr
         });
 
 

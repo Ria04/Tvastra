@@ -24,6 +24,7 @@
     </head>
 <body>
     <%-include('header.ejs') %>
+    <% if(!isdoctor) {%>
     <section class="profile-section">
         <div class="container">
             <span id="dash-head" onclick="showaside()"><i class="fa fa-angle-double-right"></i> <h4>Click to view dashboard</h4></span>
@@ -132,6 +133,109 @@
             </section>
         </div>
     </section>
+    <%} else {%>
+        <section class="profile-section">
+            <div class="container">
+                <span id="dash-head" onclick="showaside()"><i class="fa fa-angle-double-right"></i> <h4>Click to view dashboard</h4></span>
+                <section class="main-section">
+                    <%-include('dashboard.ejs') %>
+                    <div class="form-section">
+                        <%if(dr.length<=0){%>
+                            <h6>No appointments available</h6>
+                        <%}else{%>
+                            <div>
+    
+                           
+    
+                                <%var countp=0;
+                                for(var i=0;i<dr.length;i++){
+                                    if(dr[i].status=="notcomplete"){
+                                        countp+=1;
+                                    }
+                                }%>
+                        <div class="myappointments">
+                            <div class="upcoming-appointments completed-appointment">
+                               
+                                <%if(countp>0){%>
+                                <h4>Upcoming Appointments</h4>
+                    
+                                <%for(var i=0;i<dr.length;i++){%>
+                                   <% if(dr[i].status=="notcomplete"){%>
+                                    <form action="/deleteappointment/<%= dr[i]._id%>" method="POST">
+                    
+                                    <div class="appointment-div ">
+    
+    
+                                        <div class="datetimehospital">
+                                            <div class="date">
+                                                <h6><%= dr[i].date%></h6>
+                                            </div>
+                                            <div class="timehospital">
+                                                <h5><span><%= dr[i].username%></span></h5>
+                                                <h6><%= dr[i].day%><%= dr[i].time%></h6>
+                                                <h6><%= dr[i].drhospital%></h6>
+                                                <button type="reset" >Confirmed</button>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </form>
+                                <%}%>
+                                    <%}}%>
+                                
+                                
+                            </div>
+                            <div class="upcoming-appointments completed-appointment">
+                                <%var count=0;
+                                for(var i=0;i<dr.length;i++){
+                                    if(dr[i].status=="complete"){
+                                        count+=1;
+                                    }
+                                }%>
+                                <%if(count>0){%>
+                                    
+                                <h4>Complete Appointments</h4>
+                    
+                                <%for(var i=0;i<dr.length;i++){%>
+                                   <% if(dr[i].status=="complete"){%>
+                                    <form action="/deleteappointment/<%= dr[i]._id%>" method="POST">
+                    
+                                    <div class="appointment-div">
+                                        <div class="datetimehospital">
+                                            <div class="date">
+                                                <h6><%= dr[i].date%></h6>
+                                            </div>
+                                            <div class="timehospital">
+                                                <h6><span><%= dr[i].username%></span></h6>
+                                                <h6><%= dr[i].day%><%= dr[i].time%></h6>
+                                                <h6><%= dr[i].drhospital%></h6>
+                                                <button type="reset" style="background-color: rgb(238, 139, 139);">Completed</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <%}%>
+                                    <%}}%>
+                                
+                                
+                            </div>
+                        </div>
+    
+                            <%}%>
+                          
+                            
+                        
+                           
+    
+                      
+                    </div>
+    
+    
+                </section>
+            </div>
+        </section>
+
+    <%}%>
     <%-include('footer.ejs') %>
 </body>
 <script src="frontend/js/dashboard.js"></script>
