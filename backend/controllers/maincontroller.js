@@ -116,7 +116,9 @@ async function home(req, res) {
     }
     else {
         res.render("index", {
-            loggedin: false
+            loggedin: false,
+            isadmin:req.session.isadmin
+
         });
     }
 }
@@ -498,7 +500,9 @@ function isdoctor(req, res) {
     }
     else {
         res.render("isdoctor", {
-            loggedin: false
+            loggedin: false,
+            isadmin:req.session.isadmin
+
         });
     }
 }
