@@ -18,7 +18,7 @@ const multer = require('multer');
 var moment = require('moment');
 
 app.use(flash());
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 5000;
 
 
 mongoose.connect("mongodb+srv://riya:Ria@0402@cluster0.k4hgx.mongodb.net/Tvastra?retryWrites=true&w=majority", { useNewUrlParser: true, useFindAndModify: false });
